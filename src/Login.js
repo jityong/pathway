@@ -9,7 +9,7 @@ import lock from "./lock.png";
 
 function Login() {
   return ( 
-        <div>
+        <div style={{backgroundColor: "#4d92fb"}}>
           <p className="Title"> Pathway</p>
         <Fancyline />
         <p
