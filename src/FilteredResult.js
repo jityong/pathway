@@ -1,9 +1,11 @@
 import React from "react";
 import data from "./data.json";
 import * as turf from "@turf/turf";
-
+import Grid from "@material-ui/core/Grid";
+import { makeStyles } from "@material-ui/core/styles";
 
 const API_KEY = "AIzaSyDsbjEhJ1510KaVtIQJVTIU7at6hiA__6U";
+
 
 // this component aims to display the filtered clinic after they fill in the form
 //try not to abuse the API call, im using some kind of free credits from google for this
@@ -36,16 +38,15 @@ class FilteredResult extends React.Component {
       });
   }
   render(props) {
-    
     const { userLat, userLng, formData } = this.state;
-    console.log(userLng,userLat)
+    console.log(userLng, userLat);
     // console.log("test");
     //below is to filter clinics that are "<= 1" km away from input postal code
     //using the turf distance api <-- can google for more info
     const filteredClinics = data.features.filter(clinic => {
       const from = turf.point([userLng, userLat]);
       const to = turf.point([
-        clinic.geometry.coordinates[0], 
+        clinic.geometry.coordinates[0],
         clinic.geometry.coordinates[1]
       ]);
       const options = { units: "kilometers" };
@@ -56,13 +57,23 @@ class FilteredResult extends React.Component {
       <div>
         <h1>Filtered clinics for S{formData.postalCode}</h1>
         <h1>Subsidies: {formData.subsidyType}</h1>
-        <div>
-          {" "}
-          {filteredClinics.map(clinic => {
-            return (
-              <div key = {clinic.properties.Name} dangerouslySetInnerHTML={{ __html: clinic.properties.Description }} />
-            );
-          })}
+        <div className="container">
+          <div className="row">
+            {filteredClinics.map(clinic => {
+              return (
+                <div className="col-md-3 border border-secondary"
+                  style={{margin: "10px"}}>
+                <div 
+                  key={clinic.properties.Name}
+                  dangerouslySetInnerHTML={{
+                    __html: clinic.properties.Description
+                  }}
+                />
+                <button style={{display:"table-cell",verticalAlign:"bottom"}}type="button" class="btn btn-success"> Compare </button>
+                </div>
+              );
+            })}
+          </div>
         </div>
       </div>
     );
