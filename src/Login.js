@@ -7,9 +7,16 @@ import lock from "./lock.png";
 //Login page, which is the first page user will see. Need to change background
 //color to blue (whole page & considering responsive web design) for it to look good
 
+
 function Login() {
   return ( 
-        <div style={{backgroundColor: "#4d92fb"}}>
+
+        <div style={{backgroundColor: "#4d92fb",
+          height: "100%",
+          width: "100%",
+          minHeight: "100vh",
+          minWidth: "100vw"
+         }}>
           <p className="Title"> Pathway</p>
         <Fancyline />
         <p
