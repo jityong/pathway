@@ -1,5 +1,5 @@
 import React from "react";
-import data from "./data.json";
+import data from "./chas.json";
 import * as turf from "@turf/turf";
 import Grid from "@material-ui/core/Grid";
 import { makeStyles } from "@material-ui/core/styles";
@@ -50,14 +50,37 @@ class FilteredResult extends React.Component {
         clinic.geometry.coordinates[1]
       ]);
       const options = { units: "kilometers" };
-      return turf.distance(from, to, options) <= 1;
+      const dist =  turf.distance(from, to, options);
+      clinic.distance = dist;
+      if (formData.hasSubsidy === "Yes") {
+        return dist <= 1 && clinic.properties.CLINIC_PROGRAMME_CODE.includes(formData.subsidyType);
+      }
+      return dist <= 1;
     });
+    function sortDist (a,b) {
+      if (a.distance < b.distance){
+        return -1;
+      }else {
+        return 1;
+      }
+    }
+    const sortedClinics = filteredClinics.sort(sortDist);
     //note: dangerouslySetInnerHTML cos the json is in string, but its actually HTML
     return (
       <div>
         <h1>Filtered clinics for S{formData.postalCode}</h1>
-        <h1>Subsidies: {formData.subsidyType}</h1>
-        <div className="container">
+        <h1>Subsidies: {formData.subsidyType === "" ? "None" : formData.subsidyType}</h1>
+        <div>
+          {sortedClinics.map(clinic=> {
+            return (
+            <div> 
+              {clinic.properties.HCI_NAME}  {clinic.properties.CLINIC_PROGRAMME_CODE}
+              <hr/>
+            </div>
+          )
+          })}
+        </div>
+        {/* <div className="container">
           <div className="row">
             {filteredClinics.map(clinic => {
               return (
@@ -74,7 +97,7 @@ class FilteredResult extends React.Component {
               );
             })}
           </div>
-        </div>
+        </div> */}
       </div>
     );
   }

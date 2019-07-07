@@ -9,7 +9,7 @@ class Form extends React.Component {
     super();
     this.state = {
       postalCode: "",
-      hasSubsidy: "",
+      hasSubsidy: "No",
       subsidyType: "",
     };
     this.handleChange = this.handleChange.bind(this);
@@ -101,10 +101,9 @@ class Form extends React.Component {
                       required
                     >
                       <option value="">--Please select an option--</option>
-                      <option value="chas">CHAS</option>
-                      <option value="xxx">xxx</option>
-                      <option value="yyy">yyy</option>
-                      <option value="zzz">zzz</option>
+                      <option value="CHAS">CHAS</option>
+                      <option value="ISP">ISP</option>
+                      <option value="CDMP">CDMP</option>                    
                     </select>
                   </label>
                 </div>
