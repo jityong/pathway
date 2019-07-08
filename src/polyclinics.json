@@ -1,0 +1,23 @@
+{
+    "clinics":[
+    {"id": "1", "Name": "Ang Mo Kio Polyclinic (NHG)", "Address": "Block 723 Ang Mo Kio Avenue 8 #01-4136", "PostalCode": "560723", "Tel": "6355-3000", "coord": [103.847305,1.3724019]},
+    {"id": "2", "Name": "Bedok Polyclinic (Singhealth)", "Address":"Block 212 Bedok North Street 1 #03-147", "PostalCode": "460212", "Tel": "6243-6740 (General), 6643-6969 (Appt)", "coord": [103.931513,1.325906]},
+    {"id": "3", "Name": "Bukit Batok Polyclinic (NHG)", "Address": "50 Bukit Batok West Avenue 3", "PostalCode": "659164", "Tel":"6355-3000" , "coord": [103.747924,1.351972]},
+    {"id": "4", "Name": "Bukit Merah Polyclinic (Singhealth)", "Address": "Block 163 Bukit Merah Central #04-3565", "PostalCode": "150163", "Tel":"6271-3911 (General), 6643-6969 (Appt)", "coord": [103.816987,1.284152]},
+    {"id": "5", "Name": "Choa Chu Kang Polyclinic (NHG)", "Address": "2 Teck Whye Crescent", "PostalCode": "688846", "Tel":"6355-3000" , "coord": [103.750669,1.382301]},
+    {"id": "6", "Name": "Clementi Polyclinic (NHG)", "Address": "Block 451 Clementi Avenue 3 #02-307", "PostalCode": "120451", "Tel":"6355-3000" , "coord": [103.765669,1.312638]},
+    {"id": "7", "Name": "Geylang Polyclinic (Singhealth)", "Address": "21 Geylang East Central", "PostalCode": "389707", "Tel":"6842-2440 (General), 6643-6969 (Appt)" , "coord": [103.887157,1.319476]},
+    {"id": "8", "Name": "Hougang Polyclinic (NHG)", "Address": "89 Hougang Avenue 4", "PostalCode": "538829", "Tel":"6355-3000" , "coord": [103.889024,1.370032]},
+    {"id": "9", "Name": "Jurong Polyclinic (NHG)", "Address": "190 Jurong East Avenue 1", "PostalCode": "609788", "Tel":"6355-3000" , "coord": [103.730619,1.349792]},
+    {"id": "10", "Name": "Marine Parade Polyclinic (Singhealth)", "Address": "Block 80 Marine Parade #01-792", "PostalCode": "440080", "Tel":"6345-0049 (General), 6643-6969 (Appt)" , "coord": [103.907597,1.302256]},
+    {"id": "11", "Name": "Outram Polyclinic (Singhealth)", "Address": "No.3 Second Hospital Avenue", "PostalCode": "168937", "Tel":"6435-3980 (General), 6643-6969 (Appt)" , "coord": [103.838369,1.279555]},
+    {"id": "12", "Name": "Pasir Ris Polyclinic (Singhealth)", "Address": "1 Pasir Ris Drive 4 #01-11", "PostalCode": "519457", "Tel":"6585-5390 (General), 6643-6969 (Appt)" , "coord": [103.959529,1.368309]},
+    {"id": "13", "Name": "Queenstown Polyclinic (Singhealth)", "Address": "580 Stirling Road", "PostalCode": "148958", "Tel":"6471-9530 (General), 6643-6969 (Appt)" , "coord": [103.800959,1.298484]},
+    {"id": "14", "Name": "Sengkang Polyclinic (Singhealth)", "Address": "2 Sengkang Square #01-06 Sengkang Community Hub", "PostalCode": "545025", "Tel":"6315-3500 (General), 6643-6969 (Appt)" , "coord": [103.894364,1.392501]},
+    {"id": "15", "Name": "Tampines Polyclinic (Singhealth)", "Address": "1 Tampines Street 41", "PostalCode": "529203", "Tel":"6786-4070 (General), 6643-6969 (Appt)" , "coord": [103.946039,1.357257]},
+    {"id": "16", "Name": "Toa Payoh Polyclinic (NHG)", "Address": "Block 2003 Lorong 8 Toa Payoh", "PostalCode": "319260", "Tel":"6355-3000" , "coord": [103.858986,1.3345499]},
+    {"id": "17", "Name": "Woodlands Polyclinic (NHG)", "Address": "10 Woodlands Street 31", "PostalCode": "738579", "Tel":"6355-3000" , "coord": [103.775072,1.430806]},
+    {"id": "18", "Name": "Yishun Polyclinic (NHG)", "Address": "100, Yishun Central", "PostalCode": "768826", "Tel":"6355-3000", "coord": [103.837076,1.423369] }
+
+    ]
+}
