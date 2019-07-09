@@ -4,6 +4,7 @@ import * as turf from "@turf/turf";
 import ResultTabs from "./ResultTabs.js";
 import PC from "./polyclinics.json"
 
+
 const API_KEY = "AIzaSyDsbjEhJ1510KaVtIQJVTIU7at6hiA__6U";
 
 
@@ -62,9 +63,9 @@ class FilteredResult extends React.Component {
       const dist =  turf.distance(from, to, options);
       clinic.distance = dist;
       if (formData.hasSubsidy === "Yes") {
-        return dist <= 1 && clinic.properties.CLINIC_PROGRAMME_CODE.includes(formData.subsidyType);
+        return dist <= 3 && clinic.properties.CLINIC_PROGRAMME_CODE.includes(formData.subsidyType);
       }
-      return dist <= 1;
+      return dist <= 3;
     });
 
     const filteredPC = PC.clinics.filter(clinic => {
@@ -94,7 +95,7 @@ class FilteredResult extends React.Component {
         <h1>Filtered clinics for S{formData.postalCode}</h1>
         <h1>Subsidies: {formData.subsidyType === "" ? "None" : formData.subsidyType}</h1>
         <div>
-        <ResultTabs GP={sortedGP} PC={sortedPC}/>
+        <ResultTabs GP={sortedGP} PC={sortedPC} currentLoc={[this.state.userLng,this.state.userLat]}/>
           {/* {sortedClinics.map(clinic=> {
             return (
             <div> 

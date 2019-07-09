@@ -39,3 +39,7 @@
   background-color: #4d92fb;
   /* overflow: hidden; */
 }
+
+#map {
+  height: 100vh;
+}

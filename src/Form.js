@@ -39,7 +39,7 @@ class Form extends React.Component {
                     placeholder="Postal Code ie. 123456"
                     minLength="6"
                     maxLength="6"
-                    pattern="[0-9]"
+                    // pattern="[0-9]"
                     required
                     // style={{ textAlign: "center" }}
                   />

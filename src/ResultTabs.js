@@ -6,6 +6,8 @@ import AppBar from "@material-ui/core/AppBar";
 import Tabs from "@material-ui/core/Tabs";
 import Tab from "@material-ui/core/Tab";
 import Typography from "@material-ui/core/Typography";
+import MyMap from "./myMap"
+import TestMap from "./TestMap"
 
 function TabContainer({ children, dir }) {
   return (
@@ -26,6 +28,7 @@ const useStyles = makeStyles(theme => ({
     width: 500
   }
 }));
+
 
 const ResultTabs = (props) => {
   const classes = useStyles();
@@ -78,9 +81,14 @@ const ResultTabs = (props) => {
             </div>
             )
             })}</TabContainer>
-        <TabContainer dir={theme.direction}>Item Three</TabContainer>
+        <TabContainer dir={theme.direction}>
+        {/* <object type="text/html" style={{width:"100vh", height:"100vh"}} data="https://data.gov.sg/dataset/chas-clinics/resource/21dace06-c4d1-4128-9424-aba7668050dc/view/5cbf5325-26d2-4e3b-a54d-e20d6d07dcd2"/> */}
+        {/* <MyMap coord={props.currentLoc}/> */}
+        <TestMap coord={props.currentLoc} GP={props.GP} PC={props.PC}/>
+        </TabContainer>
       </SwipeableViews>
     </div>
   );
 };
+
 export default ResultTabs;
