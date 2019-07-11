@@ -25,6 +25,7 @@ class FilteredResult extends React.Component {
       userLat: 0,
       filterDist: true
     };
+    this.goBack = this.goBack.bind(this); 
   }
   componentDidMount() {
     fetch(
@@ -40,6 +41,11 @@ class FilteredResult extends React.Component {
         });
       });
   }
+
+  goBack(){
+    this.props.history.goBack();
+}
+
   render(props) {
     const { userLat, userLng, formData } = this.state;
     // polyclinics.clinics.map(clinic=> {
@@ -104,6 +110,7 @@ class FilteredResult extends React.Component {
             </div>
           )
           })} */}
+          <button onClick={this.goBack}>Go Back</button>
         </div>
       </div>
     );

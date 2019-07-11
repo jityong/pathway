@@ -10,7 +10,7 @@ class Form extends React.Component {
     this.state = {
       postalCode: "",
       hasSubsidy: "No",
-      subsidyType: "",
+      subsidyType: ""
     };
     this.handleChange = this.handleChange.bind(this);
   }
@@ -21,17 +21,15 @@ class Form extends React.Component {
   render() {
     return (
       //why is my required attribute not working...
-      <body>
-        <div class="container">
-          <div class="card card-body">
+      <div>
+        <div className="container">
+          <div className="card card-body">
             <form>
-              <div class="card">
-                <div class="card-header">
-                  Enter your postal code
-                  </div>
-                  <div class="form-group">
+              <div className="card">
+                <div className="card-header">Enter your postal code</div>
+                <div className="form-group">
                   <input
-                    class="form-control"
+                    className="form-control"
                     type="text"
                     name="postalCode"
                     value={this.state.postalCode}
@@ -49,13 +47,13 @@ class Form extends React.Component {
               </div>
 
               <br />
-              <div class="card">
-                <div class="card-header" for="hasSubsidy">
+              <div className="card">
+                <div className="card-header">
                   Are you eligible for any subsidies?
                 </div>
-                <div class="form-check">
+                <div className="form-check">
                   <input
-                    class="form-check-input"
+                    className="form-check-input"
                     id="hasSubsidy"
                     type="radio"
                     name="hasSubsidy"
@@ -64,13 +62,13 @@ class Form extends React.Component {
                     onChange={this.handleChange}
                     required
                   />
-                  <label class="form-check-label" for="hasSubsidy">
+                  <label className="form-check-label">
                     Yes
                   </label>
                 </div>
-                <div class="form-check">
+                <div className="form-check">
                   <input
-                    class="form-check-input"
+                    className="form-check-input"
                     id="hasSubsidy"
                     type="radio"
                     name="hasSubsidy"
@@ -79,7 +77,7 @@ class Form extends React.Component {
                     onChange={this.handleChange}
                     required
                   />
-                  <label class="form-check-label" for="hasSubsidy">
+                  <label className="form-check-label">
                     No
                   </label>
                 </div>
@@ -88,13 +86,13 @@ class Form extends React.Component {
 
               {/* if user hasSubsidy then show the choose subsidy select form */}
               {this.state.hasSubsidy === "Yes" && (
-                <div class="form-group">
-                  <label for="subsidyType">
+                <div className="form-group">
+                  <label>
                     Please select the subsidy you are eligible for:
                     <br />
                     <select
                       id="subsidyType"
-                      class="form-control"
+                      className="form-control"
                       name="subsidyType"
                       value={this.state.subsidyType}
                       onChange={this.handleChange}
@@ -103,14 +101,14 @@ class Form extends React.Component {
                       <option value="">--Please select an option--</option>
                       <option value="CHAS">CHAS</option>
                       <option value="ISP">ISP</option>
-                      <option value="CDMP">CDMP</option>                    
+                      <option value="CDMP">CDMP</option>
                     </select>
                   </label>
                 </div>
               )}
               <br />
               <br />
-              <button class="btn btn-primary" type="submit">
+              <button className="btn btn-primary" type="submit">
                 <Link
                   to={{
                     pathname: "/FilteredResult",
@@ -121,14 +119,13 @@ class Form extends React.Component {
                     }
                   }}
                 >
-                  <span style={{color:"white"}}>Submit</span>
+                  <span style={{ color: "white" }}>Submit</span>
                 </Link>
               </button>
             </form>
           </div>
         </div>
-      </body>
-      
+      </div>
     );
   }
 }

@@ -10,6 +10,8 @@ import MyMap from "./myMap";
 import TestMap from "./TestMap";
 import PcDialog from "./PcDialog";
 import GpDialog from "./GpDialog";
+import { display } from "@material-ui/system";
+import CompareDialog from "./CompareDialog";
 
 function TabContainer({ children, dir }) {
   return (
@@ -27,7 +29,7 @@ TabContainer.propTypes = {
 const useStyles = makeStyles(theme => ({
   root: {
     backgroundColor: theme.palette.background.paper,
-    width: 500
+    width: "100%"
   }
 }));
 
@@ -43,9 +45,35 @@ const ResultTabs = props => {
   function handleChangeIndex(index) {
     setValue(index);
   }
+  
+  const [open, setOpen] = React.useState(false);
+  const [selectedGP, setSelectedGP] = React.useState({"properties": {"HCI_NAME": "Please Choose a GP"}, "distance":"0"});
+  const [selectedPC, setSelectedPC] = React.useState({"Name":"Please choose a Polyclinic", "distance":"0"});
+  const [GPName, setGPName] = React.useState("none");
+  const [PCName, setPCName] = React.useState("none");
+
+  function handleClickOpen() {
+    setOpen(true);
+  }
+
+  const handleGPClose = (clinic,name) => {
+    setOpen(false);
+    setSelectedGP(clinic);
+    setGPName(name)
+  };
+  const handlePCClose = (clinic,name) => {
+    setOpen(false);
+    setSelectedPC(clinic);
+    setPCName(name)
+  };
 
   return (
     <div className={classes.root}>
+      Selected GP: {GPName}
+      <br/>
+      Selected PolyClinic: {PCName}
+      <CompareDialog GP={selectedGP} PC={selectedPC}/>
+      {console.log(selectedGP)}
       <AppBar position="static" color="default">
         <Tabs
           value={value}
@@ -68,7 +96,12 @@ const ResultTabs = props => {
           {props.GP.map(clinic => {
             return (
               <div key={clinic.properties.id}>
-                <GpDialog clinic={clinic} />
+                <GpDialog
+                  clinic={clinic}
+                  selectedGP={selectedGP}
+                  open={open}
+                  onClose={handleGPClose}
+                />
                 <hr />
               </div>
             );
@@ -78,7 +111,12 @@ const ResultTabs = props => {
           {props.PC.map(clinic => {
             return (
               <div key={clinic.id}>
-                <PcDialog clinic={clinic} />
+                <PcDialog clinic={clinic} 
+                  selectedPC={selectedGP}
+                  open={open}
+                  onClose={handlePCClose}
+                />
+                
                 <hr />
               </div>
             );
