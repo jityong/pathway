@@ -1,5 +1,7 @@
 import React, { Component } from "react";
-import { Map, GoogleApiWrapper, Marker } from "google-maps-react";
+import { Map, InfoWindow, GoogleApiWrapper, Marker } from "google-maps-react";
+import GpDialog from "./GpDialog";
+import PcDialog from "./PcDialog";
 
 const mapStyles = {
   width: "100%",
@@ -7,14 +9,16 @@ const mapStyles = {
 };
 
 export class TestMap extends Component {
-    displayCurrent = () => {
-        return (
-            <Marker position={{
-                lat: this.props.coord[1],
-                lng: this.props.coord[0],
-            }} />
-        )
-    }
+  displayCurrent = () => {
+    return (
+      <Marker
+        position={{
+          lat: this.props.coord[1],
+          lng: this.props.coord[0]
+        }}
+      />
+    );
+  };
   displayGP = () => {
     return this.props.GP.map(clinic => {
       return (
@@ -26,8 +30,12 @@ export class TestMap extends Component {
             lat: clinic.geometry.coordinates[1],
             lng: clinic.geometry.coordinates[0]
           }}
-          onClick={() => console.log("You clicked me!")}
-        />
+          // onClick={() => console.log("You clicked me!")}
+        >
+          <InfoWindow>
+            <GpDialog clinic={clinic} />
+          </InfoWindow>
+        </Marker>
       );
     });
   };
@@ -43,7 +51,9 @@ export class TestMap extends Component {
             lng: clinic.coord[0]
           }}
           onClick={() => console.log("You clicked me!")}
-        />
+        >
+          <PcDialog clinic={clinic} />
+        </Marker>
       );
     });
   };

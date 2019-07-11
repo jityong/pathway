@@ -6,8 +6,10 @@ import AppBar from "@material-ui/core/AppBar";
 import Tabs from "@material-ui/core/Tabs";
 import Tab from "@material-ui/core/Tab";
 import Typography from "@material-ui/core/Typography";
-import MyMap from "./myMap"
-import TestMap from "./TestMap"
+import MyMap from "./myMap";
+import TestMap from "./TestMap";
+import PcDialog from "./PcDialog";
+import GpDialog from "./GpDialog";
 
 function TabContainer({ children, dir }) {
   return (
@@ -29,8 +31,7 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-
-const ResultTabs = (props) => {
+const ResultTabs = props => {
   const classes = useStyles();
   const theme = useTheme();
   const [value, setValue] = React.useState(0);
@@ -64,27 +65,29 @@ const ResultTabs = (props) => {
         onChangeIndex={handleChangeIndex}
       >
         <TabContainer dir={theme.direction}>
-        {props.GP.map(clinic=> {
+          {props.GP.map(clinic => {
             return (
-            <div key={clinic.properties.id}> 
-              {clinic.properties.HCI_NAME}  
-              <hr/>
-            </div>
-            )
-            })}
-            </TabContainer>
-        <TabContainer dir={theme.direction}>{props.PC.map(clinic=> {
-            return (
-            <div key={clinic.id}> 
-              {clinic.Name}  
-              <hr/>
-            </div>
-            )
-            })}</TabContainer>
+              <div key={clinic.properties.id}>
+                <GpDialog clinic={clinic} />
+                <hr />
+              </div>
+            );
+          })}
+        </TabContainer>
         <TabContainer dir={theme.direction}>
-        {/* <object type="text/html" style={{width:"100vh", height:"100vh"}} data="https://data.gov.sg/dataset/chas-clinics/resource/21dace06-c4d1-4128-9424-aba7668050dc/view/5cbf5325-26d2-4e3b-a54d-e20d6d07dcd2"/> */}
-        {/* <MyMap coord={props.currentLoc}/> */}
-        <TestMap coord={props.currentLoc} GP={props.GP} PC={props.PC}/>
+          {props.PC.map(clinic => {
+            return (
+              <div key={clinic.id}>
+                <PcDialog clinic={clinic} />
+                <hr />
+              </div>
+            );
+          })}
+        </TabContainer>
+        <TabContainer dir={theme.direction}>
+          {/* <object type="text/html" style={{width:"100vh", height:"100vh"}} data="https://data.gov.sg/dataset/chas-clinics/resource/21dace06-c4d1-4128-9424-aba7668050dc/view/5cbf5325-26d2-4e3b-a54d-e20d6d07dcd2"/> */}
+          {/* <MyMap coord={props.currentLoc}/> */}
+          <TestMap coord={props.currentLoc} GP={props.GP} PC={props.PC} />
         </TabContainer>
       </SwipeableViews>
     </div>
