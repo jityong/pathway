@@ -6,12 +6,14 @@ import AppBar from "@material-ui/core/AppBar";
 import Tabs from "@material-ui/core/Tabs";
 import Tab from "@material-ui/core/Tab";
 import Typography from "@material-ui/core/Typography";
-import MyMap from "./myMap";
+// import MyMap from "./myMap";
 import TestMap from "./TestMap";
 import PcDialog from "./PcDialog";
 import GpDialog from "./GpDialog";
-import { display } from "@material-ui/system";
+// import { display } from "@material-ui/system";
 import CompareDialog from "./CompareDialog";
+import Grid from "@material-ui/core/Grid";
+import Paper from '@material-ui/core/Paper';
 
 function TabContainer({ children, dir }) {
   return (
@@ -37,6 +39,9 @@ const ResultTabs = props => {
   const classes = useStyles();
   const theme = useTheme();
   const [value, setValue] = React.useState(0);
+  const [state, setState] = React.useState({
+    sortByLoc: true,
+  })
 
   function handleChange(event, newValue) {
     setValue(newValue);
@@ -45,10 +50,16 @@ const ResultTabs = props => {
   function handleChangeIndex(index) {
     setValue(index);
   }
-  
+
   const [open, setOpen] = React.useState(false);
-  const [selectedGP, setSelectedGP] = React.useState({"properties": {"HCI_NAME": "Please Choose a GP"}, "distance":"0"});
-  const [selectedPC, setSelectedPC] = React.useState({"Name":"Please choose a Polyclinic", "distance":"0"});
+  const [selectedGP, setSelectedGP] = React.useState({
+    properties: { HCI_NAME: "Please Choose a GP" },
+    distance: "0"
+  });
+  const [selectedPC, setSelectedPC] = React.useState({
+    Name: "Please choose a Polyclinic",
+    distance: "0"
+  });
   const [GPName, setGPName] = React.useState("none");
   const [PCName, setPCName] = React.useState("none");
 
@@ -56,24 +67,35 @@ const ResultTabs = props => {
     setOpen(true);
   }
 
-  const handleGPClose = (clinic,name) => {
+  const handleGPClose = (clinic, name) => {
     setOpen(false);
     setSelectedGP(clinic);
-    setGPName(name)
+    setGPName(name);
   };
-  const handlePCClose = (clinic,name) => {
+  const handlePCClose = (clinic, name) => {
     setOpen(false);
     setSelectedPC(clinic);
-    setPCName(name)
+    setPCName(name);
   };
 
   return (
     <div className={classes.root}>
-      Selected GP: {GPName}
-      <br/>
-      Selected PolyClinic: {PCName}
-      <CompareDialog GP={selectedGP} PC={selectedPC}/>
-      {console.log(selectedGP)}
+  
+      <Grid style={{ flexGrow: 1 }} direction="row">
+        <Grid container justify="space-evenly">
+          <Grid item>Selected GP: {GPName}</Grid>
+          <Grid item>
+            Selected PolyClinic: {PCName}
+            {/* {console.log(selectedGP)} */}
+          </Grid>
+        </Grid>
+      </Grid>
+      <Grid style={{ flexGrow: 1 }} direction="row">
+        <Grid container justify="center">
+          <CompareDialog GP={selectedGP} PC={selectedPC} />
+        </Grid>
+      </Grid>
+      <hr/>
       <AppBar position="static" color="default">
         <Tabs
           value={value}
@@ -111,21 +133,22 @@ const ResultTabs = props => {
           {props.PC.map(clinic => {
             return (
               <div key={clinic.id}>
-                <PcDialog clinic={clinic} 
+                <PcDialog
+                  clinic={clinic}
                   selectedPC={selectedGP}
                   open={open}
                   onClose={handlePCClose}
                 />
-                
+
                 <hr />
               </div>
             );
           })}
         </TabContainer>
         <TabContainer dir={theme.direction}>
-          {/* <object type="text/html" style={{width:"100vh", height:"100vh"}} data="https://data.gov.sg/dataset/chas-clinics/resource/21dace06-c4d1-4128-9424-aba7668050dc/view/5cbf5325-26d2-4e3b-a54d-e20d6d07dcd2"/> */}
-          {/* <MyMap coord={props.currentLoc}/> */}
-          <TestMap coord={props.currentLoc} GP={props.GP} PC={props.PC} />
+          {props.currentLoc[0] !== 0 && (
+            <TestMap coord={props.currentLoc} GP={props.GP} PC={props.PC} />
+          )}
         </TabContainer>
       </SwipeableViews>
     </div>

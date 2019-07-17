@@ -2,12 +2,12 @@ import React from "react";
 import GP from "./chas.json";
 import * as turf from "@turf/turf";
 import ResultTabs from "./ResultTabs.js";
-import PC from "./polyclinics.json"
-
+import PC from "./polyclinics.json";
+import Button from "@material-ui/core/Button";
+import Switch from "@material-ui/core/Switch";
+import Grid from "@material-ui/core/Grid";
 
 const API_KEY = "AIzaSyDsbjEhJ1510KaVtIQJVTIU7at6hiA__6U";
-
-
 
 // this component aims to display the filtered clinic after they fill in the form
 //try not to abuse the API call, im using some kind of free credits from google for this
@@ -23,9 +23,9 @@ class FilteredResult extends React.Component {
       formData: this.props.location.state, //this gets the info from react router from Form.js
       userLng: 0,
       userLat: 0,
-      filterDist: true
+      sortByLoc: true
     };
-    this.goBack = this.goBack.bind(this); 
+    this.goBack = this.goBack.bind(this);
   }
   componentDidMount() {
     fetch(
@@ -42,23 +42,13 @@ class FilteredResult extends React.Component {
       });
   }
 
-  goBack(){
+  goBack() {
     this.props.history.goBack();
-}
+  }
 
   render(props) {
     const { userLat, userLng, formData } = this.state;
-    // polyclinics.clinics.map(clinic=> {
-    //   fetch(`https://maps.googleapis.com/maps/api/geocode/json?address=${
-    //     clinic.PostalCode
-    //   }&region=sg&key=${API_KEY}`)
-    //   .then(res => res.json())
-    //   .then(json => console.log(clinic.Name,json.results[0].geometry.location))
-        
-    // })
-    // console.log("test");
-    //below is to filter clinics that are "<= 1" km away from input postal code
-    //using the turf distance api <-- can google for more info
+
     const filteredGP = GP.features.filter(clinic => {
       const from = turf.point([userLng, userLat]);
       const to = turf.point([
@@ -66,51 +56,66 @@ class FilteredResult extends React.Component {
         clinic.geometry.coordinates[1]
       ]);
       const options = { units: "kilometers" };
-      const dist =  turf.distance(from, to, options);
+      const dist = turf.distance(from, to, options);
       clinic.distance = dist;
       if (formData.hasSubsidy === "Yes") {
-        return dist <= 3 && clinic.properties.CLINIC_PROGRAMME_CODE.includes(formData.subsidyType);
+        return (
+          dist <= 3 &&
+          clinic.properties.CLINIC_PROGRAMME_CODE.includes(formData.subsidyType)
+        );
       }
       return dist <= 3;
     });
 
     const filteredPC = PC.clinics.filter(clinic => {
       const from = turf.point([userLng, userLat]);
-      const to = turf.point([
-        clinic.coord[0],
-        clinic.coord[1]
-      ]);
+      const to = turf.point([clinic.coord[0], clinic.coord[1]]);
       const options = { units: "kilometers" };
-      const dist =  turf.distance(from, to, options);
+      const dist = turf.distance(from, to, options);
       clinic.distance = dist;
       return dist <= 100;
     });
 
-    function sortDist (a,b) {
-      if (a.distance < b.distance){
+    function sortDist(a, b) {
+      if (a.distance < b.distance) {
         return -1;
-      }else {
+      } else {
         return 1;
       }
     }
+    const handleSwitch = name => event => {
+      this.setState({ [name]: event.target.checked });
+    };
     const sortedGP = filteredGP.sort(sortDist);
     const sortedPC = filteredPC.sort(sortDist);
     //note: dangerouslySetInnerHTML cos the json is in string, but its actually HTML
     return (
       <div>
-        <h1>Filtered clinics for S{formData.postalCode}</h1>
-        <h1>Subsidies: {formData.subsidyType === "" ? "None" : formData.subsidyType}</h1>
+        <Grid container justify="center">
+          <h2>
+            Filtered clinics for{" "}
+            <span style={{ fongWeight: "bold", textDecoration: "underline" }}>
+              S{formData.postalCode}
+            </span> {" "}
+            {formData.subsidyType === ""
+              ? ""
+              : `with ${formData.subsidyType} subsidy`}
+          </h2>
+        </Grid>
+        {/* <Switch
+        checked={this.state.sortByLoc}
+        onChange={handleSwitch('sortByLoc')}
+        value="sortByLoc"
+        inputProps={{ 'aria-label': 'secondary checkbox' }}
+      /> */}
         <div>
-        <ResultTabs GP={sortedGP} PC={sortedPC} currentLoc={[this.state.userLng,this.state.userLat]}/>
-          {/* {sortedClinics.map(clinic=> {
-            return (
-            <div> 
-              {clinic.properties.HCI_NAME}  
-              <hr/>
-            </div>
-          )
-          })} */}
-          <button onClick={this.goBack}>Go Back</button>
+          <hr />
+          <ResultTabs
+            GP={sortedGP}
+            PC={sortedPC}
+            currentLoc={[this.state.userLng, this.state.userLat]}
+          />
+          <Button onClick={this.goBack}>Go Back</Button>
         </div>
       </div>
     );

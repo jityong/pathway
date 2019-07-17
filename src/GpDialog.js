@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import Dialog from "@material-ui/core/Dialog";
 import { Link } from "react-router-dom";
+import Button from "@material-ui/core/Button";
+import Grid from "@material-ui/core/Grid";
 
 import {
   DialogActions,
@@ -37,9 +39,9 @@ export class GpDialog extends Component {
     }
     return (
       <div>
-        <button onClick={this.handleToggle}>
+        <Button variant="outlined" fullWidth="true" onClick={this.handleToggle}>
           {clinic.properties.HCI_NAME}
-        </button>
+        </Button>
         <Dialog open={open} onClose={handleToggle}>
           <DialogContent>
             Clinic Name: {clinic.properties.HCI_NAME} <hr /> Address:{" "}
@@ -54,26 +56,39 @@ export class GpDialog extends Component {
             Distance:
             {parseFloat(clinic.distance).toFixed(2)}km away
             <hr />
-            <button
-              onClick={() =>
-                handleListItemClick(clinic, clinic.properties.HCI_NAME)
-              }
-            >
-              {" "}
-              Add to comparison{" "}
-            </button>
-            <button onClick={this.handleCompare}>
-              <Link
-                to={{
-                  pathname: "/selectedChoice",
-                  state: {
-                    choice: clinic
-                  }
-                }}
-              >
-                <span>Select</span>
-              </Link>
-            </button>
+            <Grid style={{ flexGrow: 1 }} direction="row">
+              <Grid container justify="space-between">
+                <Grid item>
+                  <Button
+                    variant="contained"
+                    color="primary"
+                    onClick={() =>
+                      handleListItemClick(clinic, clinic.properties.HCI_NAME)
+                    }
+                  >
+                    <span style={{ color: "white" }}>Add to comparison</span>
+                  </Button>
+                </Grid>
+                <Grid item>
+                  <Button
+                    // variant="contained"
+                    // color="secondary"
+                    onClick={this.handleCompare}
+                  >
+                    <Link
+                      to={{
+                        pathname: "/selectedChoice",
+                        state: {
+                          choice: clinic
+                        }
+                      }}
+                    >
+                      <span>Select</span>
+                    </Link>
+                  </Button>
+                </Grid>
+              </Grid>
+            </Grid>
           </DialogContent>
         </Dialog>
       </div>

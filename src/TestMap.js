@@ -59,7 +59,7 @@ export class TestMap extends Component {
   };
 
   render() {
-    console.log(this.props.coord[1]);
+    console.log(this.props.coord[1],this.props.coord[0]);
     return (
       <Map
         google={this.props.google}

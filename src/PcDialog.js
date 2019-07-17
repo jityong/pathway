@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import Dialog from "@material-ui/core/Dialog";
 import { Link } from "react-router-dom";
+import Button from "@material-ui/core/Button";
+import Grid from "@material-ui/core/Grid";
 
 import {
   DialogActions,
@@ -36,7 +38,9 @@ export class PcDialog extends Component {
     }
     return (
       <div>
-        <button onClick={this.handleToggle}>{clinic.Name}</button>
+        <Button variant="outlined" fullWidth="true" onClick={this.handleToggle}>
+          {clinic.Name}
+        </Button>
         <Dialog open={open} onClose={handleToggle}>
           <DialogContent>
             Clinic Name: {clinic.Name} <hr /> Address: {clinic.Address}{" "}
@@ -44,22 +48,34 @@ export class PcDialog extends Component {
             <hr /> Telephone: {clinic.Tel} <hr /> Distance:{" "}
             {parseFloat(clinic.distance).toFixed(2)}km away
             <hr />
-            <button onClick={() => handleListItemClick(clinic, clinic.Name)}>
-              {" "}
-              Add to comparison{" "}
-            </button>
-            <button onClick={this.handleCompare}>
-              <Link
-                to={{
-                  pathname: "/selectedChoice",
-                  state: {
-                    choice: clinic
-                  }
-                }}
-              >
-                <span>Select</span>
-              </Link>
-            </button>
+            <Grid style={{ flexGrow: 1 }} direction="row">
+              <Grid container justify="space-between">
+                <Grid item>
+                  <Button
+                    variant="contained"
+                    color="secondary"
+                    onClick={() => handleListItemClick(clinic, clinic.Name)}
+                  >
+                    {" "}
+                    Add to comparison{" "}
+                  </Button>
+                </Grid>
+                <Grid item>
+                  <Button onClick={this.handleCompare}>
+                    <Link
+                      to={{
+                        pathname: "/selectedChoice",
+                        state: {
+                          choice: clinic
+                        }
+                      }}
+                    >
+                      <span>Select</span>
+                    </Link>
+                  </Button>
+                </Grid>
+              </Grid>
+            </Grid>
           </DialogContent>
         </Dialog>
       </div>
