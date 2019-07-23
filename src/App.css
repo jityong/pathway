@@ -22,9 +22,13 @@
 }
 
 .languagePage {
-  height: 100vh;
+  /*height: 100vh;*/
+  height: 100%;
+  width: 100%;
   text-align: center;
   background-color: #4d92fb;
+  minHeight: 100vh;
+  minWidth: 100vw;
 }
 /* footer {
   position: absolute;
@@ -37,6 +41,8 @@
   height: 100%;
   width: 100%;
   background-color: #4d92fb;
+  minHeight: 100vh;
+  minWidth: 100vw;
   /* overflow: hidden; */
 }
 
