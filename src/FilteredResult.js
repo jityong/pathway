@@ -60,8 +60,8 @@ class FilteredResult extends React.Component {
       clinic.distance = dist;
       if (formData.hasSubsidy === "Yes") {
         return (
-          dist <= 3 &&
-          clinic.properties.CLINIC_PROGRAMME_CODE.includes(formData.subsidyType)
+          dist <= 3 
+          // && clinic.properties.CLINIC_PROGRAMME_CODE.includes(formData.subsidyType)
         );
       }
       return dist <= 3;
@@ -113,6 +113,7 @@ class FilteredResult extends React.Component {
           <ResultTabs
             GP={sortedGP}
             PC={sortedPC}
+            formData={formData}
             currentLoc={[this.state.userLng, this.state.userLat]}
           />
           <Button onClick={this.goBack}>Go Back</Button>

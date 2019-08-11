@@ -10,7 +10,9 @@ class Form extends React.Component {
     this.state = {
       postalCode: "",
       hasSubsidy: "No",
-      subsidyType: ""
+      subsidyType: "",
+      age: "",
+      nationality: ""
     };
     this.handleChange = this.handleChange.bind(this);
   }
@@ -45,7 +47,51 @@ class Form extends React.Component {
                 <br />
                 <br />
               </div>
-
+              <br />
+              <br />
+              <div className="card">
+                <div className="card-header">Enter your age</div>
+                <div className="form-group">
+                  <input
+                    className="form-control"
+                    type="text"
+                    name="age"
+                    value={this.state.age}
+                    onChange={this.handleChange}
+                    placeholder="ie. 25"
+                    // minLength="1"
+                    // maxLength="3"
+                    // pattern="[0-9]"
+                    // required
+                    // style={{ textAlign: "center" }}
+                  />
+                </div>
+                <br />
+                <br />
+              </div>
+              <br />
+              <br />
+              <div className="form-group">
+                <label>
+                  Please select your nationality
+                  <br />
+                  <select
+                    id="nationality"
+                    className="form-control"
+                    name="nationality"
+                    value={this.state.nationality}
+                    onChange={this.handleChange}
+                    // required
+                  >
+                    <option value="">--Please select an option--</option>
+                    <option value="Singaporean">Singaporean</option>
+                    <option value="Permanent Resident">
+                      Permanent Resident
+                    </option>
+                    <option value="Non-Resident">Non-Resident</option>
+                  </select>
+                </label>
+              </div>
               <br />
               <div className="card">
                 <div className="card-header">
@@ -60,11 +106,9 @@ class Form extends React.Component {
                     value="Yes"
                     checked={this.state.hasSubsidy === "Yes"}
                     onChange={this.handleChange}
-                    required
+                    // required
                   />
-                  <label className="form-check-label">
-                    Yes
-                  </label>
+                  <label className="form-check-label">Yes</label>
                 </div>
                 <div className="form-check">
                   <input
@@ -75,11 +119,9 @@ class Form extends React.Component {
                     value="No"
                     checked={this.state.hasSubsidy === "No"}
                     onChange={this.handleChange}
-                    required
+                    // required
                   />
-                  <label className="form-check-label">
-                    No
-                  </label>
+                  <label className="form-check-label">No</label>
                 </div>
               </div>
               <br />
@@ -96,16 +138,17 @@ class Form extends React.Component {
                       name="subsidyType"
                       value={this.state.subsidyType}
                       onChange={this.handleChange}
-                      required
+                      // required
                     >
                       <option value="">--Please select an option--</option>
-                      <option value="CHAS">CHAS</option>
-                      <option value="ISP">ISP</option>
-                      <option value="CDMP">CDMP</option>
+                      <option value="CHAS Orange">CHAS Orange</option>
+                      <option value="CHAS Blue">CHAS Blue</option>
+                      <option value="PG">Pioneer Generation</option>
                     </select>
                   </label>
                 </div>
               )}
+
               <br />
               <br />
               <button className="btn btn-primary" type="submit">
@@ -115,7 +158,9 @@ class Form extends React.Component {
                     state: {
                       postalCode: this.state.postalCode,
                       hasSubsidy: this.state.hasSubsidy,
-                      subsidyType: this.state.subsidyType
+                      subsidyType: this.state.subsidyType,
+                      age: this.state.age,
+                      nationality: this.state.nationality
                     }
                   }}
                 >

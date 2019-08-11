@@ -16,21 +16,26 @@ export class selectedChoice extends Component {
   }
   render() {
     const { choice } = this.state;
-    const result = 
+    const result =
       choice.type === "GP" ? (
-        <div>{choice.properties.HCI_NAME} <hr /> Address:{" "}
-        {choice.properties.BLK_HSE_NO} {choice.properties.STREET_NAME} #
-        {choice.properties.FLOOR_NO}-{choice.properties.UNIT_NO}{" "}
-        {choice.properties.BUILDING_NAME} Singapore{" "}
-        {choice.properties.PostalCode}
-        <hr /> Telephone: {choice.properties.Tel} <hr />
-        Applicable subsidies:{" "}
-        {choice.properties.CLINIC_PROGRAMME_CODE.join(", ")}</div>
+        <div>
+          {choice.properties.HCI_NAME} <hr /> Address:{" "}
+          {choice.properties.BLK_HSE_NO} {choice.properties.STREET_NAME} #
+          {choice.properties.FLOOR_NO}-{choice.properties.UNIT_NO}{" "}
+          {choice.properties.BUILDING_NAME} Singapore{" "}
+          {choice.properties.PostalCode}
+          <hr /> Telephone: {choice.properties.Tel} <hr />
+          Applicable subsidies:{" "}
+          {choice.properties.CLINIC_PROGRAMME_CODE.join(", ")}
+        </div>
       ) : (
-        <div> Clinic Name: {choice.Name} <hr /> Address: {choice.Address}{" "}
-        Singapore {choice.PostalCode}
-        <hr /> Telephone: {choice.Tel} <hr /> Distance:{" "}
-        {parseFloat(choice.distance).toFixed(2)}km away</div>
+        <div>
+          {" "}
+          Clinic Name: {choice.Name} <hr /> Address: {choice.Address} Singapore{" "}
+          {choice.PostalCode}
+          <hr /> Telephone: {choice.Tel} <hr /> Distance:{" "}
+          {parseFloat(choice.distance).toFixed(2)}km away
+        </div>
       );
     return (
       <div>
@@ -45,7 +50,8 @@ export class selectedChoice extends Component {
           </Grid>
         </Grid>
         {/* </Grid> */}
-
+        <hr />
+        <hr />
         <Grid style={{ flexGrow: 1 }} direction="row">
           <Grid container justify="space-evenly">
             <Grid item>

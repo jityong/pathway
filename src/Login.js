@@ -52,8 +52,9 @@ function Login() {
                   color: "white"
                 }}
               >
-                SINGPASS LOGIN
-                <img src={lock} alt="lock" height="50vw" width="50vw" /> 
+                {/* SINGPASS LOGIN
+                <img src={lock} alt="lock" height="50vw" width="50vw" />  */}
+                CONTINUE
               </label>
             </Link>
           </button>

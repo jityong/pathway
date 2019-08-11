@@ -11,7 +11,7 @@ function Language() {
         <p style={{fontSize:"15vw", font:"Merriweather"}}> LANGUAGE </p>
         <div>
           <button style={{ backgroundColor: "#FF6565", borderRadius: "15px" }}>
-            <Link to="/DischargeSummary">
+            <Link to="/GeneralInfo">
               <span style={{ fontSize: "10vw", color: "black" }}>English</span>
             </Link>
           </button>{" "}
@@ -19,7 +19,7 @@ function Language() {
         <br />
         <div>
           <button style={{ backgroundColor: "#FD9535", borderRadius: "15px" }}>
-            <Link to="/DischargeSummary">
+            <Link to="/GeneralInfo">
               <span style={{ fontSize: "10vw", color: "black" }}>中文</span>
             </Link>
           </button>{" "}
@@ -27,7 +27,7 @@ function Language() {
         <br />
         <div>
           <button style={{ backgroundColor: "#9CE939", borderRadius: "15px" }}>
-            <Link to="/DischargeSummary">
+            <Link to="/GeneralInfo">
               <span style={{ fontSize: "10vw", color: "black" }}>
                 Bahasa Melayu
               </span>
@@ -37,7 +37,7 @@ function Language() {
         <br />
         <div>
           <button style={{ backgroundColor: "#9CE939", borderRadius: "15px" }}>
-            <Link to="/DischargeSummary">
+            <Link to="/GeneralInfo">
               <span style={{ fontSize: "10vw", color: "black" }}>Tamil</span>
             </Link>
           </button>{" "}

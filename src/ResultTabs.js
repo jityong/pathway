@@ -54,11 +54,15 @@ const ResultTabs = props => {
   const [open, setOpen] = React.useState(false);
   const [selectedGP, setSelectedGP] = React.useState({
     properties: { HCI_NAME: "Please Choose a GP" },
-    distance: "0"
+    distance: "x",
+    price: "x",
+    rating: "x"
   });
   const [selectedPC, setSelectedPC] = React.useState({
     Name: "Please choose a Polyclinic",
-    distance: "0"
+    distance: "x",
+    price: "x",
+    rating: "x"
   });
   const [GPName, setGPName] = React.useState("none");
   const [PCName, setPCName] = React.useState("none");
@@ -69,11 +73,15 @@ const ResultTabs = props => {
 
   const handleGPClose = (clinic, name) => {
     setOpen(false);
+    clinic.price = "$$";
+    clinic.rating = "4";
     setSelectedGP(clinic);
     setGPName(name);
   };
   const handlePCClose = (clinic, name) => {
     setOpen(false);
+    clinic.price = "$";
+    clinic.rating = "4.3";
     setSelectedPC(clinic);
     setPCName(name);
   };
@@ -92,7 +100,7 @@ const ResultTabs = props => {
       </Grid>
       <Grid style={{ flexGrow: 1 }} direction="row">
         <Grid container justify="center">
-          <CompareDialog GP={selectedGP} PC={selectedPC} />
+          <CompareDialog GP={selectedGP} PC={selectedPC} formData={props.formData}/>
         </Grid>
       </Grid>
       <hr/>
