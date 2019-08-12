@@ -75,22 +75,22 @@ export class CompareDialog extends Component {
             complications) chronic visit, capped at $480 per year
           </p>
         ) : userSubsidyType === "CHAS Orange" ? (
-          <p style={{ fontSize: "2.5vw" }}>
+          <p style={{ fontSize: "1em" }}>
             Subsidy of max $50 per visit (both consult and medx) for simple
             chronic visit, capped at $200 per year <hr /> Subsidy of max $75 per
             visit (both consult and medx) for complicated chronic visit, capped
             at $300 per year
           </p>
         ) : userSubsidyType === "PG" ? (
-          <p style={{ fontSize: "2.5vw" }}>
+          <p style={{ fontSize: "1em" }}>
             Subsidy of max $90 per visit (both consult and medx) for simple
             chronic visit, capped at $360 per year <hr /> Subsidy of max $135
             per visit (both consult and medx) for complicated chronic visit,
             capped at $540 per year
           </p>
         ) : (
-          <p style={{ fontSize: "2.5vw" }}>
-            Average of $30 (normal and new visit) Lower price for regular
+          <p style={{ fontSize: "1em" }}>
+            ~ $30 (normal and new visit) Lower price for regular
             visits, at GP’s discretion
           </p>
         ),
@@ -102,9 +102,9 @@ export class CompareDialog extends Component {
           ? "$32.70"
           : "$51.50"
       ),
-      createData("Drug Prices", " ", " "),
+      createData("Drugs & Tests Prices", " ", " "),
       createData(
-        "1. Metformin",
+        "Metformin [Drug]",
         "-",
         userAge > 65 ? (
           <p>Capped at $0.70/week</p>
@@ -121,7 +121,7 @@ export class CompareDialog extends Component {
         )
       ),
       createData(
-        "2. Sulfonylureas (Glipizide)",
+        "Sulfonylureas (Glipizide) [Drug]",
         "-",
         userAge > 65 ? (
           <p>Capped at $0.70/week</p>
@@ -138,22 +138,24 @@ export class CompareDialog extends Component {
         )
       ),
       createData(
-        "3. HbA1c",
-        "Average $10",
+        "HbA1c [Drug]",
+        "~ $10",
         userNationality === "Singaporean" ? (
-          <p style={{ fontSize: "3vw" }}>
+          <p style={{ fontSize: "1em" }}>
             HbA1c => $14.20
             <hr /> DM panel(HbA1c + renal panel, lipids, liver panel etc) =>
             capped at $21.70
           </p>
         ) : (
-          <p style={{ fontSize: "3vw" }}>
+          <p style={{ fontSize: "1em" }}>
             HbA1c => $14.20
             <hr /> DM panel(HbA1c + renal panel, lipids, liver panel etc) =>
             $36.40
           </p>
         )
-      )
+      ),
+      createData("DRP [Test]","~$16", "$12.80"),
+      createData("DFS [Test]","~$16","$12.80")
     ];
     const handleToggle = () => {
       this.setState({

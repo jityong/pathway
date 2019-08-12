@@ -13,7 +13,7 @@ import GpDialog from "./GpDialog";
 // import { display } from "@material-ui/system";
 import CompareDialog from "./CompareDialog";
 import Grid from "@material-ui/core/Grid";
-import Paper from '@material-ui/core/Paper';
+import Paper from "@material-ui/core/Paper";
 
 function TabContainer({ children, dir }) {
   return (
@@ -40,8 +40,8 @@ const ResultTabs = props => {
   const theme = useTheme();
   const [value, setValue] = React.useState(0);
   const [state, setState] = React.useState({
-    sortByLoc: true,
-  })
+    sortByLoc: true
+  });
 
   function handleChange(event, newValue) {
     setValue(newValue);
@@ -88,22 +88,25 @@ const ResultTabs = props => {
 
   return (
     <div className={classes.root}>
-  
       <Grid style={{ flexGrow: 1 }} direction="row">
         <Grid container justify="space-evenly">
           <Grid item>Selected GP: {GPName}</Grid>
           <Grid item>
-            Selected PolyClinic: {PCName}
+            <p style={{ fontSize: "1em" }}>Selected PolyClinic: {PCName}</p>
             {/* {console.log(selectedGP)} */}
           </Grid>
         </Grid>
       </Grid>
       <Grid style={{ flexGrow: 1 }} direction="row">
         <Grid container justify="center">
-          <CompareDialog GP={selectedGP} PC={selectedPC} formData={props.formData}/>
+          <CompareDialog
+            GP={selectedGP}
+            PC={selectedPC}
+            formData={props.formData}
+          />
         </Grid>
       </Grid>
-      <hr/>
+      <hr />
       <AppBar position="static" color="default">
         <Tabs
           value={value}
