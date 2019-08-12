@@ -74,14 +74,14 @@ const ResultTabs = props => {
   const handleGPClose = (clinic, name) => {
     setOpen(false);
     clinic.price = "$$";
-    clinic.rating = "4";
+    clinic.rating = "4.3";
     setSelectedGP(clinic);
     setGPName(name);
   };
   const handlePCClose = (clinic, name) => {
     setOpen(false);
     clinic.price = "$";
-    clinic.rating = "4.3";
+    clinic.rating = "4.0";
     setSelectedPC(clinic);
     setPCName(name);
   };

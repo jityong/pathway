@@ -20,6 +20,9 @@ class Form extends React.Component {
     const { name, value } = event.target;
     return this.setState({ [name]: value });
   }
+  afterSubmission(event) {
+    event.preventDefault();
+  }
   render() {
     return (
       //why is my required attribute not working...
@@ -151,7 +154,10 @@ class Form extends React.Component {
 
               <br />
               <br />
-              <button className="btn btn-primary" type="submit">
+              <button
+                className="btn btn-primary"
+                onSubmit={this.afterSubmission}
+              >
                 <Link
                   to={{
                     pathname: "/FilteredResult",

@@ -90,8 +90,8 @@ export class CompareDialog extends Component {
           </p>
         ) : (
           <p style={{ fontSize: "1em" }}>
-            ~ $30 (normal and new visit) Lower price for regular
-            visits, at GP’s discretion
+            ~ $30 (normal and new visit) Lower price for regular visits, at GP’s
+            discretion
           </p>
         ),
         userNationality === "Singaporean"
@@ -154,8 +154,8 @@ export class CompareDialog extends Component {
           </p>
         )
       ),
-      createData("DRP [Test]","~$16", "$12.80"),
-      createData("DFS [Test]","~$16","$12.80")
+      createData("DRP [Test]", "~$16", "$12.80"),
+      createData("DFS [Test]", "~$16", "$12.80")
     ];
     const handleToggle = () => {
       this.setState({
@@ -204,6 +204,8 @@ export class CompareDialog extends Component {
                           </MyButton>
                           <Dialog open={priceOpen} onClose={handlePriceToggle}>
                             <DialogContent>
+                          
+                                <p style={{fontWeight:"bold", textDecoration:"underline"}}>Cost Breakdown</p>                          
                               <Table>
                                 <TableHead>
                                   <TableRow>
