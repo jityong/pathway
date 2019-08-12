@@ -5,6 +5,9 @@
   background-color: #4d92fb;
 
 } */
+html, body {
+  overflow: hidden;
+}
 .loginButton {
   text-align: center;
   font: "Roboto Condensed";
