@@ -89,7 +89,7 @@ const ResultTabs = props => {
   return (
     <div className={classes.root}>
       <Grid style={{ flexGrow: 1 }} direction="row">
-        <Grid container justify="left">
+        <Grid container justify="space-evenly">
           <Grid item>Selected GP: {GPName}</Grid>
           <Grid item>
             <p style={{ fontSize: "1em" }}>Selected PolyClinic: {PCName}</p>
