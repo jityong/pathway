@@ -156,7 +156,7 @@ class Form extends React.Component {
               <br />
               <button
                 className="btn btn-primary"
-                onSubmit={this.afterSubmission}
+                  onSubmit={this.afterSubmission}
               >
                 <Link
                   to={{

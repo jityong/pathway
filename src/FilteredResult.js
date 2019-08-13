@@ -94,7 +94,7 @@ class FilteredResult extends React.Component {
         <Grid container justify="center">
           <h2>
             Filtered clinics for{" "}
-            <span style={{ fongWeight: "bold", textDecoration: "underline" }}>
+            <span style={{ fontWeight: "bold", textDecoration: "underline" }}>
               S{formData.postalCode}
             </span> {" "}
             {formData.subsidyType === ""
