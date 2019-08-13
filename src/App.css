@@ -33,6 +33,12 @@
   minHeight: 100vh;
   minWidth: 100vw;
 }
+
+body {
+    min-height: 100vh;
+}
+
+
 /* footer {
   position: absolute;
   bottom: 0;
@@ -48,6 +54,9 @@
   minWidth: 100vw;
   /* overflow: hidden; */
 }
+
+
+
 
 #map {
   height: 100vh;
