@@ -48,22 +48,22 @@ export class CompareDialog extends Component {
       userAge,
       userSubsidyType
     } = this.state;
-    const { GP, PC, formData } = this.props;
+    const { clinicOne, clinicTwo, formData } = this.props;
     function createData(name, gp, pc) {
       return { name, gp, pc };
     }
     const rows = [
-      createData("Name", GP.properties.HCI_NAME, PC.Name),
+      createData("Name", clinicOne.name, clinicTwo.name),
       createData(
         "Distance",
-        parseFloat(GP.distance).toFixed(2),
-        parseFloat(PC.distance).toFixed(2)
+        parseFloat(clinicOne.distance).toFixed(2),
+        parseFloat(clinicTwo.distance).toFixed(2)
       ),
-      createData("Price", GP.price, PC.price),
-      createData("Ratings", GP.rating, PC.rating)
+      createData("Price", clinicOne.price, clinicTwo.price),
+      createData("Ratings", clinicOne.rating, clinicTwo.rating)
     ];
     const priceRows = [
-      createData("Name", GP.properties.HCI_NAME, PC.Name),
+      createData("Name", clinicOne.name, clinicTwo.name),
       createData(
         "Consultation Fee",
         userSubsidyType === "CHAS Blue" ? (
@@ -167,8 +167,8 @@ export class CompareDialog extends Component {
         priceOpen: !this.state.priceOpen
       });
     };
-    return GP === null || PC === null ? (
-      "Please select 1 GP and 1 Polyclinic"
+    return clinicOne === null || clinicTwo === null ? (
+      "Please select 2 clinics for comparison."
     ) : (
       <div>
         <Button variant="contained" color="primary" onClick={handleToggle}>
@@ -185,8 +185,8 @@ export class CompareDialog extends Component {
               <TableHead>
                 <TableRow>
                   <TableCell> </TableCell>
-                  <TableCell align="right">GP </TableCell>
-                  <TableCell align="right">Polyclinic </TableCell>
+                  <TableCell align="right">{clinicOne.type} </TableCell>
+                  <TableCell align="right">{clinicTwo.type} </TableCell>
                 </TableRow>
               </TableHead>
               <TableBody>
@@ -268,7 +268,7 @@ export class CompareDialog extends Component {
                       to={{
                         pathname: "/selectedChoice",
                         state: {
-                          choice: GP
+                          choice: clinicOne
                         }
                       }}
                     >
@@ -286,7 +286,7 @@ export class CompareDialog extends Component {
                       to={{
                         pathname: "/selectedChoice",
                         state: {
-                          choice: PC
+                          choice: clinicTwo
                         }
                       }}
                     >

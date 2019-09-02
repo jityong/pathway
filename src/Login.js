@@ -30,7 +30,7 @@ function Login() {
             display:"block"
           }}
         >
-          Make informed decision on
+          Make an informed decision on
           <br />
           your choice of primary-cary provider
         </p>
