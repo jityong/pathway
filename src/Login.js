@@ -32,7 +32,7 @@ function Login() {
         >
           Make an informed decision on
           <br />
-          your choice of primary-cary provider
+          your choice of primary-care provider
         </p>
         <div
           style={{
