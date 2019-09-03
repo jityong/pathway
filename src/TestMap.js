@@ -8,6 +8,7 @@ const mapStyles = {
   height: "100%"
 };
 
+
 export class TestMap extends Component {
   displayCurrent = () => {
     return (
@@ -59,13 +60,13 @@ export class TestMap extends Component {
   };
 
   render() {
-    console.log(this.props.coord[1],this.props.coord[0]);
+    console.log(this.props.coord[1], this.props.coord[0]);
     return (
       <Map
         google={this.props.google}
         zoom={15}
         style={mapStyles}
-        initialCenter={{ lat: this.props.coord[1], lng: this.props.coord[0] }}
+        initialCenter={{ lat: this.props.coord[1], lng: this.props.coord[0]}}
       >
         {this.displayGP()}
         {this.displayPC()}

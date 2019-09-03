@@ -5,9 +5,9 @@ import Language from "./Language";
 import DischargeSummary from "./DischargeSummary";
 import GeneralInfo from "./GeneralInfo";
 import Form from "./Form";
-import FilteredResult from "./FilteredResult"
-import selectedChoice from "./selectedChoice"
-import confirmedChoice from "./confirmedChoice"
+import FilteredResult from "./FilteredResult";
+import selectedChoice from "./selectedChoice";
+import confirmedChoice from "./confirmedChoice";
 //here is where i put all the routes tgt. can include the help button here which will
 //then be present in all the subsequent pages
 
@@ -29,7 +29,6 @@ class App extends React.Component {
             <Route path="/FilteredResult" exact component={FilteredResult} />
             <Route path="/selectedChoice" exact component={selectedChoice} />
             <Route path="/confirmedChoice" exact component={confirmedChoice} />
-
           </Switch>
         </div>
       </Router>
