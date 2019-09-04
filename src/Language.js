@@ -56,7 +56,7 @@ function Language() {
           style={{ backgroundColor: "#FF6565", borderRadius: "15px" }}
         >
           <Link to="/GeneralInfo">
-            <span style={{ fontSize: "10vw", color: "black" }}>English</span>
+            <span style={{ fontSize: "7vw", color: "black" }}>English</span>
           </Link>
         </Button>{" "}
       </div>
@@ -69,7 +69,7 @@ function Language() {
           onClick={handleAlert}
         >
           <Link to="/GeneralInfo">
-            <span style={{ fontSize: "10vw", color: "black" }}>中文</span>
+            <span style={{ fontSize: "7vw", color: "black" }}>中文</span>
           </Link>
         </Button>{" "}
       </div>
@@ -82,7 +82,7 @@ function Language() {
           onClick={handleAlert}
         >
           <Link to="/GeneralInfo">
-            <span style={{ fontSize: "10vw", color: "black" }}>
+            <span style={{ fontSize: "7vw", color: "black" }}>
               Bahasa Melayu
             </span>
           </Link>
@@ -97,7 +97,7 @@ function Language() {
           onClick={handleAlert}
         >
           <Link to="/GeneralInfo">
-            <span style={{ fontSize: "10vw", color: "black" }}>Tamil</span>
+            <span style={{ fontSize: "7vw", color: "black" }}>Tamil</span>
           </Link>
         </Button>{" "}
       </div>

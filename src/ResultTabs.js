@@ -24,8 +24,6 @@ TabContainer.propTypes = {
   dir: PropTypes.string.isRequired
 };
 
-
-
 const ResultTabs = props => {
   const theme = useTheme();
   const [value, setValue] = React.useState(0);
@@ -56,7 +54,12 @@ const ResultTabs = props => {
     clinic.rating = "4.3";
     clinic.type = "GP";
     clinic.name = name;
-    if (!clinicOne) {
+    if (
+      (clinicOne || clinicTwo) &&
+      (clinic === clinicOne || clinic === clinicTwo)
+    ) {
+      alert("Cannot compare two same clinics!");
+    } else if (!clinicOne) {
       setClinicOne(clinic);
     } else if (!clinicTwo) {
       setClinicTwo(clinic);
@@ -70,8 +73,12 @@ const ResultTabs = props => {
     clinic.rating = "4.0";
     clinic.name = name;
     clinic.type = "Polyclinic";
-    setClinicTwo(clinic);
-    if (!clinicOne) {
+    if (
+      (clinicOne || clinicTwo) &&
+      (clinic === clinicOne || clinic === clinicTwo)
+    ) {
+      alert("Cannot compare two same clinics!");
+    } else if (!clinicOne) {
       setClinicOne(clinic);
     } else if (!clinicTwo) {
       setClinicTwo(clinic);
@@ -79,21 +86,26 @@ const ResultTabs = props => {
       alert("Cannot compare more than 2 clinics");
     }
   };
-  const callbackFunction = (clinic) =>{
-    if (!clinicOne) {
+  const callbackFunction = clinic => {
+    if (
+      (clinicOne || clinicTwo) &&
+      (clinic === clinicOne || clinic === clinicTwo)
+    ) {
+      alert("Cannot compare two same clinics!");
+    } else if (!clinicOne) {
       setClinicOne(clinic);
     } else if (!clinicTwo) {
       setClinicTwo(clinic);
     } else {
       alert("Cannot compare more than 2 clinics");
     }
-  }
+  };
   const callbackDeleteOne = () => {
     setClinicOne(null);
-  }
+  };
   const callbackDeleteTwo = () => {
     setClinicTwo(null);
-  }
+  };
 
   const handleGPPageChange = pageNumber => {
     setActiveGPPage(pageNumber);
@@ -116,6 +128,7 @@ const ResultTabs = props => {
           selectedGP={clinic}
           open={open}
           onClose={handleGPClose}
+          formData={props.formData}
         />
         <hr />
       </div>
@@ -133,6 +146,7 @@ const ResultTabs = props => {
           selectedPC={clinic}
           open={open}
           onClose={handlePCClose}
+          formData={props.formData}
         />
         <hr />
       </div>
@@ -144,9 +158,8 @@ const ResultTabs = props => {
         clinicOne={clinicOne}
         clinicTwo={clinicTwo}
         formData={props.formData}
-        callbackDeleteOne = {callbackDeleteOne}
-        callbackDeleteTwo = {callbackDeleteTwo}
-
+        callbackDeleteOne={callbackDeleteOne}
+        callbackDeleteTwo={callbackDeleteTwo}
       />
       <AppBar position="static" color="default">
         <Tabs
@@ -177,8 +190,9 @@ const ResultTabs = props => {
             onChange={handleGPPageChange}
           />
         </TabContainer>
-        <TabContainer dir={theme.direction}>{filteredPC}
-        <Pagination
+        <TabContainer dir={theme.direction}>
+          {filteredPC}
+          <Pagination
             default
             activePage={activePCPage}
             itemsCountPerPage={itemPerPage}
@@ -186,10 +200,15 @@ const ResultTabs = props => {
             pageRangeDisplayed={5}
             onChange={handlePCPageChange}
           />
-          </TabContainer>
+        </TabContainer>
         <TabContainer dir={theme.direction}>
           {props.currentLoc[0] !== 0 && (
-            <TestMap coord={props.currentLoc} GP={props.GP} PC={props.PC} callbackFunction={callbackFunction}/>
+            <TestMap
+              coord={props.currentLoc}
+              GP={props.GP}
+              PC={props.PC}
+              callbackFunction={callbackFunction}
+            />
           )}
         </TabContainer>
       </SwipeableViews>

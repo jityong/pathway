@@ -19,7 +19,8 @@ import {
   DialogActions,
   DialogContent,
   DialogContentText,
-  DialogTitle
+  DialogTitle,
+  Typography
 } from "@material-ui/core";
 import { maxWidth, fontSize } from "@material-ui/system";
 export class CompareDialog extends Component {
@@ -53,7 +54,11 @@ export class CompareDialog extends Component {
       return { name, gp, pc };
     }
     const rows = [
-      createData("Name", clinicOne.name, clinicTwo.name),
+      createData(
+        <span style={{ fontWeight: "bold" }}>Name</span>,
+        <span style={{ fontWeight: "bold" }}>{clinicOne.name}</span>,
+        <span style={{ fontWeight: "bold" }}> {clinicTwo.name}</span>
+      ),
       createData(
         "Distance",
         parseFloat(clinicOne.distance).toFixed(2),
@@ -63,99 +68,204 @@ export class CompareDialog extends Component {
       createData("Ratings", clinicOne.rating, clinicTwo.rating)
     ];
     const priceRows = [
-      createData("Name", clinicOne.name, clinicTwo.name),
       createData(
         "Consultation Fee",
         userSubsidyType === "CHAS Blue" ? (
-          <p>
-            Subsidy of max $80 per visit (both consultation and medicine) for
-            simple chronic visit, capped at $320 per year <hr />
-            Subsidy of max $120 per visit (both consultation and medicine) for
-            complicated (meaning got multiple conditions, or DM with
-            complications) chronic visit, capped at $480 per year
-          </p>
+          <p>$12-15</p>
         ) : userSubsidyType === "CHAS Orange" ? (
-          <p style={{ fontSize: "1em" }}>
-            Subsidy of max $50 per visit (both consult and medx) for simple
-            chronic visit, capped at $200 per year <hr /> Subsidy of max $75 per
-            visit (both consult and medx) for complicated chronic visit, capped
-            at $300 per year
-          </p>
+          <p style={{ fontSize: "1em" }}>$12-15</p>
         ) : userSubsidyType === "PG" ? (
-          <p style={{ fontSize: "1em" }}>
-            Subsidy of max $90 per visit (both consult and medx) for simple
-            chronic visit, capped at $360 per year <hr /> Subsidy of max $135
-            per visit (both consult and medx) for complicated chronic visit,
-            capped at $540 per year
-          </p>
+          <p style={{ fontSize: "1em" }}>$5-8</p>
         ) : (
-          <p style={{ fontSize: "1em" }}>
-            ~ $30 (normal and new visit) Lower price for regular visits, at GP’s
-            discretion
-          </p>
+          <p style={{ fontSize: "1em" }}>$45-55</p>
         ),
-        userNationality === "Singaporean"
+        userSubsidyType === "PG" && userAge > 65
+          ? "$3.45"
+          : userNationality === "Singaporean"
           ? userAge < 18 || userAge > 65
             ? "$6.90"
             : "$13.20"
           : userNationality === "Permanent Resident"
           ? "$32.70"
-          : "$51.50"
-      ),
-      createData("Drugs & Tests Prices", " ", " "),
-      createData(
-        "Metformin [Drug]",
-        "-",
-        userAge > 65 ? (
-          <p>Capped at $0.70/week</p>
-        ) : userNationality === "Singaporean" ||
-          userSubsidyType === "CHAS orange" ||
-          userSubsidyType === "CHAS blue" ? (
-          <p> Capped at $.140/week</p>
-        ) : userNationality === "Permanent Resident" ? (
-          <p> (PR) Capped at $2.10/week</p>
-        ) : (
-          <p>
-            (Non-Residents) $2.80/week or itemised price, whichever is higher
-          </p>
-        )
+          : "$51.47"
       ),
       createData(
-        "Sulfonylureas (Glipizide) [Drug]",
-        "-",
-        userAge > 65 ? (
-          <p>Capped at $0.70/week</p>
-        ) : userNationality === "Singaporean" ||
-          userSubsidyType === "CHAS orange" ||
-          userSubsidyType === "CHAS blue" ? (
-          <p> Capped at $.140/week</p>
-        ) : userNationality === "Permanent Resident" ? (
-          <p> (PR) Capped at $2.10/week</p>
-        ) : (
-          <p>
-            (Non-Residents) $2.80/week or itemised price, whichever is higher
-          </p>
-        )
+        <span style={{ color: "grey" }}>"Drugs & Tests Prices"</span>,
+        <span style={{ color: "grey" }}>"Drugs & Tests Prices"</span>,
+        <span style={{ color: "grey" }}>"Drugs & Tests Prices"</span>
       ),
       createData(
-        "HbA1c [Drug]",
-        "~ $10",
+        "Metformin HCL 250MG ",
+        userNationality === "Singaporean"
+          ? userSubsidyType === "CHAS Orange" || userSubsidyType === "CHAS Blue"
+            ? "Capped at $.140/week or $0.025/tablet \n (whichever is cheaper)"
+            : userSubsidyType === "PG"
+            ? "Capped at $.140/week or $0.0125/tablet \n (whichever is cheaper)"
+            : "Capped at $.140/week or $0.075/tablet \n (whichever is cheaper)"
+          : "$0.10/tablet",
+        userNationality === "Singaporean"
+          ? userAge > 65
+            ? userSubsidyType === "PG"
+              ? "$0.70/week or $0.0125/tablet \n (whichever is cheaper)"
+              : "$0.70/week or $0.10/tablet \n (whichever is cheaper)"
+            : userSubsidyType === "CHAS Orange" ||
+              userSubsidyType === "CHAS Blue"
+            ? "Capped at $.140/week or $0.025/tablet \n (whichever is cheaper)"
+            : "$0.075/tablet"
+          : "$0.10/tablet"
+      ),
+      createData(
+        "METFORMIN 500MG XR (GLUCOPHAGE XR)",
+        "$0.25/tablet",
+        "$0.25/tablet"
+      ),
+      createData(
+        "Metformin HCL 500MG ",
+        userNationality === "Singaporean"
+          ? userSubsidyType === "CHAS Orange" || userSubsidyType === "CHAS Blue"
+            ? "Capped at $1.40/week or $0.03/tablet \n(whichever is cheaper)"
+            : userSubsidyType === "PG"
+            ? "Capped at $.140/week or $0.015/tablet \n(whichever is cheaper)"
+            : "Capped at $.140/week or $0.09/tablet \n(whichever is cheaper)"
+          : "$0.12/tablet",
+        "-"
+      ),
+      createData(
+        "Metformin HCL 850MG ",
+        userNationality === "Singaporean"
+          ? userSubsidyType === "CHAS Orange" || userSubsidyType === "CHAS Blue"
+            ? "Capped at $1.40/week or $0.03/tablet \n(whichever is cheaper)"
+            : userSubsidyType === "PG"
+            ? "Capped at $.140/week or $0.015/tablet \n(whichever is cheaper)"
+            : "Capped at $.140/week or $0.09/tablet \n(whichever is cheaper)"
+          : "$0.12/tablet",
+        userNationality === "Singaporean"
+          ? userAge > 65
+            ? userSubsidyType === "PG"
+              ? "$0.70/week or $0.015/tablet \n(whichever is cheaper)"
+              : "$0.70/week or $0.12/tablet \n(whichever is cheaper)"
+            : userSubsidyType === "CHAS Orange" ||
+              userSubsidyType === "CHAS Blue"
+            ? "Capped at $1.40/week or $0.03/tablet \n(whichever is cheaper)"
+            : "$0.09/tablet"
+          : "$0.12/tablet"
+      ),
+
+      createData(
+        "Sulfonylureas (Glipizide)",
+        "Metformin HCL 250MG ",
+        userNationality === "Singaporean"
+          ? userSubsidyType === "CHAS Orange" || userSubsidyType === "CHAS Blue"
+            ? "Capped at $.140/week or $0.025/tablet \n(whichever is cheaper)"
+            : userSubsidyType === "PG"
+            ? "Capped at $.140/week or $0.0125/tablet \n(whichever is cheaper)"
+            : "Capped at $.140/week or $0.075/tablet \n(whichever is cheaper)"
+          : "$0.10/tablet",
+        userNationality === "Singaporean"
+          ? userAge > 65
+            ? userSubsidyType === "PG"
+              ? "$0.70/week or $0.0125/tablet \n(whichever is cheaper)"
+              : "$0.70/week or $0.10/tablet \n(whichever is cheaper)"
+            : userSubsidyType === "CHAS Orange" ||
+              userSubsidyType === "CHAS Blue"
+            ? "Capped at $1.40/week or $0.025/tablet \n(whichever is cheaper)"
+            : "$0.075/tablet"
+          : "$0.10/tablet"
+      ),
+      createData(
+        "DAPAGLIFLOZIN 10MG TAB (FORXIGA)",
+        "$1.36/tablet",
+        "$1.36/tablet"
+      ),
+      createData(
+        "EMPAGLIFLOZIN 10MG TAB (JARDIANCE)",
+        "$1.79/tablet",
+        "$1.29/tablet"
+      ),
+      createData(
+        "EMPAGLIFLOZIN 25MG TAB (JARDIANCE)",
+        "$1.98/tablet",
+        "$1.29/tablet"
+      ),
+      createData(
+        "DPP-4(SITAGLIPTIN 100MG TAB (JANUVIA))",
+        "$2.79/tablet",
+        "$2.28/tablet"
+      ),
+      createData("DPP-4(SITAGLIPTIN 25MG TAB (JANUVIA))", "$2.76/tablet", "-"),
+      createData(
+        "DPP-4(SITAGLIPTIN 50MG TAB (JANUVIA))",
+        "$2.79/tablet",
+        "$2./tablet"
+      ),
+      createData(
+        "DPP-4(LINAGLIPTIN 5MG TAB (TRAJENTA))",
+        "$1.88/tablet",
+        "$1.36/tablet"
+      ),
+      createData(
+        "NovoMix insulin (Insulin Aspart) - NOVOMIX 30 FLEXPEN 3ML",
+        userNationality === "Singaporean"
+          ? userSubsidyType === "CHAS Orange" || userSubsidyType === "CHAS Blue"
+            ? "$1.08/val"
+            : userSubsidyType === "PG"
+            ? "$0.540/val"
+            : "3.24/val"
+          : "$8.63/val",
+        "$19.6/pen"
+      ),
+      createData(
+        "HbA1c",
+        "$10/test",
         userNationality === "Singaporean" ? (
           <p style={{ fontSize: "1em" }}>
-            HbA1c => $14.20
-            <hr /> DM panel(HbA1c + renal panel, lipids, liver panel etc) =>
-            capped at $21.70
+            HbA1c => $14.20/test
+            <hr /> DM panel(HbA1c + renal panel, lipids, liver panel etc) <br />{" "}
+            => capped at $21.70/test
           </p>
         ) : (
           <p style={{ fontSize: "1em" }}>
-            HbA1c => $14.20
+            HbA1c => $14.20/test
             <hr /> DM panel(HbA1c + renal panel, lipids, liver panel etc) =>
-            $36.40
+            $36.40/test
           </p>
         )
       ),
-      createData("DRP [Test]", "~$16", "$12.80"),
-      createData("DFS [Test]", "~$16", "$12.80")
+      createData(
+        "Diabetic Nurse Consultation",
+        userSubsidyType === "PG"
+          ? "$5/session"
+          : userSubsidyType === "CHAS Orange" || userSubsidyType === "CHAS Blue"
+          ? "$9/session"
+          : "$16/session",
+        "-"
+      ),
+      createData(
+        "DRP - Diabetic Retinal Photography",
+        userSubsidyType === "PG"
+          ? "$5/session"
+          : userSubsidyType === "CHAS Orange" || userSubsidyType === "CHAS Blue"
+          ? "$9/session"
+          : "$16/session",
+        userNationality === "Singaporean"
+          ? "$12.80/session"
+          : userNationality === "Permanent Resident"
+          ? "$23/session"
+          : "$49.80/session"
+      ),
+      createData(
+        "DFS - Diabetic Foot Screening",
+        userSubsidyType === "PG"
+          ? "$5/session"
+          : userSubsidyType === "CHAS Orange" || userSubsidyType === "CHAS Blue"
+          ? "$9/session"
+          : "$16/session",
+        userNationality === "Singaporean"
+          ? "$12.80/session"
+          : userNationality === "Permanent Resident"
+          ? "$23/session"
+          : "$49.80/session"
+      )
     ];
     const handleToggle = () => {
       this.setState({
@@ -204,6 +314,7 @@ export class CompareDialog extends Component {
                             onClick={handlePriceToggle}
                             tip="More Details"
                           >
+                            <Typography variant="subtitle1">Expand</Typography>
                             <ExpandMoreIcon />
                           </MyButton>
                           <Dialog open={priceOpen} onClose={handlePriceToggle}>
@@ -225,28 +336,50 @@ export class CompareDialog extends Component {
                                       align="right"
                                     >
                                       {" "}
-                                      GP{" "}
+                                      {clinicOne.type}
                                     </TableCell>
 
                                     <TableCell
                                       style={{ minWidth: 200, maxWidth: 200 }}
                                       align="right"
                                     >
-                                      Polyclinic{" "}
+                                      {clinicTwo.type}
                                     </TableCell>
                                   </TableRow>
                                 </TableHead>
                                 <TableBody>
+                                  <TableRow>
+                                    <TableCell component="th" scope="row">
+                                      <span style={{ fontWeight: "bolder" }}>
+                                        Name
+                                      </span>
+                                    </TableCell>
+                                    <TableCell component="th" scope="row">
+                                      <span style={{ fontWeight: "bolder" }}>
+                                        {clinicOne.name}
+                                      </span>
+                                    </TableCell>
+                                    <TableCell component="th" scope="row">
+                                      <span style={{ fontWeight: "bolder" }}>
+                                        {" "}
+                                        {clinicTwo.name}
+                                      </span>
+                                    </TableCell>
+                                  </TableRow>
                                   {priceRows.map(row => (
                                     <TableRow key={row.name}>
                                       <TableCell component="th" scope="row">
                                         {row.name}
                                       </TableCell>
                                       <TableCell align="right">
-                                        {row.gp}
+                                        {clinicOne.type === "GP"
+                                          ? row.gp
+                                          : row.pc}
                                       </TableCell>
                                       <TableCell align="right">
-                                        {row.pc}
+                                        {clinicTwo.type === "GP"
+                                          ? row.gp
+                                          : row.pc}{" "}
                                       </TableCell>
                                     </TableRow>
                                   ))}
@@ -260,7 +393,7 @@ export class CompareDialog extends Component {
                       )}
                     </TableCell>
                     <TableCell align="right">{row.gp}</TableCell>
-                    <TableCell align="right">{row.pc}</TableCell>
+                    <TableCell align="right">{row.pc} </TableCell>
                   </TableRow>
                 ))}
               </TableBody>
@@ -277,7 +410,8 @@ export class CompareDialog extends Component {
                       to={{
                         pathname: "/SelectedChoice",
                         state: {
-                          choice: clinicOne
+                          choice: clinicOne,
+                          formData: this.props.formData
                         }
                       }}
                     >
@@ -295,7 +429,8 @@ export class CompareDialog extends Component {
                       to={{
                         pathname: "/SelectedChoice",
                         state: {
-                          choice: clinicTwo
+                          choice: clinicTwo,
+                          formData: this.props.formData
                         }
                       }}
                     >

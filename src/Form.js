@@ -101,7 +101,7 @@ class Form extends React.Component {
           InputProps={{
             startAdornment: <InputAdornment position="start">S</InputAdornment>
           }}
-          style={{ width: "65%" }}
+          style={{ width: "100%" }}
         />
         <br />
         <hr />
@@ -118,11 +118,11 @@ class Form extends React.Component {
           InputProps={{
             startAdornment: <InputAdornment position="start" />
           }}
-          style={{ width: "65%" }}
+          style={{  width: "100%" }}
         />
         <br />
         <hr />
-        <FormControl variant="outlined" style={{ width: "65%" }}>
+        <FormControl variant="outlined" style={{ width: "100%" }}>
           <InputLabel>Nationality</InputLabel>
           <Select
             required
@@ -141,7 +141,7 @@ class Form extends React.Component {
               <em>None</em>
             </MenuItem>
             <MenuItem value="Singaporean">Singaporean</MenuItem>
-            <MenuItem value="Permanent Resident}">Permanent Resident}</MenuItem>
+            <MenuItem value="Permanent Resident">Permanent Resident</MenuItem>
             <MenuItem value="Non-Resident">Non-Resident</MenuItem>
           </Select>
         </FormControl>

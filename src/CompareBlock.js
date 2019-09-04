@@ -30,7 +30,7 @@ const CompareBlock = props => {
   const [clinicTwo, setClinicTwo] = React.useState();
   const [open, setOpen] = React.useState(false);
   const [openTwo, setOpenTwo] = React.useState(false);
-  
+
   useEffect(() => {
     setClinicOne(props.clinicOne);
     setClinicTwo(props.clinicTwo);
@@ -39,11 +39,11 @@ const CompareBlock = props => {
   function handleClickOpen() {
     setOpen(true);
   }
-  
+
   function handleClickOpenTwo() {
     setOpenTwo(true);
   }
-  
+
   function handleClickClose() {
     setOpen(false);
   }
@@ -76,18 +76,21 @@ const CompareBlock = props => {
               Distance:
               {parseFloat(clinicOne.distance).toFixed(2)}km away
               <hr />
-              <Button>
-                <Link
-                  to={{
-                    pathname: "/SelectedChoice",
-                    state: {
-                      choice: clinicOne
-                    }
-                  }}
-                >
-                  <span>Select</span>
-                </Link>
-              </Button>
+              <Link
+                to={{
+                  pathname: "/SelectedChoice",
+                  state: {
+                    choice: clinicOne,
+                    formData: props.formData
+                  }
+                }}
+              >
+                <Button size="large" style={{ backgroundColor: "#ff7c01" }}>
+                  <span style={{ textDecoration: "none", color: "white" }}>
+                    Select
+                  </span>
+                </Button>
+              </Link>
             </DialogContent>
           </Dialog>
         </Fragment>
@@ -107,18 +110,22 @@ const CompareBlock = props => {
               <hr /> Telephone: {clinicOne.Tel} <hr /> Distance:{" "}
               {parseFloat(clinicOne.distance).toFixed(2)}km away
               <hr />
-              <Button>
-                <Link
-                  to={{
-                    pathname: "/SelectedChoice",
-                    state: {
-                      choice: clinicOne
-                    }
-                  }}
-                >
-                  <span>Select</span>
-                </Link>
-              </Button>
+              <Link
+                to={{
+                  pathname: "/SelectedChoice",
+                  state: {
+                    choice: clinicOne,
+                    formData: props.formData
+
+                  }
+                }}
+              >
+                <Button size="large" style={{ backgroundColor: "#ff7c01" }}>
+                  <span style={{ textDecoration: "none", color: "white" }}>
+                    Select
+                  </span>
+                </Button>
+              </Link>
             </DialogContent>
           </Dialog>
         </Fragment>
@@ -143,18 +150,22 @@ const CompareBlock = props => {
               <hr /> Telephone: {clinicTwo.Tel} <hr /> Distance:{" "}
               {parseFloat(clinicTwo.distance).toFixed(2)}km away
               <hr />
-              <Button>
-                <Link
-                  to={{
-                    pathname: "/SelectedChoice",
-                    state: {
-                      choice: clinicTwo
-                    }
-                  }}
-                >
-                  <span>Select</span>
-                </Link>
-              </Button>
+              <Link
+                to={{
+                  pathname: "/SelectedChoice",
+                  state: {
+                    choice: clinicTwo,
+                    formData: props.formData
+
+                  }
+                }}
+              >
+                <Button size="large" style={{ backgroundColor: "#ff7c01" }}>
+                  <span style={{ textDecoration: "none", color: "white" }}>
+                    Select
+                  </span>
+                </Button>
+              </Link>
             </DialogContent>
           </Dialog>
         </Fragment>
@@ -182,18 +193,21 @@ const CompareBlock = props => {
               Distance:
               {parseFloat(clinicTwo.distance).toFixed(2)}km away
               <hr />
-              <Button>
-                <Link
-                  to={{
-                    pathname: "/SelectedChoice",
-                    state: {
-                      choice: clinicTwo
-                    }
-                  }}
-                >
-                  <span>Select</span>
-                </Link>
-              </Button>
+              <Link
+                to={{
+                  pathname: "/SelectedChoice",
+                  state: {
+                    choice: clinicTwo,
+                    formData: props.formData
+                  }
+                }}
+              >
+                <Button size="large" style={{ backgroundColor: "#ff7c01" }}>
+                  <span style={{ textDecoration: "none", color: "white" }}>
+                    Select
+                  </span>
+                </Button>
+              </Link>
             </DialogContent>
           </Dialog>
           <br />

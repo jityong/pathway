@@ -70,7 +70,8 @@ export class PcDialog extends Component {
                       to={{
                         pathname: "/SelectedChoice",
                         state: {
-                          choice: clinic
+                          choice: clinic,
+                          formData: this.props.formData
                         }
                       }}
                     >

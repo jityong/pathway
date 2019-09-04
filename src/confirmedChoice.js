@@ -73,14 +73,7 @@ export const ConfirmedChoice = props => {
           <Typography variant="h5" align="center" style={{ flexGrow: 1 }}>
             Summary
           </Typography>
-          <Link
-            to={{ pathname: "/ConfirmedChoice", state: { choice: choice } }}
-            style={{ textDecoration: "none", color: "white" }}
-          >
-            <IconButton edge="start" color="inherit" aria-label="menu">
-              <Typography variant="subtitle1">Confirm</Typography> <ArrowNext />
-            </IconButton>{" "}
-          </Link>
+              <Typography variant="subtitle1"><span style={{color:"#ff7c01"}}>----------------</span></Typography>
         </Toolbar>
       </AppBar>
       <br />

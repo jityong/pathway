@@ -8,12 +8,11 @@ import Typography from "@material-ui/core/Typography";
 import IconButton from "@material-ui/core/IconButton";
 import ArrowBack from "@material-ui/icons/ArrowBackIos";
 import ArrowNext from "@material-ui/icons/NavigateNext";
-import Background from "./PathwayBG.png"
 //haven't included any info here, can do styling for RWD(responsive web design)
 function GeneralInfo() {
 
   return (
-    <div style={{backgroundImage:`url(${Background})`,  backgroundSize: 'cover'}}>
+    <div >
       <AppBar position="static" style={{ backgroundColor: "#ff7c01" }}>
         <Toolbar>
         <Link to="/Language" style={{ textDecoration: "none", color: "white" }}>

@@ -79,7 +79,8 @@ export class GpDialog extends Component {
                       to={{
                         pathname: "/SelectedChoice",
                         state: {
-                          choice: clinic
+                          choice: clinic,
+                          formData: this.props.formData
                         }
                       }}
                     >
