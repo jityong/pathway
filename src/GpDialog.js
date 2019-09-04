@@ -71,19 +71,19 @@ export class GpDialog extends Component {
                 </Grid>
                 <Grid item>
                   <Button
-                    // variant="contained"
-                    // color="secondary"
+                    variant="contained"
+                    style={{ backgroundColor: "#ff7c01" }}
                     onClick={this.handleCompare}
                   >
                     <Link
                       to={{
-                        pathname: "/selectedChoice",
+                        pathname: "/SelectedChoice",
                         state: {
                           choice: clinic
                         }
                       }}
                     >
-                      <span>Select</span>
+                      <span style={{ color: "white" }}>Select</span>
                     </Link>
                   </Button>
                 </Grid>

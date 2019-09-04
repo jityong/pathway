@@ -49,9 +49,9 @@ body {
 .container {
   height: 100%;
   width: 100%;
-  background-color: #4d92fb;
-  minHeight: 100vh;
-  minWidth: 100vw;
+  /* background-color: #ff7c01; */
+  min-height: 100%;
+  min-width: 100%;
   /* overflow: hidden; */
 }
 
@@ -65,11 +65,11 @@ body {
 .pagination {
   display: inline-block;
   padding-left: 0;
-  color: blue;
+  color: grey;
 }
 .pagination > li {
   list-style: none;
-  border: 0.9px solid;
+  border: 0.5px solid;
 }
 .pagination > li > a,
 .pagination > li > span {
@@ -84,25 +84,25 @@ body {
   margin-left: -1px;
 }
 
-/* .pagination>li.active>a {
+.pagination>li.active>a {
   color: #fff;
-  background-color: #218838;
-  border-color: #1e7e34;
-} */
+  background-color: #ff7c01;
+  border-color: #ff7c01;
+}
 
-/* Style the active class (and buttons on mouse-over) */
+/* Style the active class (and buttons on mouse-over)
 /* .pagination > li > a:hover {
   background-color:  #218838;
   color: white;
 } */
-/* .pagination > li:first-child > a,
+/* .pagination > li:first-child > a, 
 .pagination > li:first-child > span {
   margin-left: 0;
     padding: 0px;
   border-bottom-left-radius: 4px;
   border-top-left-radius: 4px;
   display: none!important;
-} */
+} 
 /* .pagination > li:last-child > a,
 .pagination > li:last-child > span {
   border-bottom-right-radius: 4px;

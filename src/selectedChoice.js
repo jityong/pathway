@@ -1,83 +1,102 @@
-import React, { Component } from "react";
+import React, { useEffect, Component } from "react";
 import { Link } from "react-router-dom";
 import Grid from "@material-ui/core/Grid";
 import { Typography, Button, Card } from "@material-ui/core";
+import Paper from "@material-ui/core/Paper";
+import AppBar from "@material-ui/core/AppBar";
+import Toolbar from "@material-ui/core/Toolbar";
+import IconButton from "@material-ui/core/IconButton";
+import ArrowBack from "@material-ui/icons/ArrowBackIos";
+import HelpOutline from "@material-ui/icons/HelpOutline";
+import ArrowNext from "@material-ui/icons/NavigateNext";
+import { makeStyles } from "@material-ui/core/styles";
 
-export class selectedChoice extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      choice: this.props.location.state.choice
-    };
-    this.goBack = this.goBack.bind(this);
+const useStyles = makeStyles(theme => ({
+  root: {
+    padding: theme.spacing(3, 3)
   }
-  goBack() {
-    this.props.history.goBack();
+}));
+const SelectedChoice = props => {
+  const classes = useStyles();
+  function goBack() {
+    props.history.goBack();
   }
-  render() {
-    const { choice } = this.state;
-    const result =
-      choice.type === "GP" ? (
-        <div>
-          {choice.properties.HCI_NAME} <hr /> Address:{" "}
-          {choice.properties.BLK_HSE_NO} {choice.properties.STREET_NAME} #
-          {choice.properties.FLOOR_NO}-{choice.properties.UNIT_NO}{" "}
-          {choice.properties.BUILDING_NAME} Singapore{" "}
-          {choice.properties.PostalCode}
-          <hr /> Telephone: {choice.properties.Tel} <hr />
+  const [choice, setChoice] = React.useState(props.location.state.choice);
+
+  const result = (
+    <Paper sqaure="false" className={classes.root}>
+      {choice.type === "GP" ? (
+        <Typography variant="body2" align="center" style={{ flexGrow: 1 }}>
+          <Typography variant="h5" style={{ fontWeight: "bold" }}>
+            {choice.properties.HCI_NAME}
+          </Typography>{" "}
+          <br /> Address: {choice.properties.BLK_HSE_NO}{" "}
+          {choice.properties.STREET_NAME} #{choice.properties.FLOOR_NO}-
+          {choice.properties.UNIT_NO} {choice.properties.BUILDING_NAME}{" "}
+          Singapore {choice.properties.PostalCode}
+          <br /> Telephone: {choice.properties.Tel} <br />
           Applicable subsidies:{" "}
           {choice.properties.CLINIC_PROGRAMME_CODE.join(", ")}
-        </div>
+          <hr />
+          <Typography variant="h6">Price breakdown:</Typography>
+        </Typography>
       ) : (
-        <div>
+        <Typography variant="body1" align="center" style={{ flexGrow: 1 }}>
           {" "}
-          Clinic Name: {choice.Name} <hr /> Address: {choice.Address} Singapore{" "}
+          Clinic Name: {choice.Name} <br /> Address: {choice.Address} Singapore{" "}
           {choice.PostalCode}
-          <hr /> Telephone: {choice.Tel} <hr /> Distance:{" "}
+          <br /> Telephone: {choice.Tel} <br /> Distance:{" "}
           {parseFloat(choice.distance).toFixed(2)}km away
-        </div>
-      );
-    return (
-      <div>
-        <Grid container direction="column" justify="center" alignItems="center">
-          <Grid item>
-            <h1> Clinic chosen: </h1>
-          </Grid>
-          <br />
-          <Grid item>
-            {/* <Card style={{ maxWidth: 1000}}>{result}</Card> */}
-            {result}
-          </Grid>
-        </Grid>
-        {/* </Grid> */}
-        <hr />
-        <hr />
-        <Grid style={{ flexGrow: 1 }} direction="row">
-          <Grid container justify="space-evenly">
-            <Grid item>
-              <Button variant="contained" onClick={this.goBack}>
-                Go Back
-              </Button>
-            </Grid>
-            <Grid item>
-              <Button variant="contained" color="primary">
-                <Link
-                  to={{
-                    pathname: "/confirmedChoice",
-                    state: {
-                      choice: choice
-                    }
-                  }}
-                >
-                  <span style={{ color: "white" }}> Confirm </span>
-                </Link>
-              </Button>
-            </Grid>
-          </Grid>
-        </Grid>
+          <hr />
+          <Typography variant="h6">Price breakdown:</Typography>
+        </Typography>
+      )}
+    </Paper>
+  );
+  return (
+    <div>
+      <AppBar position="static" style={{ backgroundColor: "#ff7c01" }}>
+        <Toolbar>
+          <IconButton
+            edge="start"
+            color="inherit"
+            aria-label="menu"
+            onClick={goBack}
+          >
+            <ArrowBack />
+            <Typography variant="subtitle1">Back</Typography>
+          </IconButton>{" "}
+          <Typography variant="h5" align="center" style={{ flexGrow: 1 }}>
+            SELECTED CHOICE
+          </Typography>
+          <Link
+            to={{ pathname: "/ConfirmedChoice", state: { choice: choice } }}
+            style={{ textDecoration: "none", color: "white" }}
+          >
+            <IconButton edge="start" color="inherit" aria-label="menu">
+              <Typography variant="subtitle1">Confirm</Typography> <ArrowNext />
+            </IconButton>{" "}
+          </Link>
+        </Toolbar>
+      </AppBar>
+      {result}
+      <br />
+      <br />
+      <div style={{ textAlign: "center" }}>
+        <Link to={{ pathname: "/ConfirmedChoice", state: { choice: choice } }}>
+          <Button
+            variant="contained"
+            size="large"
+            style={{ backgroundColor: "#ff7c01" }}
+          >
+            <span style={{ textDecoration: "none", color: "white" }}>
+              Ok, Next
+            </span>
+          </Button>
+        </Link>
       </div>
-    );
-  }
-}
+    </div>
+  );
+};
 
-export default selectedChoice;
+export default SelectedChoice;

@@ -39,15 +39,11 @@ const CompareBlock = props => {
   function handleClickOpen() {
     setOpen(true);
   }
-  const handleDeleteChipOne = () => {
-    setClinicOne(null);
-  };
+  
   function handleClickOpenTwo() {
     setOpenTwo(true);
   }
-  const handleDeleteChipTwo = () => {
-    setClinicTwo(null);
-  };
+  
   function handleClickClose() {
     setOpen(false);
   }
@@ -62,7 +58,7 @@ const CompareBlock = props => {
             label={clinicOne.name}
             clinic={clinicOne}
             onClick={handleClickOpen}
-            onDelete={handleDeleteChipOne}
+            onDelete={props.callbackDeleteOne}
             color="primary"
           />
           <Dialog open={open} onClose={handleClickClose}>
@@ -83,7 +79,7 @@ const CompareBlock = props => {
               <Button>
                 <Link
                   to={{
-                    pathname: "/selectedChoice",
+                    pathname: "/SelectedChoice",
                     state: {
                       choice: clinicOne
                     }
@@ -101,7 +97,7 @@ const CompareBlock = props => {
             label={clinicOne.name}
             clinic={clinicOne}
             onClick={handleClickOpen}
-            onDelete={handleDeleteChipOne}
+            onDelete={props.callbackDeleteOne}
             color="secondary"
           />
           <Dialog open={open} onClose={handleClickClose}>
@@ -114,7 +110,7 @@ const CompareBlock = props => {
               <Button>
                 <Link
                   to={{
-                    pathname: "/selectedChoice",
+                    pathname: "/SelectedChoice",
                     state: {
                       choice: clinicOne
                     }
@@ -135,7 +131,7 @@ const CompareBlock = props => {
             label={clinicTwo.name}
             clinic={clinicTwo}
             onClick={handleClickOpenTwo}
-            onDelete={handleDeleteChipTwo}
+            onDelete={props.callbackDeleteTwo}
             color="secondary"
           />
           <br />
@@ -150,7 +146,7 @@ const CompareBlock = props => {
               <Button>
                 <Link
                   to={{
-                    pathname: "/selectedChoice",
+                    pathname: "/SelectedChoice",
                     state: {
                       choice: clinicTwo
                     }
@@ -168,7 +164,7 @@ const CompareBlock = props => {
             label={clinicTwo.name}
             clinic={clinicTwo}
             onClick={handleClickOpenTwo}
-            onDelete={handleDeleteChipTwo}
+            onDelete={props.callbackDeleteTwo}
             color="primary"
           />
           <Dialog open={openTwo} onClose={handleClickCloseTwo}>
@@ -189,7 +185,7 @@ const CompareBlock = props => {
               <Button>
                 <Link
                   to={{
-                    pathname: "/selectedChoice",
+                    pathname: "/SelectedChoice",
                     state: {
                       choice: clinicTwo
                     }

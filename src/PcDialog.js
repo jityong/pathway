@@ -61,16 +61,20 @@ export class PcDialog extends Component {
                   </Button>
                 </Grid>
                 <Grid item>
-                  <Button onClick={this.handleCompare}>
+                  <Button
+                    variant="contained"
+                    style={{ backgroundColor: "#ff7c01" }}
+                    onClick={this.handleCompare}
+                  >
                     <Link
                       to={{
-                        pathname: "/selectedChoice",
+                        pathname: "/SelectedChoice",
                         state: {
                           choice: clinic
                         }
                       }}
                     >
-                      <span>Select</span>
+                      <span style={{ color: "white" }}>Select</span>
                     </Link>
                   </Button>
                 </Grid>

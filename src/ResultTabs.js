@@ -79,6 +79,21 @@ const ResultTabs = props => {
       alert("Cannot compare more than 2 clinics");
     }
   };
+  const callbackFunction = (clinic) =>{
+    if (!clinicOne) {
+      setClinicOne(clinic);
+    } else if (!clinicTwo) {
+      setClinicTwo(clinic);
+    } else {
+      alert("Cannot compare more than 2 clinics");
+    }
+  }
+  const callbackDeleteOne = () => {
+    setClinicOne(null);
+  }
+  const callbackDeleteTwo = () => {
+    setClinicTwo(null);
+  }
 
   const handleGPPageChange = pageNumber => {
     setActiveGPPage(pageNumber);
@@ -129,6 +144,9 @@ const ResultTabs = props => {
         clinicOne={clinicOne}
         clinicTwo={clinicTwo}
         formData={props.formData}
+        callbackDeleteOne = {callbackDeleteOne}
+        callbackDeleteTwo = {callbackDeleteTwo}
+
       />
       <AppBar position="static" color="default">
         <Tabs
@@ -171,7 +189,7 @@ const ResultTabs = props => {
           </TabContainer>
         <TabContainer dir={theme.direction}>
           {props.currentLoc[0] !== 0 && (
-            <TestMap coord={props.currentLoc} GP={props.GP} PC={props.PC} />
+            <TestMap coord={props.currentLoc} GP={props.GP} PC={props.PC} callbackFunction={callbackFunction}/>
           )}
         </TabContainer>
       </SwipeableViews>

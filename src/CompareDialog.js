@@ -3,7 +3,7 @@ import Dialog from "@material-ui/core/Dialog";
 import Grid from "@material-ui/core/Grid";
 import { makeStyles } from "@material-ui/core/styles";
 import { Link } from "react-router-dom";
-import selectedChoice from "./selectedChoice";
+import SelectedChoice from "./SelectedChoice";
 import Button from "@material-ui/core/Button";
 import Switch from "@material-ui/core/Switch";
 import Table from "@material-ui/core/Table";
@@ -171,7 +171,11 @@ export class CompareDialog extends Component {
       "Please select 2 clinics for comparison."
     ) : (
       <div>
-        <Button variant="contained" color="primary" onClick={handleToggle}>
+        <Button
+          variant="contained"
+          style={{ backgroundColor: "#ff7c01" }}
+          onClick={handleToggle}
+        >
           Compare!
         </Button>
         <Dialog
@@ -204,8 +208,14 @@ export class CompareDialog extends Component {
                           </MyButton>
                           <Dialog open={priceOpen} onClose={handlePriceToggle}>
                             <DialogContent>
-                          
-                                <p style={{fontWeight:"bold", textDecoration:"underline"}}>Cost Breakdown</p>                          
+                              <p
+                                style={{
+                                  fontWeight: "bold",
+                                  textDecoration: "underline"
+                                }}
+                              >
+                                Cost Breakdown
+                              </p>
                               <Table>
                                 <TableHead>
                                   <TableRow>
@@ -260,13 +270,12 @@ export class CompareDialog extends Component {
                 </TableCell>
                 <TableCell align="right">
                   <Button
-                    // style={{ fontSize: "1vw" }}
                     variant="contained"
-                    color="secondary"
+                    style={{ backgroundColor: "#ff7c01" }}
                   >
                     <Link
                       to={{
-                        pathname: "/selectedChoice",
+                        pathname: "/SelectedChoice",
                         state: {
                           choice: clinicOne
                         }
@@ -280,11 +289,11 @@ export class CompareDialog extends Component {
                   <Button
                     // style={{ fontSize: "1vw" }}
                     variant="contained"
-                    color="secondary"
+                    style={{ backgroundColor: "#ff7c01" }}
                   >
                     <Link
                       to={{
-                        pathname: "/selectedChoice",
+                        pathname: "/SelectedChoice",
                         state: {
                           choice: clinicTwo
                         }
@@ -296,54 +305,6 @@ export class CompareDialog extends Component {
                 </TableCell>
               </TableFooter>
             </Table>
-
-            {/* <Grid direction="row">
-              <Grid container justify="center" spacing={2}>
-                <Grid item lg="5" md="4" sm="6" xs="6">
-                  Clinic Name: {GP.properties.HCI_NAME}  <hr />
-                  Distance:
-                  {parseFloat(GP.distance).toFixed(2)}km away
-                  <hr />
-                  Price: $$ 
-                  <hr />
-                  Rating: 4.5
-                  <hr />
-                  <Button style={{fontSize:"2vw"}} variant="contained" color="secondary">
-                    <Link
-                      to={{
-                        pathname: "/selectedChoice",
-                        state: {
-                          choice: GP
-                        }
-                      }}
-                    >
-                      <span style={{ color: "white" }}>Select</span>
-                    </Link>
-                  </Button>
-                </Grid>
-                <Grid item lg="5" md="5" sm="6" xs="6">
-                Polyclinic Name: {PC.Name} <hr />
-                  Distance:
-                  {parseFloat(PC.distance).toFixed(2)}km away
-                  <hr />
-                  Price: $ <hr/>
-                  Rating: 4
-                  <hr />
-                  <Button style={{fontSize:"2vw"}} variant="contained" color="secondary">
-                    <Link
-                      to={{
-                        pathname: "/selectedChoice",
-                        state: {
-                          choice: PC
-                        }
-                      }}
-                    >
-                      <span style={{ color: "white" }}>Select</span>
-                    </Link>
-                  </Button>
-                </Grid>
-              </Grid>
-            </Grid> */}
           </DialogContent>
         </Dialog>
       </div>

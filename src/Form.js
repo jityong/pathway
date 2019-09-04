@@ -1,9 +1,29 @@
-import React from "react";
+import React, { Fragment } from "react";
 import { Link } from "react-router-dom";
+import Button from "@material-ui/core/Button";
+import InputAdornment from "@material-ui/core/InputAdornment";
+import TextField from "@material-ui/core/TextField";
+import FormControl from "@material-ui/core/FormControl";
+import Radio from "@material-ui/core/Radio";
+import RadioGroup from "@material-ui/core/RadioGroup";
+import InputLabel from "@material-ui/core/InputLabel";
+import MenuItem from "@material-ui/core/MenuItem";
+import FormControlLabel from "@material-ui/core/FormControlLabel";
+import FormLabel from "@material-ui/core/FormLabel";
+import Select from "@material-ui/core/Select";
+import OutlinedInput from "@material-ui/core/OutlinedInput";
+import Grid from "@material-ui/core/Grid";
+import AppBar from "@material-ui/core/AppBar";
+import Toolbar from "@material-ui/core/Toolbar";
+import Typography from "@material-ui/core/Typography";
+import IconButton from "@material-ui/core/IconButton";
+import ArrowBack from "@material-ui/icons/ArrowBackIos";
+import HelpOutline from "@material-ui/icons/HelpOutline";
 
 //this component takes gets postal code & subsidy from user and pass the data over
 //to the FilteredResult.js component through the react router
 // could also use some styling
+
 class Form extends React.Component {
   constructor() {
     super();
@@ -15,166 +35,198 @@ class Form extends React.Component {
       nationality: ""
     };
     this.handleChange = this.handleChange.bind(this);
+    this.goBack = this.goBack.bind(this);
   }
+
   handleChange(event) {
     const { name, value } = event.target;
     return this.setState({ [name]: value });
   }
-  afterSubmission(event) {
-    event.preventDefault();
+  goBack() {
+    this.props.history.goBack();
   }
   render() {
+    const passCheck =
+      this.state.postalCode.length === 6 &&
+      this.state.age !== "" &&
+      this.state.nationality !== "";
+    const help = () => {
+      alert(
+        "Postal code information is used to help locate and identify clinics near your desired address."
+         + "\n\n" + 
+         "Your age, nationality and eligible subsidy types are used in filtering out relevant prices for your reference!"
+         + "\n\n\n\n" + 
+         "Please complete the following form to submit and continue your journey on Pathway!"
+         + "\n\n" + 
+         "None of these information are kept or used for any other purposes."
+      );
+    };
     return (
-      //why is my required attribute not working...
       <div>
-        <div className="container">
-          <div className="card card-body">
-            <form>
-              <div className="card">
-                <div className="card-header">Enter your postal code</div>
-                <div className="form-group">
-                  <input
-                    className="form-control"
-                    type="text"
-                    name="postalCode"
-                    value={this.state.postalCode}
-                    onChange={this.handleChange}
-                    placeholder="Postal Code ie. 123456"
-                    minLength="6"
-                    maxLength="6"
-                    // pattern="[0-9]"
-                    required
-                    // style={{ textAlign: "center" }}
-                  />
-                </div>
-                <br />
-                <br />
-              </div>
-              <br />
-              <br />
-              <div className="card">
-                <div className="card-header">Enter your age</div>
-                <div className="form-group">
-                  <input
-                    className="form-control"
-                    type="text"
+        <AppBar position="static" style={{ backgroundColor: "#ff7c01" }}>
+          <Toolbar>
+            <Link
+              to="/GeneralInfo"
+              style={{ textDecoration: "none", color: "white" }}
+            >
+              <IconButton edge="start" color="inherit" aria-label="menu">
+                <ArrowBack />
+                <Typography variant="subtitle1">Back</Typography>
+              </IconButton>{" "}
+            </Link>
+            <Typography variant="h5" align="center" style={{ flexGrow: 1 }}>
+              DETAILS
+            </Typography>
+            <IconButton
+              edge="start"
+              color="inherit"
+              aria-label="menu"
+              onClick={help}
+            >
+              <Typography variant="subtitle1">Help{" "}</Typography> <HelpOutline />
+            </IconButton>{" "}
+          </Toolbar>
+        </AppBar>
+        <br />
+        <br />
+        <TextField
+          required={true}
+          name="postalCode"
+          id="postalCode"
+          variant="outlined"
+          label="Please enter your Postal Code"
+          value={this.state.postalCode}
+          onChange={this.handleChange}
+          placeholder="123456"
+          InputProps={{
+            startAdornment: <InputAdornment position="start">S</InputAdornment>
+          }}
+          style={{ width: "65%" }}
+        />
+        <br />
+        <hr />
+        <TextField
+          required={true}
+          id="age"
+          name="age"
+          variant="outlined"
+          label="Please enter your age"
+          value={this.state.age}
+          onChange={this.handleChange}
+          placeholder="ie. 25"
+          // error ={this.state.age="" ? true : false}
+          InputProps={{
+            startAdornment: <InputAdornment position="start" />
+          }}
+          style={{ width: "65%" }}
+        />
+        <br />
+        <hr />
+        <FormControl variant="outlined" style={{ width: "65%" }}>
+          <InputLabel>Nationality</InputLabel>
+          <Select
+            required
+            name="nationality"
+            value={this.state.nationality}
+            onChange={this.handleChange}
+            input={
+              <OutlinedInput
+                labelWidth="Nationality"
+                name="nationality"
+                id="nationality"
+              />
+            }
+          >
+            <MenuItem value="">
+              <em>None</em>
+            </MenuItem>
+            <MenuItem value="Singaporean">Singaporean</MenuItem>
+            <MenuItem value="Permanent Resident}">Permanent Resident}</MenuItem>
+            <MenuItem value="Non-Resident">Non-Resident</MenuItem>
+          </Select>
+        </FormControl>
+        <br />
+        <hr />
+        <FormControl component="fieldset">
+          <FormLabel component="legend">
+            Are you eligible for any subsidies?
+          </FormLabel>
+          <RadioGroup
+            aria-label="Subsidies eligibility"
+            name="hasSubsidy"
+            value={this.state.hasSubsidy}
+            // checked={this.state.hasSubsidy === "Yes"}
+            onChange={this.handleChange}
+          >
+            <FormControlLabel value="Yes" control={<Radio />} label="Yes" />
+            <FormControlLabel value="No" control={<Radio />} label="No" />
+          </RadioGroup>
+        </FormControl>
+
+        {this.state.hasSubsidy === "Yes" && (
+          <div>
+            <FormControl variant="outlined" style={{ width: "100%" }}>
+              <InputLabel>
+                Please select the subsidy you are eligible for:
+              </InputLabel>
+              <Select
+                name="subsidyType"
+                value={this.state.subsidyType}
+                onChange={this.handleChange}
+                input={
+                  <OutlinedInput
+                    labelWidth="Eligible Subsidies"
                     name="age"
-                    value={this.state.age}
-                    onChange={this.handleChange}
-                    placeholder="ie. 25"
-                    // minLength="1"
-                    // maxLength="3"
-                    // pattern="[0-9]"
-                    // required
-                    // style={{ textAlign: "center" }}
+                    id="outlined-age-simple"
                   />
-                </div>
-                <br />
-                <br />
-              </div>
-              <br />
-              <br />
-              <div className="form-group">
-                <label>
-                  Please select your nationality
-                  <br />
-                  <select
-                    id="nationality"
-                    className="form-control"
-                    name="nationality"
-                    value={this.state.nationality}
-                    onChange={this.handleChange}
-                    // required
-                  >
-                    <option value="">--Please select an option--</option>
-                    <option value="Singaporean">Singaporean</option>
-                    <option value="Permanent Resident">
-                      Permanent Resident
-                    </option>
-                    <option value="Non-Resident">Non-Resident</option>
-                  </select>
-                </label>
-              </div>
-              <br />
-              <div className="card">
-                <div className="card-header">
-                  Are you eligible for any subsidies?
-                </div>
-                <div className="form-check">
-                  <input
-                    className="form-check-input"
-                    id="hasSubsidy"
-                    type="radio"
-                    name="hasSubsidy"
-                    value="Yes"
-                    checked={this.state.hasSubsidy === "Yes"}
-                    onChange={this.handleChange}
-                    // required
-                  />
-                  <label className="form-check-label">Yes</label>
-                </div>
-                <div className="form-check">
-                  <input
-                    className="form-check-input"
-                    id="hasSubsidy"
-                    type="radio"
-                    name="hasSubsidy"
-                    value="No"
-                    checked={this.state.hasSubsidy === "No"}
-                    onChange={this.handleChange}
-                    // required
-                  />
-                  <label className="form-check-label">No</label>
-                </div>
-              </div>
-              <br />
-
-              {/* if user hasSubsidy then show the choose subsidy select form */}
-              {this.state.hasSubsidy === "Yes" && (
-                <div className="form-group">
-                  <label>
-                    Please select the subsidy you are eligible for:
-                    <br />
-                    <select
-                      id="subsidyType"
-                      className="form-control"
-                      name="subsidyType"
-                      value={this.state.subsidyType}
-                      onChange={this.handleChange}
-                      // required
-                    >
-                      <option value="">--Please select an option--</option>
-                      <option value="CHAS Orange">CHAS Orange</option>
-                      <option value="CHAS Blue">CHAS Blue</option>
-                      <option value="PG">Pioneer Generation</option>
-                    </select>
-                  </label>
-                </div>
-              )}
-
-              <br />
-              <br />
-              <button
-                className="btn btn-primary"
-                  onSubmit={this.afterSubmission}
+                }
               >
-                <Link
-                  to={{
-                    pathname: "/FilteredResult",
-                    state: {
-                      postalCode: this.state.postalCode,
-                      hasSubsidy: this.state.hasSubsidy,
-                      subsidyType: this.state.subsidyType,
-                      age: this.state.age,
-                      nationality: this.state.nationality
-                    }
-                  }}
-                >
-                  <span style={{ color: "white" }}>Submit</span>
-                </Link>
-              </button>
-            </form>
+                <MenuItem value="">
+                  <em>None</em>
+                </MenuItem>
+                <MenuItem value="">--Please select an option--</MenuItem>
+                <MenuItem value="CHAS Orange">CHAS Orange</MenuItem>
+                <MenuItem value="CHAS Blue">CHAS Blue</MenuItem>
+                <MenuItem value="PG">Pioneer Generation</MenuItem>
+              </Select>
+            </FormControl>
           </div>
+        )}
+        <br />
+        <hr />
+        <div style={{ justifyContent: "center", textAlign: "center" }}>
+          {passCheck ? (
+            <Button
+              variant="contained"
+              style={{ backgroundColor: "#ff7c01" }}
+              size="large"
+            >
+              <Link
+                to={{
+                  pathname: "/FilteredResult",
+                  state: {
+                    postalCode: this.state.postalCode,
+                    hasSubsidy: this.state.hasSubsidy,
+                    subsidyType: this.state.subsidyType,
+                    age: this.state.age,
+                    nationality: this.state.nationality
+                  }
+                }}
+              >
+                <span style={{ color: "white" }}>Submit</span>
+              </Link>
+            </Button>
+          ) : (
+            <Fragment>
+              <Button variant="contained" disabled="true" size="large">
+                Submit
+              </Button>
+              <br />
+              <span style={{ fontSize: "15px" }}>
+                Please complete the form above to submit.
+              </span>
+            </Fragment>
+          )}
         </div>
       </div>
     );

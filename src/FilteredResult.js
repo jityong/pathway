@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Fragment, Component } from "react";
 import GP from "./chas.json";
 import * as turf from "@turf/turf";
 import ResultTabs from "./ResultTabs.js";
@@ -6,6 +6,27 @@ import PC from "./polyclinics.json";
 import Button from "@material-ui/core/Button";
 import Switch from "@material-ui/core/Switch";
 import Grid from "@material-ui/core/Grid";
+import AppBar from "@material-ui/core/AppBar";
+import Toolbar from "@material-ui/core/Toolbar";
+import Typography from "@material-ui/core/Typography";
+import IconButton from "@material-ui/core/IconButton";
+import ArrowBack from "@material-ui/icons/ArrowBackIos";
+import SearchIcon from "@material-ui/icons/Search";
+import HelpOutline from "@material-ui/icons/HelpOutline";
+import { Link } from "react-router-dom";
+import FormGroup from "@material-ui/core/FormGroup";
+import FormControlLabel from "@material-ui/core/FormControlLabel";
+import { FormLabel } from "@material-ui/core";
+// import Search from "./Search";
+import Dialog from "@material-ui/core/Dialog";
+import Menu from "@material-ui/core/Menu";
+import MenuItem from "@material-ui/core/MenuItem";
+import {
+  DialogActions,
+  DialogContent,
+  DialogContentText,
+  DialogTitle
+} from "@material-ui/core";
 
 const API_KEY = "AIzaSyDsbjEhJ1510KaVtIQJVTIU7at6hiA__6U";
 
@@ -23,9 +44,12 @@ class FilteredResult extends React.Component {
       formData: this.props.location.state, //this gets the info from react router from Form.js
       userLng: 0,
       userLat: 0,
-      sortByLoc: true
+      sortByLoc: true,
+      open: false,
+      // searchedClinic: {}
     };
     this.goBack = this.goBack.bind(this);
+    // this.routeChange = this.routeChange.bind(this);
   }
   componentDidMount() {
     fetch(
@@ -45,11 +69,17 @@ class FilteredResult extends React.Component {
   goBack() {
     this.props.history.goBack();
   }
+  // routeChange = () => {
+  //   let path = `/FilteredResult/Search`;
+  //   this.props.history.push(path);
+  // };
 
   render(props) {
-    const { userLat, userLng, formData } = this.state;
+    const { userLat, userLng, formData, sortByLoc } = this.state;
+    const { open } = this.state;
 
     const filteredGP = GP.features.filter(clinic => {
+      clinic.name = clinic.properties.HCI_NAME;
       const from = turf.point([userLng, userLat]);
       const to = turf.point([
         clinic.geometry.coordinates[0],
@@ -58,16 +88,15 @@ class FilteredResult extends React.Component {
       const options = { units: "kilometers" };
       const dist = turf.distance(from, to, options);
       clinic.distance = dist;
-      if (formData.hasSubsidy === "Yes") {
-        return (
-          dist <= 3 
-          // && clinic.properties.CLINIC_PROGRAMME_CODE.includes(formData.subsidyType)
-        );
+      if (sortByLoc) {
+        return dist <= 3;
+      } else {
+        return true;
       }
-      return dist <= 3;
     });
 
     const filteredPC = PC.clinics.filter(clinic => {
+      clinic.name = clinic.Name;
       const from = turf.point([userLng, userLat]);
       const to = turf.point([clinic.coord[0], clinic.coord[1]]);
       const options = { units: "kilometers" };
@@ -76,6 +105,15 @@ class FilteredResult extends React.Component {
       return dist <= 100;
     });
 
+    function callbackFunc(clinic){
+      this.setState({ searchedClinic: clinic });
+    };
+    const handleToggle = () => {
+      this.setState({
+        open: !this.state.open
+      });
+    };
+
     function sortDist(a, b) {
       if (a.distance < b.distance) {
         return -1;
@@ -83,40 +121,93 @@ class FilteredResult extends React.Component {
         return 1;
       }
     }
+    const toggleDistSort = () => {
+      this.setState({ sortByLoc: !sortByLoc });
+    };
     const handleSwitch = name => event => {
       this.setState({ [name]: event.target.checked });
     };
     const sortedGP = filteredGP.sort(sortDist);
     const sortedPC = filteredPC.sort(sortDist);
     //note: dangerouslySetInnerHTML cos the json is in string, but its actually HTML
+    const help = () => {
+      alert(
+        "Clinics are sorted by distance; nearest at the top." +
+          "\n\n" +
+          "Map view is available at the rightmost tab." +
+          "\n\n" +
+          "Toggle the 'Filter by 3km radius' switch to choose between displaying all clinics or just clinics within your 3km radius." +
+          "\n\n" +
+          "Add two clinics to comparison to activate the compare feature!" +
+          "\n\n" +
+          "Select a clinic to move on!" +
+          "\n\n\n\n\n" +
+          "For any further enquiries please contact pathway@u.nus.edu"
+      );
+    };
     return (
       <div>
-        <Grid container justify="center">
-          <h2>
-            Filtered clinics for{" "}
-            <span style={{ fontWeight: "bold", textDecoration: "underline" }}>
-              S{formData.postalCode}
-            </span> {" "}
-            {formData.subsidyType === ""
-              ? ""
-              : `with ${formData.subsidyType} subsidy`}
-          </h2>
-        </Grid>
-        {/* <Switch
-        checked={this.state.sortByLoc}
-        onChange={handleSwitch('sortByLoc')}
-        value="sortByLoc"
-        inputProps={{ 'aria-label': 'secondary checkbox' }}
-      /> */}
+        <AppBar position="static" style={{ backgroundColor: "#ff7c01" }}>
+          <Toolbar>
+            <Link to="/Form" style={{ textDecoration: "none", color: "white" }}>
+              <IconButton edge="start" color="inherit" aria-label="menu">
+                <ArrowBack />
+                <Typography variant="subtitle1">Back</Typography>
+              </IconButton>{" "}
+            </Link>
+            <Typography variant="h6" align="center" style={{ flexGrow: 1 }}>
+              Filtered clinics for{" "}
+              <span style={{ textDecoration: "underline", fontWeight: "bold" }}>
+                S{formData.postalCode}
+              </span>{" "}
+              {formData.subsidyType === ""
+                ? ""
+                : `with ${formData.subsidyType} subsidy`}
+              <br />
+              <FormLabel style={{ color: "white" }}>
+                <FormControlLabel
+                  control={
+                    <Switch
+                      checked={this.state.sortByLoc}
+                      value={this.state.sort}
+                      onChange={toggleDistSort}
+                      inputProps={{ "aria-label": "primary checkbox" }}
+                      color="primary"
+                    />
+                  }
+                  label="Filter by 3km radius"
+                  labelPlacement="start"
+                />
+              </FormLabel>
+            </Typography>
+            {/* <IconButton
+              edge="start"
+              color="inherit"
+              aria-label="menu"
+              onClick={this.routeChange}
+            >
+              <SearchIcon callbackFunc={callbackFunc} />
+              {console.log(GP)}
+            </IconButton>{" "} */}
+            <IconButton
+              edge="start"
+              color="inherit"
+              aria-label="menu"
+              onClick={help}
+            >
+              <Typography variant="subtitle1">Help </Typography> <HelpOutline />
+            </IconButton>{" "}
+          </Toolbar>
+        </AppBar>
         <div>
           <hr />
           <ResultTabs
             GP={sortedGP}
             PC={sortedPC}
             formData={formData}
+            // searchedClinic={this.searchedClinic}
             currentLoc={[this.state.userLng, this.state.userLat]}
           />
-          <Button onClick={this.goBack}>Go Back</Button>
         </div>
       </div>
     );
