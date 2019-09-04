@@ -18,11 +18,10 @@ function Language() {
   return (
     <div
       style={{
-        minHeight:"100vh",
+        minHeight: "100vh",
         backgroundImage: `url(${Background})`,
         backgroundPosition: "center",
-        backgroundSize: "cover",
-       
+        backgroundSize: "cover"
       }}
     >
       <AppBar position="static" style={{ backgroundColor: "#ff7c01" }}>
@@ -36,21 +35,19 @@ function Language() {
           <Typography variant="h5" align="center" style={{ flexGrow: 1 }}>
             LANGUAGE
           </Typography>
-          <Link to="/Form" style={{ textDecoration: "none", color: "white" }}>
-            <IconButton
-              edge="start"
-              color="inherit"
-              aria-label="menu"
-              onClick={handleAlert}
-            >
-              <Typography variant="subtitle1" /> <HelpOutline />
-            </IconButton>{" "}
-          </Link>
+          <IconButton
+            edge="start"
+            color="inherit"
+            aria-label="menu"
+            onClick={handleAlert}
+          >
+            <Typography variant="subtitle1" /> <HelpOutline />
+          </IconButton>{" "}
         </Toolbar>
       </AppBar>
       <br />
       <br />
-      <div style={{ textAlign: "center"}} >
+      <div style={{ textAlign: "center" }}>
         <Button
           variant="contained"
           style={{ backgroundColor: "#FF6565", borderRadius: "15px" }}

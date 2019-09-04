@@ -106,7 +106,7 @@ export const ConfirmedChoice = props => {
       <Typography variant="caption" align="center">
         {" "}
         All information quoted above belongs to MOHT (MOH), NUHS Primary Care
-        Department, the Primary Care Network and the Pathway team. Please direct
+        Department, the Primary Care Network, Data.gov.sg and the Pathway team. Please direct
         any queries to pathway@u.nus.edu. We will like to thank Professor Daphne
         Yee, the NUHS Primary Care Department led by Professor Doris Young, and
         Professor David S. Rosenblum for their unwavering support and insightful

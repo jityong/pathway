@@ -335,7 +335,7 @@ const SelectedChoice = props => {
             style={{ backgroundColor: "#ff7c01" }}
           >
             <span style={{ textDecoration: "none", color: "white" }}>
-              Ok, Next
+              Confirm
             </span>
           </Button>
         </Link>

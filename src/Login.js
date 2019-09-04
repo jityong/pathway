@@ -12,14 +12,13 @@ function Login() {
   return (
     <div
       style={{
-        textAlign:"center",
         minHeight: "100vh",
         backgroundImage: `url(${Background})`,
         backgroundPosition: "center",
         backgroundSize: "cover"
       }}
     >
-    <div style={{display:"flex" ,alignItems:"flexEnd"}}>
+    <div style={{textAlign:"center",verticalAlign:"bottom",bottom:"0px" }}>
       <Link to="/Language">
         <Button variant="contained" color="secondary" size="large">
           CONTINUE
