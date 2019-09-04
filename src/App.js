@@ -8,7 +8,6 @@ import Form from "./Form";
 import FilteredResult from "./FilteredResult";
 import SelectedChoice from "./SelectedChoice";
 import confirmedChoice from "./confirmedChoice";
-import Search from "./Search"
 //here is where i put all the routes tgt. can include the help button here which will
 //then be present in all the subsequent pages
 
@@ -30,7 +29,6 @@ class App extends React.Component {
             <Route path="/FilteredResult" exact component={FilteredResult} />
             <Route path="/SelectedChoice" exact component={SelectedChoice} />
             <Route path="/confirmedChoice" exact component={confirmedChoice} />
-            <Route path="/filteredResult/Search" exact component={Search} />
 
           </Switch>
         </div>
