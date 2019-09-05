@@ -10,6 +10,15 @@
   color: white;
 }
 
+.wrapper {
+  text-align: center;
+}
+
+.button {
+  position: absolute;
+}
+
+
 .Title {
   display: block;
   text-align: center;
