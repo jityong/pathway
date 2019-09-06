@@ -3,6 +3,13 @@
 /* html, body {
   overflow: hidden;
 } */
+
+
+#submission {
+  text-align: center;
+}
+
+
 .loginButton {
   text-align: center;
   font: "Roboto Condensed";
