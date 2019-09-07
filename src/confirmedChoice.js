@@ -24,6 +24,11 @@ export const ConfirmedChoice = props => {
   function goBack() {
     props.history.goBack();
   }
+  const alertClick = () => {
+    alert("This service will be available soon."
+    +"\n\n"+
+    "Thank you for using Pathway and please vote for our project at MGC 2019!")
+  }
   const { choice } = props.location.state;
   const result = (
     <Paper
@@ -92,6 +97,7 @@ export const ConfirmedChoice = props => {
           variant="contained"
           size="large"
           style={{ backgroundColor: "#ff7c01" }}
+          onClick={alertClick}
         >
           {" "}
           <span style={{ textDecoration: "none", color: "white" }}>

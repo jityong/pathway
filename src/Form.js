@@ -61,6 +61,11 @@ class Form extends React.Component {
          "None of these information are kept or used for any other purposes."
       );
     };
+    const alertSubsidy = () => {
+      alert(
+        "For more information regarding subsidies, please refer to http://tiny.cc/moh-subsidies"
+      );
+    };
     return (
       <div>
         <AppBar position="static" style={{ backgroundColor: "#ff7c01" }}>
@@ -149,7 +154,14 @@ class Form extends React.Component {
         <hr />
         <FormControl component="fieldset">
           <FormLabel component="legend">
-            Are you eligible for any subsidies?
+            Are you eligible for any subsidies? 
+            <IconButton
+              edge="start"
+              color="inherit"
+              aria-label="menu"
+              onClick={alertSubsidy}            >
+              <Typography variant="subtitle1" ></Typography> <HelpOutline />
+              </IconButton>
           </FormLabel>
           <RadioGroup
             aria-label="Subsidies eligibility"
