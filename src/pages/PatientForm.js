@@ -24,7 +24,7 @@ import HelpOutline from "@material-ui/icons/HelpOutline";
 //to the FilteredResult.js component through the react router
 // could also use some styling
 
-class Form extends React.Component {
+class PatientForm extends React.Component {
   constructor() {
     super();
     this.state = {
@@ -245,4 +245,4 @@ class Form extends React.Component {
   }
 }
 
-export default Form;
+export default PatientForm;

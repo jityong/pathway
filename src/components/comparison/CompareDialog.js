@@ -1,11 +1,7 @@
 import React, { Component, Fragment } from "react";
 import Dialog from "@material-ui/core/Dialog";
-import Grid from "@material-ui/core/Grid";
-import { makeStyles } from "@material-ui/core/styles";
 import { Link } from "react-router-dom";
-import SelectedChoice from "./SelectedChoice";
 import Button from "@material-ui/core/Button";
-import Switch from "@material-ui/core/Switch";
 import Table from "@material-ui/core/Table";
 import TableBody from "@material-ui/core/TableBody";
 import TableCell from "@material-ui/core/TableCell";
@@ -13,7 +9,7 @@ import TableHead from "@material-ui/core/TableHead";
 import TableRow from "@material-ui/core/TableRow";
 import TableFooter from "@material-ui/core/TableFooter";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
-import MyButton from "./MyButton";
+import MyButton from "../../util/MyButton";
 
 import {
   DialogActions,
@@ -408,7 +404,7 @@ export class CompareDialog extends Component {
                   >
                     <Link
                       to={{
-                        pathname: "/SelectedChoice",
+                        pathname: "/ConfirmClinicChoice",
                         state: {
                           choice: clinicOne,
                           formData: this.props.formData
@@ -427,7 +423,7 @@ export class CompareDialog extends Component {
                   >
                     <Link
                       to={{
-                        pathname: "/SelectedChoice",
+                        pathname: "/ConfirmClinicChoice",
                         state: {
                           choice: clinicTwo,
                           formData: this.props.formData

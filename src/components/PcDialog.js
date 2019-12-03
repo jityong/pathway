@@ -68,7 +68,7 @@ export class PcDialog extends Component {
                   >
                     <Link
                       to={{
-                        pathname: "/SelectedChoice",
+                        pathname: "/ConfirmClinicChoice",
                         state: {
                           choice: clinic,
                           formData: this.props.formData

@@ -1,16 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./App.css";
-import Fancyline from "./Fancylines";
-import lock from "./lock.png";
+import "../style/App.css";
 import { Typography, Button, Card, Grid } from "@material-ui/core";
 //import Background from "./PathwayBG.png";
-import homepage2 from "./homepage2.png";
+import homepage2 from "../images/homepage2.png";
 
 //Login page, which is the first page user will see. Need to change background
 //color to blue (whole page & considering responsive web design) for it to look good
 
-function Login() {
+function Welcome() {
   return (
     <div
       style={{
@@ -39,4 +37,4 @@ function Login() {
   );
 }
 
-export default Login;
+export default Welcome;

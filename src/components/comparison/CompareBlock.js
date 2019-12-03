@@ -78,7 +78,7 @@ const CompareBlock = props => {
               <hr />
               <Link
                 to={{
-                  pathname: "/SelectedChoice",
+                  pathname: "/ConfirmClinicChoice",
                   state: {
                     choice: clinicOne,
                     formData: props.formData
@@ -112,7 +112,7 @@ const CompareBlock = props => {
               <hr />
               <Link
                 to={{
-                  pathname: "/SelectedChoice",
+                  pathname: "/ConfirmClinicChoice",
                   state: {
                     choice: clinicOne,
                     formData: props.formData
@@ -152,7 +152,7 @@ const CompareBlock = props => {
               <hr />
               <Link
                 to={{
-                  pathname: "/SelectedChoice",
+                  pathname: "/ConfirmClinicChoice",
                   state: {
                     choice: clinicTwo,
                     formData: props.formData
@@ -195,7 +195,7 @@ const CompareBlock = props => {
               <hr />
               <Link
                 to={{
-                  pathname: "/SelectedChoice",
+                  pathname: "/ConfirmClinicChoice",
                   state: {
                     choice: clinicTwo,
                     formData: props.formData

@@ -1,16 +1,12 @@
 import React, { Component } from "react";
-import FamMedRoute from "./DischargeRoutes/FamMedRoute.png";
-import GpRoute from "./DischargeRoutes/GpRoute.png";
-import PCRoute from "./DischargeRoutes/PolyclinicRoute.png";
+import GpRoute from "../images/DischargeRoutes/GpRoute.png";
+import PCRoute from "../images/DischargeRoutes/PolyclinicRoute.png";
 import Paper from "@material-ui/core/Paper";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import IconButton from "@material-ui/core/IconButton";
 import ArrowBack from "@material-ui/icons/ArrowBackIos";
-import HelpOutline from "@material-ui/icons/HelpOutline";
-import ArrowNext from "@material-ui/icons/NavigateNext";
 import { Typography, Button, Card } from "@material-ui/core";
-import { Link } from "react-router-dom";
 import { makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles(theme => ({
@@ -18,7 +14,7 @@ const useStyles = makeStyles(theme => ({
     padding: theme.spacing(3, 3)
   }
 }));
-export const ConfirmedChoice = props => {
+export const SummaryPage = props => {
   const classes = useStyles();
 
   function goBack() {
@@ -122,4 +118,4 @@ export const ConfirmedChoice = props => {
   );
 };
 
-export default ConfirmedChoice;
+export default SummaryPage;

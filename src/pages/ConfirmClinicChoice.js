@@ -1,21 +1,16 @@
 import React, { useEffect, Component } from "react";
 import { Link } from "react-router-dom";
-import Grid from "@material-ui/core/Grid";
 import { Typography, Button, Card } from "@material-ui/core";
 import Paper from "@material-ui/core/Paper";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import IconButton from "@material-ui/core/IconButton";
 import ArrowBack from "@material-ui/icons/ArrowBackIos";
-import HelpOutline from "@material-ui/icons/HelpOutline";
 import ArrowNext from "@material-ui/icons/NavigateNext";
 import { makeStyles } from "@material-ui/core/styles";
-import Table from "@material-ui/core/Table";
 import TableBody from "@material-ui/core/TableBody";
 import TableCell from "@material-ui/core/TableCell";
-import TableHead from "@material-ui/core/TableHead";
 import TableRow from "@material-ui/core/TableRow";
-import TableFooter from "@material-ui/core/TableFooter";
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -23,7 +18,7 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-const SelectedChoice = props => {
+const ConfirmClinicChoice = props => {
   const classes = useStyles();
   const { userNationality, userSubsidyType, userAge } = props;
   function goBack() {
@@ -312,7 +307,7 @@ const SelectedChoice = props => {
             <Typography variant="subtitle1">Back</Typography>
           </IconButton>{" "}
           <Typography variant="h5" align="center" style={{ flexGrow: 1 }}>
-            SELECTED CHOICE
+            CONFIRM YOUR CHOICE
           </Typography>
           <Link
             to={{ pathname: "/ConfirmedChoice", state: { choice: choice } }}
@@ -344,4 +339,4 @@ const SelectedChoice = props => {
   );
 };
 
-export default SelectedChoice;
+export default ConfirmClinicChoice;

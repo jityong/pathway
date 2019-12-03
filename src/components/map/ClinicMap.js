@@ -1,9 +1,7 @@
 import React, { Fragment, Component } from "react";
-import { Map, InfoWindow, GoogleApiWrapper, Marker } from "google-maps-react";
-import GpDialog from "./GpDialog";
-import PcDialog from "./PcDialog";
+import { Map, GoogleApiWrapper, Marker } from "google-maps-react";
+import PcDialog from "../PcDialog";
 import Button from "@material-ui/core/Button";
-import { Link } from "react-router-dom";
 import InfoWindowEx from "./InfoWindowEx";
 
 const mapStyles = {
@@ -11,7 +9,7 @@ const mapStyles = {
   height: "100%"
 };
 
-export class TestMap extends Component {
+export class ClinicMap extends Component {
   state = {
     activeMarker: {},
     selectedPlace: {
@@ -182,4 +180,4 @@ export class TestMap extends Component {
 
 export default GoogleApiWrapper({
   apiKey: "AIzaSyDsbjEhJ1510KaVtIQJVTIU7at6hiA__6U"
-})(TestMap);
+})(ClinicMap);
