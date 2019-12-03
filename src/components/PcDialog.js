@@ -10,6 +10,10 @@ import {
   DialogContentText,
   DialogTitle
 } from "@material-ui/core";
+
+// Displays the PC dialog when clicked in the list of PCs within resultTab.
+// FilteredResult --> ResultTabs --> PcDialog
+
 export class PcDialog extends Component {
   state = {
     open: false

@@ -23,6 +23,8 @@ TabContainer.propTypes = {
   children: PropTypes.node.isRequired,
   dir: PropTypes.string.isRequired
 };
+// Displays the 3 tabs of PC,GP and Map in the results page
+// Also displays the chosen clinics for comparison (DisplayBlock.js)
 
 const ResultTabs = props => {
   const theme = useTheme();
@@ -153,6 +155,10 @@ const ResultTabs = props => {
     );
   });
   return (
+    //callback delete methods required because it is the state here in ResultTabs that needs to be changed, as the
+    // clinicOne and clinicTwo state of displayBlock is taken from the state here. If the state here is not changed,
+    // after we delete in DisplayBlock, when it re-renders the displayBlock state will get the old (unchanged) state
+    // from here instead and nothing would have changed (delete fail).
     <div>
       <CompareBlock
         clinicOne={clinicOne}

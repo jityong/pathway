@@ -12,13 +12,12 @@ import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import MyButton from "../../util/MyButton";
 
 import {
-  DialogActions,
   DialogContent,
-  DialogContentText,
-  DialogTitle,
   Typography
 } from "@material-ui/core";
-import { maxWidth, fontSize } from "@material-ui/system";
+
+//Displays the "Compare!" button when 2 clinics are selected for comparison.
+// Displays the table of information for comparison between the 2 clinics.
 export class CompareDialog extends Component {
   state = {
     open: false,

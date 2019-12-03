@@ -9,10 +9,7 @@ import { Link } from "react-router-dom";
 import CompareDialog from "./CompareDialog";
 
 import {
-  DialogActions,
-  DialogContent,
-  DialogContentText,
-  DialogTitle
+  DialogContent
 } from "@material-ui/core";
 
 const useStyles = makeStyles(theme => ({
@@ -21,7 +18,9 @@ const useStyles = makeStyles(theme => ({
     width: "100%"
   }
 }));
-
+// Displays the selected clinics tabs for comparison at the top in the FilteredResult page. Used by ResultsTab.
+// Allows for the tabs to be clicked on and display clinic information.
+// FilteredResult --> ResultsTab --> CompareBlock
 const CompareBlock = props => {
   const classes = useStyles();
   const theme = useTheme();

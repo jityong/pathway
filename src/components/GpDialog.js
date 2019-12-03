@@ -5,11 +5,11 @@ import Button from "@material-ui/core/Button";
 import Grid from "@material-ui/core/Grid";
 
 import {
-  DialogActions,
   DialogContent,
-  DialogContentText,
-  DialogTitle
 } from "@material-ui/core";
+
+//Displays the GP dialog when clicked in the list of GPs within resultTab.
+// // FilteredResult --> ResultTabs --> GpDialog
 export class GpDialog extends Component {
   state = {
     open: false
