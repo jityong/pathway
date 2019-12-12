@@ -6,10 +6,10 @@ import AppBar from "@material-ui/core/AppBar";
 import Tabs from "@material-ui/core/Tabs";
 import Tab from "@material-ui/core/Tab";
 import Typography from "@material-ui/core/Typography";
-import TestMap from "./TestMap";
+import ClinicMap from "./map/ClinicMap";
 import PcDialog from "./PcDialog";
 import GpDialog from "./GpDialog";
-import CompareBlock from "./CompareBlock";
+import CompareBlock from "./comparison/CompareBlock";
 import Pagination from "react-js-pagination";
 function TabContainer({ children, dir }) {
   return (
@@ -203,7 +203,7 @@ const ResultTabs = props => {
         </TabContainer>
         <TabContainer dir={theme.direction}>
           {props.currentLoc[0] !== 0 && (
-            <TestMap
+            <ClinicMap
               coord={props.currentLoc}
               GP={props.GP}
               PC={props.PC}

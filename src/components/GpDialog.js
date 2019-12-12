@@ -77,7 +77,7 @@ export class GpDialog extends Component {
                   >
                     <Link
                       to={{
-                        pathname: "/SelectedChoice",
+                        pathname: "/ConfirmClinicChoice",
                         state: {
                           choice: clinic,
                           formData: this.props.formData

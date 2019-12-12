@@ -1,8 +1,8 @@
 import React, { Fragment, Component } from "react";
-import GP from "./chas.json";
+import GP from "../data/chas.json";
 import * as turf from "@turf/turf";
-import ResultTabs from "./ResultTabs.js";
-import PC from "./polyclinics.json";
+import ResultTabs from "../components/ResultTabs.js";
+import PC from "../data/polyclinics.json";
 import Button from "@material-ui/core/Button";
 import Switch from "@material-ui/core/Switch";
 import Grid from "@material-ui/core/Grid";
@@ -41,7 +41,7 @@ class FilteredResult extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      formData: this.props.location.state, //this gets the info from react router from Form.js
+      formData: this.props.location.state, //this gets the info from react router from PatientForm.js
       userLng: 0,
       userLat: 0,
       sortByLoc: true,

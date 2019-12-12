@@ -7,7 +7,7 @@ import ArrowBack from "@material-ui/icons/ArrowBackIos";
 import HelpOutline from "@material-ui/icons/HelpOutline";
 import ArrowNext from "@material-ui/icons/NavigateNext";
 import { Typography, Button, Card } from "@material-ui/core";
-import Background from "./BackgroundFaded.png";
+import Background from "../images/BackgroundFaded.png";
 
 //Choose langauge, but all Buttons go to same place anyway. Could use some styling
 
