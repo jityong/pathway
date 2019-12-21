@@ -225,6 +225,7 @@ const ConfirmClinicChoice = props => {
         : "$49.80/session"
     )
   ];
+
   const result = (
     <Paper sqaure="false" className={classes.root}>
       {choice.type === "GP" ? (
@@ -323,6 +324,8 @@ const ConfirmClinicChoice = props => {
       <br />
       <br />
       <div style={{ textAlign: "center" }}>
+
+        
         <Link to={{ pathname: "/ConfirmedChoice", state: { choice: choice } }}>
           <Button
             variant="contained"

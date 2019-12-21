@@ -3,6 +3,7 @@ import { Map, GoogleApiWrapper, Marker } from "google-maps-react";
 import PcDialog from "../PcDialog";
 import Button from "@material-ui/core/Button";
 import InfoWindowEx from "./InfoWindowEx";
+import { Link, Redirect } from "react-router-dom";
 
 const mapStyles = {
   width: "100%",
@@ -115,10 +116,29 @@ export class ClinicMap extends Component {
               Distance:
               {parseFloat(selectedPlace.clinic.distance).toFixed(2)}km away
               <hr />
-              {/* <Button>
+
+
+              Doctor: {selectedPlace.clinic.properties.DR_NAME}
+
+              <hr />
+              Opening Hours:
+            {/* {clinic.properties.ALL_OPENING_HOURS.join(", ")} */}
+              <hr />
+              Directions:
+            {/* {clinic.properties.ALL_DIRECTIONS.join(", ")} */}
+              <hr />
+
+
+              <img src={process.env.PUBLIC_URL + `/ClinicPictures/${selectedPlace.clinic.properties.FILE_NAME}.png`}
+                alt="clinic picture" style={{ width: "100%" }} />
+
+              <hr />
+
+{/* 
+              <Button>
                 <Link
                   to={{
-                    pathname: "/selectedChoice",
+                    pathname: "/ConfirmClinicChoice",
                     state: {
                       choice: selectedPlace.clinic
                     }
@@ -127,6 +147,8 @@ export class ClinicMap extends Component {
                   <span>Select</span>
                 </Link>
               </Button> */}
+
+
               <Button
                 variant="contained"
                 color="primary"
@@ -146,10 +168,12 @@ export class ClinicMap extends Component {
               <hr /> Telephone: {selectedPlace.clinic.Tel} <hr /> Distance:{" "}
               {parseFloat(selectedPlace.clinic.distance).toFixed(2)}km away
               <hr />
+
+
               {/* <Button>
                 <Link
                   to={{
-                    pathname: "/selectedChoice",
+                      pathname: "/ConfirmClinicChoice",
                     state: {
                       choice: selectedPlace.clinic
                     }
@@ -158,6 +182,8 @@ export class ClinicMap extends Component {
                   <span>Select</span>
                 </Link>
               </Button> */}
+
+
               <Button
                 variant="contained"
                 color="primary"

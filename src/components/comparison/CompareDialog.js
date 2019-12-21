@@ -61,7 +61,11 @@ export class CompareDialog extends Component {
         parseFloat(clinicTwo.distance).toFixed(2)
       ),
       createData("Price", clinicOne.price, clinicTwo.price),
-      createData("Ratings", clinicOne.rating, clinicTwo.rating)
+      createData("Ratings", clinicOne.rating, clinicTwo.rating),
+      createData("Doctor name", clinicOne.rating, clinicTwo.rating),
+      createData("Opening hours", clinicOne.rating, clinicTwo.rating),
+      createData("Directions", clinicOne.rating, clinicTwo.rating)
+
     ];
     const priceRows = [
       createData(
@@ -361,6 +365,8 @@ export class CompareDialog extends Component {
                                         {clinicTwo.name}
                                       </span>
                                     </TableCell>
+
+
                                   </TableRow>
                                   {priceRows.map(row => (
                                     <TableRow key={row.name}>
@@ -397,6 +403,8 @@ export class CompareDialog extends Component {
                 <TableCell align="right">
                   <Button />
                 </TableCell>
+
+                
                 <TableCell align="right">
                   <Button
                     variant="contained"
@@ -415,6 +423,9 @@ export class CompareDialog extends Component {
                     </Link>
                   </Button>
                 </TableCell>
+
+
+
                 <TableCell align="right">
                   <Button
                     // style={{ fontSize: "1vw" }}

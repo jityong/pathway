@@ -67,6 +67,8 @@ const ResultTabs = props => {
       alert("Cannot compare more than 2 clinics");
     }
   };
+
+  
   const handlePCClose = (clinic, name) => {
     setOpen(false);
     clinic.price = "$";

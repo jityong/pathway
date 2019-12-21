@@ -1,5 +1,6 @@
 import React, { Fragment, Component } from "react";
-import GP from "../data/chas.json";
+import GP from "../data/pcn.json";
+//import GP from "../data/chas.json";
 import * as turf from "@turf/turf";
 import ResultTabs from "../components/ResultTabs.js";
 import PC from "../data/polyclinics.json";

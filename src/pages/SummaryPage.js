@@ -14,7 +14,7 @@ const useStyles = makeStyles(theme => ({
     padding: theme.spacing(3, 3)
   }
 }));
-export const SummaryPage = props => {
+export const SummaryPage= props => {
   const classes = useStyles();
 
   function goBack() {
@@ -41,6 +41,13 @@ export const SummaryPage = props => {
           Singapore {choice.properties.PostalCode}
           <br /> Telephone: {choice.properties.Tel} <br />
           <hr />
+
+          <img src={process.env.PUBLIC_URL + `/ClinicPictures/${choice.properties.FILE_NAME}.png`}
+            alt="pcn picture" style={{ width: "100%" }} />
+
+          <hr />
+
+
           <span> Referral flowchart of your healthcare journey so far:</span>
           <img src={GpRoute} alt="gp route" style={{ width: "100%" }} />
         </Paper>
@@ -51,6 +58,7 @@ export const SummaryPage = props => {
           <br /> Telephone: {choice.Tel} <br /> Distance:{" "}
           {parseFloat(choice.distance).toFixed(2)}km away
           <hr />
+
           <span>Referral flowchart of your healthcare journey so far:</span>
           <img src={PCRoute} alt="pc route" style={{ width: "100%" }} />
         </div>

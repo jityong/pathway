@@ -1,8 +1,9 @@
 import React, { Component } from "react";
 import Dialog from "@material-ui/core/Dialog";
-import { Link } from "react-router-dom";
+import { Link, Redirect } from "react-router-dom";
 import Button from "@material-ui/core/Button";
 import Grid from "@material-ui/core/Grid";
+
 
 import {
   DialogActions,
@@ -10,9 +11,11 @@ import {
   DialogContentText,
   DialogTitle
 } from "@material-ui/core";
+
 export class GpDialog extends Component {
   state = {
-    open: false
+    open: false,
+    redirectTo: null
   };
   handleToggle = () => {
     this.setState({
@@ -20,7 +23,10 @@ export class GpDialog extends Component {
     });
   };
 
+
+
   render() {
+
     const { onClose, selectedGP, ...other } = this.props;
     const { open } = this.state;
     const { clinic } = this.props;
@@ -29,6 +35,7 @@ export class GpDialog extends Component {
         open: !this.state.open
       });
     };
+
     function handleClose() {
       onClose(selectedGP);
     }
@@ -37,6 +44,15 @@ export class GpDialog extends Component {
       onClose(clinic, name);
       handleToggle();
     }
+
+
+
+    if (this.state.redirectTo) {
+      return (
+        <Redirect to={this.state.redirectTo} />
+      );
+    }
+
     return (
       <div>
         <Button variant="outlined" fullWidth="true" onClick={this.handleToggle}>
@@ -56,6 +72,22 @@ export class GpDialog extends Component {
             Distance:
             {parseFloat(clinic.distance).toFixed(2)}km away
             <hr />
+            Doctor: {clinic.properties.DR_NAME}
+
+            <hr />
+            Opening Hours:
+            {/* {clinic.properties.ALL_OPENING_HOURS.join(", ")} */}
+            <hr />
+            Directions:
+            {/* {clinic.properties.ALL_DIRECTIONS.join(", ")} */}
+            <hr />
+
+
+            <img src={process.env.PUBLIC_URL + `/ClinicPictures/${clinic.properties.FILE_NAME}.png`} 
+            alt="clinic picture" style={{ width: "100%" }} />
+
+            <hr />
+
             <Grid style={{ flexGrow: 1 }} direction="row">
               <Grid container justify="space-between">
                 <Grid item>
@@ -69,6 +101,7 @@ export class GpDialog extends Component {
                     <span style={{ color: "white" }}>Add to comparison</span>
                   </Button>
                 </Grid>
+
                 <Grid item>
                   <Button
                     variant="contained"
@@ -88,6 +121,9 @@ export class GpDialog extends Component {
                     </Link>
                   </Button>
                 </Grid>
+
+
+
               </Grid>
             </Grid>
           </DialogContent>
