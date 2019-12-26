@@ -47,6 +47,24 @@ export class ClinicMap extends Component {
       clinic.name = clinic.properties.HCI_NAME;
       clinic.price = "$$";
       clinic.rating = "4.3";
+      clinic.doctorName = clinic.properties.DR_NAME;
+      //store it as an array and delay FP is a better approach
+      // clinic.formattedOpeningHours = clinic.properties.formattedOpeningHours;
+
+      clinic.formattedOpeningHours = 
+        clinic.properties.ALL_OPENING_HOURS.map(period => (
+          period.day_string + ":\n" + period.opening_hours.join(",\n")
+        ))
+        .join(", \n");
+      
+      clinic.formattedDirections = 
+        clinic.properties.ALL_DIRECTIONS.map(path => (
+          path.transport_string + "\n" + path.directions.join(",\n")
+        ))
+        .join(", \n");
+      
+
+
       return (
         <Marker
           key={clinic.id}
@@ -120,13 +138,49 @@ export class ClinicMap extends Component {
 
               Doctor: {selectedPlace.clinic.properties.DR_NAME}
 
-              <hr />
+              {/* <hr />
               Opening Hours:
-            {/* {clinic.properties.ALL_OPENING_HOURS.join(", ")} */}
+              {selectedPlace.clinic.properties.ALL_OPENING_HOURS.map(period => (
+                  period.day_string + ":\n" + period.opening_hours.join(",\n")
+              ))
+              .join(", \n")}
               <hr />
               Directions:
-            {/* {clinic.properties.ALL_DIRECTIONS.join(", ")} */}
+              {selectedPlace.clinic.properties.ALL_DIRECTIONS.map(path => (
+              path.transport_string + "\n" + path.directions.join(",\n")
+              ))
+              .join(", \n")}
+              <hr /> */}
+
+
               <hr />
+              <p>Opening Hours:</p>
+              <hr />
+              {
+                selectedPlace.clinic.properties.ALL_OPENING_HOURS.map(period => (
+                  <p>
+                    {period.day_string}
+                    <br />
+                    {period.opening_hours.join(", ")}
+                  </p>
+                ))
+              }
+              <hr />
+
+              <p>Directions:</p>
+              {
+                selectedPlace.clinic.properties.ALL_DIRECTIONS.map(path => (
+                  <p>
+                    {path.transport_string}
+                    <br />
+                    {path.directions.join(", ")}
+                  </p>
+                ))
+              }
+              <hr />
+
+
+
 
 
               <img src={process.env.PUBLIC_URL + `/ClinicPictures/${selectedPlace.clinic.properties.FILE_NAME}.png`}

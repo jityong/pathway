@@ -62,9 +62,12 @@ export class CompareDialog extends Component {
       ),
       createData("Price", clinicOne.price, clinicTwo.price),
       createData("Ratings", clinicOne.rating, clinicTwo.rating),
-      createData("Doctor name", clinicOne.rating, clinicTwo.rating),
-      createData("Opening hours", clinicOne.rating, clinicTwo.rating),
-      createData("Directions", clinicOne.rating, clinicTwo.rating)
+      createData("Doctor name", ((clinicOne.type === "GP") ? clinicOne.doctorName : ""),
+      ((clinicTwo.type === "GP") ? clinicTwo.doctorName : "")),
+      createData("Opening hours", ((clinicOne.type === "GP") ? clinicOne.formattedOpeningHours : ""),
+        ((clinicTwo.type === "GP") ? clinicTwo.formattedOpeningHours : "")),
+      createData("Directions", ((clinicOne.type === "GP") ? clinicOne.formattedDirections : ""),
+        ((clinicTwo.type === "GP") ? clinicTwo.formattedDirections : "")),
 
     ];
     const priceRows = [

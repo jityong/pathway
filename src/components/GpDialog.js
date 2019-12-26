@@ -75,12 +75,32 @@ export class GpDialog extends Component {
             Doctor: {clinic.properties.DR_NAME}
 
             <hr />
-            Opening Hours:
-            {/* {clinic.properties.ALL_OPENING_HOURS.join(", ")} */}
+
+
+
+            <p>Opening Hours:</p>
             <hr />
-            Directions:
-            {/* {clinic.properties.ALL_DIRECTIONS.join(", ")} */}
+            {clinic.properties.ALL_OPENING_HOURS.map(period => (
+              <p>
+                {period.day_string}
+                <br />
+                {period.opening_hours.join(", ")}
+              </p>
+            ))}
             <hr />
+
+            <p>Directions:</p>
+            {clinic.properties.ALL_DIRECTIONS.map(path => (
+              <p>
+                {path.transport_string}
+                <br />
+                {path.directions.join(", ")}
+              </p>
+            ))}
+            <hr />
+
+          
+
 
 
             <img src={process.env.PUBLIC_URL + `/ClinicPictures/${clinic.properties.FILE_NAME}.png`} 
