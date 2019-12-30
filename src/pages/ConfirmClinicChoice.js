@@ -35,10 +35,17 @@ const ConfirmClinicChoice = props => {
         <p>$12-15</p>
       ) : userSubsidyType === "CHAS Orange" ? (
         <p style={{ fontSize: "1em" }}>$12-15</p>
+
       ) : userSubsidyType === "PG" ? (
-        <p style={{ fontSize: "1em" }}>$5-8</p>
+        <p style={{ fontSize: "1em" }}>$5-12</p>
+      ) : userSubsidyType === "MG" ? (
+        <p style={{ fontSize: "1em" }}>$5-12</p>
+
+
+      ) : userSubsidyType === "CHAS Green" ? (
+        <p style={{ fontSize: "1em" }}>$35-55</p>
       ) : (
-        <p style={{ fontSize: "1em" }}>$45-55</p>
+        <p style={{ fontSize: "1em" }}>$35-55</p>
       ),
       userSubsidyType === "PG" && userAge > 65
         ? "$3.45"
@@ -193,38 +200,106 @@ const ConfirmClinicChoice = props => {
       "Diabetic Nurse Consultation",
       userSubsidyType === "PG"
         ? "$5/session"
+        : userSubsidyType === "MG"
+        ? "$7/session"
         : userSubsidyType === "CHAS Orange" || userSubsidyType === "CHAS Blue"
         ? "$9/session"
-        : "$16/session",
+        : userSubsidyType === "CHAS Green"
+        ? "$10/session"
+        : "$10/session",
+        //Newly added column for nationality, PR and Non-resident charges are for ....
+      userNationality === "Permanent Resident"
+        ? "$23/session"
+        //lack of information
+        : userNationality === "Singaporean"
+        ? "$10/session"
+        : "$40/session",
       "-"
     ),
     createData(
       "DRP - Diabetic Retinal Photography",
       userSubsidyType === "PG"
         ? "$5/session"
+        : userSubsidyType === "MG"
+        ? "$7/session"
         : userSubsidyType === "CHAS Orange" || userSubsidyType === "CHAS Blue"
         ? "$9/session"
+        : userSubsidyType === "CHAS Green"
+        ? "$16/session"
         : "$16/session",
-      userNationality === "Singaporean"
-        ? "$12.80/session"
+
+      userNationality === "Singaporean"//is subsidised SG-rean same as just indicating nationality?
+        ? "$12.80/session"//still uses old data
+        //using data from new column from NUHS
         : userNationality === "Permanent Resident"
         ? "$23/session"
-        : "$49.80/session"
+        : "$40/session"
     ),
     createData(
       "DFS - Diabetic Foot Screening",
       userSubsidyType === "PG"
         ? "$5/session"
+        : userSubsidyType === "MG"
+        ? "$7/session"
         : userSubsidyType === "CHAS Orange" || userSubsidyType === "CHAS Blue"
         ? "$9/session"
+        : userSubsidyType === "CHAS Green"
+        ? "$16/session"
         : "$16/session",
-      userNationality === "Singaporean"
-        ? "$12.80/session"
+
+      userNationality === "Singaporean"//is subsidised SG-rean same as just indicating nationality?
+        ? "$12.80/session"//still uses old data
+        //using data from new column from NUHS
         : userNationality === "Permanent Resident"
         ? "$23/session"
-        : "$49.80/session"
-    )
+        : "$40/session"
+    ),
+
+    createData(
+      "DRP + DFS + 1 Nurse Visit",
+      userSubsidyType === "PG"
+        ? "$12/session"
+        : userSubsidyType === "MG"
+        ? "$18/session"
+        : userSubsidyType === "CHAS Orange" || userSubsidyType === "CHAS Blue"
+        ? "$24/session"
+        : userSubsidyType === "CHAS Green"
+        ? "$40/session"
+        : "$40/session"
+    ),
+
+    createData(
+      "DRP + DFS + 2 Nurse Visit",
+      userSubsidyType === "PG"
+        ? "$14/session"
+        : userSubsidyType === "MG"
+        ? "$24/session"
+        : userSubsidyType === "CHAS Orange" || userSubsidyType === "CHAS Blue"
+        ? "$30/session"
+        : userSubsidyType === "CHAS Green"
+        ? "$45/session"
+        : "$45/session"
+    ),
+
+    createData(
+      "DRP(or DFS) + 1 Nurse Visit",
+      userSubsidyType === "PG"
+        ? "$6/session"
+        : userSubsidyType === "MG"
+        ? "$10/session"
+        : userSubsidyType === "CHAS Orange" || userSubsidyType === "CHAS Blue"
+        ? "$12/session"
+        : userSubsidyType === "CHAS Green"
+        ? "$20/session"
+        : "$20/session"
+    ),
+
+    
+
+
+
   ];
+
   const result = (
     <Paper sqaure="false" className={classes.root}>
       {choice.type === "GP" ? (
@@ -323,6 +398,8 @@ const ConfirmClinicChoice = props => {
       <br />
       <br />
       <div style={{ textAlign: "center" }}>
+
+        
         <Link to={{ pathname: "/ConfirmedChoice", state: { choice: choice } }}>
           <Button
             variant="contained"

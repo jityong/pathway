@@ -1,0 +1,2774 @@
+{
+  "type": "FeatureCollection",
+  "crs": {
+    "type": "name",
+    "properties": {
+      "name": "urn:ogc:def:crs:OGC:1.3:CRS84"
+    }
+  },
+  "features": [
+    {
+      "type": "GP",
+      "properties": {
+        "id": "kml_170",
+        "HCI_NAME": "FAJAR FAMILY CLINIC & SURGERY",
+        "Tel": "67690636",
+        "PostalCode": "670445",
+        "BLK_HSE_NO": "445",
+        "FLOOR_NO": "01",
+        "UNIT_NO": "550",
+        "STREET_NAME": "FAJAR ROAD",
+        "BUILDING_NAME": "FAJAR SHOPPING CENTRE",
+        "CLINIC_PROGRAMME_CODE": [
+          "CDMP",
+          "CHAS"
+        ],
+        "X_COORDINATE": "21038.95049455",
+        "Y_COORDINATE": "40614.90347463",
+        "INC_CRC": "2B4E2DF9826B90E0",
+        "FMEL_UPD_D": "20190213130534",
+        "DR_NAME": "Dr Soh Soon Beng",
+        "ALL_OPENING_HOURS": [
+          {
+            "day_string": "Monday - Thursday",
+            "opening_hours": [
+              "8.30AM – 12.30PM",
+              "2.00PM – 4.30PM",
+              "6.30PM – 9.00PM"
+            ]
+          },
+          {
+            "day_string": "Friday",
+            "opening_hours": [
+              "8.30AM – 12.30PM",
+              "2.00PM – 4.30PM"
+            ]
+          },
+          {
+            "day_string": "Saturday & Sunday",
+            "opening_hours": [
+              "8.30AM – 12.30PM"
+            ]
+          },
+          {
+            "day_string": "Public Holiday",
+            "opening_hours": [
+              "Closed"
+            ]
+          }
+        ],
+        "ALL_DIRECTIONS": [
+          {
+            "transport_string": "By MRT / LRT:",
+            "directions": [
+              "Alight at Fajar LRT Station. Take Exit A and walk to Fajar Shopping Centre."
+            ]
+          },
+          {
+            "transport_string": "By Bus:",
+            "directions": [
+              "From Bukit Panjang Bus Interchange - Take Bus No. 972/922, alight at Fajar Station (B44771). Walk to Fajar Shopping Centre."
+            ]
+          }
+        ],
+        "FILE_NAME": "Slide1"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.77076830515,
+          1.38358044593591,
+          0
+        ]
+      }
+    },
+    {
+      "type": "GP",
+      "properties": {
+        "id": "kml_872",
+        "HCI_NAME": "PRINCETON FAMILY CLINIC PTE LTD.",
+        "Tel": "67622278",
+        "PostalCode": "670445",
+        "BLK_HSE_NO": "445",
+        "FLOOR_NO": "01",
+        "UNIT_NO": "546",
+        "STREET_NAME": "FAJAR RD",
+        "BUILDING_NAME": "FAJAR SHOPPING CENTRE",
+        "CLINIC_PROGRAMME_CODE": [
+          "CDMP",
+          "CHAS"
+        ],
+        "X_COORDINATE": "21038.95049455",
+        "Y_COORDINATE": "40614.90347463",
+        "INC_CRC": "2B4E2DF9EE6CB332",
+        "FMEL_UPD_D": "20190213130534",
+        "DR_NAME": "Dr Kwong Kum Hoong",
+        "ALL_OPENING_HOURS": [
+          {
+            "day_string": "Monday - Thursday",
+            "opening_hours": [
+              "9.00AM – 3.30PM",
+              "7.00PM – 9.00PM"
+            ]
+          },
+          {
+            "day_string": "Friday",
+            "opening_hours": [
+              "9.00AM – 3.30PM"
+            ]
+          },
+          {
+            "day_string": "Saturday, Sunday & Public Holiday",
+            "opening_hours": [
+              "9.00AM – 12.30PM"
+            ]
+          }
+        ],
+        "ALL_DIRECTIONS": [
+          {
+            "transport_string": "By MRT / LRT:",
+            "directions": [
+              "Alight at Fajar LRT Station. Take Exit A and walk to Fajar Shopping Centre."
+            ]
+          },
+          {
+            "transport_string": "By Bus:",
+            "directions": [
+              "From Bukit Panjang Bus Interchange - Take Bus No. 972/922, alight at Fajar Station (B44771). Walk to Fajar Shopping Centre."
+            ]
+          }
+        ],
+        "FILE_NAME": "Slide2"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.77076830515,
+          1.38358044593591,
+          0
+        ]
+      }
+    },
+    {
+      "type": "GP",
+      "properties": {
+        "id": "kml_410",
+        "HCI_NAME": "LIFECARE FAMILY CLINIC",
+        "Tel": "67698588",
+        "PostalCode": "671524",
+        "BLK_HSE_NO": "524A",
+        "FLOOR_NO": "02",
+        "UNIT_NO": "15",
+        "STREET_NAME": "JELAPANG ROAD",
+        "BUILDING_NAME": "GREENRIDGE SHOPPING CENTRE",
+        "CLINIC_PROGRAMME_CODE": [
+          "CDMP",
+          "CHAS",
+          "ISP"
+        ],
+        "X_COORDINATE": "20533.72990182",
+        "Y_COORDINATE": "40816.74398038",
+        "INC_CRC": "E64094C33783AA9F",
+        "FMEL_UPD_D": "20190213130534",
+        "DR_NAME": "Dr Choo Chee Hoe Ivan",
+        "ALL_OPENING_HOURS": [
+          {
+            "day_string": "Monday – Thursday",
+            "opening_hours": [
+              "8.00AM – 12.30PM",
+              "2.00PM – 4.00PM",
+              "6.00PM – 9.30PM"
+            ]
+          },
+          {
+            "day_string": "Friday",
+            "opening_hours": [
+              "8.00AM – 12.30PM",
+              "6.00PM – 9.30PM"
+            ]
+          },
+          {
+            "day_string": "Saturday",
+            "opening_hours": [
+              "8.00AM – 12.30PM"
+            ]
+          },
+          {
+            "day_string": "Sunday",
+            "opening_hours": [
+              "9.00AM – 12.30PM"
+            ]
+          },
+          {
+            "day_string": "Public Holiday",
+            "opening_hours": [
+              "Closed"
+            ]
+          }
+        ],
+        "ALL_DIRECTIONS": [
+          {
+            "transport_string": "By MRT / LRT:",
+            "directions": [
+              "Alight at Jelapang LRT Station. Take Exit A and walk to Greenridge Shopping Centre."
+            ]
+          },
+          {
+            "transport_string": "By Bus:",
+            "directions": [
+              "From Bukit Panjang Bus Interchange – Take Bus No. 920/922, alight at Blk 532 (B44661). Walk towards Greenridge Shopping Centre."
+            ]
+          }
+        ],
+        "FILE_NAME": "Slide3"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.766228468168,
+          1.38540569301034,
+          0
+        ]
+      }
+    },
+    {
+      "type": "GP",
+      "properties": {
+        "id": "kml_482",
+        "HCI_NAME": "Healthwerkz Medical Centre (CCK)",
+        "Tel": "67662827",
+        "PostalCode": "680225",
+        "BLK_HSE_NO": "225",
+        "FLOOR_NO": "01",
+        "UNIT_NO": "199",
+        "STREET_NAME": "CHOA CHU KANG CENTRAL",
+        "BUILDING_NAME": "",
+        "CLINIC_PROGRAMME_CODE": [
+          "CDMP",
+          "CHAS",
+          "ISP"
+        ],
+        "X_COORDINATE": "18158.96700811",
+        "Y_COORDINATE": "40339.68620283",
+        "INC_CRC": "451C8F6D4A58AE41",
+        "FMEL_UPD_D": "20190213130534",
+        "DR_NAME": "Dr Goh Hsin Kai & Dr Gerald Chong",
+        "ALL_OPENING_HOURS": [
+          {
+            "day_string": "Monday – Friday",
+            "opening_hours": [
+              "8.30AM – 1.00PM",
+              "6.00PM – 9.00PM"
+            ]
+          },
+          {
+            "day_string": "Saturday",
+            "opening_hours": [
+              "8.30AM – 12.30PM"
+            ]
+          },
+          {
+            "day_string": "Sunday & Public Holiday",
+            "opening_hours": [
+              "Closed"
+            ]
+          }
+        ],
+        "ALL_DIRECTIONS": [
+          {
+            "transport_string": "By MRT / LRT:",
+            "directions": [
+              "Alight at South View LRT Station. Take Exit A and walk to Blk 225."
+            ]
+          },
+          {
+            "transport_string": "By Bus:",
+            "directions": [
+              "67",
+              "188",
+              "301",
+              "974",
+              "982E"
+            ]
+          }
+        ],
+        "FILE_NAME": "Slide4"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.744889593655,
+          1.38109065346169,
+          0
+        ]
+      }
+    },
+
+    {
+      "type": "GP",
+      "properties": {
+        "id": "kml_408",
+        "HCI_NAME": "LIFE FAMILY CLINIC",
+        "Tel": "67669119",
+        "PostalCode": "689810",
+        "BLK_HSE_NO": "10",
+        "FLOOR_NO": "01",
+        "UNIT_NO": "28/29",
+        "STREET_NAME": "CHOA CHU KANG AVENUE 4",
+        "BUILDING_NAME": "CHOA CHU KANG MRT STATION",
+        "CLINIC_PROGRAMME_CODE": [
+          "CDMP",
+          "CHAS"
+        ],
+        "X_COORDINATE": "18075.46699384",
+        "Y_COORDINATE": "40846.3516983",
+        "INC_CRC": "277C555DF7C9BF48",
+        "FMEL_UPD_D": "20190213130534",
+        "DR_NAME": "Dr Lim Kim Show & Dr Audrey Kei",
+        "ALL_OPENING_HOURS":[
+            {
+                "day_string" : "Monday-Sunday",
+                "opening_hours": [
+                    "8.00AM – 11.00PM"
+                ]
+            },
+
+            {
+                "day_string": "Public Holiday",
+                "opening_hours": [
+                    "8.00AM – 11.00PM"
+                ]
+            }
+        ],
+
+        "ALL_DIRECTIONS":[
+            {
+                "transport_string": "By MRT / LRT:",
+                "directions":[
+                   "Alight at Choa Chua Kang MRT station / bus interchange and walk to Life Family Clinic, located in the MRT station." 
+                ]
+            }
+        ],
+        "FILE_NAME": "Slide5"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.744139113686,
+          1.38567272097282,
+          0
+        ]
+      }
+    },
+
+    {
+      "type": "GP",
+      "properties": {
+        "id": "kml_568",
+        "HCI_NAME": "Onecare Clinic Choa Chu Kang",
+        "Tel": "67666146",
+        "PostalCode": "680810",
+        "BLK_HSE_NO": "810",
+        "FLOOR_NO": "01",
+        "UNIT_NO": "09",
+        "STREET_NAME": "CHOA CHU KANG AVENUE 7",
+        "BUILDING_NAME": "MULTI STOREY CAR PARK",
+        "CLINIC_PROGRAMME_CODE": [
+          "CDMP",
+          "CHAS"
+        ],
+        "X_COORDINATE": "18300.32739086",
+        "Y_COORDINATE": "39562.04195213",
+        "INC_CRC": "5CA8F2A2AE046EBE",
+        "FMEL_UPD_D": "20190213130534",
+        "DR_NAME": "Dr Jeffrey Ho",
+        "ALL_OPENING_HOURS" :[
+            {
+                "day_string": "Monday – Friday",
+                "opening_hours": [
+                    "8.00AM – 3.00PM",
+                    "6.00PM – 9.30PM"
+                ]
+            },
+            {
+                "day_string": "Saturday",
+                "opening_hours": [
+                    "8.00AM – 1.00PM"
+                ]
+            },
+
+            {
+                "day_string": "Sunday",
+                "opening_hours": [
+                    "8.00AM – 1.00PM",
+                    "6.00PM – 9.30PM"
+
+                ]
+            },
+
+            {
+                "day_string": "Public Holiday",
+                "opening_hours": [
+                    "Closed"
+                ]
+            }
+
+            
+        ],
+        "ALL_DIRECTIONS": [
+            {
+                "transport_string": "By MRT:",
+                "directions": ["Alight at Choa Chu Kang MRT Station. From Lot 1 – Take Bus No. 983 and alight at Opp Blk 810 CP (B44879)."]
+            },
+            {
+                "transport_string": "By Bus:",
+                "directions": ["From Lot 1 – Take Bus No. 983 and alight at Opp Blk 810 CP (B44879)."]
+            }
+        ],
+        "FILE_NAME": "Slide6"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.746160076357,
+          1.3740579729092,
+          0
+        ]
+      }
+    },
+    {
+      "type": "GP",
+      "properties": {
+        "id": "kml_424",
+        "HCI_NAME": "LIN & SONS CLINIC & SURGERY PTE LTD",
+        "Tel": "67690554",
+        "PostalCode": "680018",
+        "BLK_HSE_NO": "18",
+        "FLOOR_NO": "01",
+        "UNIT_NO": "97",
+        "STREET_NAME": "TECK WHYE LANE",
+        "BUILDING_NAME": "",
+        "CLINIC_PROGRAMME_CODE": [
+          "CDMP",
+          "CHAS",
+          "ISP"
+        ],
+        "X_COORDINATE": "19180.77675744",
+        "Y_COORDINATE": "40030.81792505",
+        "INC_CRC": "9449F6D6367BFD12",
+        "FMEL_UPD_D": "20190213130534",
+        "DR_NAME":"Dr Lin Hai Duh",
+        "ALL_OPENING_HOURS":[
+            {
+                "day_string": "Monday – Friday",
+                "opening_hours":[
+                    "8.30AM – 1.00PM", 
+                    "2.00PM – 5.00PM", 
+                    "6.30PM – 9.30PM"
+                ]
+            },
+            {
+                "day_string": "Saturday",
+                "opening_hours":[
+                    "8.30AM – 1.00PM", 
+                    "2.00PM – 5.00PM"
+                ]
+            },
+            {
+                "day_string": "Sunday",
+                "opening_hours":[
+                    "9.00AM – 1.00PM"
+                ]
+            },
+            {
+                "day_string":"Public Holiday",
+                "opening_hours":[
+                    "Closed"
+                ]
+            }
+        ],
+        "ALL_DIRECTIONS":[
+            {
+                "transport_string":"By MRT / LRT:",
+                "directions":["Alight at Teck Whye LRT Station. Take Exit A and walk to Teck Whye Heights III."]
+            },
+            {
+                "transport_string":"By Bus:",
+                "directions":["307", "190", "975", "985"]
+            }
+        ],
+        "FILE_NAME":"Slide7"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.754071399254,
+          1.37829768774576,
+          0
+        ]
+      }
+    },
+    {
+      "type": "GP",
+      "properties": {
+        "id": "kml_589",
+        "HCI_NAME": "PHOENIX CLINIC & SURGERY",
+        "Tel": "67675345",
+        "PostalCode": "680150",
+        "BLK_HSE_NO": "150",
+        "FLOOR_NO": "01",
+        "UNIT_NO": "43",
+        "STREET_NAME": "JALAN TECK WHYE",
+        "BUILDING_NAME": "",
+        "CLINIC_PROGRAMME_CODE": [
+          "CDMP",
+          "CHAS",
+          "ISP"
+        ],
+        "X_COORDINATE": "19445.58296276",
+        "Y_COORDINATE": "40020.39565941",
+        "INC_CRC": "C4E208EF873996FF",
+        "FMEL_UPD_D": "20190213130534",
+        "DR_NAME":"Dr Lo Cher Kuan",
+        "ALL_OPENING_HOURS":[
+            {
+                "day_string":"Monday – Friday",
+                "opening_hours":[
+                    "8.30AM – 3.00PM",
+                    "7.00PM – 10.00PM"
+                ]
+            },
+            {
+                "day_string":"Saturday",
+                "opening_hours":[
+                    "9.00AM – 12.00PM"
+                ]
+            },
+            {
+                "day_string":"Sunday",
+                "opening_hours":[
+                    "7.00PM – 10.00PM"
+                ]
+            },
+            {
+                "day_string":"Public Holiday",
+                "opening_hours":[
+                    "Closed"
+                ]
+            }
+        ],
+        "ALL_DIRECTIONS":[
+            {
+                "transport_string":"By MRT / LRT:",
+                "directions":[
+                    "Alight at Phoenix LRT Station. Take Exit A and walk to Blk 150."
+                ]
+            },
+            {
+                "transport_string":"By Bus:",
+                "directions":[
+                    "From Lot 1 – Take Bus No. 975 and alight at Blk 157 (B44279)."
+                ]
+            }
+        ],
+        "FILE_NAME":"Slide8"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.756450878463,
+          1.37820351167481,
+          0
+        ]
+      }
+    },
+    {
+      "type": "GP",
+      "properties": {
+        "id": "kml_520",
+        "HCI_NAME": "MILLENNIUM MEDICAL GROUP",
+        "Tel": "67656685",
+        "PostalCode": "680533",
+        "BLK_HSE_NO": "533",
+        "FLOOR_NO": "01",
+        "UNIT_NO": "33",
+        "STREET_NAME": "CHOA CHU KANG ST 51",
+        "BUILDING_NAME": "",
+        "CLINIC_PROGRAMME_CODE": [
+          "CDMP",
+          "CHAS",
+          "ISP"
+        ],
+        "X_COORDINATE": "17959.80639937",
+        "Y_COORDINATE": "41554.16544046",
+        "INC_CRC": "8587B88D72BF9C1C",
+        "FMEL_UPD_D": "20190213130534",
+        "DR_NAME":"Dr Toh Beng Chye",
+        "ALL_OPENING_HOURS":[
+            {
+                "day_string":"Monday – Friday",
+                "opening_hours":[
+                    "9.00AM – 12.30PM", 
+                    "2.00PM – 4.00PM", 
+                    "7.00PM – 9.00PM"
+                ]
+            },
+            {
+                "day_string":"Saturday & Public Holiday",
+                "opening_hours":[
+                    "9.00AM – 12.30PM"
+                ]
+            },
+            {
+                "day_string":"Sunday",
+                "opening_hours":[
+                    "9.00AM – 12.30PM", 
+                    "7.00PM – 9.00PM"
+                ]
+            }
+
+        ],
+        "ALL_DIRECTIONS":[
+            {
+                "transport_string":"By MRT / Bus:",
+                "directions":[
+                    "From Opp Yew Tee MRT Station – Take Bus No. 979 and alight at Blk 540 (B45461). Walk to Limbang Shopping Centre.",
+                    "From Opp Yew Tee MRT Station – Take Bus No. 302 and alight at Blk 530 (B45319). Walk to Limbang Shopping Centre."
+                ]
+            }
+        ],
+        "FILE_NAME":"Slide9"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.743099573448,
+          1.39207388666981,
+          0
+        ]
+      }
+    },
+    {
+      "type": "GP",
+      "properties": {
+        "id": "kml_917",
+        "HCI_NAME": "THE PEOPLE'S CLINIC",
+        "Tel": "67693766",
+        "PostalCode": "680145",
+        "BLK_HSE_NO": "145",
+        "FLOOR_NO": "01",
+        "UNIT_NO": "161",
+        "STREET_NAME": "TECK WHYE AVE",
+        "BUILDING_NAME": "",
+        "CLINIC_PROGRAMME_CODE": [
+          "CDMP",
+          "CHAS",
+          "ISP"
+        ],
+        "X_COORDINATE": "19002.22916017",
+        "Y_COORDINATE": "40385.47303582",
+        "INC_CRC": "E93094882AC7A438",
+        "FMEL_UPD_D": "20190213130534",
+        "DR_NAME":"Dr Phan Oi Peng",
+        "ALL_OPENING_HOURS":[
+            {
+                "day_string":"Monday – Friday",
+                "opening_hours":[
+                    "9.30AM – 12.30PM", 
+                    "2.30PM – 4.30PM"
+                ]
+            },
+            {
+                "day_string":"Saturday, Sunday & Public Holiday",
+                "opening_hours":[
+                    "Closed"
+                ]
+            }
+        ],
+        "ALL_DIRECTIONS":[
+            {
+                "transport_string":"By Bus:",
+                "directions":[
+                    "From Lot 1 – Take Bus No. 190/975/985 and alight at CCK Polyclinic (B44299). Walk to Blk 145."
+                ]
+            }
+        ],
+        "FILE_NAME":"Slide10"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.75246691105,
+          1.38150500405147,
+          0
+        ]
+      }
+    },
+    {
+      "type": "GP",
+      "properties": {
+        "id": "kml_1060",
+        "HCI_NAME": "Zam Family Clinic",
+        "Tel": "67690302",
+        "PostalCode": "680516",
+        "BLK_HSE_NO": "516",
+        "FLOOR_NO": "01",
+        "UNIT_NO": "66",
+        "STREET_NAME": "CHOA CHU KANG STREET 51",
+        "BUILDING_NAME": "",
+        "CLINIC_PROGRAMME_CODE": [
+          "CDMP",
+          "CHAS",
+          "ISP"
+        ],
+        "X_COORDINATE": "18007.15448522",
+        "Y_COORDINATE": "41429.98092775",
+        "INC_CRC": "4241831F1073E0A4",
+        "FMEL_UPD_D": "20190213130534",
+        "DR_NAME":"Dr Azhar",
+        "ALL_OPENING_HOURS":[
+            {
+                "day_string":"Monday – Thursday & Saturday",
+                "opening_hours":[
+                    "8.30AM – 1.00PM", 
+                    "5.30PM – 10.00PM"
+                ]
+            },
+            {
+                "day_string":"Friday & Sunday",
+                "opening_hours":[
+                    "8.30AM – 1.00PM"
+                ]
+            },
+            {
+                "day_string":"Public Holiday",
+                "opening_hours":[
+                    "Closed"
+                ]
+            }
+        ],
+        "ALL_DIRECTIONS":[
+            {
+                "transport_string":"By MRT / Bus:",
+                "directions":[
+                    "From Opp Yew Tee MRT Station – Take Bus No. 979 and alight at Blk 540 (B45461). Walk to Blk 516.",
+                    "From Opp Yew Tee MRT Station – Take Bus No. 302 and alight at Blk 530 (B45319). Walk to Blk 516."
+                ]
+            }
+        ],
+        "FILE_NAME":"Slide11"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.743525075344,
+          1.39095082434027,
+          0
+        ]
+      }
+    },
+    {
+      "type": "GP",
+      "properties": {
+        "id": "kml_190",
+        "HCI_NAME": "BUKIT BATOK MEDICAL CLINIC",
+        "Tel": "65603311",
+        "PostalCode": "650207",
+        "BLK_HSE_NO": "207",
+        "FLOOR_NO": "01",
+        "UNIT_NO": "114",
+        "STREET_NAME": "BUKIT BATOK ST 21",
+        "BUILDING_NAME": "",
+        "CLINIC_PROGRAMME_CODE": [
+          "CDMP",
+          "CHAS",
+          "ISP"
+        ],
+        "X_COORDINATE": "18658.80226064",
+        "Y_COORDINATE": "36487.01400006",
+        "INC_CRC": "35CD364D7FCA97D0",
+        "FMEL_UPD_D": "20190213130534",
+        "DR_NAME":"Dr Kwek Thiam Soo",
+        "ALL_OPENING_HOURS":[
+            {
+                "day_string":"Monday-Friday",
+                "opening_hours":[
+                    "9:00 am – 12:30 pm", 
+                    "2:00- 4:30pm"
+                ]
+            },
+            {
+                "day_string":"Thursday-Friday",
+                "opening_hours":[
+                    "7:00 pm – 9:00 pm"
+                ]
+            },
+            {
+                "day_string":"Saturday",
+                "opening_hours":[
+                    "9:00 am – 12:30pm"
+                ]
+            },
+            {
+                "day_string":"Sunday",
+                "opening_hours":[
+                    "9:00 am – 12:00pm"
+                ]
+            },
+            {
+                "day_string":"Public Holiday",
+                "opening_hours":[
+                    "Closed"
+                ]
+            }
+        ],
+        "ALL_DIRECTIONS":[
+            {
+                "transport_string":"By Bus:",
+                "directions":[
+                    "From Bukit Batok MRT bus interchange, take bus no. 173. Alight at the  3rd stop and walk 3 mins to Bukit Batok Medical Clinic."
+                ]
+            }
+        ],
+        "FILE_NAME":"Slide12"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.749382188619,
+          1.3462486617594,
+          0
+        ]
+      }
+    },
+    {
+      "type": "GP",
+      "properties": {
+        "id": "kml_394",
+        "HCI_NAME": "LAI MEDICAL CLINIC PTE LTD",
+        "Tel": "65632935",
+        "PostalCode": "650213",
+        "BLK_HSE_NO": "213",
+        "FLOOR_NO": "01",
+        "UNIT_NO": "209",
+        "STREET_NAME": "BT BATOK ST 21",
+        "BUILDING_NAME": "",
+        "CLINIC_PROGRAMME_CODE": [
+          "CDMP",
+          "CHAS",
+          "ISP"
+        ],
+        "X_COORDINATE": "19005.43502393",
+        "Y_COORDINATE": "36550.00712241",
+        "INC_CRC": "56650D6499A4EF56",
+        "FMEL_UPD_D": "20190213130534",
+        "DR_NAME":"Dr Lai Oi Leng",
+        "ALL_OPENING_HOURS":[
+            {
+                "day_string":"Monday-Tuesday, Thursday",
+                "opening_hours":[
+                    "8: 30 am – 12: 30 pm",
+                    "2: 00- 3: 45pm",
+                    "6: 30 pm –8: 15pm" 
+                ]
+            },
+            {
+                "day_string":"Wednesday, Friday- Saturday",
+                "opening_hours":[
+                    "8:00 am – 12:30pm"
+                ]
+            },
+            {
+                "day_string":"Sunday and Public Holiday",
+                "opening_hours":["Closed"]
+            }
+        ],
+        "ALL_DIRECTIONS":[
+            {
+                "transport_string":"By Bus:",
+                "directions":[
+                    "From Bukit Batok MRT bus interchange, take bus no. 173. Alight at the 5th stop (opp Bt View Sec School) and walk 1 min to Lai Medical Centre."
+                ]
+            }
+        ],
+        "FILE_NAME":"Slide13"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.752496875132,
+          1.34681845431119,
+          0
+        ]
+      }
+    },
+    {
+      "type": "GP",
+      "properties": {
+        "id": "kml_337",
+        "HCI_NAME": "Drs Koo, Fok & Associates( Pioneer )",
+        "Tel": "68622380",
+        "PostalCode": "648310",
+        "BLK_HSE_NO": "31",
+        "FLOOR_NO": "02",
+        "UNIT_NO": "04",
+        "STREET_NAME": "JURONG WEST STREET 63",
+        "BUILDING_NAME": "",
+        "CLINIC_PROGRAMME_CODE": [
+          "CDMP",
+          "CHAS"
+        ],
+        "X_COORDINATE": "12822.76951404",
+        "Y_COORDINATE": "35525.56378608",
+        "INC_CRC": "5CB3822D70C0AD37",
+        "FMEL_UPD_D": "20190213130534",
+        "DR_NAME":"Dr Lim Ying",
+        "ALL_OPENING_HOURS":[
+            {
+                "day_string":"Monday-Friday",
+                "opening_hours":[
+                    "8: 00 am – 1: 00 pm",
+                    "2: 00- 4: 00pm",
+                    "6: 00 pm – 9: 30 pm" 
+                ]
+            },
+            {
+                "day_string":"Saturday",
+                "opening_hours":[
+                    "8:00 am – 1:00pm", 
+                    "2:00 pm – 4:00pm"
+                ]
+            },
+            {
+                "day_string":"Sunday & Public Holiday",
+                "opening_hours":[
+                    "Closed"
+                ]
+            }
+        ],
+        "ALL_DIRECTIONS":[
+            {
+                "transport_string":"By MRT:",
+                "directions":[
+                    "1 min walk from Pioneer MRT station"
+                ]
+            }
+        ],
+        "FILE_NAME":"Slide14"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.696942416846,
+          1.33755128795461,
+          0
+        ]
+      }
+    },
+    {
+      "type": "GP",
+      "properties": {
+        "id": "kml_492",
+        "HCI_NAME": "ICON MEDICAL CLINIC",
+        "Tel": "65600521",
+        "PostalCode": "640517",
+        "BLK_HSE_NO": "517",
+        "FLOOR_NO": "01",
+        "UNIT_NO": "101",
+        "STREET_NAME": "JURONG WEST ST 52",
+        "BUILDING_NAME": "",
+        "CLINIC_PROGRAMME_CODE": [
+          "CDMP",
+          "CHAS",
+          "ISP"
+        ],
+        "X_COORDINATE": "15358.20007142",
+        "Y_COORDINATE": "36443.0204543",
+        "INC_CRC": "6D06BABAD57AAEB1",
+        "FMEL_UPD_D": "20190213130534",
+        "DR_NAME":"Dr Ng Chin Hwee & Dr Gwee Sheau Min",
+        "ALL_OPENING_HOURS":[
+            {
+                "day_string":"Monday-Friday",
+                "opening_hours":[
+                    "8:30 am – 1:45 pm", 
+                    "6:00 pm – 8:45 pm"
+                ]
+            },
+            {
+                "day_string":"Saturday & Sunday",
+                "opening_hours":[
+                    "8:30 am – 12:00pm"
+                ]
+            },
+            {
+                "day_string":"Public Holiday",
+                "opening_hours":["Closed"]
+            }
+        ],
+        "ALL_DIRECTIONS":[
+            {
+                "transport_string":"By Bus:",
+                "directions":[
+                    "From Chinese Garden Bus Stop, take bus no. 335. Alight at the  4th stop and walk 1 mins to Icon Medical Clinic."
+                ]
+            }
+        ],
+        "FILE_NAME":"Slide15"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.71972430603,
+          1.34584959191131,
+          0
+        ]
+      }
+    },
+    {
+      "type": "GP",
+      "properties": {
+        "id": "kml_402",
+        "HCI_NAME": "LEE FAMILY CLINIC PTE. LTD.",
+        "Tel": "67940217",
+        "PostalCode": "640762",
+        "BLK_HSE_NO": "762",
+        "FLOOR_NO": "02",
+        "UNIT_NO": "262",
+        "STREET_NAME": "JURONG WEST STREET 75",
+        "BUILDING_NAME": "GEK POH SHOPPING CENTRE",
+        "CLINIC_PROGRAMME_CODE": [
+          "CDMP",
+          "CHAS",
+          "ISP"
+        ],
+        "X_COORDINATE": "12910.720738",
+        "Y_COORDINATE": "36763.1478772",
+        "INC_CRC": "73068DF3537B2A54",
+        "FMEL_UPD_D": "20190213130534",
+        "DR_NAME":"Dr Shirley Lee",
+        "ALL_OPENING_HOURS":[
+            {
+                "day_string":"Monday – Friday",
+                "opening_hours":[
+                    "8:00 am – 1:00 pm",
+                    "2:00- 4:00pm",
+                    "6:00 pm – 9:30 pm"
+                ]
+            },
+            {
+                "day_string":"Saturday",
+                "opening_hours":[
+                    "8:00 am – 1:00pm",
+                    "2:00 pm – 4:00pm"
+                ]
+            },
+            {
+                "day_string":"Sunday & Public Holiday",
+                "opening_hours":["Closed"]
+            }
+        ],
+        "ALL_DIRECTIONS":[
+            {
+                "transport_string":"By Bus:",
+                "directions":[
+                    "From Boon Lay MRT bus interchange, take bus no. 243G or 181. Alight at the  4th stop (Gek Poh Shopping Centre) and walk 2 mins to Lee Family Clinic."
+                ]
+            }
+        ],
+        "FILE_NAME":"Slide16"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.697732090659,
+          1.34874357156987,
+          0
+        ]
+      }
+    },
+    {
+      "type": "GP",
+      "properties": {
+        "id": "kml_1013",
+        "HCI_NAME": "Viva Medical Group (Westside)",
+        "Tel": "97779069",
+        "PostalCode": "127371",
+        "BLK_HSE_NO": "154",
+        "FLOOR_NO": "01",
+        "UNIT_NO": "81",
+        "STREET_NAME": "WEST COAST ROAD",
+        "BUILDING_NAME": "WEST COAST PLAZA",
+        "CLINIC_PROGRAMME_CODE": [
+          "CDMP",
+          "CHAS",
+          "ISP"
+        ],
+        "X_COORDINATE": "20522.66849744",
+        "Y_COORDINATE": "31781.86818974",
+        "INC_CRC": "0344EB4438547641",
+        "FMEL_UPD_D": "20190213130534",
+        "DR_NAME":"Dr Vincent Tan",
+        "ALL_OPENING_HOURS":[
+            {
+                "day_string":"Monday-Friday",
+                "opening_hours":[
+                    "08:30 am – 12:00 pm",
+                    "2:00 pm – 4:00 pm"
+                ]
+            },
+            {
+                "day_string":"Saturday",
+                "opening_hours":[
+                    "08: 30 am – 12: 00 pm"    
+                ]
+            },
+            {
+                "day_string":"Sunday",
+                "opening_hours": ["09:00 am – 12:00 pm"]
+            },
+            {
+                "day_string":"Public Holiday",
+                "opening_hours":[
+                    "Closed"
+                ]
+            }
+        ],
+        "ALL_DIRECTIONS":[
+            {
+                "transport_string":"By Bus:",
+                "directions":[
+                    "From Clementi MRT bus interchange, take bus no. 201. Alight at the  2nd stop and walk 2 mins to West coast Plaza."
+                ]
+            }
+        ],
+        "FILE_NAME":"Slide17"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.766131307482,
+          1.30369753962251,
+          0
+        ]
+      }
+    },
+    {
+      "type": "GP",
+      "properties": {
+        "id": "kml_275",
+        "HCI_NAME": "CHUNGKIAW CLINIC PTE LTD",
+        "Tel": "64662255",
+        "PostalCode": "596180",
+        "BLK_HSE_NO": "68",
+        "FLOOR_NO": "01",
+        "UNIT_NO": "01",
+        "STREET_NAME": "JALAN JURONG KECHIL",
+        "BUILDING_NAME": "SUITES AT BUKIT TIMAH",
+        "CLINIC_PROGRAMME_CODE": [
+          "CDMP",
+          "CHAS",
+          "ISP"
+        ],
+        "X_COORDINATE": "21359.43190152",
+        "Y_COORDINATE": "35856.6370502",
+        "INC_CRC": "1485B5E12D2D4556",
+        "FMEL_UPD_D": "20190213130534",
+        "DR_NAME":"Dr Kevin Koh",
+        "ALL_OPENING_HOURS":[
+            {
+                "day_string":"Monday and Friday",
+                "opening_hours":[
+                    "8:45am to 12:00pm", 
+                    "2:00pm to 5:00pm"
+                ]
+            },
+            {
+                "day_string":"Tuesday and Wednesday",
+                "opening_hours":[
+                    "8:45am to 12:00pm", 
+                    "2:00pm to 4:00pm"
+                ]
+            },
+            {
+                "day_string":"Thursday and Sunday",
+                "opening_hours":[
+                    "8:45am to 12:00pm"
+                ]
+            },
+            {
+                "day_string":"Saturday and Public Holiday",
+                "opening_hours":["Closed"]
+            }
+        ],
+        "ALL_DIRECTIONS":[
+            {
+                "transport_string":"By MRT:",
+                "directions":[
+                    "3 mins walk from Beauty World MRT Station Exit C"
+                ]
+            }
+        ],
+        "FILE_NAME":"Slide18"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.773649129579,
+          1.34054847931538,
+          0
+        ]
+      }
+    },
+    {
+      "type": "GP",
+      "properties": {
+        "id": "kml_495",
+        "HCI_NAME": "MANDARIN MEDICAL CENTRE",
+        "Tel": "64667828",
+        "PostalCode": "598586",
+        "BLK_HSE_NO": "66",
+        "FLOOR_NO": "",
+        "UNIT_NO": "",
+        "STREET_NAME": "JLN JURONG KECHIL",
+        "BUILDING_NAME": "JK BUILDING",
+        "CLINIC_PROGRAMME_CODE": [
+          "CDMP",
+          "CHAS",
+          "ISP"
+        ],
+        "X_COORDINATE": "21387.7853142",
+        "Y_COORDINATE": "35858.67986669",
+        "INC_CRC": "5EAB90F9F2326836",
+        "FMEL_UPD_D": "20190213130534",
+        "DR_NAME":"Dr Ho Han Chen",
+        "ALL_OPENING_HOURS":[
+            {
+                "day_string":"Monday-Tuesday, Thursday-Friday",
+                "opening_hours":[
+                    "8:30 am – 12:00 pm", 
+                    "2:00- 5:00pm,"
+                ]
+            },
+            {
+                "day_string":"Wednesday, Saturday - Sunday",
+                "opening_hours":[
+                    "8:00 am – 12:00pm"
+                ]
+            },
+            {
+                "day_string":"Public Holiday",
+                "opening_hours":["Closed"]
+            }
+        ],
+        "ALL_DIRECTIONS":[
+            {
+                "transport_string":"By MRT:",
+                "directions":[
+                    "3 mins walk from Beauty World MRT Station Exit C"
+                ]
+            }
+        ],
+        "FILE_NAME":"Slide19"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.773903901185,
+          1.34056695989911,
+          0
+        ]
+      }
+    },
+    {
+      "type": "GP",
+      "properties": {
+        "id": "kml_304",
+        "HCI_NAME": "Clover Medical Clinic Pte Ltd",
+        "Tel": "65094480",
+        "PostalCode": "689578",
+        "BLK_HSE_NO": "21",
+        "FLOOR_NO": "B1",
+        "UNIT_NO": "25",
+        "STREET_NAME": "CHOA CHU KANG NORTH 6",
+        "BUILDING_NAME": "YEW TEE POINT",
+        "CLINIC_PROGRAMME_CODE": [
+          "CDMP",
+          "CHAS",
+          "ISP"
+        ],
+        "X_COORDINATE": "18353.41782778",
+        "Y_COORDINATE": "42106.15224732",
+        "INC_CRC": "56A12270A796A4C8",
+        "FMEL_UPD_D": "20190213130534",
+        "DR_NAME": "Dr Tan Shu Juan",
+        "ALL_OPENING_HOURS":[
+            {
+                "day_string":"Monday-Thursday",
+                "opening_hours":[
+                    "8:30 am – 12:00 pm", 
+                    "1:00- 5:00pm", 
+                    "6:00 pm – 9:00pm"
+                ]
+            },
+            {
+                "day_string":"Friday-Saturday",
+                "opening_hours":[
+                    "9:00 am – 1:00pm", 
+                    "6:00 pm – 9:00pm"
+                ]
+            },
+            {
+                "day_string":"Sunday and Public Holiday",
+                "opening_hours":[
+                    "Closed"
+                ]
+            }
+            
+        ],
+        "ALL_DIRECTIONS":[
+            {
+                "transport_string":"By MRT:",
+                "directions":[
+                    "1 min walk from Yew Tee MRT station"
+                ]
+            }
+        ],
+        "FILE_NAME":"Slide20"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.746636294808,
+          1.39706598488567,
+          0
+        ]
+      }
+    },
+    {
+      "type": "GP",
+      "properties": {
+        "id": "kml_220",
+        "HCI_NAME": "GOH CLINIC + SURGERY",
+        "Tel": "65676368",
+        "PostalCode": "650283",
+        "BLK_HSE_NO": "283",
+        "FLOOR_NO": "01",
+        "UNIT_NO": "271",
+        "STREET_NAME": "BT BATOK EAST AVE 3",
+        "BUILDING_NAME": "",
+        "CLINIC_PROGRAMME_CODE": [
+          "CDMP",
+          "CHAS",
+          "ISP"
+        ],
+        "X_COORDINATE": "19566.61109985",
+        "Y_COORDINATE": "36563.8334163",
+        "INC_CRC": "A9F871991231803B",
+        "FMEL_UPD_D": "20190213130534",
+        "DR_NAME":"Dr Goh Yean Hoon",
+        "ALL_OPENING_HOURS":[
+            {
+                "day_string":"Monday-Tuesday, Thursday-Saturday",
+                "opening_hours":[
+                    "8:30 am – 12:30 pm"
+                ]
+            },
+            {
+                "day_string":"Wednesday",
+                "opening_hours":[
+                    "8:30 am – 2:00 pm"
+                ]
+            },
+            {
+                "day_string":"Sunday and Public Holiday",
+                "opening_hours":[
+                    "Closed"
+                ]
+            }
+        ],
+        "ALL_DIRECTIONS":[
+            {
+                "transport_string":"By Bus:",
+                "directions":[
+                    "From Bukit Batok MRT bus interchange, take bus no. 66. Alight at the  2nd stop and walk 3 mins to Blk 283."
+                ]
+            }
+        ],
+        "FILE_NAME":"Slide21"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.757539380941,
+          1.34694365739119,
+          0
+        ]
+      }
+    },
+    {
+      "type": "GP",
+      "properties": {
+        "id": "kml_604",
+        "HCI_NAME": "Healthlife Family Clinic",
+        "Tel": "69048680",
+        "PostalCode": "651296",
+        "BLK_HSE_NO": "296A",
+        "FLOOR_NO": "01",
+        "UNIT_NO": "64",
+        "STREET_NAME": "BUKIT BATOK STREET 22",
+        "BUILDING_NAME": "SKYLINE II @ BUKIT BATOK",
+        "CLINIC_PROGRAMME_CODE": [
+          "CHAS"
+        ],
+        "X_COORDINATE": "18327.92997593",
+        "Y_COORDINATE": "36248.7276335",
+        "INC_CRC": "5C0F1C27319648B3",
+        "FMEL_UPD_D": "20190213130534",
+        "DR_NAME":"Dr Yong Yuan Chen",
+        "ALL_OPENING_HOURS":[
+            {
+                "day_string":"Monday-Wednesday",
+                "opening_hours":[
+                    "8: 30 am – 1: 00 pm",
+                    "2: 00pm – 4: 00pm",
+                    "6: 00pm- 9: 00pm"
+                ]
+            },
+            {
+                "day_string":"Thursday, Saturday",
+                "opening_hours":[
+                    "8: 30 am – 1: 00 pm"
+                ]
+            },
+            {
+                "day_string":"Friday",
+                "opening_hours":[
+                    "8:30 am – 1:00 pm", 
+                    "6:00pm to 9:00pm"
+                ]
+            },
+            {
+                "day_string":"Sunday",
+                "opening_hours":[
+                    "6:00pm-9:00pm"
+                ]
+            },
+            {
+                "day_string":"Public Holiday",
+                "opening_hours":["Closed"]
+            }
+        ],
+        "ALL_DIRECTIONS":[
+            {
+                "transport_string":"By Bus:",
+                "directions":[
+                    "From Bukit Batok MRT bus interchange, take bus no. 189. Alight at the 3rd  stop (opposite of Bukit Batok swimming complex) and walk 8mins to Blk 296A."
+                ]
+            }
+        ],
+        "FILE_NAME":"Slide22"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.746409176593,
+          1.34409358188013,
+          0
+        ]
+      }
+    },
+    {
+      "type": "GP",
+      "properties": {
+        "id": "kml_738",
+        "HCI_NAME": "NEWEST MEDICAL AND LASER CLINIC PTE LTD",
+        "Tel": "62660451",
+        "PostalCode": "128020",
+        "BLK_HSE_NO": "1",
+        "FLOOR_NO": "01",
+        "UNIT_NO": "49/50",
+        "STREET_NAME": "WEST COAST DRIVE",
+        "BUILDING_NAME": "NEWEST",
+        "CLINIC_PROGRAMME_CODE": [
+          "CDMP",
+          "CHAS"
+        ],
+        "X_COORDINATE": "19556.70066582",
+        "Y_COORDINATE": "33187.93129389",
+        "INC_CRC": "6DC02FCAC488D756",
+        "FMEL_UPD_D": "20190213130534",
+        "DR_NAME":"Dr Neo Hui Yee & Dr Low Wymin",
+        "ALL_OPENING_HOURS":[
+            {
+                "day_string":"Monday – Friday",
+                "opening_hours":[
+                    "08:30 am – 2:30 pm", 
+                    "6:00 pm – 8:30 pm"
+                ]
+            },
+            {
+                "day_string":"Saturday",
+                "opening_hours":[
+                    "08:30 am – 1:00 pm"
+                ]
+            },
+            {
+                "day_string":"Sunday",
+                "opening_hours":[
+                    "5:00pm- 9:00pm"
+                ]
+            },
+            {
+                "day_string":"Public Holiday",
+                "opening_hours":["Closed"]
+            }
+        ],
+        "ALL_DIRECTIONS":[
+            {
+                "transport_string":"By Bus:",
+                "directions":[
+                    "From Clementi MRT bus stop, take bus no.201. Alight at the 3rd  stop (Newest) and walk 2 mins to NeWest Medical and Laser Clinic."
+                ]
+            }
+        ],
+        "FILE_NAME":"Slide23"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.757451263607,
+          1.31641321897956,
+          0
+        ]
+      }
+    },
+    {
+      "type": "GP",
+      "properties": {
+        "id": "kml_314",
+        "HCI_NAME": "DR CHUA'S FAMILY CLINIC PTE. LTD.",
+        "Tel": "67928505",
+        "PostalCode": "640638",
+        "BLK_HSE_NO": "638",
+        "FLOOR_NO": "02",
+        "UNIT_NO": "04",
+        "STREET_NAME": "JURONG WEST STREET 61",
+        "BUILDING_NAME": "PIONEER MALL",
+        "CLINIC_PROGRAMME_CODE": [
+          "CHAS"
+        ],
+        "X_COORDINATE": "12848.66147374",
+        "Y_COORDINATE": "35983.46577397",
+        "INC_CRC": "B70AB6D5F96286F8",
+        "FMEL_UPD_D": "20190213130534",
+        "DR_NAME":"Dr Chua Kok Keong",
+        "ALL_OPENING_HOURS":[
+            {
+                "day_string":"Monday-Thursday",
+                "opening_hours":[
+                    "08:00 am – 3:00 pm", 
+                    "6:30 pm – 9:30 pm"
+                ]
+            },
+            {
+                "day_string":"Friday",
+                "opening_hours":[
+                    "8:00 am- 3:00 pm"
+                ]
+            },
+            {
+                "day_string":"Saturday",
+                "opening_hours":["08:00 am – 1:00 pm"]
+
+            },
+            {
+                "day_string":"Sunday",
+                "opening_hours":["05: 00 pm – 9: 30 pm"]
+            },
+            {
+                "day_string":"Public Holiday",
+                "opening_hours":["08:00 am – 12:00 pm"]
+            }
+        ],
+        "ALL_DIRECTIONS":[
+            {
+                "transport_string":"By Bus:",
+                "directions":[
+                    "From Boon Lay interchange, take bus no. 243w. Alight at the 3rd stop and walk 2 mins to Pioneer Mall."
+                ]
+            }
+        ],
+        "FILE_NAME":"Slide24"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.697174842354,
+          1.34169239237791,
+          0
+        ]
+      }
+    },
+    {
+      "type": "GP",
+      "properties": {
+        "id": "kml_987",
+        "HCI_NAME": "Trinity Medical Clinic",
+        "Tel": "65607088",
+        "PostalCode": "600130",
+        "BLK_HSE_NO": "130",
+        "FLOOR_NO": "02",
+        "UNIT_NO": "205/207",
+        "STREET_NAME": "Jurong Gateway Road",
+        "BUILDING_NAME": "",
+        "CLINIC_PROGRAMME_CODE": [
+          "CDMP",
+          "CHAS"
+        ],
+        "X_COORDINATE": "17539.08184945",
+        "Y_COORDINATE": "35212.81503171",
+        "INC_CRC": "E0BEAC5536062B80",
+        "FMEL_UPD_D": "20190213130534",
+        "DR_NAME":"Dr Lim Yeeu Kang & Dr Rachel Goh",
+        "ALL_OPENING_HOURS":[
+            {
+                "day_string":"Monday – Friday ",
+                "opening_hours":[
+                    "09: 00 am – 12: 30 pm",
+                    "02: 00 pm – 05: 00 pm",
+                    "06: 00 pm – 09: 00 pm"
+                ]
+            },
+            {
+                "day_string":"Saturday – Sunday& Public Holiday",
+                "opening_hours":["09:00 am – 12:30 pm"]
+            }
+        ],
+        "ALL_DIRECTIONS":[
+            {
+                "transport_string":"By MRT / LRT:",
+                "directions":[
+                    "Alight at Jurong East MRT station and walk 7 mins to Blk 130."
+                ]
+            },
+            {
+                "transport_string":"By Bus:",
+                "directions":["From Jurong East MRT bus interchange, take bus no. 990. Alight at the  1st stop and walk 4 mins to Blk 130."]
+            }
+        ],
+        "FILE_NAME":"Slide25"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.739321261292,
+          1.33472490438698,
+          0
+        ]
+      }
+    },
+    {
+      "type": "GP",
+      "properties": {
+        "id": "kml_859",
+        "HCI_NAME": "PIER MEDICAL CENTRE",
+        "Tel": "67915677",
+        "PostalCode": "640725",
+        "BLK_HSE_NO": "725",
+        "FLOOR_NO": "B1",
+        "UNIT_NO": "164",
+        "STREET_NAME": "JURONG WEST AVE 5",
+        "BUILDING_NAME": "",
+        "CLINIC_PROGRAMME_CODE": [
+          "CDMP",
+          "CHAS",
+          "ISP"
+        ],
+        "X_COORDINATE": "12909.31303461",
+        "Y_COORDINATE": "36399.35313687",
+        "INC_CRC": "DD8D2D8F1D0C6AD9",
+        "FMEL_UPD_D": "20190213130534",
+        "DR_NAME":"Dr Lim Chew",
+        "ALL_OPENING_HOURS":[
+            {
+                "day_string":"Monday – Friday",
+                "opening_hours":[
+                    "08:30 am – 1:00 pm", 
+                    "2:00 pm – 5:00pm", 
+                    "7:00 pm – 9:00 pm"
+                ]
+            },
+            {
+                "day_string":"Saturday, Sunday and Public Holiday",
+                "opening_hours":["Closed"]
+            }
+        ],
+        "ALL_DIRECTIONS":[
+            {
+                "transport_string":"By Bus:",
+                "directions":[
+                    "From Boon Lay MRT bus interchange, take bus no. 242. Alight at the  5th stop and walk 4 mins to Blk 725."
+                ]
+            }
+        ],
+        "FILE_NAME":"Slide26"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.697719623525,
+          1.34545354926714,
+          0
+        ]
+      }
+    },
+    {
+      "type": "GP",
+      "properties": {
+        "id": "kml_156",
+        "HCI_NAME": "EXCELSIOR CLINIC & SURGERY",
+        "Tel": "65673822",
+        "PostalCode": "650283",
+        "BLK_HSE_NO": "283",
+        "FLOOR_NO": "01",
+        "UNIT_NO": "261",
+        "STREET_NAME": "BT BATOK EAST AVE 3",
+        "BUILDING_NAME": "",
+        "CLINIC_PROGRAMME_CODE": [
+          "CDMP",
+          "CHAS",
+          "ISP"
+        ],
+        "X_COORDINATE": "19566.61109985",
+        "Y_COORDINATE": "36563.8334163",
+        "INC_CRC": "A9F8719964971622",
+        "FMEL_UPD_D": "20190213130534",
+        "DR_NAME":"Dr Tan Teck Hong",
+        "ALL_OPENING_HOURS":[
+            {
+                "day_string":"Monday, Tuesday & Thursday",
+                "opening_hours":[
+                    "09: 30 am – 12: 30 pm",
+                    "2: 30 pm – 4: 00 pm",
+                    "7: 30 pm – 9: 00 pm"
+                ]
+            },
+            {
+                "day_string":"Wednesday & Friday",
+                "opening_hours":[
+                    "09:30 am – 12:30 pm", 
+                    "02:30 pm – 04:00 pm"
+                ]
+            },
+            {
+                "day_string":"Saturday",
+                "opening_hours":[
+                    "09:30 am – 12:30 pm"
+                ]
+            },
+            {
+                "day_string":"Sunday & Public Holiday",
+                "opening_hours":["Closed"]
+            }
+        ],
+        "ALL_DIRECTIONS":[
+            {
+                "transport_string":"By Bus:",
+                "directions":[
+                    "From Bukit Batok MRT bus interchange, take bus no. 66. Alight at the  2nd stop and walk 3 mins to Blk 283"
+                ]
+            }
+        ],
+        "FILE_NAME":"Slide27"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.757539380941,
+          1.34694365739119,
+          0
+        ]
+      }
+    },
+    {
+      "type": "GP",
+      "properties": {
+        "id": "kml_346",
+        "HCI_NAME": "EASTERN CLINIC & SURGERY PTE LTD",
+        "Tel": "65614458",
+        "PostalCode": "600235",
+        "BLK_HSE_NO": "235",
+        "FLOOR_NO": "01",
+        "UNIT_NO": "316",
+        "STREET_NAME": "JURONG EAST STREET 21",
+        "BUILDING_NAME": "",
+        "CLINIC_PROGRAMME_CODE": [
+          "CDMP",
+          "CHAS",
+          "ISP"
+        ],
+        "X_COORDINATE": "17855.02063743",
+        "Y_COORDINATE": "35793.44079941",
+        "INC_CRC": "FC6878086A00499D",
+        "FMEL_UPD_D": "20190213130534",
+        "DR_NAME":"Dr Angela Teo",
+        "ALL_OPENING_HOURS":[
+            {
+                "day_string":"Monday, Tuesday & Thursday",
+                "opening_hours":[
+                    "09:00 am – 12:30 pm", 
+                    "02:00 pm – 04:30 pm"
+                ]
+            },
+            {
+                "day_string":"Friday– Saturday",
+                "opening_hours":["09:00 am – 12:30 pm"]
+            },
+            {
+                "day_string":"Wednesday, Sunday, Public Holiday",
+                "opening_hours":["Closed"]
+            }
+        ],
+        "ALL_DIRECTIONS":[
+            {
+                "transport_string":"By Bus:",
+                "directions":[
+                    "From Jurong East MRT bus interchange, take bus no. 98. Alight at the  1st stop (Blk 209) and walk 6 mins to Blk 235."
+                ]
+            }
+        ],
+        "FILE_NAME":"Slide28"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.742159955431,
+          1.33997597903837,
+          0
+        ]
+      }
+    },
+    {
+      "type": "GP",
+      "properties": {
+        "id": "kml_347",
+        "HCI_NAME": "EASTERN CLINIC & SURGERY PTE LTD",
+        "Tel": "65631206",
+        "PostalCode": "600318",
+        "BLK_HSE_NO": "318",
+        "FLOOR_NO": "01",
+        "UNIT_NO": "48",
+        "STREET_NAME": "JURONG EAST STREET 31",
+        "BUILDING_NAME": "",
+        "CLINIC_PROGRAMME_CODE": [
+          "CDMP",
+          "CHAS",
+          "ISP"
+        ],
+        "X_COORDINATE": "16564.1803619",
+        "Y_COORDINATE": "36626.37088443",
+        "INC_CRC": "D5FBE9DC9903325E",
+        "FMEL_UPD_D": "20190213130534",
+        "DR_NAME":"Dr Tan Chin Hor",
+        "ALL_OPENING_HOURS":[
+            {
+                "day_string":"Monday, Tuesday & Thursday",
+                "opening_hours":[
+                    "09:00 am – 12:30 pm", 
+                    "02:00 pm – 04:30 pm"
+                ]
+            },
+            {
+                "day_string":"Friday– Saturday",
+                "opening_hours":[
+                    "09:00 am – 12:30 pm"
+                ]
+            },
+            {
+                "day_string":"Wednesday, Sunday, Public Holiday",
+                "opening_hours":[
+                    "Closed"
+                ]
+            }
+        ],
+        "ALL_DIRECTIONS":[
+            {
+                "transport_string":"By Bus:",
+                "directions":[
+                    "From Jurong East MRT bus interchange, take bus no. 334. Alight at the  6th stop  (Blk 347) and walk 5 mins to Blk 318."
+                ]
+            }
+        ],
+        "FILE_NAME":"Slide29"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.73056069188,
+          1.34750822879295,
+          0
+        ]
+      }
+    },
+    {
+      "type": "GP",
+      "properties": {
+        "id": "kml_322",
+        "HCI_NAME": "DRS TANG & PARTNERS PTE. LTD.",
+        "Tel": "62656077",
+        "PostalCode": "610064",
+        "BLK_HSE_NO": "64",
+        "FLOOR_NO": "01",
+        "UNIT_NO": "115",
+        "STREET_NAME": "YUNG KUANG ROAD",
+        "BUILDING_NAME": "",
+        "CLINIC_PROGRAMME_CODE": [
+          "CDMP",
+          "CHAS",
+          "ISP"
+        ],
+        "X_COORDINATE": "15661.61193978",
+        "Y_COORDINATE": "34952.88381813",
+        "INC_CRC": "B0C7BAF7429899DC",
+        "FMEL_UPD_D": "20190213130534",
+        "DR_NAME":"Dr Kam Shyan Chin",
+        "ALL_OPENING_HOURS":[
+            {
+                "day_string":"Monday – Tuesday, Thursday – Friday",
+                "opening_hours":[
+                    "08:30 am – 08:30 pm"
+                ]
+            },
+            {
+                "day_string":"Wednesday",
+                "opening_hours":[
+                    "08:30 am – 05:30 pm"
+                ]
+            },
+            {
+                "day_string":"Saturday",
+                "opening_hours":[
+                    "08:30 am – 01:00 pm"
+                ]
+            },
+            {
+                "day_string":"Sunday and Public Holiday",
+                "opening_hours":["Closed"]
+            }
+        ],
+        "ALL_DIRECTIONS":[
+            {
+                "transport_string":"By Bus:",
+                "directions":[
+                    "From Choa Chu Kang MRT bus interchange, take bus no. 302. Alight at the  4th stop and walk 4 mins to Blk 516."
+                ]
+            }
+        ],
+        "FILE_NAME":"Slide30"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.722451247982,
+          1.33237347600046,
+          0
+        ]
+      }
+    },
+
+
+    {
+      "type": "GP",
+      "properties": {
+        "id": "kml_486",
+        "HCI_NAME": "Hisemainn Medical Clinic (Bukit Batok)",
+        "Tel": "65691375",
+        "PostalCode": "654289",
+        "BLK_HSE_NO": "289E",
+        "FLOOR_NO": "01",
+        "UNIT_NO": "160",
+        "STREET_NAME": "BUKIT BATOK ST 25",
+        "BUILDING_NAME": "",
+        "CLINIC_PROGRAMME_CODE": [
+          "CDMP",
+          "CHAS",
+          "ISP"
+        ],
+        "X_COORDINATE": "19777.16142979",
+        "Y_COORDINATE": "36257.16226119",
+        "INC_CRC": "D9E1032CCC23C33C",
+        "FMEL_UPD_D": "20190213130534",
+        "DR_NAME":"Dr Andy Lo",
+        "ALL_OPENING_HOURS":[
+            {
+                "day_string":"Monday – Friday",
+                "opening_hours":[
+                    "08:30 am – 03:30 pm", 
+                    "06:30 pm – 09:30 pm"
+                ]
+            },
+            {
+                "day_string":"Saturday",
+                "opening_hours":[
+                    "08:30 am – 01:00 pm"
+                ]
+            },
+            {
+                "day_string":"Sunday & Public Holiday",
+                "opening_hours":[
+                    "Closed"
+                ]
+            }
+        ],
+        "ALL_DIRECTIONS":[
+            {
+                "transport_string":"By Bus:",
+                "directions":[
+                    "From Bukit Batok MRT bus interchange, take bus no. 106. Alight at the  3rd stop  (Blk 289E)and walk 1 min to Hisemainn Medical Clinic (Bukit Batok)."
+                ]
+            }
+        ],
+        "FILE_NAME":"Slide31"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.759431387572,
+          1.34417029371853,
+          0
+        ]
+      }
+    },
+
+
+
+    {
+      "type": "GP",
+      "properties": {
+        "id": "kml_9",
+        "HCI_NAME": "C H TAN MEDICAL CLINIC & DENTAL SURGERY",
+        "Tel": "65618712",
+        "PostalCode": "650177",
+        "BLK_HSE_NO": "177",
+        "FLOOR_NO": "01",
+        "UNIT_NO": "259",
+        "STREET_NAME": "BT BATOK WEST AVE 8",
+        "BUILDING_NAME": "",
+        "CLINIC_PROGRAMME_CODE": [
+          "CDMP",
+          "CHAS",
+          "ISP"
+        ],
+        "X_COORDINATE": "17808.54269556",
+        "Y_COORDINATE": "36497.59486993",
+        "INC_CRC": "1678EB41FB069F2B",
+        "FMEL_UPD_D": "20190213130534",
+        "DR_NAME":"Dr Tan Chin Hin",
+        "ALL_OPENING_HOURS":[
+            {
+                "day_string":"Monday & Thursday",
+                "opening_hours":[
+                    "09:00 am – 12:30 pm",
+                    "02:00 pm – 04:30 pm", 
+                    "07:00 pm – 09:00 pm"
+                ]
+            },
+            {
+                "day_string":"Tuesday– Wednesday &  Friday",
+                "opening_hours":[
+                    "09:00 am – 12:30 pm", 
+                    "14:00pm –16:40 pm"
+                ]
+            },
+            {
+                "day_string":"Saturday",
+                "opening_hours":[
+                    "09:00 am – 12:30 pm"
+                ]
+            },
+            {
+                "day_string":"Sunday & Public Holiday",
+                "opening_hours":[
+                    "Closed"
+                ]
+            }
+        ],
+        "ALL_DIRECTIONS":[
+            {
+                "day_string":"By Bus:",
+                "directions":[
+                    "From Bukit Batok MRT bus interchange, take bus no. 941. Alight at the  6th stop (Blk 169) and walk 1 min to C H Tan Medical Clinic & Dental Surgery."
+                ]
+            }
+        ],
+        "FILE_NAME":"Slide32"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.741742087355,
+          1.34634407478636,
+          0
+        ]
+      }
+    },
+    {
+      "type": "GP",
+      "properties": {
+        "id": "kml_934",
+        "HCI_NAME": "Tayka Medical Family Clinic",
+        "Tel": "65645528",
+        "PostalCode": "640526",
+        "BLK_HSE_NO": "526",
+        "FLOOR_NO": "01",
+        "UNIT_NO": "323",
+        "STREET_NAME": "JURONG WEST STREET 52",
+        "BUILDING_NAME": "",
+        "CLINIC_PROGRAMME_CODE": [
+          "CDMP",
+          "CHAS",
+          "ISP"
+        ],
+        "X_COORDINATE": "15060.40645539",
+        "Y_COORDINATE": "36644.53597271",
+        "INC_CRC": "A47FFC2A7BEF139F",
+        "FMEL_UPD_D": "20190213130534",
+        "FILE_NAME":"Slide33",
+        "DR_NAME":"Dr Joseph Sunil Kumar",
+        "ALL_OPENING_HOURS":[
+            {
+                "day_string":"Monday – Friday",
+                "opening_hours":[
+                    "09:00 am – 12:00 pm", 
+                    "02:00 pm – 04:00 pm",
+                    "07:00 pm – 09:00 pm"
+                ]
+            },
+            {
+                "day_string":"Saturday, Sunday &Public Holiday",
+                "opening_hours":["Closed"]
+            }
+        ],
+        "ALL_DIRECTIONS":[
+            {
+                "transport_string":"By Bus:",
+                "directions":[
+                    "From Chinese Garden MRT bus stop, take bus no. 335. Alight at the  6th stop (Blk 526) and walk 1 min to Tayka Medical Family Clinic."
+                ]
+            }
+        ]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.717048366415,
+          1.34767189579547,
+          0
+        ]
+      }
+    },
+    {
+      "type": "GP",
+      "properties": {
+        "id": "kml_1033",
+        "HCI_NAME": "Wee HealthFirst Medical Clinic",
+        "Tel": "67775755",
+        "PostalCode": "120378",
+        "BLK_HSE_NO": "378",
+        "FLOOR_NO": "01",
+        "UNIT_NO": "342",
+        "STREET_NAME": "CLEMENTI AVENUE 5",
+        "BUILDING_NAME": "",
+        "CLINIC_PROGRAMME_CODE": [
+          "CHAS"
+        ],
+        "X_COORDINATE": "20665.79277721",
+        "Y_COORDINATE": "33298.3445399",
+        "INC_CRC": "24DDF76D43CF4F4A",
+        "FMEL_UPD_D": "20190213130534",
+        "FILE_NAME":"Slide34",
+        "DR_NAME":"Dr Seow Yu Jin",
+        "ALL_OPENING_HOURS":[
+            {
+                "day_string":"Monday – Friday",
+                "opening_hours":[
+                    "09:00 am – 12:30 pm", 
+                    "02:00 pm – 04:30 pm"
+                ]
+            },
+            {
+                "day_string":"Saturday – Sunday",
+                "opening_hours":[
+                    "09:00 am – 12:30 pm"
+                ]
+            },
+            {
+                "day_string":"Public Holiday",
+                "opening_hours":["Closed"]
+            }
+        ],
+        "ALL_DIRECTIONS":[
+            {
+                "transport_string":"By MRT / LRT:",
+                "directions":[
+                    "Transfer from MRT to LRT at Choa Chu Kang station, alight at Teck Whye station and walk 5 mins to Blk 18."
+                ]
+            },
+            {
+                "transport_string":"By Bus:",
+                "directions":[
+                    "From Choa Chu Kang MRT bus interchange, take bus no. 302. Alight at the  4th stop and walk 4 mins to Blk 516."
+                ]
+            }
+        ]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.7674169862,
+          1.31741204143962,
+          0
+        ]
+      }
+    },
+    {
+      "type": "GP",
+      "properties": {
+        "id": "kml_558",
+        "HCI_NAME": "One Medical Clinic",
+        "Tel": "67922143",
+        "PostalCode": "640728",
+        "BLK_HSE_NO": "728",
+        "FLOOR_NO": "01",
+        "UNIT_NO": "K1",
+        "STREET_NAME": "JURONG WEST AVENUE 5",
+        "BUILDING_NAME": "",
+        "CLINIC_PROGRAMME_CODE": [
+          "CDMP",
+          "CHAS",
+          "ISP"
+        ],
+        "X_COORDINATE": "12906.94517024",
+        "Y_COORDINATE": "36470.66223641",
+        "INC_CRC": "F677E466A8DBC7D6",
+        "FMEL_UPD_D": "20190213130534",
+        "FILE_NAME": "Slide35",
+        "DR_NAME": "Dr Loke Chok Loon",
+        "ALL_OPENING_HOURS": [
+            {
+                "day_string": "Monday – Friday",
+                "opening_hours": [
+                    "09:00 am – 12:30 pm",
+                    "02:00 pm – 04:30 pm"
+                ]
+            },
+            {
+                "day_string": "Saturday – Sunday",
+                "opening_hours": [
+                    "09:00 am – 12:30 pm"
+                ]
+            },
+            {
+                "day_string": "Public Holiday",
+                "opening_hours": [
+                    "Closed"
+                ]
+            }
+        ],
+        "ALL_DIRECTIONS": [
+            {
+                "transport_string": "By MRT / LRT:",
+                "directions": [
+                    "Transfer from MRT to LRT at Choa Chu Kang station, alight at Teck Whye station and walk 5 mins to Blk 18."
+                ]
+            },
+            {
+                "transport_string": "By Bus:",
+                "directions": [
+                    "From Choa Chu Kang MRT bus interchange, take bus no. 302. Alight at the  4th stop and walk 4 mins to Blk 516."
+                ]
+            }
+        ]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.697698311825,
+          1.34609844042057,
+          0
+        ]
+      }
+    },
+
+
+
+    {
+      "type": "GP",
+      "properties": {
+        "id": "kml_728",
+        "HCI_NAME": "My doctor @ Lakeside",
+        "Tel": "62657270",
+        "PostalCode": "649845",
+        "BLK_HSE_NO": "201",
+        "FLOOR_NO": "01",
+        "UNIT_NO": "05",
+        "STREET_NAME": "BOON LAY WAY",
+        "BUILDING_NAME": "LAKESIDE MRT STATION",
+        "CLINIC_PROGRAMME_CODE": [
+          "CDMP",
+          "CHAS",
+          "ISP"
+        ],
+        "X_COORDINATE": "15422.46690079",
+        "Y_COORDINATE": "36250.08421427",
+        "INC_CRC": "52AB8DB1DA165EBB",
+        "FMEL_UPD_D": "20190213130534",
+        "FILE_NAME":"Slide36",
+        "DR_NAME":"Dr Ernie Ho",
+        "ALL_OPENING_HOURS":[
+            {
+                "day_string":"Monday – Friday",
+                "opening_hours":[
+                    "09: 00 am – 12: 30 pm",
+                    "02: 00 pm – 04: 30 pm"
+                ]
+            },
+            {
+                "day_string":"Saturday – Sunday",
+                "opening_hours":[
+                    "09:00 am – 12:30 pm"
+                ]
+            },
+            {
+                "day_string":"Public Holiday",
+                "opening_hours":["Closed"]
+            }
+        ],
+        "ALL_DIRECTIONS":[
+            {
+                "transport_string":"By MRT / LRT:",
+                "directions":["Alight at Lakeside MRT station and walk 1 mins to My Doctor @ Lakeside Clinic"]
+            }
+        ]
+   
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.720301861897,
+          1.34410477497427,
+          0
+        ]
+      }
+    },
+    {
+      "type": "GP",
+      "properties": {
+        "id": "kml_514",
+        "HCI_NAME": "EH Medical (Bukit Batok",
+        "Tel": "6255 1368",
+        "PostalCode": "650292",
+        "BLK_HSE_NO": "292",
+        "FLOOR_NO": "01",
+        "UNIT_NO": "07",
+        "STREET_NAME": "Bukit Batok East Ave 6",
+        "BUILDING_NAME": "",
+        "CLINIC_PROGRAMME_CODE": [
+          "CDMP",
+          "CHAS",
+          "ISP"
+        ],
+        "X_COORDINATE": "",
+        "Y_COORDINATE": "",
+        "INC_CRC": "",
+        "FMEL_UPD_D": "",
+        "FILE_NAME":"Slide37",
+        "DR_NAME":"Dr Qing Manli",
+        "ALL_OPENING_HOURS":[
+            {
+                "day_string":"Monday – Friday",
+                "opening_hours":[
+                    "08:30 am – 01:30 pm", 
+                    "06:30 pm – 09:30 pm"
+                ]
+            },
+            {
+                "day_string":"Saturday",
+                "opening_hours":[
+                    "08:30 am – 12:30 pm"
+                ]
+            },
+            {
+                "day_string":"Sunday",
+                "opening_hours":[
+                    "08:30 am – 12:30 pm", 
+                    "06:30 pm – 09:30 pm"
+                ]
+            },
+            {
+                "day_string":"Public Holiday",
+                "opening_hours":[
+                    "Closed"
+                ]
+            }
+        ],
+        "ALL_DIRECTIONS":[
+            {
+                "transport_string":"By Bus:",
+                "directions":["From Bukit Batok MRT bus interchange, take bus no. 990. Alight at the  3rd stop (Blk 291A) and walk 2 mins to Blk 292."]
+            }
+        ]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.34451,
+          103.755438,
+          0
+        ]
+      }
+    },
+    {
+      "type": "GP",
+      "properties": {
+        "id": "kml_515",
+        "HCI_NAME": "MEI LING CLINIC",
+        "Tel": "64741782",
+        "PostalCode": "140158",
+        "BLK_HSE_NO": "158",
+        "FLOOR_NO": "01",
+        "UNIT_NO": "80",
+        "STREET_NAME": "MEI LING ST",
+        "BUILDING_NAME": "",
+        "CLINIC_PROGRAMME_CODE": [
+          "CDMP",
+          "CHAS",
+          "ISP"
+        ],
+        "X_COORDINATE": "24604.28818307",
+        "Y_COORDINATE": "30570.20299682",
+        "INC_CRC": "F03B704CC493DB39",
+        "FMEL_UPD_D": "20190213130534",
+        "FILE_NAME":"Slide38",
+        "DR_NAME":"Dr Pauline Neow & Dr Tan Wee Meng",
+        "ALL_OPENING_HOURS":[
+            {
+                "day_string":"Monday – Friday",
+                "opening_hours":[
+                    "8:00 AM – 1:00 PM", 
+                    "6:00 PM – 8.30 PM"
+                ]
+            },
+            {
+                "day_string":"Saturday & Sunday",
+                "opening_hours":[
+                    "8:00 AM – 11.30AM"
+                ]
+            },
+            {
+                "day_string":"Public Holiday",
+                "opening_hours":["Closed"]
+            }
+        ],
+        "ALL_DIRECTIONS":[
+            {
+                "transport_string":"By MRT:",
+                "directions":[
+                    "Alight at Queensown MRT station and walk to Blk 158, Mei Ling Street."
+                ]
+            },
+            {
+                "transport_string":"Buses at the nearest bus stop:",
+                "directions":[
+                    "64"
+                ]
+            }
+        ]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.802806668566,
+          1.29274038368447,
+          0
+        ]
+      }
+    },
+    {
+      "type": "GP",
+      "properties": {
+        "id": "kml_505",
+        "HCI_NAME": "MEDICAL AND DENTAL CENTRE @ COMMONWEALTH",
+        "Tel": "64756116",
+        "PostalCode": "141088",
+        "BLK_HSE_NO": "88",
+        "FLOOR_NO": "01",
+        "UNIT_NO": "03",
+        "STREET_NAME": "TANGLIN HALT ROAD",
+        "BUILDING_NAME": "MULTI STOREY CAR PARK",
+        "CLINIC_PROGRAMME_CODE": [
+          "CDMP",
+          "CHAS",
+          "ISP"
+        ],
+        "X_COORDINATE": "24094.56247338",
+        "Y_COORDINATE": "31570.32385921",
+        "INC_CRC": "5BC5E3E4B6324746",
+        "FMEL_UPD_D": "20190213130534",
+        "FILE_NAME":"Slide39",
+        "DR_NAME":"Dr Gwee Shou-Yi Rachel",
+        "ALL_OPENING_HOURS":[
+            {
+                "day_string":"Monday – Friday",
+                "opening_hours":[
+                    "09:00 am – 12:30 pm",
+                    "02:00 pm – 04: 00 pm"
+                ]
+            },
+            {
+                "day_string":"Saturday",
+                "opening_hours":[
+                    "9:00 am –  2:00 pm"
+                ]
+            },
+            {
+                "day_string":"Sunday & Public Holiday",
+                "opening_hours":["Closed"]
+            }
+        ],
+        "ALL_DIRECTIONS":[
+            {
+                "transport_string":"By MRT:",
+                "directions":[
+                    "Alight at Commonwealth MRT station and walk 2 minutes from MRT exit A or D to Blk 88."
+                ]
+            },
+            {
+                "transport_string":"Buses at the nearest bus stop:",
+                "directions":[
+                    "32",
+                    "61",
+                    "100",
+                    "105",
+                    "111",
+                    "145",
+                    "147",
+                    "196",
+                    "198",
+                    "970"
+                ]
+            }
+        ]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.798226442847,
+          1.30178506400972,
+          0
+        ]
+      }
+    },
+    {
+      "type": "GP",
+      "properties": {
+        "id": "kml_1019",
+        "HCI_NAME": "WEST COAST CLINIC & SURGERY (CLEMENTI WEST) PTE LTD",
+        "Tel": "67770183",
+        "PostalCode": "120722",
+        "BLK_HSE_NO": "722",
+        "FLOOR_NO": "01",
+        "UNIT_NO": "162",
+        "STREET_NAME": "CLEMENTI WEST ST 2",
+        "BUILDING_NAME": "",
+        "CLINIC_PROGRAMME_CODE": [
+          "CDMP",
+          "CHAS",
+          "ISP"
+        ],
+        "X_COORDINATE": "20253.64523557",
+        "Y_COORDINATE": "31702.48925226",
+        "INC_CRC": "E3F0E0FA458974ED",
+        "FMEL_UPD_D": "20190213130534",
+        "FILE_NAME":"Slide40",
+        "DR_NAME":"Dr Sun See Seng",
+        "ALL_OPENING_HOURS":[
+            {
+                "day_string":"Monday – Friday",
+                "opening_hours":[
+                    "08:30 am – 12:00 pm", 
+                    "02:00 pm – 04:00 pm"
+                ]
+            },
+            {
+                "day_string":"Saturday",
+                "opening_hours":[
+                    "08:30 am – 12:00 pm"
+                ]
+            },
+            {
+                "day_string":"Sunday and Public Holiday",
+                "opening_hours":["Closed"]
+            }
+        ],
+        "ALL_DIRECTIONS":[
+            {
+                "transport_string":"By MRT:",
+                "directions":[
+                    "Alight Clementi MRT station and take bus no. 201 from Clementi MRT bus stop.",
+                    "Alight at the 2nd stop, outside blk 601 West Coast road and walk 4 minutes to blk 722."
+                ]
+            },
+            {
+                "transport_string":"By Bus:",
+                "directions":[
+                    "30", "51", "143", "175", "201", "282", "655"
+                ]
+            }
+        ]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.763714029961,
+          1.30297959925028,
+          0
+        ]
+      }
+    },
+    {
+      "type": "GP",
+      "properties": {
+        "id": "kml_396",
+        "HCI_NAME": "LC Clinic Medical Surgery Aesthetics",
+        "Tel": "64640932",
+        "PostalCode": "120446",
+        "BLK_HSE_NO": "446",
+        "FLOOR_NO": "01",
+        "UNIT_NO": "191",
+        "STREET_NAME": "CLEMENTI AVENUE 3",
+        "BUILDING_NAME": "",
+        "CLINIC_PROGRAMME_CODE": [
+          "CDMP",
+          "CHAS",
+          "ISP"
+        ],
+        "X_COORDINATE": "20388.75098162",
+        "Y_COORDINATE": "32756.64709195",
+        "INC_CRC": "DB93E7374B5A2AB8",
+        "FMEL_UPD_D": "20190213130534",
+        "FILE_NAME":"Slide41",
+        "DR_NAME":"Dr Lim Choo",
+        "ALL_OPENING_HOURS":[
+            {
+                "day_string":"Monday-Saturday",
+                "opening_hours":["8:30 am – 10:00 pm"]
+            },
+            {
+                "day_string":"Sunday",
+                "opening_hours":[
+                    "11:00am – 10:00 pm"
+                ]
+            },
+            {
+                "day_string":"Public Holiday",
+                "opening_hours":[
+                    "Closed"
+                ]
+            }
+        ],
+        "ALL_DIRECTIONS":[
+            {
+                "transport_string":"By MRT:",
+                "directions":["Alight at Clementi MRT station / bus interchange and walk 5 minutes to Blk 446 (next to 321 Mall)."]
+            },
+            {
+                "transport_string":"Buses at the nearest bus stop:",
+                "directions":[
+                    "14", "78", "96", "147", "156", "165", "166", "175", "285"
+                ]
+            }
+
+        ]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.764927758834,
+          1.31251305739568,
+          0
+        ]
+      }
+    },
+    {
+      "type": "GP",
+      "properties": {
+        "id": "kml_336",
+        "HCI_NAME": "Drs Chua & Partners (AV) Pte Ltd",
+        "Tel": "63773179",
+        "PostalCode": "150125",
+        "BLK_HSE_NO": "125",
+        "FLOOR_NO": "01",
+        "UNIT_NO": "174",
+        "STREET_NAME": "Bukit Merah Lane 1",
+        "BUILDING_NAME": "",
+        "CLINIC_PROGRAMME_CODE": [
+          "CDMP",
+          "CHAS"
+        ],
+        "X_COORDINATE": "24625.76619298",
+        "Y_COORDINATE": "29817.55108082",
+        "INC_CRC": "785ECF34C0CB0CAE",
+        "FMEL_UPD_D": "20190213130534",
+        "FILE_NAME":"Slide42",
+        "DR_NAME":"Dr Kevin Chua & Dr Iroshini Chua",
+        "ALL_OPENING_HOURS":[
+            {
+                "day_string":"Monday",
+                "opening_hours":[
+                    "8:30 am – 12.30 pm", "2pm – 8pm "
+                ]
+            },
+            {
+                "day_string": "Tuesday – Friday",
+                "opening_hours":[
+                    "8.30 am – 12.30 pm", "2 pm – 5 pm"
+                ]
+            },
+            {
+                "day_string":"Saturday",
+                "opening_hours":["8.30 am – 2.30 pm"]
+            },
+            {
+                "day_string":"Sunday & Public Holiday",
+                "opening_hours":["Closed"]
+            }
+
+        ],
+        "ALL_DIRECTIONS":[
+            {
+                "transport_string":"By MRT:",
+                "directions":[
+                    "Alight at Telok Blangah MRT station, change to bus 61 or 93 and alight outside Alexandra Hospital. Cross the overhead bridge to Blk 125."
+                ]
+            },
+            {
+                "transport_string":"Buses at the nearest bus stops:",
+                "directions":[
+                    "33", "97", "166", "196", "197", "198", "963"
+                ]
+            }
+        ]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.802999738051,
+          1.2859336675265,
+          0
+        ]
+      }
+    }
+  ]
+}

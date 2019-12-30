@@ -44,5 +44,8 @@
       "last 1 safari version"
     ]
   },
-  "homepage": "http://pathwaynuhs.com"
+  "homepage": "http://pathwaynuhs.com",
+  "devDependencies": {
+    "html-loader": "^0.5.5"
+  }
 }
