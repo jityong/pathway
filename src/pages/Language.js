@@ -5,7 +5,6 @@ import Toolbar from "@material-ui/core/Toolbar";
 import IconButton from "@material-ui/core/IconButton";
 import ArrowBack from "@material-ui/icons/ArrowBackIos";
 import HelpOutline from "@material-ui/icons/HelpOutline";
-import ArrowNext from "@material-ui/icons/NavigateNext";
 import { Typography, Button, Card } from "@material-ui/core";
 import Background from "../images/BackgroundFaded.png";
 
