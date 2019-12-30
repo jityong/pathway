@@ -62,6 +62,15 @@ const CompareBlock = props => {
           />
           <Dialog open={open} onClose={handleClickClose}>
             <DialogContent>
+              <img
+                src={
+                  process.env.PUBLIC_URL +
+                  `/ClinicPictures/${clinicOne.properties.FILE_NAME}.png`
+                }
+                alt="clinic picture"
+                style={{ width: "100%" }}
+              />
+              <hr />
               Clinic Name: {clinicOne.properties.HCI_NAME} <hr /> Address:{" "}
               {clinicOne.properties.BLK_HSE_NO}{" "}
               {clinicOne.properties.STREET_NAME} #
@@ -75,14 +84,11 @@ const CompareBlock = props => {
               Distance:
               {parseFloat(clinicOne.distance).toFixed(2)}km away
               <hr />
-
-
-              
-              {/* Doctor: {clinic.properties.DR_NAME}
+              Doctor: {clinicOne.properties.DR_NAME}
               <hr />
               <p>Opening Hours:</p>
               <hr />
-              {clinic.properties.ALL_OPENING_HOURS.map(period => (
+              {clinicOne.properties.ALL_OPENING_HOURS.map(period => (
                 <p>
                   {period.day_string}
                   <br />
@@ -91,17 +97,14 @@ const CompareBlock = props => {
               ))}
               <hr />
               <p>Directions:</p>
-              {clinic.properties.ALL_DIRECTIONS.map(path => (
+              {clinicOne.properties.ALL_DIRECTIONS.map(path => (
                 <p>
                   {path.transport_string}
                   <br />
                   {path.directions.join(", ")}
                 </p>
               ))}
-              <hr /> */}
-
-
-
+              <hr />
               <Link
                 to={{
                   pathname: "/ConfirmClinicChoice",
@@ -136,9 +139,6 @@ const CompareBlock = props => {
               <hr /> Telephone: {clinicOne.Tel} <hr /> Distance:{" "}
               {parseFloat(clinicOne.distance).toFixed(2)}km away
               <hr />
-
-
-              
               <Link
                 to={{
                   pathname: "/ConfirmClinicChoice",
@@ -178,9 +178,6 @@ const CompareBlock = props => {
               <hr /> Telephone: {clinicTwo.Tel} <hr /> Distance:{" "}
               {parseFloat(clinicTwo.distance).toFixed(2)}km away
               <hr />
-
-
-
               <Link
                 to={{
                   pathname: "/ConfirmClinicChoice",
@@ -210,6 +207,15 @@ const CompareBlock = props => {
           />
           <Dialog open={openTwo} onClose={handleClickCloseTwo}>
             <DialogContent>
+              <img
+                src={
+                  process.env.PUBLIC_URL +
+                  `/ClinicPictures/${clinicTwo.properties.FILE_NAME}.png`
+                }
+                alt="clinic picture"
+                style={{ width: "100%" }}
+              />
+              <hr />
               Clinic Name: {clinicTwo.properties.HCI_NAME} <hr /> Address:{" "}
               {clinicTwo.properties.BLK_HSE_NO}{" "}
               {clinicTwo.properties.STREET_NAME} #
@@ -223,8 +229,27 @@ const CompareBlock = props => {
               Distance:
               {parseFloat(clinicTwo.distance).toFixed(2)}km away
               <hr />
-
-
+              Doctor: {clinicTwo.properties.DR_NAME}
+              <hr />
+              <p>Opening Hours:</p>
+              <hr />
+              {clinicTwo.properties.ALL_OPENING_HOURS.map(period => (
+                <p>
+                  {period.day_string}
+                  <br />
+                  {period.opening_hours.join(", ")}
+                </p>
+              ))}
+              <hr />
+              <p>Directions:</p>
+              {clinicTwo.properties.ALL_DIRECTIONS.map(path => (
+                <p>
+                  {path.transport_string}
+                  <br />
+                  {path.directions.join(", ")}
+                </p>
+              ))}
+              <hr />
 
 
               <Link
