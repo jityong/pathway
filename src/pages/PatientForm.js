@@ -200,6 +200,8 @@ class PatientForm extends React.Component {
                 <MenuItem value="CHAS Orange">CHAS Orange</MenuItem>
                 <MenuItem value="CHAS Blue">CHAS Blue</MenuItem>
                 <MenuItem value="PG">Pioneer Generation</MenuItem>
+                <MenuItem value="CHAS Green">CHAS Green</MenuItem>
+                <MenuItem value="MG">Merdeka Generation</MenuItem>
               </Select>
             </FormControl>
           </div>

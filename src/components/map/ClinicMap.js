@@ -3,6 +3,7 @@ import { Map, GoogleApiWrapper, Marker } from "google-maps-react";
 import PcDialog from "../PcDialog";
 import Button from "@material-ui/core/Button";
 import InfoWindowEx from "./InfoWindowEx";
+import { Link, Redirect } from "react-router-dom";
 
 const mapStyles = {
   width: "100%",
@@ -46,6 +47,24 @@ export class ClinicMap extends Component {
       clinic.name = clinic.properties.HCI_NAME;
       clinic.price = "$$";
       clinic.rating = "4.3";
+      clinic.doctorName = clinic.properties.DR_NAME;
+      //store it as an array and delay FP is a better approach
+      // clinic.formattedOpeningHours = clinic.properties.formattedOpeningHours;
+
+      clinic.formattedOpeningHours = 
+        clinic.properties.ALL_OPENING_HOURS.map(period => (
+          period.day_string + ":\n" + period.opening_hours.join(",\n")
+        ))
+        .join(", \n");
+      
+      clinic.formattedDirections = 
+        clinic.properties.ALL_DIRECTIONS.map(path => (
+          path.transport_string + "\n" + path.directions.join(",\n")
+        ))
+        .join(", \n");
+      
+
+
       return (
         <Marker
           key={clinic.id}
@@ -115,10 +134,65 @@ export class ClinicMap extends Component {
               Distance:
               {parseFloat(selectedPlace.clinic.distance).toFixed(2)}km away
               <hr />
-              {/* <Button>
+
+
+              Doctor: {selectedPlace.clinic.properties.DR_NAME}
+
+              {/* <hr />
+              Opening Hours:
+              {selectedPlace.clinic.properties.ALL_OPENING_HOURS.map(period => (
+                  period.day_string + ":\n" + period.opening_hours.join(",\n")
+              ))
+              .join(", \n")}
+              <hr />
+              Directions:
+              {selectedPlace.clinic.properties.ALL_DIRECTIONS.map(path => (
+              path.transport_string + "\n" + path.directions.join(",\n")
+              ))
+              .join(", \n")}
+              <hr /> */}
+
+
+              <hr />
+              <p>Opening Hours:</p>
+              <hr />
+              {
+                selectedPlace.clinic.properties.ALL_OPENING_HOURS.map(period => (
+                  <p>
+                    {period.day_string}
+                    <br />
+                    {period.opening_hours.join(", ")}
+                  </p>
+                ))
+              }
+              <hr />
+
+              <p>Directions:</p>
+              {
+                selectedPlace.clinic.properties.ALL_DIRECTIONS.map(path => (
+                  <p>
+                    {path.transport_string}
+                    <br />
+                    {path.directions.join(", ")}
+                  </p>
+                ))
+              }
+              <hr />
+
+
+
+
+
+              <img src={process.env.PUBLIC_URL + `/ClinicPictures/${selectedPlace.clinic.properties.FILE_NAME}.png`}
+                alt="clinic picture" style={{ width: "100%" }} />
+
+              <hr />
+
+{/* 
+              <Button>
                 <Link
                   to={{
-                    pathname: "/selectedChoice",
+                    pathname: "/ConfirmClinicChoice",
                     state: {
                       choice: selectedPlace.clinic
                     }
@@ -127,6 +201,8 @@ export class ClinicMap extends Component {
                   <span>Select</span>
                 </Link>
               </Button> */}
+
+
               <Button
                 variant="contained"
                 color="primary"
@@ -146,10 +222,12 @@ export class ClinicMap extends Component {
               <hr /> Telephone: {selectedPlace.clinic.Tel} <hr /> Distance:{" "}
               {parseFloat(selectedPlace.clinic.distance).toFixed(2)}km away
               <hr />
+
+
               {/* <Button>
                 <Link
                   to={{
-                    pathname: "/selectedChoice",
+                      pathname: "/ConfirmClinicChoice",
                     state: {
                       choice: selectedPlace.clinic
                     }
@@ -158,6 +236,8 @@ export class ClinicMap extends Component {
                   <span>Select</span>
                 </Link>
               </Button> */}
+
+
               <Button
                 variant="contained"
                 color="primary"
