@@ -75,6 +75,33 @@ const CompareBlock = props => {
               Distance:
               {parseFloat(clinicOne.distance).toFixed(2)}km away
               <hr />
+
+
+              
+              {/* Doctor: {clinic.properties.DR_NAME}
+              <hr />
+              <p>Opening Hours:</p>
+              <hr />
+              {clinic.properties.ALL_OPENING_HOURS.map(period => (
+                <p>
+                  {period.day_string}
+                  <br />
+                  {period.opening_hours.join(", ")}
+                </p>
+              ))}
+              <hr />
+              <p>Directions:</p>
+              {clinic.properties.ALL_DIRECTIONS.map(path => (
+                <p>
+                  {path.transport_string}
+                  <br />
+                  {path.directions.join(", ")}
+                </p>
+              ))}
+              <hr /> */}
+
+
+
               <Link
                 to={{
                   pathname: "/ConfirmClinicChoice",
@@ -109,13 +136,15 @@ const CompareBlock = props => {
               <hr /> Telephone: {clinicOne.Tel} <hr /> Distance:{" "}
               {parseFloat(clinicOne.distance).toFixed(2)}km away
               <hr />
+
+
+              
               <Link
                 to={{
                   pathname: "/ConfirmClinicChoice",
                   state: {
                     choice: clinicOne,
                     formData: props.formData
-
                   }
                 }}
               >
@@ -149,13 +178,15 @@ const CompareBlock = props => {
               <hr /> Telephone: {clinicTwo.Tel} <hr /> Distance:{" "}
               {parseFloat(clinicTwo.distance).toFixed(2)}km away
               <hr />
+
+
+
               <Link
                 to={{
                   pathname: "/ConfirmClinicChoice",
                   state: {
                     choice: clinicTwo,
                     formData: props.formData
-
                   }
                 }}
               >
@@ -192,6 +223,10 @@ const CompareBlock = props => {
               Distance:
               {parseFloat(clinicTwo.distance).toFixed(2)}km away
               <hr />
+
+
+
+
               <Link
                 to={{
                   pathname: "/ConfirmClinicChoice",
