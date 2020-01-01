@@ -19,14 +19,14 @@ var newDrugsData = drugsData.map(function(data) {
             : data.PCN_Status == "S2"
             ? xlsx.SSF.format('$0.00', data.PCN_UnitPrice * 0.5 * 0.75)
         : xlsx.SSF.format('$0.00', data.PCN_UnitPrice);
-    data.PCN_Price.GREEN_CHAS = data.SG_NON_CHAS;
+    data.PCN_Price.GREEN_CHAS = data.PCN_Price.NON_CHAS;
     data.PCN_Price.ORANGE_CHAS = data.PCN_Status == "S1"
         ? "Charged at $1.40/week or " + xlsx.SSF.format('$0.00', data.PCN_UnitPrice * 0.25)
         + "/tablet, whichever is cheaper"
         : data.PCN_Status == "S2"
             ? xlsx.SSF.format('$0.00', data.PCN_UnitPrice * 0.5 * 0.25)
         : xlsx.SSF.format('$0.00', data.PCN_UnitPrice);
-    data.PCN_Price.BLUE_CHAS = data.SG_ORANGE_CHAS;
+    data.PCN_Price.BLUE_CHAS = data.PCN_Price.ORANGE_CHAS;
     data.PCN_Price.MG_CHAS = data.PCN_Status == "S1"
         ? "Charged at $1.40/week or "
         + xlsx.SSF.format('$0.00', data.PCN_UnitPrice * 0.1875)
@@ -75,7 +75,7 @@ var newDrugsData = drugsData.map(function(data) {
             : data.Polyclinic_Status == "S2"
             ? xlsx.SSF.format('$0.00', data.Polyclinic_UnitPrice * 0.5)
         : xlsx.SSF.format('$0.00', data.Polyclinic_UnitPrice);
-    data.Polyclinic_Price.above65 = data.Polyclinic_Status == "NA" ? "NA"
+    data.Polyclinic_Price.noPG_above65 = data.Polyclinic_Status == "NA" ? "NA"
         : data.Polyclinic_Status == "S1"
         ? "Charged at $0.70/week or " + xlsx.SSF.format('$0.00', data.Polyclinic_UnitPrice)
         + "/tablet, whichever is cheaper"
@@ -114,7 +114,7 @@ var newConsultationData = consultationData.map(function(data) {
     data.PCN_Price.ORANGE_CHAS = data.PCN_ORANGE_CHAS == "NA" ? "NA" : xlsx.SSF.format('$0.00', data.PCN_ORANGE_CHAS);
     data.PCN_Price.BLUE_CHAS = data.PCN_BLUE_CHAS == "NA" ? "NA" : xlsx.SSF.format('$0.00', data.PCN_BLUE_CHAS);
     data.PCN_Price.GREEN_CHAS = data.PCN_GREEN_CHAS == "NA" ? "NA" : xlsx.SSF.format('$0.00', data.PCN_GREEN_CHAS);
-    data.PCN_Price.Non_CHAS = data.PCN_NON_CHAS == "NA" ? "NA" : xlsx.SSF.format('$0.00', data.PCN_NON_CHAS);
+    data.PCN_Price.NON_CHAS = data.PCN_NON_CHAS == "NA" ? "NA" : xlsx.SSF.format('$0.00', data.PCN_NON_CHAS);
     data.PCN_Price.NON_RESIDENT = data.PCN_NON_CHAS == "NA" ? "NA" : xlsx.SSF.format('$0.00', data.PCN_NON_CHAS);
 
     data.Polyclinic_Price = {};
@@ -132,10 +132,12 @@ var newConsultationData = consultationData.map(function(data) {
 function callback() {
 
 }
-var test = {newTestsData};
-fs.writeFile('testPrices.json', JSON.stringify(newTestsData, null, 4), 'utf8', callback);
-fs.writeFile('drugPrices.json', JSON.stringify(newDrugsData, null, 4), 'utf8', callback);
-fs.writeFile('consultationPrices.json', JSON.stringify(newConsultationData, null, 4), 'utf8', callback);
+var drugPrices = {drugs: newDrugsData};
+var testPrices = {tests: newTestsData};
+var consultationPrices = {consultation: newConsultationData};
+fs.writeFile('../data/testPrices.json', JSON.stringify(testPrices, null, 4), 'utf8', callback);
+fs.writeFile('../data/drugPrices.json', JSON.stringify(drugPrices, null, 4), 'utf8', callback);
+fs.writeFile('../data/consultationPrices.json', JSON.stringify(consultationPrices, null, 4), 'utf8', callback);
 
 
 console.log(JSON.stringify(newTestsData, null, 4));

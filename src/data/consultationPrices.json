@@ -1,0 +1,64 @@
+{
+    "consultation": [
+        {
+            "Description": "Doctor Consultation",
+            "PCN_PG_CHAS": "$5 to $12",
+            "PCN_MG_CHAS": "$5 to $12",
+            "PCN_BLUE_CHAS": "$12 to $15",
+            "PCN_ORANGE_CHAS": "$12 to $15",
+            "PCN_GREEN_CHAS": "$35 to $55",
+            "PCN_NON_CHAS": "$35 to $55",
+            "POLYCLINIC_SG_ADULT": 13.2,
+            "POLYCLINIC_SG_CHILD_ELDERLY": 6.9,
+            "POLYCLINIC_PR": 32.7,
+            "POLYCLINIC_NON_RESIDENT": 51.47,
+            "PCN_Price": {
+                "PG": "$5 to $12",
+                "MG": "$5 to $12",
+                "ORANGE_CHAS": "$12 to $15",
+                "BLUE_CHAS": "$12 to $15",
+                "GREEN_CHAS": "$35 to $55",
+                "NON_CHAS": "$35 to $55",
+                "NON_RESIDENT": "$35 to $55"
+            },
+            "Polyclinic_Price": {
+                "SG_ADULT": "$13.20",
+                "PR": "$32.70",
+                "SG_CHILD_ELDERLY": "$6.90",
+                "NON_RESIDENT": "$51.47",
+                "PG": "$3.45",
+                "MG": "$1.73"
+            }
+        },
+        {
+            "Description": "Family Physician Consultation",
+            "PCN_PG_CHAS": "NA",
+            "PCN_MG_CHAS": "NA",
+            "PCN_BLUE_CHAS": "NA",
+            "PCN_ORANGE_CHAS": "NA",
+            "PCN_GREEN_CHAS": "NA",
+            "PCN_NON_CHAS": "NA",
+            "POLYCLINIC_SG_ADULT": 30,
+            "POLYCLINIC_SG_CHILD_ELDERLY": 30,
+            "POLYCLINIC_PR": 40,
+            "POLYCLINIC_NON_RESIDENT": 67.8,
+            "PCN_Price": {
+                "PG": "NA",
+                "MG": "NA",
+                "ORANGE_CHAS": "NA",
+                "BLUE_CHAS": "NA",
+                "GREEN_CHAS": "NA",
+                "NON_CHAS": "NA",
+                "NON_RESIDENT": "NA"
+            },
+            "Polyclinic_Price": {
+                "SG_ADULT": "$30.00",
+                "PR": "$40.00",
+                "SG_CHILD_ELDERLY": "$30.00",
+                "NON_RESIDENT": "$67.80",
+                "PG": "$15.00",
+                "MG": "$7.50"
+            }
+        }
+    ]
+}

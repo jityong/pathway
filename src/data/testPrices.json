@@ -1,0 +1,260 @@
+{
+    "tests": [
+        {
+            "Name": "hbA1c",
+            "Description": "hbA1c",
+            "PCN_PG_CHAS": 10,
+            "PCN_MG_CHAS": 10,
+            "PCN_Orange_CHAS": 10,
+            "PCN_Blue_CHAS": 10,
+            "PCN_Green_CHAS": 10,
+            "PCN_Non_CHAS": 10,
+            "PCN_PRs": 10,
+            "PCN_NonResident": 10,
+            "Polyclinic_SG": 14.1,
+            "Polyclinic_PR": 14.1,
+            "Polyclinic_SG_Child_Elderly": 14.1,
+            "Polyclinic_NonResident": 14.1,
+            "PCN_Price": {
+                "PG": "$10.00",
+                "MG": "$10.00",
+                "ORANGE_CHAS": "$10.00",
+                "BLUE_CHAS": "$10.00",
+                "GREEN_CHAS": "$10.00",
+                "Non_CHAS": "$10.00",
+                "PR": "$10.00",
+                "NON_RESIDENT": "$10.00"
+            },
+            "Polyclinic_Price": {
+                "SG": "$14.10",
+                "PR": "$14.10",
+                "SG_CHILD_ELDERLY": "$14.10",
+                "NON_RESIDENT": "$14.10"
+            }
+        },
+        {
+            "Name": "Nurse Counselling",
+            "Description": "Nurse Counselling",
+            "PCN_PG_CHAS": 5,
+            "PCN_MG_CHAS": 7,
+            "PCN_Orange_CHAS": 9,
+            "PCN_Blue_CHAS": 9,
+            "PCN_Green_CHAS": 10,
+            "PCN_Non_CHAS": 10,
+            "PCN_PRs": 23,
+            "PCN_NonResident": 40,
+            "Polyclinic_SG": 7.3,
+            "Polyclinic_PR": 7.3,
+            "Polyclinic_SG_Child_Elderly": 6.8,
+            "Polyclinic_NonResident": 31.4,
+            "PCN_Price": {
+                "PG": "$5.00",
+                "MG": "$7.00",
+                "ORANGE_CHAS": "$9.00",
+                "BLUE_CHAS": "$9.00",
+                "GREEN_CHAS": "$10.00",
+                "Non_CHAS": "$10.00",
+                "PR": "$23.00",
+                "NON_RESIDENT": "$40.00"
+            },
+            "Polyclinic_Price": {
+                "SG": "$7.30",
+                "PR": "$7.30",
+                "SG_CHILD_ELDERLY": "$6.80",
+                "NON_RESIDENT": "$31.40"
+            }
+        },
+        {
+            "Name": "DRP",
+            "Description": "Diabetic Retinal Photography",
+            "PCN_PG_CHAS": 5,
+            "PCN_MG_CHAS": 7,
+            "PCN_Orange_CHAS": 9,
+            "PCN_Blue_CHAS": 9,
+            "PCN_Green_CHAS": 16,
+            "PCN_Non_CHAS": 16,
+            "PCN_PRs": 23,
+            "PCN_NonResident": 40,
+            "Polyclinic_SG": 12.8,
+            "Polyclinic_PR": 23,
+            "Polyclinic_SG_Child_Elderly": 12.8,
+            "Polyclinic_NonResident": 49.8,
+            "PCN_Price": {
+                "PG": "$5.00",
+                "MG": "$7.00",
+                "ORANGE_CHAS": "$9.00",
+                "BLUE_CHAS": "$9.00",
+                "GREEN_CHAS": "$16.00",
+                "Non_CHAS": "$16.00",
+                "PR": "$23.00",
+                "NON_RESIDENT": "$40.00"
+            },
+            "Polyclinic_Price": {
+                "SG": "$12.80",
+                "PR": "$23.00",
+                "SG_CHILD_ELDERLY": "$12.80",
+                "NON_RESIDENT": "$49.80"
+            }
+        },
+        {
+            "Name": "DFS",
+            "Description": "Diabetic Foot Screening",
+            "PCN_PG_CHAS": 5,
+            "PCN_MG_CHAS": 7,
+            "PCN_Orange_CHAS": 9,
+            "PCN_Blue_CHAS": 9,
+            "PCN_Green_CHAS": 16,
+            "PCN_Non_CHAS": 16,
+            "PCN_PRs": 23,
+            "PCN_NonResident": 40,
+            "Polyclinic_SG": 12.8,
+            "Polyclinic_PR": 23,
+            "Polyclinic_SG_Child_Elderly": 12.8,
+            "Polyclinic_NonResident": 49.8,
+            "PCN_Price": {
+                "PG": "$5.00",
+                "MG": "$7.00",
+                "ORANGE_CHAS": "$9.00",
+                "BLUE_CHAS": "$9.00",
+                "GREEN_CHAS": "$16.00",
+                "Non_CHAS": "$16.00",
+                "PR": "$23.00",
+                "NON_RESIDENT": "$40.00"
+            },
+            "Polyclinic_Price": {
+                "SG": "$12.80",
+                "PR": "$23.00",
+                "SG_CHILD_ELDERLY": "$12.80",
+                "NON_RESIDENT": "$49.80"
+            }
+        },
+        {
+            "Name": "Spirometry",
+            "Description": "Spirometry",
+            "PCN_PG_CHAS": 21,
+            "PCN_MG_CHAS": 24,
+            "PCN_Orange_CHAS": 23.5,
+            "PCN_Blue_CHAS": 23.5,
+            "PCN_Green_CHAS": 30.6,
+            "PCN_Non_CHAS": 30.6,
+            "PCN_PRs": "Based on respective service providers' charges",
+            "PCN_NonResident": "Based on respective service providers' charges",
+            "Polyclinic_SG": "NA",
+            "Polyclinic_PR": "NA",
+            "Polyclinic_SG_Child_Elderly": "NA",
+            "Polyclinic_NonResident": "NA",
+            "PCN_Price": {
+                "PG": "$21.00",
+                "MG": "$24.00",
+                "ORANGE_CHAS": "$23.50",
+                "BLUE_CHAS": "$23.50",
+                "GREEN_CHAS": "$30.60",
+                "Non_CHAS": "$30.60",
+                "PR": "Based on respective service providers' charges",
+                "NON_RESIDENT": "Based on respective service providers' charges"
+            },
+            "Polyclinic_Price": {
+                "SG": "NA",
+                "PR": "NA",
+                "SG_CHILD_ELDERLY": "NA",
+                "NON_RESIDENT": "NA"
+            }
+        },
+        {
+            "Name": "Bundle Package",
+            "Description": "DRP + DFS + 1 Nurse Visit",
+            "PCN_PG_CHAS": 12,
+            "PCN_MG_CHAS": 18,
+            "PCN_Orange_CHAS": 24,
+            "PCN_Blue_CHAS": 24,
+            "PCN_Green_CHAS": 40,
+            "PCN_Non_CHAS": 40,
+            "PCN_PRs": "NA",
+            "PCN_NonResident": "NA",
+            "Polyclinic_SG": "NA",
+            "Polyclinic_PR": "NA",
+            "Polyclinic_SG_Child_Elderly": "NA",
+            "Polyclinic_NonResident": "NA",
+            "PCN_Price": {
+                "PG": "$12.00",
+                "MG": "$18.00",
+                "ORANGE_CHAS": "$24.00",
+                "BLUE_CHAS": "$24.00",
+                "GREEN_CHAS": "$40.00",
+                "Non_CHAS": "$40.00",
+                "PR": "NA",
+                "NON_RESIDENT": "NA"
+            },
+            "Polyclinic_Price": {
+                "SG": "NA",
+                "PR": "NA",
+                "SG_CHILD_ELDERLY": "NA",
+                "NON_RESIDENT": "NA"
+            }
+        },
+        {
+            "Name": "Bundle Package",
+            "Description": "DRP + DFS + 2 Nurse Visit",
+            "PCN_PG_CHAS": 14,
+            "PCN_MG_CHAS": 24,
+            "PCN_Orange_CHAS": 30,
+            "PCN_Blue_CHAS": 30,
+            "PCN_Green_CHAS": 45,
+            "PCN_Non_CHAS": 45,
+            "PCN_PRs": "NA",
+            "PCN_NonResident": "NA",
+            "Polyclinic_SG": "NA",
+            "Polyclinic_PR": "NA",
+            "Polyclinic_SG_Child_Elderly": "NA",
+            "Polyclinic_NonResident": "NA",
+            "PCN_Price": {
+                "PG": "$14.00",
+                "MG": "$24.00",
+                "ORANGE_CHAS": "$30.00",
+                "BLUE_CHAS": "$30.00",
+                "GREEN_CHAS": "$45.00",
+                "Non_CHAS": "$45.00",
+                "PR": "NA",
+                "NON_RESIDENT": "NA"
+            },
+            "Polyclinic_Price": {
+                "SG": "NA",
+                "PR": "NA",
+                "SG_CHILD_ELDERLY": "NA",
+                "NON_RESIDENT": "NA"
+            }
+        },
+        {
+            "Name": "Bundle Package",
+            "Description": "DRP/DFS + 1 Nurse Visit",
+            "PCN_PG_CHAS": 6,
+            "PCN_MG_CHAS": 10,
+            "PCN_Orange_CHAS": 12,
+            "PCN_Blue_CHAS": 12,
+            "PCN_Green_CHAS": 20,
+            "PCN_Non_CHAS": 20,
+            "PCN_PRs": "NA",
+            "PCN_NonResident": "NA",
+            "Polyclinic_SG": "NA",
+            "Polyclinic_PR": "NA",
+            "Polyclinic_SG_Child_Elderly": "NA",
+            "Polyclinic_NonResident": "NA",
+            "PCN_Price": {
+                "PG": "$6.00",
+                "MG": "$10.00",
+                "ORANGE_CHAS": "$12.00",
+                "BLUE_CHAS": "$12.00",
+                "GREEN_CHAS": "$20.00",
+                "Non_CHAS": "$20.00",
+                "PR": "NA",
+                "NON_RESIDENT": "NA"
+            },
+            "Polyclinic_Price": {
+                "SG": "NA",
+                "PR": "NA",
+                "SG_CHILD_ELDERLY": "NA",
+                "NON_RESIDENT": "NA"
+            }
+        }
+    ]
+}
