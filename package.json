@@ -21,7 +21,8 @@
     "react-scripts": "3.0.1",
     "react-select": "^3.0.4",
     "react-swipeable-views": "^0.13.3",
-    "turf": "^3.0.14"
+    "turf": "^3.0.14",
+    "xlsx": "^0.15.4"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -46,6 +47,7 @@
   },
   "homepage": "http://pathwaynuhs.com",
   "devDependencies": {
-    "html-loader": "^0.5.5"
+    "html-loader": "^0.5.5",
+    "json": "^9.0.6"
   }
 }
