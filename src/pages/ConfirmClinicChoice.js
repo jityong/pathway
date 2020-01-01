@@ -11,6 +11,9 @@ import { makeStyles } from "@material-ui/core/styles";
 import TableBody from "@material-ui/core/TableBody";
 import TableCell from "@material-ui/core/TableCell";
 import TableRow from "@material-ui/core/TableRow";
+import consultationPrices from "../data/consultationPrices";
+import drugPrices from "../data/drugPrices";
+import testPrices from "../data/testPrices";
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -28,278 +31,81 @@ const ConfirmClinicChoice = props => {
   function createData(name, gp, pc) {
     return { name, gp, pc };
   }
-  const priceRows = [
-    createData(
-      "Consultation Fee",
-      userSubsidyType === "CHAS Blue" ? (
-        <p>$12-15</p>
-      ) : userSubsidyType === "CHAS Orange" ? (
-        <p style={{ fontSize: "1em" }}>$12-15</p>
-
-      ) : userSubsidyType === "PG" ? (
-        <p style={{ fontSize: "1em" }}>$5-12</p>
-      ) : userSubsidyType === "MG" ? (
-        <p style={{ fontSize: "1em" }}>$5-12</p>
-
-
-      ) : userSubsidyType === "CHAS Green" ? (
-        <p style={{ fontSize: "1em" }}>$35-55</p>
-      ) : (
-        <p style={{ fontSize: "1em" }}>$35-55</p>
-      ),
-      userSubsidyType === "PG" && userAge > 65
-        ? "$3.45"
-        : userNationality === "Singaporean"
-        ? userAge < 18 || userAge > 65
-          ? "$6.90"
-          : "$13.20"
-        : userNationality === "Permanent Resident"
-        ? "$32.70"
-        : "$51.47"
-    ),
-    createData(
-      <span style={{ color: "grey" }}>"Drugs & Tests Prices"</span>,
-      <span style={{ color: "grey" }}>"Drugs & Tests Prices"</span>,
-      <span style={{ color: "grey" }}>"Drugs & Tests Prices"</span>
-    ),
-    createData(
-      "Metformin HCL 250MG ",
-      userNationality === "Singaporean"
-        ? userSubsidyType === "CHAS Orange" || userSubsidyType === "CHAS Blue"
-          ? "Capped at $.140/week or $0.025/tablet \n (whichever is cheaper)"
-          : userSubsidyType === "PG"
-          ? "Capped at $.140/week or $0.0125/tablet \n (whichever is cheaper)"
-          : "Capped at $.140/week or $0.075/tablet \n (whichever is cheaper)"
-        : "$0.10/tablet",
-      userNationality === "Singaporean"
-        ? userAge > 65
-          ? userSubsidyType === "PG"
-            ? "$0.70/week or $0.0125/tablet \n (whichever is cheaper)"
-            : "$0.70/week or $0.10/tablet \n (whichever is cheaper)"
-          : userSubsidyType === "CHAS Orange" || userSubsidyType === "CHAS Blue"
-          ? "Capped at $.140/week or $0.025/tablet \n (whichever is cheaper)"
-          : "$0.075/tablet"
-        : "$0.10/tablet"
-    ),
-    createData(
-      "METFORMIN 500MG XR (GLUCOPHAGE XR)",
-      "$0.25/tablet",
-      "$0.25/tablet"
-    ),
-    createData(
-      "Metformin HCL 500MG ",
-      userNationality === "Singaporean"
-        ? userSubsidyType === "CHAS Orange" || userSubsidyType === "CHAS Blue"
-          ? "Capped at $1.40/week or $0.03/tablet \n(whichever is cheaper)"
-          : userSubsidyType === "PG"
-          ? "Capped at $.140/week or $0.015/tablet \n(whichever is cheaper)"
-          : "Capped at $.140/week or $0.09/tablet \n(whichever is cheaper)"
-        : "$0.12/tablet",
-      "-"
-    ),
-    createData(
-      "Metformin HCL 850MG ",
-      userNationality === "Singaporean"
-        ? userSubsidyType === "CHAS Orange" || userSubsidyType === "CHAS Blue"
-          ? "Capped at $1.40/week or $0.03/tablet \n(whichever is cheaper)"
-          : userSubsidyType === "PG"
-          ? "Capped at $.140/week or $0.015/tablet \n(whichever is cheaper)"
-          : "Capped at $.140/week or $0.09/tablet \n(whichever is cheaper)"
-        : "$0.12/tablet",
-      userNationality === "Singaporean"
-        ? userAge > 65
-          ? userSubsidyType === "PG"
-            ? "$0.70/week or $0.015/tablet \n(whichever is cheaper)"
-            : "$0.70/week or $0.12/tablet \n(whichever is cheaper)"
-          : userSubsidyType === "CHAS Orange" || userSubsidyType === "CHAS Blue"
-          ? "Capped at $1.40/week or $0.03/tablet \n(whichever is cheaper)"
-          : "$0.09/tablet"
-        : "$0.12/tablet"
-    ),
-
-    createData(
-      "Sulfonylureas (Glipizide)",
-      "Metformin HCL 250MG ",
-      userNationality === "Singaporean"
-        ? userSubsidyType === "CHAS Orange" || userSubsidyType === "CHAS Blue"
-          ? "Capped at $.140/week or $0.025/tablet \n(whichever is cheaper)"
-          : userSubsidyType === "PG"
-          ? "Capped at $.140/week or $0.0125/tablet \n(whichever is cheaper)"
-          : "Capped at $.140/week or $0.075/tablet \n(whichever is cheaper)"
-        : "$0.10/tablet",
-      userNationality === "Singaporean"
-        ? userAge > 65
-          ? userSubsidyType === "PG"
-            ? "$0.70/week or $0.0125/tablet \n(whichever is cheaper)"
-            : "$0.70/week or $0.10/tablet \n(whichever is cheaper)"
-          : userSubsidyType === "CHAS Orange" || userSubsidyType === "CHAS Blue"
-          ? "Capped at $1.40/week or $0.025/tablet \n(whichever is cheaper)"
-          : "$0.075/tablet"
-        : "$0.10/tablet"
-    ),
-    createData(
-      "DAPAGLIFLOZIN 10MG TAB (FORXIGA)",
-      "$1.36/tablet",
-      "$1.36/tablet"
-    ),
-    createData(
-      "EMPAGLIFLOZIN 10MG TAB (JARDIANCE)",
-      "$1.79/tablet",
-      "$1.29/tablet"
-    ),
-    createData(
-      "EMPAGLIFLOZIN 25MG TAB (JARDIANCE)",
-      "$1.98/tablet",
-      "$1.29/tablet"
-    ),
-    createData(
-      "DPP-4(SITAGLIPTIN 100MG TAB (JANUVIA))",
-      "$2.79/tablet",
-      "$2.28/tablet"
-    ),
-    createData("DPP-4(SITAGLIPTIN 25MG TAB (JANUVIA))", "$2.76/tablet", "-"),
-    createData(
-      "DPP-4(SITAGLIPTIN 50MG TAB (JANUVIA))",
-      "$2.79/tablet",
-      "$2./tablet"
-    ),
-    createData(
-      "DPP-4(LINAGLIPTIN 5MG TAB (TRAJENTA))",
-      "$1.88/tablet",
-      "$1.36/tablet"
-    ),
-    createData(
-      "NovoMix insulin (Insulin Aspart) - NOVOMIX 30 FLEXPEN 3ML",
-      userNationality === "Singaporean"
-        ? userSubsidyType === "CHAS Orange" || userSubsidyType === "CHAS Blue"
-          ? "$1.08/val"
-          : userSubsidyType === "PG"
-          ? "$0.540/val"
-          : "3.24/val"
-        : "$8.63/val",
-      "$19.6/pen"
-    ),
-    createData(
-      "HbA1c",
-      "$10/test",
-      userNationality === "Singaporean" ? (
-        <p style={{ fontSize: "1em" }}>
-          HbA1c => $14.20/test
-          <hr /> DM panel(HbA1c + renal panel, lipids, liver panel etc) <br />{" "}
-          => capped at $21.70/test
-        </p>
-      ) : (
-        <p style={{ fontSize: "1em" }}>
-          HbA1c => $14.20/test
-          <hr /> DM panel(HbA1c + renal panel, lipids, liver panel etc) =>
-          $36.40/test
-        </p>
-      )
-    ),
-    createData(
-      "Diabetic Nurse Consultation",
-      userSubsidyType === "PG"
-        ? "$5/session"
-        : userSubsidyType === "MG"
-        ? "$7/session"
-        : userSubsidyType === "CHAS Orange" || userSubsidyType === "CHAS Blue"
-        ? "$9/session"
-        : userSubsidyType === "CHAS Green"
-        ? "$10/session"
-        : "$10/session",
-        //Newly added column for nationality, PR and Non-resident charges are for ....
-      userNationality === "Permanent Resident"
-        ? "$23/session"
-        //lack of information
-        : userNationality === "Singaporean"
-        ? "$10/session"
-        : "$40/session",
-      "-"
-    ),
-    createData(
-      "DRP - Diabetic Retinal Photography",
-      userSubsidyType === "PG"
-        ? "$5/session"
-        : userSubsidyType === "MG"
-        ? "$7/session"
-        : userSubsidyType === "CHAS Orange" || userSubsidyType === "CHAS Blue"
-        ? "$9/session"
-        : userSubsidyType === "CHAS Green"
-        ? "$16/session"
-        : "$16/session",
-
-      userNationality === "Singaporean"//is subsidised SG-rean same as just indicating nationality?
-        ? "$12.80/session"//still uses old data
-        //using data from new column from NUHS
-        : userNationality === "Permanent Resident"
-        ? "$23/session"
-        : "$40/session"
-    ),
-    createData(
-      "DFS - Diabetic Foot Screening",
-      userSubsidyType === "PG"
-        ? "$5/session"
-        : userSubsidyType === "MG"
-        ? "$7/session"
-        : userSubsidyType === "CHAS Orange" || userSubsidyType === "CHAS Blue"
-        ? "$9/session"
-        : userSubsidyType === "CHAS Green"
-        ? "$16/session"
-        : "$16/session",
-
-      userNationality === "Singaporean"//is subsidised SG-rean same as just indicating nationality?
-        ? "$12.80/session"//still uses old data
-        //using data from new column from NUHS
-        : userNationality === "Permanent Resident"
-        ? "$23/session"
-        : "$40/session"
-    ),
-
-    createData(
-      "DRP + DFS + 1 Nurse Visit",
-      userSubsidyType === "PG"
-        ? "$12/session"
-        : userSubsidyType === "MG"
-        ? "$18/session"
-        : userSubsidyType === "CHAS Orange" || userSubsidyType === "CHAS Blue"
-        ? "$24/session"
-        : userSubsidyType === "CHAS Green"
-        ? "$40/session"
-        : "$40/session"
-    ),
-
-    createData(
-      "DRP + DFS + 2 Nurse Visit",
-      userSubsidyType === "PG"
-        ? "$14/session"
-        : userSubsidyType === "MG"
-        ? "$24/session"
-        : userSubsidyType === "CHAS Orange" || userSubsidyType === "CHAS Blue"
-        ? "$30/session"
-        : userSubsidyType === "CHAS Green"
-        ? "$45/session"
-        : "$45/session"
-    ),
-
-    createData(
-      "DRP(or DFS) + 1 Nurse Visit",
-      userSubsidyType === "PG"
-        ? "$6/session"
-        : userSubsidyType === "MG"
-        ? "$10/session"
-        : userSubsidyType === "CHAS Orange" || userSubsidyType === "CHAS Blue"
-        ? "$12/session"
-        : userSubsidyType === "CHAS Green"
-        ? "$20/session"
-        : "$20/session"
-    ),
-
-    
-
-
-
-  ];
-
+  const consultationPriceRows = consultationPrices.consultation.map(function (data) {
+    return createData(
+        data.Description,
+        userNationality === "SG"
+            ? userSubsidyType === "PG"
+            ? data.PCN_Price.PG
+            : userSubsidyType === "MG"
+                ? data.PCN_Price.MG
+                : userSubsidyType === "CHAS Blue" || userSubsidyType === "CHAS Orange"
+                    ? data.PCN_Price.BLUE_CHAS
+                    : data.PCN_Price.NON_CHAS
+            : data.PCN_Price.NON_RESIDENT,
+        userNationality === "Singaporean"
+            ? userSubsidyType === "PG"
+            ? data.Polyclinic_Price.PG
+            : userSubsidyType === "MG"
+                ? data.Polyclinic_Price.MG
+                : userAge < 18 || userAge > 65
+                    ? data.Polyclinic_Price.SG_CHILD_ELDERLY
+                    : data.Polyclinic_Price.SG_ADULT
+            : userNationality === "Permanent Resident"
+            ? data.Polyclinic_Price.PR
+            : data.Polyclinic_Price.NON_RESIDENT
+    )
+  })
+  const drugPriceRows = drugPrices.drugs.map(function (data) {
+    return createData(
+        data.Name + ": " + data.Description,
+        userNationality === "Singaporean"
+            ? userSubsidyType === "CHAS Orange" || userSubsidyType === "CHAS Blue"
+            ? data.PCN_Price.ORANGE_CHAS
+            : userSubsidyType === "PG"
+                ? data.PCN_Price.PG_CHAS
+                : data.PCN_Price.NON_CHAS
+            : data.PCN_Price.NON_SG,
+        userNationality === "Singaporean"
+            ? userAge > 65
+            ? userSubsidyType === "PG"
+                ? data.Polyclinic_Price.PG
+                : userSubsidyType === "MG"
+                    ? data.Polyclinic_Price.MG_above65
+                    : data.Polyclinic_Price.noPG_above65
+            : userSubsidyType === "MG"
+                ? data.Polyclinic_Price.MG_below65
+                : data.Polyclinic_Price.below65
+            : data.Polyclinic_Price.nonSG
+    )
+  });
+  const testPriceRows = testPrices.tests.map(function (data) {
+        return createData(
+            data.Name + ": " + data.Description,
+            userNationality === "Singaporean"
+                ? userSubsidyType === "PG"
+                ? data.PCN_Price.PG
+                : userSubsidyType === "MG"
+                    ? data.PCN_Price.MG
+                    : userSubsidyType === "CHAS Orange" || userSubsidyType === "CHAS Blue"
+                        ? data.PCN_Price.ORANGE_CHAS
+                        : data.PCN_Price.Non_CHAS
+                : userNationality === "Permanent Resident"
+                ? data.PCN_Price.PR
+                : data.PCN_Price.NON_RESIDENT,
+            userNationality === "Singaporean"
+                ? userAge < 18 || userAge > 65
+                ? data.Polyclinic_Price.SG_CHILD_ELDERLY
+                : data.Polyclinic_Price.SG
+                : userNationality === "Permanent Resident"
+                ? data.Polyclinic_Price.PR
+                : data.Polyclinic_Price.NON_RESIDENT
+        )
+      }
+  )
+  const priceRows = consultationPriceRows.concat(drugPriceRows.concat(testPriceRows)).flatMap(function (data) {
+    return data;
+  });
   const result = (
     <Paper sqaure="false" className={classes.root}>
       {choice.type === "GP" ? (
