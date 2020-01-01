@@ -4,12 +4,17 @@ import { Link } from "react-router-dom";
 import Button from "@material-ui/core/Button";
 import Grid from "@material-ui/core/Grid";
 
+
 import {
   DialogActions,
   DialogContent,
   DialogContentText,
   DialogTitle
 } from "@material-ui/core";
+
+// Displays the PC dialog when clicked in the list of PCs within resultTab.
+// FilteredResult --> ResultTabs --> PcDialog
+
 export class PcDialog extends Component {
   state = {
     open: false
@@ -43,11 +48,12 @@ export class PcDialog extends Component {
         </Button>
         <Dialog open={open} onClose={handleToggle}>
           <DialogContent>
-            Clinic Name: {clinic.Name} <hr /> Address: {clinic.Address}{" "}
-            Singapore {clinic.PostalCode}
-            <hr /> Telephone: {clinic.Tel} <hr /> Distance:{" "}
-            {parseFloat(clinic.distance).toFixed(2)}km away
-            <hr />
+            Clinic Name: {clinic.Name} <hr /> 
+            Address: {clinic.Address}{" "}
+            Singapore {clinic.PostalCode}<hr /> 
+            Telephone: {clinic.Tel} <hr /> 
+            Distance:{" "}
+            {parseFloat(clinic.distance).toFixed(2)}km away<hr />
             <Grid style={{ flexGrow: 1 }} direction="row">
               <Grid container justify="space-between">
                 <Grid item>
@@ -60,6 +66,8 @@ export class PcDialog extends Component {
                     Add to comparison{" "}
                   </Button>
                 </Grid>
+
+
                 <Grid item>
                   <Button
                     variant="contained"
@@ -79,6 +87,8 @@ export class PcDialog extends Component {
                     </Link>
                   </Button>
                 </Grid>
+                
+
               </Grid>
             </Grid>
           </DialogContent>

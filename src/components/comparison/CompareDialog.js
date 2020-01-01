@@ -12,13 +12,12 @@ import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import MyButton from "../../util/MyButton";
 
 import {
-  DialogActions,
   DialogContent,
-  DialogContentText,
-  DialogTitle,
   Typography
 } from "@material-ui/core";
-import { maxWidth, fontSize } from "@material-ui/system";
+
+//Displays the "Compare!" button when 2 clinics are selected for comparison.
+// Displays the table of information for comparison between the 2 clinics.
 export class CompareDialog extends Component {
   state = {
     open: false,
@@ -61,7 +60,14 @@ export class CompareDialog extends Component {
         parseFloat(clinicTwo.distance).toFixed(2)
       ),
       createData("Price", clinicOne.price, clinicTwo.price),
-      createData("Ratings", clinicOne.rating, clinicTwo.rating)
+      createData("Ratings", clinicOne.rating, clinicTwo.rating),
+      createData("Doctor name", ((clinicOne.type === "GP") ? clinicOne.doctorName : ""),
+      ((clinicTwo.type === "GP") ? clinicTwo.doctorName : "")),
+      createData("Opening hours", ((clinicOne.type === "GP") ? clinicOne.formattedOpeningHours : ""),
+        ((clinicTwo.type === "GP") ? clinicTwo.formattedOpeningHours : "")),
+      createData("Directions", ((clinicOne.type === "GP") ? clinicOne.formattedDirections : ""),
+        ((clinicTwo.type === "GP") ? clinicTwo.formattedDirections : "")),
+
     ];
     const priceRows = [
       createData(
@@ -361,6 +367,8 @@ export class CompareDialog extends Component {
                                         {clinicTwo.name}
                                       </span>
                                     </TableCell>
+
+
                                   </TableRow>
                                   {priceRows.map(row => (
                                     <TableRow key={row.name}>
@@ -397,6 +405,8 @@ export class CompareDialog extends Component {
                 <TableCell align="right">
                   <Button />
                 </TableCell>
+
+                
                 <TableCell align="right">
                   <Button
                     variant="contained"
@@ -415,6 +425,9 @@ export class CompareDialog extends Component {
                     </Link>
                   </Button>
                 </TableCell>
+
+
+
                 <TableCell align="right">
                   <Button
                     // style={{ fontSize: "1vw" }}
