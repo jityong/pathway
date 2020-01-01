@@ -1,0 +1,368 @@
+{
+    "drugs": [
+        {
+            "Name": "Metformin ",
+            "Description": "500MG XR TAB (GLUCOPHAGE XR)",
+            "Unit": "TAB",
+            "PCN_Status": "NF",
+            "PCN_UnitPrice": 0.25,
+            "Polyclinic_Status": "NA",
+            "Polyclinic_UnitPrice": 0,
+            "PCN_Price": {
+                "NON_CHAS": "$0.25",
+                "GREEN_CHAS": "$0.25",
+                "ORANGE_CHAS": "$0.25",
+                "BLUE_CHAS": "$0.25",
+                "MG_CHAS": "$0.25",
+                "PG_CHAS": "$0.25",
+                "NON_SG": "$0.25"
+            },
+            "Polyclinic_Price": {
+                "PG": "NA",
+                "MG_above65": "NA",
+                "MG_below65": "NA",
+                "below65": "NA",
+                "noPG_above65": "NA",
+                "nonSG": "NA"
+            }
+        },
+        {
+            "Name": "Metformin ",
+            "Description": "HCL 250MG ",
+            "Unit": "TAB",
+            "PCN_Status": "S1",
+            "PCN_UnitPrice": 0.1,
+            "Polyclinic_Status": "S1",
+            "Polyclinic_UnitPrice": 0.1,
+            "PCN_Price": {
+                "NON_CHAS": "Charged at $1.40/week or $0.08/tablet, whichever is cheaper",
+                "GREEN_CHAS": "Charged at $1.40/week or $0.08/tablet, whichever is cheaper",
+                "ORANGE_CHAS": "Charged at $1.40/week or $0.03/tablet, whichever is cheaper",
+                "BLUE_CHAS": "Charged at $1.40/week or $0.03/tablet, whichever is cheaper",
+                "MG_CHAS": "Charged at $1.40/week or $0.02/tablet, whichever is cheaper",
+                "PG_CHAS": "Charged at $1.40/week or $0.01/tablet, whichever is cheaper",
+                "NON_SG": "$0.10"
+            },
+            "Polyclinic_Price": {
+                "PG": "Charged at $0.70/week or $0.05/tablet, whichever is cheaper",
+                "MG_above65": "Charged at $0.70/week or $0.03/tablet, whichever is cheaper",
+                "MG_below65": "Charged at $1.40/week or $0.03/tablet, whichever is cheaper",
+                "below65": "Charged at $1.40/week or $0.10/tablet, whichever is cheaper",
+                "noPG_above65": "Charged at $0.70/week or $0.10/tablet, whichever is cheaper",
+                "nonSG": "$0.10"
+            }
+        },
+        {
+            "Name": "Metformin ",
+            "Description": "HCL 500MG  ",
+            "Unit": "TAB",
+            "PCN_Status": "S1",
+            "PCN_UnitPrice": 0.12,
+            "Polyclinic_Status": "NA",
+            "Polyclinic_UnitPrice": 0,
+            "PCN_Price": {
+                "NON_CHAS": "Charged at $1.40/week or $0.09/tablet, whichever is cheaper",
+                "GREEN_CHAS": "Charged at $1.40/week or $0.09/tablet, whichever is cheaper",
+                "ORANGE_CHAS": "Charged at $1.40/week or $0.03/tablet, whichever is cheaper",
+                "BLUE_CHAS": "Charged at $1.40/week or $0.03/tablet, whichever is cheaper",
+                "MG_CHAS": "Charged at $1.40/week or $0.02/tablet, whichever is cheaper",
+                "PG_CHAS": "Charged at $1.40/week or $0.02/tablet, whichever is cheaper",
+                "NON_SG": "$0.12"
+            },
+            "Polyclinic_Price": {
+                "PG": "NA",
+                "MG_above65": "NA",
+                "MG_below65": "NA",
+                "below65": "NA",
+                "noPG_above65": "NA",
+                "nonSG": "NA"
+            }
+        },
+        {
+            "Name": "Metformin ",
+            "Description": "HCL 500MG XR ",
+            "Unit": "TAB",
+            "PCN_Status": "NF",
+            "PCN_UnitPrice": 0.25,
+            "Polyclinic_Status": "NA",
+            "Polyclinic_UnitPrice": 0,
+            "PCN_Price": {
+                "NON_CHAS": "$0.25",
+                "GREEN_CHAS": "$0.25",
+                "ORANGE_CHAS": "$0.25",
+                "BLUE_CHAS": "$0.25",
+                "MG_CHAS": "$0.25",
+                "PG_CHAS": "$0.25",
+                "NON_SG": "$0.25"
+            },
+            "Polyclinic_Price": {
+                "PG": "NA",
+                "MG_above65": "NA",
+                "MG_below65": "NA",
+                "below65": "NA",
+                "noPG_above65": "NA",
+                "nonSG": "NA"
+            }
+        },
+        {
+            "Name": "Metformin ",
+            "Description": "HCL 850MG  ",
+            "Unit": "TAB",
+            "PCN_Status": "S1",
+            "PCN_UnitPrice": 0.12,
+            "Polyclinic_Status": "S1",
+            "Polyclinic_UnitPrice": 0.12,
+            "PCN_Price": {
+                "NON_CHAS": "Charged at $1.40/week or $0.09/tablet, whichever is cheaper",
+                "GREEN_CHAS": "Charged at $1.40/week or $0.09/tablet, whichever is cheaper",
+                "ORANGE_CHAS": "Charged at $1.40/week or $0.03/tablet, whichever is cheaper",
+                "BLUE_CHAS": "Charged at $1.40/week or $0.03/tablet, whichever is cheaper",
+                "MG_CHAS": "Charged at $1.40/week or $0.02/tablet, whichever is cheaper",
+                "PG_CHAS": "Charged at $1.40/week or $0.02/tablet, whichever is cheaper",
+                "NON_SG": "$0.12"
+            },
+            "Polyclinic_Price": {
+                "PG": "Charged at $0.70/week or $0.06/tablet, whichever is cheaper",
+                "MG_above65": "Charged at $0.70/week or $0.03/tablet, whichever is cheaper",
+                "MG_below65": "Charged at $1.40/week or $0.03/tablet, whichever is cheaper",
+                "below65": "Charged at $1.40/week or $0.12/tablet, whichever is cheaper",
+                "noPG_above65": "Charged at $0.70/week or $0.12/tablet, whichever is cheaper",
+                "nonSG": "$0.12"
+            }
+        },
+        {
+            "Name": "Sulfonylureas (Glipizide) ",
+            "Description": "GLIPIZIDE 5MG ",
+            "Unit": "TAB",
+            "PCN_Status": "S2",
+            "PCN_UnitPrice": 0.1,
+            "Polyclinic_Status": "S1",
+            "Polyclinic_UnitPrice": 0.1,
+            "PCN_Price": {
+                "NON_CHAS": "$0.04",
+                "GREEN_CHAS": "$0.04",
+                "ORANGE_CHAS": "$0.01",
+                "BLUE_CHAS": "$0.01",
+                "MG_CHAS": "$0.01",
+                "PG_CHAS": "$0.01",
+                "NON_SG": "$0.10"
+            },
+            "Polyclinic_Price": {
+                "PG": "Charged at $0.70/week or $0.05/tablet, whichever is cheaper",
+                "MG_above65": "Charged at $0.70/week or $0.03/tablet, whichever is cheaper",
+                "MG_below65": "Charged at $1.40/week or $0.03/tablet, whichever is cheaper",
+                "below65": "Charged at $1.40/week or $0.10/tablet, whichever is cheaper",
+                "noPG_above65": "Charged at $0.70/week or $0.10/tablet, whichever is cheaper",
+                "nonSG": "$0.10"
+            }
+        },
+        {
+            "Name": "SGLT2",
+            "Description": "DAPAGLIFLOZIN 10MG TAB (FORXIGA) ",
+            "Unit": "TAB",
+            "PCN_Status": "NF",
+            "PCN_UnitPrice": 1.36,
+            "Polyclinic_Status": "NS",
+            "Polyclinic_UnitPrice": 1.36,
+            "PCN_Price": {
+                "NON_CHAS": "$1.36",
+                "GREEN_CHAS": "$1.36",
+                "ORANGE_CHAS": "$1.36",
+                "BLUE_CHAS": "$1.36",
+                "MG_CHAS": "$1.36",
+                "PG_CHAS": "$1.36",
+                "NON_SG": "$1.36"
+            },
+            "Polyclinic_Price": {
+                "PG": "$1.36",
+                "MG_above65": "$1.36",
+                "MG_below65": "$1.36",
+                "below65": "$1.36",
+                "noPG_above65": "$1.36",
+                "nonSG": "$1.36"
+            }
+        },
+        {
+            "Name": "SGLT2",
+            "Description": "EMPAGLIFLOZIN 10MG TAB (JARDIANCE) ",
+            "Unit": "TAB",
+            "PCN_Status": "NF",
+            "PCN_UnitPrice": 1.79,
+            "Polyclinic_Status": "NS",
+            "Polyclinic_UnitPrice": 1.29,
+            "PCN_Price": {
+                "NON_CHAS": "$1.79",
+                "GREEN_CHAS": "$1.79",
+                "ORANGE_CHAS": "$1.79",
+                "BLUE_CHAS": "$1.79",
+                "MG_CHAS": "$1.79",
+                "PG_CHAS": "$1.79",
+                "NON_SG": "$1.79"
+            },
+            "Polyclinic_Price": {
+                "PG": "$1.29",
+                "MG_above65": "$1.29",
+                "MG_below65": "$1.29",
+                "below65": "$1.29",
+                "noPG_above65": "$1.29",
+                "nonSG": "$1.29"
+            }
+        },
+        {
+            "Name": "SGLT2",
+            "Description": "EMPAGLIFLOZIN 25MG TAB (JARDIANCE) ",
+            "Unit": "TAB",
+            "PCN_Status": "NF",
+            "PCN_UnitPrice": 1.98,
+            "Polyclinic_Status": "NS",
+            "Polyclinic_UnitPrice": 1.29,
+            "PCN_Price": {
+                "NON_CHAS": "$1.98",
+                "GREEN_CHAS": "$1.98",
+                "ORANGE_CHAS": "$1.98",
+                "BLUE_CHAS": "$1.98",
+                "MG_CHAS": "$1.98",
+                "PG_CHAS": "$1.98",
+                "NON_SG": "$1.98"
+            },
+            "Polyclinic_Price": {
+                "PG": "$1.29",
+                "MG_above65": "$1.29",
+                "MG_below65": "$1.29",
+                "below65": "$1.29",
+                "noPG_above65": "$1.29",
+                "nonSG": "$1.29"
+            }
+        },
+        {
+            "Name": "DPP-4",
+            "Description": "SITAGLIPTIN 100MG TAB (JANUVIA) ",
+            "Unit": "TAB",
+            "PCN_Status": "NF",
+            "PCN_UnitPrice": 2.79,
+            "Polyclinic_Status": "NS",
+            "Polyclinic_UnitPrice": 2.28,
+            "PCN_Price": {
+                "NON_CHAS": "$2.79",
+                "GREEN_CHAS": "$2.79",
+                "ORANGE_CHAS": "$2.79",
+                "BLUE_CHAS": "$2.79",
+                "MG_CHAS": "$2.79",
+                "PG_CHAS": "$2.79",
+                "NON_SG": "$2.79"
+            },
+            "Polyclinic_Price": {
+                "PG": "$2.28",
+                "MG_above65": "$2.28",
+                "MG_below65": "$2.28",
+                "below65": "$2.28",
+                "noPG_above65": "$2.28",
+                "nonSG": "$2.28"
+            }
+        },
+        {
+            "Name": "DPP-4",
+            "Description": "SITAGLIPTIN 25MG TAB (JANUVIA) ",
+            "Unit": "TAB",
+            "PCN_Status": "NF",
+            "PCN_UnitPrice": 2.76,
+            "Polyclinic_Status": "NA",
+            "Polyclinic_UnitPrice": 0,
+            "PCN_Price": {
+                "NON_CHAS": "$2.76",
+                "GREEN_CHAS": "$2.76",
+                "ORANGE_CHAS": "$2.76",
+                "BLUE_CHAS": "$2.76",
+                "MG_CHAS": "$2.76",
+                "PG_CHAS": "$2.76",
+                "NON_SG": "$2.76"
+            },
+            "Polyclinic_Price": {
+                "PG": "NA",
+                "MG_above65": "NA",
+                "MG_below65": "NA",
+                "below65": "NA",
+                "noPG_above65": "NA",
+                "nonSG": "NA"
+            }
+        },
+        {
+            "Name": "DPP-4",
+            "Description": "SITAGLIPTIN 50MG TAB (JANUVIA) ",
+            "Unit": "TAB",
+            "PCN_Status": "NF",
+            "PCN_UnitPrice": 2.79,
+            "Polyclinic_Status": "NS",
+            "Polyclinic_UnitPrice": 2.28,
+            "PCN_Price": {
+                "NON_CHAS": "$2.79",
+                "GREEN_CHAS": "$2.79",
+                "ORANGE_CHAS": "$2.79",
+                "BLUE_CHAS": "$2.79",
+                "MG_CHAS": "$2.79",
+                "PG_CHAS": "$2.79",
+                "NON_SG": "$2.79"
+            },
+            "Polyclinic_Price": {
+                "PG": "$2.28",
+                "MG_above65": "$2.28",
+                "MG_below65": "$2.28",
+                "below65": "$2.28",
+                "noPG_above65": "$2.28",
+                "nonSG": "$2.28"
+            }
+        },
+        {
+            "Name": "DPP-4",
+            "Description": "LINAGLIPTIN 5MG TAB (TRAJENTA) ",
+            "Unit": "TAB",
+            "PCN_Status": "NF",
+            "PCN_UnitPrice": 1.88,
+            "Polyclinic_Status": "NS",
+            "Polyclinic_UnitPrice": 1.36,
+            "PCN_Price": {
+                "NON_CHAS": "$1.88",
+                "GREEN_CHAS": "$1.88",
+                "ORANGE_CHAS": "$1.88",
+                "BLUE_CHAS": "$1.88",
+                "MG_CHAS": "$1.88",
+                "PG_CHAS": "$1.88",
+                "NON_SG": "$1.88"
+            },
+            "Polyclinic_Price": {
+                "PG": "$1.36",
+                "MG_above65": "$1.36",
+                "MG_below65": "$1.36",
+                "below65": "$1.36",
+                "noPG_above65": "$1.36",
+                "nonSG": "$1.36"
+            }
+        },
+        {
+            "Name": "NovoMix insulin (Insulin Aspart)",
+            "Description": "NOVOMIX 30 FLEXPEN 3ML  ",
+            "Unit": "VAL",
+            "PCN_Status": "S2",
+            "PCN_UnitPrice": 8.53,
+            "Polyclinic_Status": "S2",
+            "Polyclinic_UnitPrice": 8.53,
+            "PCN_Price": {
+                "NON_CHAS": "$3.20",
+                "GREEN_CHAS": "$3.20",
+                "ORANGE_CHAS": "$1.07",
+                "BLUE_CHAS": "$1.07",
+                "MG_CHAS": "$0.80",
+                "PG_CHAS": "$0.53",
+                "NON_SG": "$8.53"
+            },
+            "Polyclinic_Price": {
+                "PG": "$2.13",
+                "MG_above65": "$1.07",
+                "MG_below65": "$1.07",
+                "below65": "$4.26",
+                "noPG_above65": "$4.26",
+                "nonSG": "$8.53"
+            }
+        }
+    ]
+}

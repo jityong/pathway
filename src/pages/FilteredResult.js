@@ -4,30 +4,16 @@ import GP from "../data/pcn.json";
 import * as turf from "@turf/turf";
 import ResultTabs from "../components/ResultTabs.js";
 import PC from "../data/polyclinics.json";
-import Button from "@material-ui/core/Button";
 import Switch from "@material-ui/core/Switch";
-import Grid from "@material-ui/core/Grid";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
 import IconButton from "@material-ui/core/IconButton";
 import ArrowBack from "@material-ui/icons/ArrowBackIos";
-import SearchIcon from "@material-ui/icons/Search";
 import HelpOutline from "@material-ui/icons/HelpOutline";
 import { Link } from "react-router-dom";
-import FormGroup from "@material-ui/core/FormGroup";
 import FormControlLabel from "@material-ui/core/FormControlLabel";
 import { FormLabel } from "@material-ui/core";
-// import Search from "./Search";
-import Dialog from "@material-ui/core/Dialog";
-import Menu from "@material-ui/core/Menu";
-import MenuItem from "@material-ui/core/MenuItem";
-import {
-  DialogActions,
-  DialogContent,
-  DialogContentText,
-  DialogTitle
-} from "@material-ui/core";
 
 const API_KEY = "AIzaSyDsbjEhJ1510KaVtIQJVTIU7at6hiA__6U";
 
