@@ -55,25 +55,67 @@ export class CompareDialog extends Component {
         }
 
         const rows = [
-            createData(
-                <span style={{fontWeight: "bold"}}>Name</span>,
-                <span style={{fontWeight: "bold"}}>{clinicOne.name}</span>,
-                <span style={{fontWeight: "bold"}}> {clinicTwo.name}</span>
-            ),
-            createData(
-                "Distance",
-                parseFloat(clinicOne.distance).toFixed(2),
-                parseFloat(clinicTwo.distance).toFixed(2)
-            ),
-            createData("Price", clinicOne.price, clinicTwo.price),
-            createData("Ratings", clinicOne.rating, clinicTwo.rating),
-            createData("Doctor name", ((clinicOne.type === "GP") ? clinicOne.doctorName : ""),
-                ((clinicTwo.type === "GP") ? clinicTwo.doctorName : "")),
-            createData("Opening hours", ((clinicOne.type === "GP") ? clinicOne.formattedOpeningHours : ""),
-                ((clinicTwo.type === "GP") ? clinicTwo.formattedOpeningHours : "")),
-            createData("Directions", ((clinicOne.type === "GP") ? clinicOne.formattedDirections : ""),
-                ((clinicTwo.type === "GP") ? clinicTwo.formattedDirections : "")),
+          createData(
+            <span style={{ fontWeight: "bold" }}>Name</span>,
+            <span style={{ fontWeight: "bold" }}>{clinicOne.name}</span>,
+            <span style={{ fontWeight: "bold" }}> {clinicTwo.name}</span>
+          ),
+          createData(
+            "Distance",
+            parseFloat(clinicOne.distance).toFixed(2),
+            parseFloat(clinicTwo.distance).toFixed(2)
+          ),
+          createData("Price", clinicOne.price, clinicTwo.price),
+          createData("Ratings", clinicOne.rating, clinicTwo.rating),
+          createData(
+            "Doctor name",
+            clinicOne.type === "GP" ? clinicOne.doctorName : "",
+            clinicTwo.type === "GP" ? clinicTwo.doctorName : ""
+          ),
 
+          createData(
+            "Opening hours",
+            clinicOne.type === "GP" ? (
+              <div
+                dangerouslySetInnerHTML={{
+                  __html: clinicOne.formattedOpeningHours
+                }}
+              />
+            ) : (
+              ""
+            ),
+            clinicTwo.type === "GP" ? (
+              <div
+                dangerouslySetInnerHTML={{
+                  __html: clinicTwo.formattedOpeningHours
+                }}
+              />
+            ) : (
+              ""
+            )
+          ),
+
+          createData(
+            "Directions",
+            clinicOne.type === "GP" ? (
+              <div
+                dangerouslySetInnerHTML={{
+                  __html: clinicOne.formattedDirections
+                }}
+              />
+            ) : (
+              ""
+            ),
+            clinicTwo.type === "GP" ? (
+              <div
+                dangerouslySetInnerHTML={{
+                  __html: clinicTwo.formattedDirections
+                }}
+              />
+            ) : (
+              ""
+            )
+          )
         ];
         const consultationPriceRows = consultationPrices.consultation.map(function (data) {
             return createData(

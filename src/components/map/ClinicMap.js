@@ -48,20 +48,16 @@ export class ClinicMap extends Component {
       clinic.price = "$$";
       clinic.rating = "4.3";
       clinic.doctorName = clinic.properties.DR_NAME;
-      //store it as an array and delay FP is a better approach
-      // clinic.formattedOpeningHours = clinic.properties.formattedOpeningHours;
+ 
+      clinic.formattedOpeningHours = clinic.properties.ALL_OPENING_HOURS.map(
+        period =>
+          period.day_string + ":</br>" + period.opening_hours.join(",</br>")
+      ).join("</br></br>");
 
-      clinic.formattedOpeningHours = 
-        clinic.properties.ALL_OPENING_HOURS.map(period => (
-          period.day_string + ":\n" + period.opening_hours.join(",\n")
-        ))
-        .join(", \n");
       
-      clinic.formattedDirections = 
-        clinic.properties.ALL_DIRECTIONS.map(path => (
-          path.transport_string + "\n" + path.directions.join(",\n")
-        ))
-        .join(", \n");
+      clinic.formattedDirections = clinic.properties.ALL_DIRECTIONS.map(
+        path => path.transport_string + "</br>" + path.directions.join(",</br>")
+      ).join("</br></br>");
       
 
 
@@ -120,7 +116,17 @@ export class ClinicMap extends Component {
         >
           {selectedPlace.clinic.type === "GP" ? (
             <div>
-              GP: {selectedPlace.clinic.properties.HCI_NAME} <hr /> Address:{" "}
+              GP:
+              <img
+                src={
+                  process.env.PUBLIC_URL +
+                  `/ClinicPictures/${selectedPlace.clinic.properties.FILE_NAME}.png`
+                }
+                alt="clinic picture"
+                style={{ width: "100%" }}
+              />
+              <hr />
+              {selectedPlace.clinic.properties.HCI_NAME} <hr /> Address:{" "}
               {selectedPlace.clinic.properties.BLK_HSE_NO}{" "}
               {selectedPlace.clinic.properties.STREET_NAME} #
               {selectedPlace.clinic.properties.FLOOR_NO}-
@@ -134,10 +140,7 @@ export class ClinicMap extends Component {
               Distance:
               {parseFloat(selectedPlace.clinic.distance).toFixed(2)}km away
               <hr />
-
-
               Doctor: {selectedPlace.clinic.properties.DR_NAME}
-
               {/* <hr />
               Opening Hours:
               {selectedPlace.clinic.properties.ALL_OPENING_HOURS.map(period => (
@@ -151,45 +154,27 @@ export class ClinicMap extends Component {
               ))
               .join(", \n")}
               <hr /> */}
-
-
               <hr />
               <p>Opening Hours:</p>
               <hr />
-              {
-                selectedPlace.clinic.properties.ALL_OPENING_HOURS.map(period => (
-                  <p>
-                    {period.day_string}
-                    <br />
-                    {period.opening_hours.join(", ")}
-                  </p>
-                ))
-              }
+              {selectedPlace.clinic.properties.ALL_OPENING_HOURS.map(period => (
+                <p>
+                  {period.day_string}
+                  <br />
+                  {period.opening_hours.join(", ")}
+                </p>
+              ))}
               <hr />
-
               <p>Directions:</p>
-              {
-                selectedPlace.clinic.properties.ALL_DIRECTIONS.map(path => (
-                  <p>
-                    {path.transport_string}
-                    <br />
-                    {path.directions.join(", ")}
-                  </p>
-                ))
-              }
+              {selectedPlace.clinic.properties.ALL_DIRECTIONS.map(path => (
+                <p>
+                  {path.transport_string}
+                  <br />
+                  {path.directions.join(", ")}
+                </p>
+              ))}
               <hr />
-
-
-
-
-
-              <img src={process.env.PUBLIC_URL + `/ClinicPictures/${selectedPlace.clinic.properties.FILE_NAME}.png`}
-                alt="clinic picture" style={{ width: "100%" }} />
-
-              <hr />
-
-{/* 
-              <Button>
+              {/* <Button>
                 <Link
                   to={{
                     pathname: "/ConfirmClinicChoice",
@@ -201,8 +186,6 @@ export class ClinicMap extends Component {
                   <span>Select</span>
                 </Link>
               </Button> */}
-
-
               <Button
                 variant="contained"
                 color="primary"
@@ -222,8 +205,6 @@ export class ClinicMap extends Component {
               <hr /> Telephone: {selectedPlace.clinic.Tel} <hr /> Distance:{" "}
               {parseFloat(selectedPlace.clinic.distance).toFixed(2)}km away
               <hr />
-
-
               {/* <Button>
                 <Link
                   to={{
@@ -236,8 +217,6 @@ export class ClinicMap extends Component {
                   <span>Select</span>
                 </Link>
               </Button> */}
-
-
               <Button
                 variant="contained"
                 color="primary"
@@ -251,7 +230,6 @@ export class ClinicMap extends Component {
           ) : (
             <div>Input Location</div>
           )}
-          
         </InfoWindowEx>
       </Map>
     );

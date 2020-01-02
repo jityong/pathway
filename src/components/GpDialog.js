@@ -59,6 +59,16 @@ export class GpDialog extends Component {
         </Button>
         <Dialog open={open} onClose={handleToggle}>
           <DialogContent>
+            <img
+              src={
+                process.env.PUBLIC_URL +
+                `/ClinicPictures/${clinic.properties.FILE_NAME}.png`
+              }
+              alt="clinic picture"
+              style={{ width: "100%" }}
+            />
+            <hr />
+            
             Clinic Name: {clinic.properties.HCI_NAME} <hr /> Address:{" "}
             {clinic.properties.BLK_HSE_NO} {clinic.properties.STREET_NAME} #
             {clinic.properties.FLOOR_NO}-{clinic.properties.UNIT_NO}{" "}
@@ -72,11 +82,7 @@ export class GpDialog extends Component {
             {parseFloat(clinic.distance).toFixed(2)}km away
             <hr />
             Doctor: {clinic.properties.DR_NAME}
-
             <hr />
-
-
-
             <p>Opening Hours:</p>
             <hr />
             {clinic.properties.ALL_OPENING_HOURS.map(period => (
@@ -87,7 +93,6 @@ export class GpDialog extends Component {
               </p>
             ))}
             <hr />
-
             <p>Directions:</p>
             {clinic.properties.ALL_DIRECTIONS.map(path => (
               <p>
@@ -97,16 +102,6 @@ export class GpDialog extends Component {
               </p>
             ))}
             <hr />
-
-          
-
-
-
-            <img src={process.env.PUBLIC_URL + `/ClinicPictures/${clinic.properties.FILE_NAME}.png`} 
-            alt="clinic picture" style={{ width: "100%" }} />
-
-            <hr />
-
             <Grid style={{ flexGrow: 1 }} direction="row">
               <Grid container justify="space-between">
                 <Grid item>
@@ -140,9 +135,6 @@ export class GpDialog extends Component {
                     </Link>
                   </Button>
                 </Grid>
-
-
-
               </Grid>
             </Grid>
           </DialogContent>
