@@ -48,12 +48,32 @@ export class PcDialog extends Component {
         </Button>
         <Dialog open={open} onClose={handleToggle}>
           <DialogContent>
+            {/* No image to be rendered yet */}
             Clinic Name: {clinic.Name} <hr /> 
             Address: {clinic.Address}{" "}
             Singapore {clinic.PostalCode}<hr /> 
             Telephone: {clinic.Tel} <hr /> 
             Distance:{" "}
             {parseFloat(clinic.distance).toFixed(2)}km away<hr />
+            <p>Opening Hours:</p>
+            <hr />
+            {clinic.ALL_OPENING_HOURS.map(period => (
+              <p>
+                {period.day_string}
+                <br />
+                {period.opening_hours.join(", ")}
+              </p>
+            ))}
+            <hr />
+            <p>Directions:</p>
+            {clinic.ALL_DIRECTIONS.map(path => (
+              <p>
+                {path.transport_string}
+                <br />
+                {path.directions.join(", ")}
+              </p>
+            ))}
+            <hr />
             <Grid style={{ flexGrow: 1 }} direction="row">
               <Grid container justify="space-between">
                 <Grid item>

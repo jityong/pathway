@@ -1,0 +1,933 @@
+{
+    "clinics": [
+        {
+            "type": "polyclinic",
+            "id": "1",
+            "Name": "Ang Mo Kio Polyclinic (NHG)",
+            "Address": "Block 21 Ang Mo Kio Central 2 ",
+            "PostalCode": "569666",
+            "Tel": "6355-3000",
+            "coord": [
+                103.847305,
+                1.3724019
+            ],
+            "FILE_NAME": "Slide1",
+            "ALL_OPENING_HOURS": [
+                {
+                    "day_string": "Monday - Friday",
+                    "opening_hours": [
+                        "8.00AM – 1.00PM",
+                        "2.00PM – 4.30PM",
+                        "Registration is from 7:30AM to 4:00PM (Without appointment)"
+                    ]
+                },
+                {
+                    "day_string": "Saturday",
+                    "opening_hours": [
+                        "8:00AM to 12:30PM",
+                        "Registration is from 7:30AM to 12:00PM (Without appointment)"
+                    ]
+                },
+                {
+                    "day_string": "Sunday & Public Holiday",
+                    "opening_hours": [
+                        "Closed"
+                    ]
+                }
+            ],
+            "ALL_DIRECTIONS": [
+                {
+                    "transport_string": "By MRT / LRT:",
+                    "directions": [
+                        "Nearest MRT Station: NS16 Ang Mo Kio"
+                    ]
+                },
+                {
+                    "transport_string": "By Bus:",
+                    "directions": [
+                        "From Yio Chu Kang MRT: 13, 86, 162, 851, 852, 853",
+                        "From Ang Mo Kio MRT: 13, 86, 138, 162, 851, 852, 853"
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "polyclinic",
+            "id": "2",
+            "Name": "Bedok Polyclinic (Singhealth)",
+            "Address": "Block 11 Bedok North Street 1  #02-01 / #03-01",
+            "PostalCode": "469662",
+            "Tel": "6243-6740 (General), 6643-6969 (Appt)",
+            "coord": [
+                103.931513,
+                1.325906
+            ],
+            "FILE_NAME":"Slide2",
+            "ALL_OPENING_HOURS":[
+                {
+                    "day_string": "Monday - Friday",
+                    "opening_hours":[
+                        "8.00AM - 1.00PM (by appointment)",
+                        "Last registration is at 11.30AM (Without appointment)",
+                        "2.00PM - 4.30PM (by appointment) ",
+                        "Last registration is at 4.00PM (Without appointment)"
+                    ]
+                },
+                {
+                    "day_string":"Saturday",
+                    "opening_hours":[
+                        "8.00AM - 12.30PM (by appointment)",
+                        "Last registration is at 10.30AM (Without appointment)"
+                    ]
+                },
+                {
+                    "day_string":"Sunday & Public Holiday",
+                    "opening_hours":[
+                        "Closed"
+                    ]
+                }
+            ],
+            "ALL_DIRECTIONS":[
+                {
+                    "transport_string":"By MRT / LRT:",
+                    "directions":[
+                        "Nearest MRT Station: Bedok MRT"
+                    ]
+                },
+                {
+                    "transport_string":"By Bus:",
+                    "directions":[
+                        "Nearest Bus Interchange/Bus Stop: Bedok Interchange. Contains Bus No: 7,14,18, 222",
+                        "From Bus Stop along New Upper Changi Road, take Bus No: 2, 24, 31"
+
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "polyclinic",
+            "id": "3",
+            "Name": "Bukit Batok Polyclinic (NHG)",
+            "Address": "50 Bukit Batok West Avenue 3",
+            "PostalCode": "659164",
+            "Tel": "6355-3000",
+            "coord": [
+                103.747924,
+                1.351972
+            ],
+            "FILE_NAME":"Slide3",
+            "ALL_OPENING_HOURS":[
+                {
+                    "day_string": "Monday - Friday",
+                    "opening_hours":[
+                        "8:00AM to 1:00PM",
+                        "Last registration is at 12PM (Without appointment)",
+                        "2:00PM to 4:30PM",
+                        "Last registration is at 4PM (Without appointment)"
+                    ]
+                },
+                {
+                    "day_string": "Saturday",
+                    "opening_hours": [
+                        "8:00AM to 12:30PM",
+                        "Registration is from 7:30AM to 12:00PM (Without appointment)"
+                    ]
+                },
+                {
+                    "day_string": "Sunday & Public Holiday",
+                    "opening_hours": [
+                        "Closed"
+                    ]
+                }
+            ],
+            "ALL_DIRECTIONS":[
+                {
+                    "transport_string":"By MRT / LRT:",
+                    "directions":[
+                        "Nearest MRT Station: NS2 Bukit Batok"
+                    ]
+                },
+                {
+                    "transport_string":"By Bus:",
+                    "directions":[
+                        "66, 157, 174, 506, 173, 176, 178, 188, 941, 945, 947"
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "polyclinic",
+            "id": "4",
+            "Name": "Bukit Merah Polyclinic (Singhealth)",
+            "Address": "Block 163 Bukit Merah Central #04-3565",
+            "PostalCode": "150163",
+            "Tel": "6271-3911 (General), 6643-6969 (Appt)",
+            "coord": [
+                103.816987,
+                1.284152
+            ],
+            "FILE_NAME":"Slide4",
+
+            "ALL_OPENING_HOURS": [
+                {
+                    "day_string": "Monday - Friday",
+                    "opening_hours": [
+                        "8.00AM - 1.00PM (by appointment)",
+                        "Last registration is at 11.30AM (Without appointment)",
+                        "2.00PM - 4.30PM (by appointment) ",
+                        "Last registration is at 4.00PM (Without appointment)"
+                    ]
+                },
+                {
+                    "day_string": "Saturday",
+                    "opening_hours": [
+                        "8.00AM - 12.30PM (by appointment)",
+                        "Last registration is at 10.30AM (Without appointment)"
+                    ]
+                },
+                {
+                    "day_string": "Sunday & Public Holiday",
+                    "opening_hours": [
+                        "Closed"
+                    ]
+                }
+            ],
+            "ALL_DIRECTIONS":[
+                {
+                    "transport_string":"By MRT / LRT:",
+                    "directions":[
+                        "Nearest MRT Station: Redhill MRT – transfer to Bus No. 132 to Bukit Merah Bus Interchange"
+                    ]
+                },
+                {
+                    "transport_string": "By Bus:",
+                    "directions": [
+                        "Nearest Bus Interchange/Bus Stop: Bukit Merah Bus Interchange. Contains Bus No: 5, 16, 57, 123, 131, 132, 139, 153, 167, 176, 198, 272, 273, 275, 851",
+                        "From Bus Stop along Jalan Bukit Merah, take Bus No: 14, 147, 196, 197, 855, 961"
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "polyclinic",
+            "id": "5",
+            "Name": "Choa Chu Kang Polyclinic (NHG)",
+            "Address": "2 Teck Whye Crescent",
+            "PostalCode": "688846",
+            "Tel": "6355-3000",
+            "coord": [
+                103.750669,
+                1.382301
+            ],
+            "FILE_NAME":"Slide5",
+            "ALL_OPENING_HOURS": [
+                {
+                    "day_string": "Monday - Friday",
+                    "opening_hours": [
+                        "8:00AM to 1:00PM",
+                        "Last registration is at 12PM (Without appointment)",
+                        "2:00PM to 4:30PM",
+                        "Last registration is at 4PM (Without appointment)"
+                    ]
+                },
+                {
+                    "day_string": "Saturday",
+                    "opening_hours": [
+                        "8:00AM to 12:30PM",
+                        "Registration is from 7:30AM to 12:00PM (Without appointment)"
+                    ]
+                },
+                {
+                    "day_string": "Sunday & Public Holiday",
+                    "opening_hours": [
+                        "Closed"
+                    ]
+                }
+            ],
+            "ALL_DIRECTIONS":[
+                {
+                    "transport_string":"By MRT / LRT:",
+                    "directions":[
+                        "Nearest MRT Station: NS4 Choa Chu Kang"
+                    ]
+                },
+                {
+                    "transport_string":"By Bus:",
+                    "directions": [
+                        "190, 307, 975, 985"
+                    ]
+                }
+            ]
+            
+        },
+        {
+            "type": "polyclinic",
+            "id": "6",
+            "Name": "Clementi Polyclinic (NHG)",
+            "Address": "Block 451 Clementi Avenue 3 #02-307",
+            "PostalCode": "120451",
+            "Tel": "6355-3000",
+            "coord": [
+                103.765669,
+                1.312638
+            ],
+            "FILE_NAME":"Slide6",
+            "ALL_OPENING_HOURS": [
+                {
+                    "day_string": "Monday - Friday",
+                    "opening_hours": [
+                        "8:00AM to 1:00PM",
+                        "Last registration is at 12PM (Without appointment)",
+                        "2:00PM to 4:30PM",
+                        "Last registration is at 4PM (Without appointment)"
+                    ]
+                },
+                {
+                    "day_string": "Saturday",
+                    "opening_hours": [
+                        "8:00AM to 12:30PM",
+                        "Registration is from 7:30AM to 12:00PM (Without appointment)"
+                    ]
+                },
+                {
+                    "day_string": "Sunday & Public Holiday",
+                    "opening_hours": [
+                        "Closed"
+                    ]
+                }
+            ],
+            "ALL_DIRECTIONS":[
+                {
+                    "transport_string":"By MRT / LRT:",
+                    "directions":[
+                        "Nearest MRT Station: EW23 Clementi"
+                    ]
+                },
+                {
+                    "transport_string":"By Bus:",
+                    "directions":[
+                        "14, 78, 96, 147, 156, 165, 166, 175, 285"
+                    ]
+                }
+            ]
+
+        },
+        {
+            "type": "polyclinic",
+            "id": "7",
+            "Name": "Geylang Polyclinic (Singhealth)",
+            "Address": "21 Geylang East Central",
+            "PostalCode": "389707",
+            "Tel": "6842-2440 (General), 6643-6969 (Appt)",
+            "coord": [
+                103.887157,
+                1.319476
+            ],
+            "FILE_NAME":"Slide7",
+            "ALL_OPENING_HOURS": [
+                {
+                    "day_string": "Monday - Friday",
+                    "opening_hours": [
+                        "8.00AM – 1.00PM",
+                        "2.00PM – 4.30PM",
+                        "Registration is from 7:30AM to 4:00PM (Without appointment)"
+                    ]
+                },
+                {
+                    "day_string": "Saturday",
+                    "opening_hours": [
+                        "8:00AM to 12:30PM",
+                        "Registration is from 7:30AM to 12:00PM (Without appointment)"
+                    ]
+                },
+                {
+                    "day_string": "Sunday & Public Holiday",
+                    "opening_hours": [
+                        "Closed"
+                    ]
+                }
+            ],
+            "ALL_DIRECTIONS":[
+                {
+                    "transport_string":"By MRT / LRT:",
+                    "directions":[
+                        "Nearest MRT Station: EW8 Paya Lebar and EW9 Aljunied"
+                    ]
+                },
+                {
+                    "transport_string":"By Bus:",
+                    "directions":[
+                        "From Bus Stop along Geylang East Central, take Bus No: 80, 155, 134",
+                        "From Bus Stop along New Paya Lebar Rd, take Bus No: 24, 28, 76, 135, 154"
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "polyclinic",
+            "id": "8",
+            "Name": "Hougang Polyclinic (NHG)",
+            "Address": "89 Hougang Avenue 4",
+            "PostalCode": "538829",
+            "Tel": "6355-3000",
+            "coord": [
+                103.889024,
+                1.370032
+            ],
+            "FILE_NAME":"Slide8",
+            "ALL_OPENING_HOURS": [
+                {
+                    "day_string": "Monday - Friday",
+                    "opening_hours": [
+                        "8.00AM – 1.00PM",
+                        "2.00PM – 4.30PM",
+                        "Registration is from 7:30AM to 4:00PM (Without appointment)"
+                    ]
+                },
+                {
+                    "day_string": "Saturday",
+                    "opening_hours": [
+                        "8:00AM to 12:30PM",
+                        "Registration is from 7:30AM to 12:00PM (Without appointment)"
+                    ]
+                },
+                {
+                    "day_string": "Sunday & Public Holiday",
+                    "opening_hours": [
+                        "Closed"
+                    ]
+                }
+            ],
+            "ALL_DIRECTIONS":[
+                {
+                    "transport_string":"By MRT / LRT:",
+                    "directions":[
+                        "Nearest MRT Station: NE14 Hougang"
+                    ]
+                },
+                {
+                    "transport_string":"By Bus:",
+                    "directions":[
+                        "From SBS Transit : 62, 62A, 72, 72A, 82, 101, 107, 113, 165"
+                    ]
+                }
+            ]
+
+        },
+        {
+            "type": "polyclinic",
+            "id": "9",
+            "Name": "Jurong Polyclinic (NHG)",
+            "Address": "190 Jurong East Avenue 1",
+            "PostalCode": "609788",
+            "Tel": "6355-3000",
+            "coord": [
+                103.730619,
+                1.349792
+            ],
+            "FILE_NAME":"Slide9",
+            "ALL_OPENING_HOURS": [
+                {
+                    "day_string": "Monday - Friday",
+                    "opening_hours": [
+                        "8:00AM to 1:00PM",
+                        "Last registration is at 12PM (Without appointment)",
+                        "2:00PM to 4:30PM",
+                        "Last registration is at 4PM (Without appointment)"
+                    ]
+                },
+                {
+                    "day_string": "Saturday",
+                    "opening_hours": [
+                        "8:00AM to 12:30PM",
+                        "Registration is from 7:30AM to 12:00PM (Without appointment)"
+                    ]
+                },
+                {
+                    "day_string": "Sunday & Public Holiday",
+                    "opening_hours": [
+                        "Closed"
+                    ]
+                }
+            ],
+            "ALL_DIRECTIONS":[
+                {
+                    "transport_string":"By MRT / LRT:",
+                    "directions":[
+                        "Nearest MRT Station: NS1 EW24 Jurong East"
+                    ]
+                },
+                {
+                    "transport_string":"By Bus:",
+                    "directions":[
+                        "General: 98, 98M, 99, 157, 185, 187, 198, 334, 502, 542, 657",
+                        "To Opp Jurong Polyclinic: 5N, 98, 98M, 99, 157, 185, 187, 198, 334, 502, NR5"
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "polyclinic",
+            "id": "10",
+            "Name": "Marine Parade Polyclinic (Singhealth)",
+            "Address": "Block 80 Marine Parade #01-792",
+            "PostalCode": "440080",
+            "Tel": "6345-0049 (General), 6643-6969 (Appt)",
+            "coord": [
+                103.907597,
+                1.302256
+            ],
+            "FILE_NAME":"Slide10",
+            "ALL_OPENING_HOURS": [
+                {
+                    "day_string": "Monday - Friday",
+                    "opening_hours": [
+                        "8.00AM - 1.00PM (by appointment)",
+                        "Last registration is at 11.30AM (Without appointment)",
+                        "2.00PM - 4.30PM (by appointment) ",
+                        "Last registration is at 4.00PM (Without appointment)"
+                    ]
+                },
+                {
+                    "day_string": "Saturday",
+                    "opening_hours": [
+                        "8.00AM - 12.30PM (by appointment)",
+                        "Last registration is at 10.30AM (Without appointment)"
+                    ]
+                },
+                {
+                    "day_string": "Sunday & Public Holiday",
+                    "opening_hours": [
+                        "Closed"
+                    ]
+                }
+            ],
+            "ALL_DIRECTIONS":[
+                {
+                    "transport_string":"By MRT / LRT:",
+                    "directions":[
+                        "Paya Lebar MRT – transfer to Bus No. 135",
+                        "Kallang MRT – transfer to Bus No. 31"
+                    ]
+                },
+                {
+                    "transport_string":"By Bus:",
+                    "directions":[
+                        "From Bus Stop along Marine Parade Road, take Bus No: 15, 16, 31, 36, 196, 197, 135"
+                    ]
+                }
+            ]
+
+        },
+        {
+            "type": "polyclinic",
+            "id": "11",
+            "Name": "Outram Polyclinic (Singhealth)",
+            "Address": "No.3 Second Hospital Avenue, #02-00 Health Promotion Board Building",
+            "PostalCode": "168937",
+            "Tel": "6435-3980 (General), 6643-6969 (Appt)",
+            "coord": [
+                103.838369,
+                1.279555
+            ],
+            "FILE_NAME":"Slide11",
+            "ALL_OPENING_HOURS": [
+                {
+                    "day_string": "Monday - Friday",
+                    "opening_hours": [
+                        "8.00AM - 1.00PM (by appointment)",
+                        "Last registration is at 11.30AM (Without appointment)",
+                        "2.00PM - 4.30PM (by appointment) ",
+                        "Last registration is at 4.00PM (Without appointment)"
+                    ]
+                },
+                {
+                    "day_string": "Saturday",
+                    "opening_hours": [
+                        "8.00AM - 12.30PM (by appointment)",
+                        "Last registration is at 10.30AM (Without appointment)"
+                    ]
+                },
+                {
+                    "day_string": "Sunday & Public Holiday",
+                    "opening_hours": [
+                        "Closed"
+                    ]
+                }
+            ],
+            "ALL_DIRECTIONS":[
+                {
+                    "transport_string":"By MRT / LRT:",
+                    "directions":[
+                        "Nearest MRT Station: Outram Park MRT"
+                    ]
+                },
+                {
+                    "transport_string":"By Bus:",
+                    "directions":[
+                        "From Bus Stop along New Bridge Road, take Bus No: 2, 12 54, 124, 143, 147, 166, 197, 961",
+                        "From Bus Stop along Outram Road, take Bus No: 33, 63, 75, 851"
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "polyclinic",
+            "id": "12",
+            "Name": "Pasir Ris Polyclinic (Singhealth)",
+            "Address": "1 Pasir Ris Drive 4 #01-11",
+            "PostalCode": "519457",
+            "Tel": "6585-5390 (General), 6643-6969 (Appt)",
+            "coord": [
+                103.959529,
+                1.368309
+            ],
+            "FILE_NAME":"Slide12",
+            "ALL_OPENING_HOURS": [
+                {
+                    "day_string": "Monday - Friday",
+                    "opening_hours": [
+                        "8.00AM - 1.00PM (by appointment)",
+                        "Last registration is at 11.30AM (Without appointment)",
+                        "2.00PM - 4.30PM (by appointment) ",
+                        "Last registration is at 4.00PM (Without appointment)"
+                    ]
+                },
+                {
+                    "day_string": "Saturday",
+                    "opening_hours": [
+                        "8.00AM - 12.30PM (by appointment)",
+                        "Last registration is at 10.30AM (Without appointment)"
+                    ]
+                },
+                {
+                    "day_string": "Sunday & Public Holiday",
+                    "opening_hours": [
+                        "Closed"
+                    ]
+                }
+            ],
+            "ALL_DIRECTIONS":[
+                {
+                    "transport_string":"By MRT / LRT:",
+                    "directions":[
+                        "From Pasir Ris MRT – transfer to bus no. 12, 21, 358, 17"
+                    ]
+                },
+                {
+                    "transport_string":"By Bus:",
+                    "directions":[
+                        "From Bus Stop along Pasir Ris Drive 1, take Bus No: 12, 21, 53, 81, 358, 359, 518",
+                        "From Bus Stop along Pasir Ris Drive 4, take Bus No: 17"
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "polyclinic",
+            "id": "13",
+            "Name": "Queenstown Polyclinic (Singhealth)",
+            "Address": "580 Stirling Road",
+            "PostalCode": "148958",
+            "Tel": "6471-9530 (General), 6643-6969 (Appt)",
+            "coord": [
+                103.800959,
+                1.298484
+            ],
+            "FILE_NAME":"Slide13",
+            "ALL_OPENING_HOURS": [
+                {
+                    "day_string": "Monday - Friday",
+                    "opening_hours": [
+                        "8:00AM to 1:00PM",
+                        "Last registration is at 11:30PM (Without appointment)",
+                        "2:00PM to 4:30PM",
+                        "Last registration is at 4PM (Without appointment)"
+                    ]
+                },
+                {
+                    "day_string": "Saturday",
+                    "opening_hours": [
+                        "8:00AM to 12:30PM",
+                        "Last registration is at 10:30PM (Without appointment)"
+                    ]
+                },
+                {
+                    "day_string": "Sunday & Public Holiday",
+                    "opening_hours": [
+                        "Closed"
+                    ]
+                }
+            ],
+            "ALL_DIRECTIONS":[
+                {
+                    "transport_string":"By MRT / LRT:",
+                    "directions":[
+                        "Nearest MRT Station: EW20 Commonwealth MRT"
+                    ]
+                },
+                {
+                    "transport_string":"By MRT / LRT:",
+                    "directions":[
+                        "From Bus Stop along Commonwealth Avenue, take Bus No: 51, 145, 195, 111, 970",
+                        "From Bus Stop along Stirling Road, take Bus No: 51, 61, 93, 100, 123, 147, 196, 198, 855, 961"
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "polyclinic",
+            "id": "14",
+            "Name": "Sengkang Polyclinic (Singhealth)",
+            "Address": "2 Sengkang Square #01-06 Sengkang Community Hub",
+            "PostalCode": "545025",
+            "Tel": "6315-3500 (General), 6643-6969 (Appt)",
+            "coord": [
+                103.894364,
+                1.392501
+            ],
+            "FILE_NAME":"Slide14",
+            "ALL_OPENING_HOURS": [
+                {
+                    "day_string": "Monday - Friday",
+                    "opening_hours": [
+                        "8.00AM - 1.00PM (by appointment)",
+                        "Last registration is at 11.30AM (Without appointment)",
+                        "2.00PM - 4.30PM (by appointment) ",
+                        "Last registration is at 4.00PM (Without appointment)"
+                    ]
+                },
+                {
+                    "day_string": "Saturday",
+                    "opening_hours": [
+                        "8.00AM - 12.30PM (by appointment)",
+                        "Last registration is at 10.30AM (Without appointment)"
+                    ]
+                },
+                {
+                    "day_string": "Sunday & Public Holiday",
+                    "opening_hours": [
+                        "Closed"
+                    ]
+                }
+            ],
+            "ALL_DIRECTIONS":[
+                {
+                    "transport_string":"By MRT / LRT:",
+                    "directions":[
+                        "Nearest MRT Station: Sengkang MRT"
+                    ]
+                },
+                {
+                    "transport_string":"By Bus:",
+                    "directions":[
+                        "Nearest Bus Interchange/Bus Stop: Sengkang Bus Interchange. Contains Bus No: 80, 83, 86, 87, 156, 159, 163, 371, 372, 965",
+                        "From Bus Stop along Sengkang East Way, take Bus No: 156, 159, 161"
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "polyclinic",
+            "id": "15",
+            "Name": "Tampines Polyclinic (Singhealth)",
+            "Address": "1 Tampines Street 41",
+            "PostalCode": "529203",
+            "Tel": "6786-4070 (General), 6643-6969 (Appt)",
+            "coord": [
+                103.946039,
+                1.357257
+            ],
+            "FILE_NAME":"Slide15",
+            "ALL_OPENING_HOURS": [
+                {
+                    "day_string": "Monday - Friday",
+                    "opening_hours": [
+                        "8.00AM - 1.00PM (by appointment)",
+                        "Last registration is at 11.30AM (Without appointment)",
+                        "2.00PM - 4.30PM (by appointment) ",
+                        "Last registration is at 4.00PM (Without appointment)"
+                    ]
+                },
+                {
+                    "day_string": "Saturday",
+                    "opening_hours": [
+                        "8.00AM - 12.30PM (by appointment)",
+                        "Last registration is at 10.30AM (Without appointment)"
+                    ]
+                },
+                {
+                    "day_string": "Sunday & Public Holiday",
+                    "opening_hours": [
+                        "Closed"
+                    ]
+                }
+            ],
+            "ALL_DIRECTIONS":[
+                {
+                    "transport_string":"By MRT / LRT:",
+                    "directions":[
+                        "From Tampines MRT – transfer to Bus No. 28, 29, 81, 19, 291, 293"
+                    ]
+                },
+                {
+                    "transport_string":"By Bus:",
+                    "directions":[
+                        "From Bus Stop along Tampines Ave 7, take Bus No: 28, 29, 81, 19, 291, 293",
+                        "From Bus Stop along Tampines Ave 4, take Bus No: 15, 21, 27"
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "polyclinic",
+            "id": "16",
+            "Name": "Toa Payoh Polyclinic (NHG)",
+            "Address": "Block 2003 Lorong 8 Toa Payoh",
+            "PostalCode": "319260",
+            "Tel": "6355-3000",
+            "coord": [
+                103.858986,
+                1.3345499
+            ],
+            "FILE_NAME":"Slide16",
+            "ALL_OPENING_HOURS": [
+                {
+                    "day_string": "Monday - Friday",
+                    "opening_hours": [
+                        "8.00AM – 1.00PM",
+                        "2.00PM – 4.30PM",
+                        "Registration is from 7:30AM to 4:00PM (Without appointment)"
+                    ]
+                },
+                {
+                    "day_string": "Saturday",
+                    "opening_hours": [
+                        "8:00AM to 12:30PM",
+                        "Registration is from 7:30AM to 12:00PM (Without appointment)"
+                    ]
+                },
+                {
+                    "day_string": "Sunday & Public Holiday",
+                    "opening_hours": [
+                        "Closed"
+                    ]
+                }
+            ],
+            "ALL_DIRECTIONS":[
+                {
+                    "transport_string":"By MRT / LRT:",
+                    "directions":[
+                        "From NS19 Toa Payoh, transfer to Bus service 238"
+                    ]
+                },
+                {
+                    "transport_string":"By Bus:",
+                    "directions":[
+                        "SBS Transit 238"
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "polyclinic",
+            "id": "17",
+            "Name": "Woodlands Polyclinic (NHG)",
+            "Address": "10 Woodlands Street 31",
+            "PostalCode": "738579",
+            "Tel": "6355-3000",
+            "coord": [
+                103.775072,
+                1.430806
+            ],
+            "FILE_NAME":"Slide17",
+            "ALL_OPENING_HOURS": [
+                {
+                    "day_string": "Monday - Friday",
+                    "opening_hours": [
+                        "8.00AM – 1.00PM",
+                        "2.00PM – 4.30PM",
+                        "Registration is from 7:30AM to 4:00PM (Without appointment)"
+                    ]
+                },
+                {
+                    "day_string": "Saturday",
+                    "opening_hours": [
+                        "8:00AM to 12:30PM",
+                        "Registration is from 7:30AM to 12:00PM (Without appointment)"
+                    ]
+                },
+                {
+                    "day_string": "Sunday & Public Holiday",
+                    "opening_hours": [
+                        "Closed"
+                    ]
+                }
+            ],
+            "ALL_DIRECTIONS":[
+                {
+                    "transport_string":"By MRT / LRT:",
+                    "directions":[
+                        "Nearest MRT Station: NS8 Marsiling"
+                    ]
+                },
+                {
+                    "transport_string":"By Bus:",
+                    "directions":[
+                        "SMRT : 187, 856, 925, 960, 961, 963, NR16"    
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "polyclinic",
+            "id": "18",
+            "Name": "Yishun Polyclinic (NHG)",
+            "Address": "2 Yishun Ave 9",
+            "PostalCode": "768898",
+            "Tel": "6355-3000",
+            "coord": [
+                103.837076,
+                1.423369
+            ],
+            "FILE_NAME":"Slide18",
+            "ALL_OPENING_HOURS": [
+                {
+                    "day_string": "Monday - Friday",
+                    "opening_hours": [
+                        "8.00AM – 1.00PM",
+                        "2.00PM – 4.30PM",
+                        "Registration is from 7:30AM to 4:00PM (Without appointment)"
+                    ]
+                },
+                {
+                    "day_string": "Saturday",
+                    "opening_hours": [
+                        "8:00AM to 12:30PM",
+                        "Registration is from 7:30AM to 12:00PM (Without appointment)"
+                    ]
+                },
+                {
+                    "day_string": "Sunday & Public Holiday",
+                    "opening_hours": [
+                        "Closed"
+                    ]
+                }
+            ],
+            "ALL_DIRECTIONS":[
+                {
+                    "transport_string":"By MRT / LRT:",
+                    "directions":[
+                        "Nearest MRT Station: NS13 Yishun"
+                    ]
+                },
+                {
+                    "transport_string":"By Bus:",
+                    "directions":[
+                        "Walking distance from Yishun Temporary Bus Interchange."
+                    ]
+                }
+            ]
+        }
+    ]
+}

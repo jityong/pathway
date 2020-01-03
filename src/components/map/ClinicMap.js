@@ -81,6 +81,16 @@ export class ClinicMap extends Component {
       clinic.name = clinic.Name;
       clinic.price = "$";
       clinic.rating = "4.0";
+      clinic.formattedOpeningHours = clinic.ALL_OPENING_HOURS.map(
+        period =>
+          period.day_string + ":</br>" + period.opening_hours.join(",</br>")
+      ).join("</br></br>");
+
+
+      clinic.formattedDirections = clinic.ALL_DIRECTIONS.map(
+        path => path.transport_string + "</br>" + path.directions.join(",</br>")
+      ).join("</br></br>");
+
       return (
         <Marker
           key={clinic.id}
@@ -205,6 +215,26 @@ export class ClinicMap extends Component {
               <hr /> Telephone: {selectedPlace.clinic.Tel} <hr /> Distance:{" "}
               {parseFloat(selectedPlace.clinic.distance).toFixed(2)}km away
               <hr />
+                <p>Opening Hours:</p>
+                <hr />
+                {selectedPlace.clinic.ALL_OPENING_HOURS.map(period => (
+                  <p>
+                    {period.day_string}
+                    <br />
+                    {period.opening_hours.join(", ")}
+                  </p>
+                ))}
+                <hr />
+                <p>Directions:</p>
+                {selectedPlace.clinic.ALL_DIRECTIONS.map(path => (
+                  <p>
+                    {path.transport_string}
+                    <br />
+                    {path.directions.join(", ")}
+                  </p>
+                ))}
+                <hr />
+
               {/* <Button>
                 <Link
                   to={{
