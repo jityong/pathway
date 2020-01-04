@@ -56,14 +56,14 @@ export class CompareDialog extends Component {
 
         const rows = [
             createData(
-            <span style={{ fontWeight: "bold" }}>Name</span>,
-            <span style={{ fontWeight: "bold" }}>{clinicOne.name}</span>,
-            <span style={{ fontWeight: "bold" }}> {clinicTwo.name}</span>
+                <span style={{fontWeight: "bold"}}>Name</span>,
+                <span style={{fontWeight: "bold"}}>{clinicOne.name}</span>,
+                <span style={{fontWeight: "bold"}}> {clinicTwo.name}</span>
             ),
             createData(
-            "Distance",
-            parseFloat(clinicOne.distance).toFixed(2),
-            parseFloat(clinicTwo.distance).toFixed(2)
+                "Distance (km)",
+                parseFloat(clinicOne.distance).toFixed(2),
+                parseFloat(clinicTwo.distance).toFixed(2)
             ),
             createData("Price", clinicOne.price, clinicTwo.price),
             // createData("Ratings", clinicOne.rating, clinicTwo.rating),
@@ -95,7 +95,7 @@ export class CompareDialog extends Component {
                 />
             )
 
-   
+
         ];
         const consultationPriceRows = consultationPrices.consultation.map(function (data) {
             return createData(
@@ -205,13 +205,13 @@ export class CompareDialog extends Component {
                             <TableHead>
                                 <TableRow>
                                     <TableCell> </TableCell>
-                                    <TableCell align="right">{clinicOne.type} </TableCell>
-                                    <TableCell align="right">{clinicTwo.type} </TableCell>
+                                    <TableCell align="left">{clinicOne.type} </TableCell>
+                                    <TableCell align="left">{clinicTwo.type} </TableCell>
                                 </TableRow>
                             </TableHead>
                             <TableBody>
                                 {rows.map(row => (
-                                    <TableRow key={row.name}>
+                                    <TableRow key={row.name} style={{minWidth: 0}}>
                                         <TableCell component="th" scope="row">
                                             {row.name === "Price" ? (
                                                 <Fragment>
@@ -262,7 +262,7 @@ export class CompareDialog extends Component {
                                                                         </TableCell>
                                                                         <TableCell component="th" scope="row">
                                                                             <span style={{fontWeight: "bolder"}}>
-                                                                            {   clinicOne.name}
+                                                                            {clinicOne.name}
                                                                             </span>
                                                                         </TableCell>
                                                                         <TableCell component="th" scope="row">
@@ -300,8 +300,8 @@ export class CompareDialog extends Component {
                                                 <Fragment>{row.name}</Fragment>
                                             )}
                                         </TableCell>
-                                        <TableCell align="right">{row.gp}</TableCell>
-                                        <TableCell align="right">{row.pc} </TableCell>
+                                        <TableCell align="left" style={{minWidth: 210}}>{row.gp}</TableCell>
+                                        <TableCell align="left" style={{minWidth: 210}}>{row.pc} </TableCell>
                                     </TableRow>
                                 ))}
                             </TableBody>
