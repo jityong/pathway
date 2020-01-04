@@ -55,67 +55,75 @@ export class CompareDialog extends Component {
         }
 
         const rows = [
-          createData(
+            createData(
             <span style={{ fontWeight: "bold" }}>Name</span>,
             <span style={{ fontWeight: "bold" }}>{clinicOne.name}</span>,
             <span style={{ fontWeight: "bold" }}> {clinicTwo.name}</span>
-          ),
-          createData(
+            ),
+            createData(
             "Distance",
             parseFloat(clinicOne.distance).toFixed(2),
             parseFloat(clinicTwo.distance).toFixed(2)
-          ),
-          createData("Price", clinicOne.price, clinicTwo.price),
-          createData("Ratings", clinicOne.rating, clinicTwo.rating),
-          createData(
+            ),
+            createData("Price", clinicOne.price, clinicTwo.price),
+            createData("Ratings", clinicOne.rating, clinicTwo.rating),
+            createData(
             "Doctor name",
             clinicOne.type === "GP" ? clinicOne.doctorName : "",
             clinicTwo.type === "GP" ? clinicTwo.doctorName : ""
-          ),
-
-          createData(
-            "Opening hours",
-            clinicOne.type === "GP" ? (
-              <div
-                dangerouslySetInnerHTML={{
-                  __html: clinicOne.formattedOpeningHours
-                }}
-              />
-            ) : (
-              ""
             ),
-            clinicTwo.type === "GP" ? (
-              <div
-                dangerouslySetInnerHTML={{
-                  __html: clinicTwo.formattedOpeningHours
-                }}
-              />
-            ) : (
-              ""
-            )
-          ),
 
-          createData(
-            "Directions",
-            clinicOne.type === "GP" ? (
-              <div
-                dangerouslySetInnerHTML={{
-                  __html: clinicOne.formattedDirections
-                }}
-              />
-            ) : (
-              ""
+            // createData(
+            // "Opening hours",
+            // clinicOne.type === "GP" ? (
+            //     <div
+            //     dangerouslySetInnerHTML={{
+            //         __html: clinicOne.formattedOpeningHours
+            //     }}
+            //     />
+            // ) : (
+            //     ""
+            // ),
+            // clinicTwo.type === "GP" ? (
+            //     <div
+            //     dangerouslySetInnerHTML={{
+            //         __html: clinicTwo.formattedOpeningHours
+            //     }}
+            //     />
+            // ) : (
+            //     ""
+            // )
+            // ),
+
+            createData(
+                "Opening hours",
+                <div
+                    dangerouslySetInnerHTML={{
+                        __html: clinicOne.formattedOpeningHours
+                    }}
+                />,
+                <div
+                    dangerouslySetInnerHTML={{
+                        __html: clinicTwo.formattedOpeningHours
+                    }}
+                />
             ),
-            clinicTwo.type === "GP" ? (
-              <div
-                dangerouslySetInnerHTML={{
-                  __html: clinicTwo.formattedDirections
-                }}
-              />
-            ) : (
-              ""
+            createData(
+                "Directions",
+                <div
+                    dangerouslySetInnerHTML={{
+                        __html: clinicOne.formattedDirections
+                    }}
+                />,
+                <div
+                    dangerouslySetInnerHTML={{
+                        __html: clinicTwo.formattedDirections
+                    }}
+                />
             )
-          )
+
+
+   
         ];
         const consultationPriceRows = consultationPrices.consultation.map(function (data) {
             return createData(
@@ -276,20 +284,20 @@ export class CompareDialog extends Component {
                                                                 <TableBody>
                                                                     <TableRow>
                                                                         <TableCell component="th" scope="row">
-                                      <span style={{fontWeight: "bolder"}}>
-                                        Name
-                                      </span>
+                                                                            <span style={{fontWeight: "bolder"}}>
+                                                                                Name
+                                                                            </span>
                                                                         </TableCell>
                                                                         <TableCell component="th" scope="row">
-                                      <span style={{fontWeight: "bolder"}}>
-                                        {clinicOne.name}
-                                      </span>
+                                                                            <span style={{fontWeight: "bolder"}}>
+                                                                            {   clinicOne.name}
+                                                                            </span>
                                                                         </TableCell>
                                                                         <TableCell component="th" scope="row">
-                                      <span style={{fontWeight: "bolder"}}>
-                                        {" "}
-                                          {clinicTwo.name}
-                                      </span>
+                                                                            <span style={{fontWeight: "bolder"}}>
+                                                                            {" "}
+                                                                                {clinicTwo.name}
+                                                                            </span>
                                                                         </TableCell>
 
 

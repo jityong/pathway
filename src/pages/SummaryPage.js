@@ -98,6 +98,26 @@ export const SummaryPage= props => {
           {parseFloat(choice.distance).toFixed(2)}km away
           <hr />
 
+          <p>Opening Hours:</p>
+          <hr />
+          {choice.ALL_OPENING_HOURS.map(period => (
+            <p>
+              {period.day_string}
+              <br />
+              {period.opening_hours.join(", ")}
+            </p>
+          ))}
+          <hr />
+          <p>Directions:</p>
+          {choice.ALL_DIRECTIONS.map(path => (
+            <p>
+              {path.transport_string}
+              <br />
+              {path.directions.join(", ")}
+            </p>
+          ))}
+          <hr />
+
           <span>Referral flowchart of your healthcare journey so far:</span>
           <img src={PCRoute} alt="pc route" style={{ width: "100%" }} />
         </div>

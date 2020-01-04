@@ -139,6 +139,25 @@ const CompareBlock = props => {
               <hr /> Telephone: {clinicOne.Tel} <hr /> Distance:{" "}
               {parseFloat(clinicOne.distance).toFixed(2)}km away
               <hr />
+              <p>Opening Hours:</p>
+              <hr />
+              {clinicOne.ALL_OPENING_HOURS.map(period => (
+                <p>
+                  {period.day_string}
+                  <br />
+                  {period.opening_hours.join(", ")}
+                </p>
+              ))}
+              <hr />
+              <p>Directions:</p>
+              {clinicOne.ALL_DIRECTIONS.map(path => (
+                <p>
+                  {path.transport_string}
+                  <br />
+                  {path.directions.join(", ")}
+                </p>
+              ))}
+              <hr />
               <Link
                 to={{
                   pathname: "/ConfirmClinicChoice",
@@ -178,6 +197,29 @@ const CompareBlock = props => {
               <hr /> Telephone: {clinicTwo.Tel} <hr /> Distance:{" "}
               {parseFloat(clinicTwo.distance).toFixed(2)}km away
               <hr />
+
+              <p>Opening Hours:</p>
+              <hr />
+              {clinicTwo.ALL_OPENING_HOURS.map(period => (
+                <p>
+                  {period.day_string}
+                  <br />
+                  {period.opening_hours.join(", ")}
+                </p>
+              ))}
+              <hr />
+              <p>Directions:</p>
+              {clinicTwo.ALL_DIRECTIONS.map(path => (
+                <p>
+                  {path.transport_string}
+                  <br />
+                  {path.directions.join(", ")}
+                </p>
+              ))}
+              <hr />
+
+
+              
               <Link
                 to={{
                   pathname: "/ConfirmClinicChoice",
