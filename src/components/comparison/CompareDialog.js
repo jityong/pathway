@@ -66,34 +66,7 @@ export class CompareDialog extends Component {
             parseFloat(clinicTwo.distance).toFixed(2)
             ),
             createData("Price", clinicOne.price, clinicTwo.price),
-            createData("Ratings", clinicOne.rating, clinicTwo.rating),
-            createData(
-            "Doctor name",
-            clinicOne.type === "GP" ? clinicOne.doctorName : "",
-            clinicTwo.type === "GP" ? clinicTwo.doctorName : ""
-            ),
-
-            // createData(
-            // "Opening hours",
-            // clinicOne.type === "GP" ? (
-            //     <div
-            //     dangerouslySetInnerHTML={{
-            //         __html: clinicOne.formattedOpeningHours
-            //     }}
-            //     />
-            // ) : (
-            //     ""
-            // ),
-            // clinicTwo.type === "GP" ? (
-            //     <div
-            //     dangerouslySetInnerHTML={{
-            //         __html: clinicTwo.formattedOpeningHours
-            //     }}
-            //     />
-            // ) : (
-            //     ""
-            // )
-            // ),
+            // createData("Ratings", clinicOne.rating, clinicTwo.rating),
 
             createData(
                 "Opening hours",
@@ -121,7 +94,6 @@ export class CompareDialog extends Component {
                     }}
                 />
             )
-
 
    
         ];
