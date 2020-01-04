@@ -72,9 +72,12 @@ export class GpDialog extends Component {
             <br/>
             {parseFloat(clinic.distance).toFixed(2)}km away {/*Distance*/}
             <hr />
-            {clinic.properties.DR_NAME} {/*Doctor Name*/}
+            <span style={{fontWeight: "bold"}}>{clinic.properties.DR_NAME} {/*Doctor Name*/} </span>
+            <br/>
             <br />
-            Telephone: {clinic.properties.Tel} <br />
+            <span style={{fontWeight: "bold"}}>Telephone: </span>
+            <br/>
+            {clinic.properties.Tel} <br />
             <hr />
             <span style={{fontWeight:"bold"}}>Opening Hours:</span>
             <br/>
