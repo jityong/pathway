@@ -49,14 +49,15 @@ export class PcDialog extends Component {
         <Dialog open={open} onClose={handleToggle}>
           <DialogContent>
             {/* No image to be rendered yet */}
-            Clinic Name: {clinic.Name} <hr /> 
-            Address: {clinic.Address}{" "}
-            Singapore {clinic.PostalCode}<hr /> 
-            Telephone: {clinic.Tel} <hr /> 
-            Distance:{" "}
-            {parseFloat(clinic.distance).toFixed(2)}km away<hr />
-            <p>Opening Hours:</p>
+            <span style={{fontWeight:"bold"}}>{clinic.Name} <br /> {/*Clinic Name*/}</span>
+            {parseFloat(clinic.distance).toFixed(2)}km away {/*Distance*/}
             <hr />
+
+            Telephone: {clinic.Tel}
+            <hr />
+
+            <span style={{fontWeight:"bold"}}>Opening Hours:</span>
+            <br/>
             {clinic.ALL_OPENING_HOURS.map(period => (
               <p>
                 {period.day_string}
@@ -64,8 +65,16 @@ export class PcDialog extends Component {
                 {period.opening_hours.join(", ")}
               </p>
             ))}
+
+            <hr/>
+            <span style={{fontWeight:"bold"}}>Address: </span>
+            <br/>
+            {clinic.Address}{" "}
+            Singapore {clinic.PostalCode}
             <hr />
-            <p>Directions:</p>
+
+            <span style={{fontWeight:"bold"}}>Directions:</span>
+            <br/>
             {clinic.ALL_DIRECTIONS.map(path => (
               <p>
                 {path.transport_string}
@@ -74,6 +83,7 @@ export class PcDialog extends Component {
               </p>
             ))}
             <hr />
+
             <Grid style={{ flexGrow: 1 }} direction="row">
               <Grid container justify="space-between">
                 <Grid item>

@@ -68,14 +68,16 @@ export class GpDialog extends Component {
               style={{ width: "100%" }}
             />
             <hr />
-            {clinic.properties.HCI_NAME} {/*Clinic Name*/}
+            <span style={{fontWeight:"bold"}}>{clinic.properties.HCI_NAME} </span> {/*Clinic Name*/}
+            <br/>
             {parseFloat(clinic.distance).toFixed(2)}km away {/*Distance*/}
             <hr />
             {clinic.properties.DR_NAME} {/*Doctor Name*/}
             <br />
             Telephone: {clinic.properties.Tel} <br />
             <hr />
-            <p style={{fontWeight:"bold"}}>Opening Hours:</p>
+            <span style={{fontWeight:"bold"}}>Opening Hours:</span>
+            <br/>
             {clinic.properties.ALL_OPENING_HOURS.map(period => (
               <p>
                 {period.day_string}
