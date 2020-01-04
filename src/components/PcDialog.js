@@ -84,8 +84,8 @@ export class PcDialog extends Component {
             ))}
             <hr />
 
-            <Grid style={{ flexGrow: 1 }} direction="row">
-              <Grid container justify="space-between">
+            <Grid style={{ flexGrow: 1 }} direction="column">
+              <Grid container justify="space-evenly">
                 <Grid item>
                   <Button
                     variant="contained"
