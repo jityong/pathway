@@ -113,13 +113,11 @@ const ConfirmClinicChoice = props => {
           <Typography variant="h5" style={{ fontWeight: "bold" }}>
             {choice.properties.HCI_NAME}
           </Typography>{" "}
-          <br /> Address: {choice.properties.BLK_HSE_NO}{" "}
+          <br /> {choice.properties.BLK_HSE_NO}{" "}
           {choice.properties.STREET_NAME} #{choice.properties.FLOOR_NO}-
           {choice.properties.UNIT_NO} {choice.properties.BUILDING_NAME}{" "}
           Singapore {choice.properties.PostalCode}
           <br /> Telephone: {choice.properties.Tel} <br />
-          Applicable subsidies:{" "}
-          {choice.properties.CLINIC_PROGRAMME_CODE.join(", ")}
           <hr />
           <Typography variant="h6" style={{ fontWeight: "bolder" }}>
             Price breakdown:

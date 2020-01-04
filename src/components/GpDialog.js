@@ -68,23 +68,19 @@ export class GpDialog extends Component {
               style={{ width: "100%" }}
             />
             <hr />
-            
-            Clinic Name: {clinic.properties.HCI_NAME} <hr /> Address:{" "}
-            {clinic.properties.BLK_HSE_NO} {clinic.properties.STREET_NAME} #
-            {clinic.properties.FLOOR_NO}-{clinic.properties.UNIT_NO}{" "}
-            {clinic.properties.BUILDING_NAME} Singapore{" "}
-            {clinic.properties.PostalCode}
-            <hr /> Telephone: {clinic.properties.Tel} <hr />
-            Applicable subsidies:{" "}
-            {clinic.properties.CLINIC_PROGRAMME_CODE.join(", ")}
+            <span style={{fontWeight:"bold"}}>{clinic.properties.HCI_NAME} </span> {/*Clinic Name*/}
+            <br/>
+            {parseFloat(clinic.distance).toFixed(2)}km away {/*Distance*/}
             <hr />
-            Distance:
-            {parseFloat(clinic.distance).toFixed(2)}km away
+            <span style={{fontWeight: "bold"}}>{clinic.properties.DR_NAME} {/*Doctor Name*/} </span>
+            <br/>
+            <br />
+            <span style={{fontWeight: "bold"}}>Telephone: </span>
+            <br/>
+            {clinic.properties.Tel} <br />
             <hr />
-            Doctor: {clinic.properties.DR_NAME}
-            <hr />
-            <p>Opening Hours:</p>
-            <hr />
+            <span style={{fontWeight:"bold"}}>Opening Hours:</span>
+            <br/>
             {clinic.properties.ALL_OPENING_HOURS.map(period => (
               <p>
                 {period.day_string}
@@ -93,7 +89,13 @@ export class GpDialog extends Component {
               </p>
             ))}
             <hr />
-            <p>Directions:</p>
+            <span style={{fontWeight:"bold"}}>Address: </span><br/>
+            {clinic.properties.BLK_HSE_NO} {clinic.properties.STREET_NAME} #
+            {clinic.properties.FLOOR_NO}-{clinic.properties.UNIT_NO}{" "}
+            {clinic.properties.BUILDING_NAME} Singapore{" "}
+            {clinic.properties.PostalCode}
+            <hr/>
+            <p style={{fontWeight: "bold"}}>Directions:</p>
             {clinic.properties.ALL_DIRECTIONS.map(path => (
               <p>
                 {path.transport_string}
@@ -102,8 +104,8 @@ export class GpDialog extends Component {
               </p>
             ))}
             <hr />
-            <Grid style={{ flexGrow: 1 }} direction="row">
-              <Grid container justify="space-between">
+            <Grid style={{ flexGrow: 1 }} direction="column">
+              <Grid container justify="space-evenly">
                 <Grid item>
                   <Button
                     variant="contained"
