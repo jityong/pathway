@@ -19,6 +19,8 @@ import {
     Typography
 } from "@material-ui/core";
 
+var xlsx = require("xlsx");
+
 //Displays the "Compare!" button when 2 clinics are selected for comparison.
 // Displays the table of information for comparison between the 2 clinics.
 export class CompareDialog extends Component {
@@ -65,7 +67,8 @@ export class CompareDialog extends Component {
                 parseFloat(clinicOne.distance).toFixed(2),
                 parseFloat(clinicTwo.distance).toFixed(2)
             ),
-            createData("Price", clinicOne.price, clinicTwo.price),
+            // createData("Price", clinicOne.price, clinicTwo.price),
+            createData("Price", "$", "$"),
             // createData("Ratings", clinicOne.rating, clinicTwo.rating),
 
             createData(
@@ -169,9 +172,22 @@ export class CompareDialog extends Component {
                 )
             }
         )
-        const priceRows = consultationPriceRows.concat(drugPriceRows.concat(testPriceRows)).flatMap(function (data) {
-            return data;
-        });
+        const drugPriceLabel = [
+            createData(
+                <span style={{fontWeight: "bold"}}>Drug prices/month</span>,
+                <span style={{fontWeight: "bold"}}>Estimated drug prices per month, ie 30 x tablet</span>,
+                <span style={{fontWeight: "bold"}}>Estimated drug prices per month, ie 30 x tablet</span>
+            )];
+
+        const testPriceLabel = [
+            createData(
+                <span style={{fontWeight: "bold"}}>Prices for Tests & Screenings</span>,
+                <span style={{fontWeight: "bold"}}>Prices for Tests & Screenings</span>,
+                <span style={{fontWeight: "bold"}}>Prices for Tests & Screenings</span>
+            )];
+        // const priceRows = consultationPriceRows.concat(drugPriceLabel).concat(drugPriceRows).concat(testPriceLabel).concat(testPriceRows).flatMap(function (data) {
+        //     return data;
+        // });
         const handleToggle = () => {
             this.setState({
                 open: !this.state.open
@@ -231,7 +247,7 @@ export class CompareDialog extends Component {
                                                                     textDecoration: "underline"
                                                                 }}
                                                             >
-                                                                Cost Breakdown
+                                                                Cost Breakdown based on your Age, Nationality & Eligible Subsidies
                                                             </p>
                                                             <Table>
                                                                 <TableHead>
@@ -271,10 +287,34 @@ export class CompareDialog extends Component {
                                                                                 {clinicTwo.name}
                                                                             </span>
                                                                         </TableCell>
-
-
                                                                     </TableRow>
-                                                                    {priceRows.map(row => (
+                                                                    {consultationPriceRows.map(row=>(
+                                                                        <TableRow key={row.name}>
+                                                                            <TableCell component="th"
+                                                                                       scope="row">
+                                                                                {row.name}
+                                                                            </TableCell>
+                                                                            <TableCell align="right">
+                                                                                {clinicOne.type === "GP"
+                                                                                    ? isNaN(row.gp)
+                                                                                        ? row.gp
+                                                                                        : xlsx.SSF.format('$0.00', row.gp)
+                                                                                    : isNaN(row.pc)
+                                                                                        ? row.pc
+                                                                                        : xlsx.SSF.format('$0.00', row.pc)}
+                                                                            </TableCell>
+                                                                            <TableCell align="right">
+                                                                                {clinicTwo.type === "GP"
+                                                                                    ? isNaN(row.gp)
+                                                                                        ? row.gp
+                                                                                        : xlsx.SSF.format('$0.00', row.gp)
+                                                                                    : isNaN(row.pc)
+                                                                                        ? row.pc
+                                                                                        : xlsx.SSF.format('$0.00', row.pc)}
+                                                                            </TableCell>
+                                                                        </TableRow>
+                                                                    ))}
+                                                                    {drugPriceLabel.map(row => (
                                                                         <TableRow key={row.name}>
                                                                             <TableCell component="th" scope="row">
                                                                                 {row.name}
@@ -287,7 +327,76 @@ export class CompareDialog extends Component {
                                                                             <TableCell align="right">
                                                                                 {clinicTwo.type === "GP"
                                                                                     ? row.gp
-                                                                                    : row.pc}{" "}
+                                                                                    : row.pc}
+                                                                            </TableCell>
+                                                                        </TableRow>
+                                                                    ))}
+                                                                    {drugPriceRows.map(row => (
+                                                                        <TableRow key={row.name}>
+                                                                            <TableCell component="th" scope="row">
+                                                                                {row.name}
+                                                                            </TableCell>
+                                                                            <TableCell align="right">
+                                                                                {clinicOne.type === "GP"
+                                                                                    ? isNaN(row.gp)
+                                                                                        ? row.gp
+                                                                                        : xlsx.SSF.format('$0.00', row.gp * 30)
+                                                                                    : isNaN(row.pc)
+                                                                                        ? row.pc
+                                                                                        : xlsx.SSF.format('$0.00', row.pc * 30)}
+                                                                            </TableCell>
+                                                                            <TableCell align="right">
+                                                                                {clinicTwo.type === "GP"
+                                                                                    ? isNaN(row.gp)
+                                                                                        ? row.gp
+                                                                                        : xlsx.SSF.format('$0.00', row.gp * 30)
+                                                                                    : isNaN(row.pc)
+                                                                                        ? row.pc
+                                                                                        : xlsx.SSF.format('$0.00', row.pc * 30)}
+                                                                            </TableCell>
+                                                                        </TableRow>
+                                                                    ))}
+                                                                    {testPriceLabel.map(row => (
+                                                                        <TableRow key={row.name}>
+                                                                            <TableCell component="th"
+                                                                                       scope="row">
+                                                                                {row.name}
+                                                                            </TableCell>
+                                                                            <TableCell align="right">
+                                                                                {clinicOne.type === "GP"
+                                                                                    ? row.gp
+                                                                                    : row.pc}
+                                                                            </TableCell>
+                                                                            <TableCell align="right">
+                                                                                {clinicTwo.type === "GP"
+                                                                                    ? row.gp
+                                                                                    : row.pc}
+                                                                            </TableCell>
+                                                                        </TableRow>
+                                                                    ))}
+                                                                    {testPriceRows.map(row => (
+                                                                        <TableRow key={row.name}>
+                                                                            <TableCell component="th"
+                                                                                       scope="row">
+                                                                                {row.name}
+                                                                            </TableCell>
+                                                                            <TableCell align="right">
+                                                                                {clinicOne.type === "GP"
+                                                                                    ? isNaN(row.gp)
+                                                                                        ? row.gp
+                                                                                        : xlsx.SSF.format('$0.00', row.gp * 30)
+                                                                                    : isNaN(row.pc)
+                                                                                        ? row.pc
+                                                                                        : xlsx.SSF.format('$0.00', row.pc * 30)}
+                                                                            </TableCell>
+                                                                            <TableCell align="right">
+                                                                                {clinicTwo.type === "GP"
+                                                                                    ? isNaN(row.gp)
+                                                                                        ? row.gp
+                                                                                        : xlsx.SSF.format('$0.00', row.gp * 30)
+                                                                                    : isNaN(row.pc)
+                                                                                        ? row.pc
+                                                                                        : xlsx.SSF.format('$0.00', row.pc * 30)}
                                                                             </TableCell>
                                                                         </TableRow>
                                                                     ))}

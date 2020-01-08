@@ -15,6 +15,9 @@ import consultationPrices from "../data/consultationPrices";
 import drugPrices from "../data/drugPrices";
 import testPrices from "../data/testPrices";
 
+var xlsx = require("xlsx");
+
+
 const useStyles = makeStyles(theme => ({
   root: {
     padding: theme.spacing(3, 3)
@@ -103,9 +106,23 @@ const ConfirmClinicChoice = props => {
         )
       }
   )
-  const priceRows = consultationPriceRows.concat(drugPriceRows.concat(testPriceRows)).flatMap(function (data) {
-    return data;
-  });
+  const drugPriceLabel = [
+    createData(
+        <span style={{fontWeight: "bold"}}>Drug prices/month</span>,
+        <span style={{fontWeight: "bold"}}>Estimated drug prices per month, ie 30 x tablet</span>,
+        <span style={{fontWeight: "bold"}}>Estimated drug prices per month, ie 30 x tablet</span>
+    )];
+
+  const testPriceLabel = [
+    createData(
+        <span style={{fontWeight: "bold"}}>Prices for Tests & Screenings</span>,
+        <span style={{fontWeight: "bold"}}>Prices for Tests & Screenings</span>,
+        <span style={{fontWeight: "bold"}}>Prices for Tests & Screenings</span>
+    )];
+
+  // const priceRows = consultationPriceRows.concat(drugPriceRows.concat(testPriceRows)).flatMap(function (data) {
+  //   return data;
+  // });
   const result = (
     <Paper sqaure="false" className={classes.root}>
       {choice.type === "GP" ? (
@@ -128,15 +145,80 @@ const ConfirmClinicChoice = props => {
                 <span style={{ fontWeight: "bolder" }}>Description</span>
               </TableCell>
             </TableRow>
-            {priceRows.map(row => (
-              <TableRow key={row.name}>
-                <TableCell component="th" scope="row">
-                  {row.name}
-                </TableCell>
-                <TableCell align="right">
-                  {choice.type === "GP" ? row.gp : row.pc}
-                </TableCell>
-              </TableRow>
+            {consultationPriceRows.map(row=>(
+                <TableRow key={row.name}>
+                  <TableCell component="th"
+                             scope="row">
+                    {row.name}
+                  </TableCell>
+                  <TableCell align="right">
+                    {choice.type === "GP"
+                        ? isNaN(row.gp)
+                            ? row.gp
+                            : xlsx.SSF.format('$0.00', row.gp)
+                        : isNaN(row.pc)
+                            ? row.pc
+                            : xlsx.SSF.format('$0.00', row.pc)}
+                  </TableCell>
+                </TableRow>
+            ))}
+            {drugPriceLabel.map(row => (
+                <TableRow key={row.name}>
+                  <TableCell component="th" scope="row">
+                    {row.name}
+                  </TableCell>
+                  <TableCell align="right">
+                    {choice.type === "GP"
+                        ? row.gp
+                        : row.pc}
+                  </TableCell>
+                </TableRow>
+            ))}
+            {drugPriceRows.map(row => (
+                <TableRow key={row.name}>
+                  <TableCell component="th" scope="row">
+                    {row.name}
+                  </TableCell>
+                  <TableCell align="right">
+                    {choice.type === "GP"
+                        ? isNaN(row.gp)
+                            ? row.gp
+                            : xlsx.SSF.format('$0.00', row.gp * 30)
+                        : isNaN(row.pc)
+                            ? row.pc
+                            : xlsx.SSF.format('$0.00', row.pc * 30)}
+                  </TableCell>
+                </TableRow>
+            ))}
+            {testPriceLabel.map(row => (
+                <TableRow key={row.name}>
+                  <TableCell component="th"
+                             scope="row">
+                    {row.name}
+                  </TableCell>
+                  <TableCell align="right">
+                    {choice.type === "GP"
+                        ? row.gp
+                        : row.pc}
+                  </TableCell>
+                </TableRow>
+            ))}
+            {testPriceRows.map(row => (
+                <TableRow key={row.name}>
+                  <TableCell component="th"
+                             scope="row">
+                    {row.name}
+                  </TableCell>
+                  <TableCell align="right">
+                    {choice.type === "GP"
+                        ? isNaN(row.gp)
+                            ? row.gp
+                            : xlsx.SSF.format('$0.00', row.gp * 30)
+                        : isNaN(row.pc)
+                            ? row.pc
+                            : xlsx.SSF.format('$0.00', row.pc * 30)}
+                  </TableCell>
+                </TableRow>
             ))}
           </TableBody>
         </Typography>
@@ -157,15 +239,80 @@ const ConfirmClinicChoice = props => {
                 <span style={{ fontWeight: "bolder" }}>Description</span>
               </TableCell>
             </TableRow>
-            {priceRows.map(row => (
-              <TableRow key={row.name}>
-                <TableCell component="th" scope="row">
-                  {row.name}
-                </TableCell>
-                <TableCell align="right">
-                  {choice.type === "GP" ? row.gp : row.pc}
-                </TableCell>
-              </TableRow>
+            {consultationPriceRows.map(row=>(
+                <TableRow key={row.name}>
+                  <TableCell component="th"
+                             scope="row">
+                    {row.name}
+                  </TableCell>
+                  <TableCell align="right">
+                    {choice.type === "GP"
+                        ? isNaN(row.gp)
+                            ? row.gp
+                            : xlsx.SSF.format('$0.00', row.gp)
+                        : isNaN(row.pc)
+                            ? row.pc
+                            : xlsx.SSF.format('$0.00', row.pc)}
+                  </TableCell>
+                </TableRow>
+            ))}
+            {drugPriceLabel.map(row => (
+                <TableRow key={row.name}>
+                  <TableCell component="th" scope="row">
+                    {row.name}
+                  </TableCell>
+                  <TableCell align="right">
+                    {choice.type === "GP"
+                        ? row.gp
+                        : row.pc}
+                  </TableCell>
+                </TableRow>
+            ))}
+            {drugPriceRows.map(row => (
+                <TableRow key={row.name}>
+                  <TableCell component="th" scope="row">
+                    {row.name}
+                  </TableCell>
+                  <TableCell align="right">
+                    {choice.type === "GP"
+                        ? isNaN(row.gp)
+                            ? row.gp
+                            : xlsx.SSF.format('$0.00', row.gp * 30)
+                        : isNaN(row.pc)
+                            ? row.pc
+                            : xlsx.SSF.format('$0.00', row.pc * 30)}
+                  </TableCell>
+                </TableRow>
+            ))}
+            {testPriceLabel.map(row => (
+                <TableRow key={row.name}>
+                  <TableCell component="th"
+                             scope="row">
+                    {row.name}
+                  </TableCell>
+                  <TableCell align="right">
+                    {choice.type === "GP"
+                        ? row.gp
+                        : row.pc}
+                  </TableCell>
+                </TableRow>
+            ))}
+            {testPriceRows.map(row => (
+                <TableRow key={row.name}>
+                  <TableCell component="th"
+                             scope="row">
+                    {row.name}
+                  </TableCell>
+                  <TableCell align="right">
+                    {choice.type === "GP"
+                        ? isNaN(row.gp)
+                            ? row.gp
+                            : xlsx.SSF.format('$0.00', row.gp * 30)
+                        : isNaN(row.pc)
+                            ? row.pc
+                            : xlsx.SSF.format('$0.00', row.pc * 30)}
+                  </TableCell>
+                </TableRow>
             ))}
           </TableBody>
         </Typography>

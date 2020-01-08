@@ -71,38 +71,40 @@ const CompareBlock = props => {
                 style={{ width: "100%" }}
               />
               <hr />
-              Clinic Name: {clinicOne.properties.HCI_NAME} <hr /> Address:{" "}
-              {clinicOne.properties.BLK_HSE_NO}{" "}
-              {clinicOne.properties.STREET_NAME} #
+              <span style={{fontWeight:"bold"}}>{clinicOne.properties.HCI_NAME} </span> {/*clinicOne Name*/}
+              <br/>
+              {parseFloat(clinicOne.distance).toFixed(2)}km away {/*Distance*/}
+              <hr />
+              <span style={{fontWeight: "bold"}}>{clinicOne.properties.DR_NAME} {/*Doctor Name*/} </span>
+              <br/>
+              <br />
+              <span style={{fontWeight: "bold"}}>Telephone: </span>
+              <br/>
+              {clinicOne.properties.Tel} <br />
+              <hr />
+              <span style={{fontWeight:"bold"}}>Opening Hours:</span>
+              <br/>
+              {clinicOne.properties.ALL_OPENING_HOURS.map(period => (
+                  <p>
+                    {period.day_string}
+                    <br />
+                    {period.opening_hours.join(", ")}
+                  </p>
+              ))}
+              <hr />
+              <span style={{fontWeight:"bold"}}>Address: </span><br/>
+              {clinicOne.properties.BLK_HSE_NO} {clinicOne.properties.STREET_NAME} #
               {clinicOne.properties.FLOOR_NO}-{clinicOne.properties.UNIT_NO}{" "}
               {clinicOne.properties.BUILDING_NAME} Singapore{" "}
               {clinicOne.properties.PostalCode}
-              <hr /> Telephone: {clinicOne.properties.Tel} <hr />
-              Applicable subsidies:{" "}
-              {clinicOne.properties.CLINIC_PROGRAMME_CODE.join(", ")}
-              <hr />
-              Distance:
-              {parseFloat(clinicOne.distance).toFixed(2)}km away
-              <hr />
-              Doctor: {clinicOne.properties.DR_NAME}
-              <hr />
-              <p>Opening Hours:</p>
-              <hr />
-              {clinicOne.properties.ALL_OPENING_HOURS.map(period => (
-                <p>
-                  {period.day_string}
-                  <br />
-                  {period.opening_hours.join(", ")}
-                </p>
-              ))}
-              <hr />
-              <p>Directions:</p>
+              <hr/>
+              <p style={{fontWeight: "bold"}}>Directions:</p>
               {clinicOne.properties.ALL_DIRECTIONS.map(path => (
-                <p>
-                  {path.transport_string}
-                  <br />
-                  {path.directions.join(", ")}
-                </p>
+                  <p>
+                    {path.transport_string}
+                    <br />
+                    {path.directions.join(", ")}
+                  </p>
               ))}
               <hr />
               <Link
@@ -134,28 +136,38 @@ const CompareBlock = props => {
           />
           <Dialog open={open} onClose={handleClickClose}>
             <DialogContent>
-              Clinic Name: {clinicOne.Name} <hr /> Address: {clinicOne.Address}{" "}
-              Singapore {clinicOne.PostalCode}
-              <hr /> Telephone: {clinicOne.Tel} <hr /> Distance:{" "}
-              {parseFloat(clinicOne.distance).toFixed(2)}km away
+              <span style={{fontWeight:"bold"}}>{clinicOne.Name} <br /> {/*clinicOne Name*/}</span>
+              {parseFloat(clinicOne.distance).toFixed(2)}km away {/*Distance*/}
               <hr />
-              <p>Opening Hours:</p>
+
+              Telephone: {clinicOne.Tel}
               <hr />
+
+              <span style={{fontWeight:"bold"}}>Opening Hours:</span>
+              <br/>
               {clinicOne.ALL_OPENING_HOURS.map(period => (
-                <p>
-                  {period.day_string}
-                  <br />
-                  {period.opening_hours.join(", ")}
-                </p>
+                  <p>
+                    {period.day_string}
+                    <br />
+                    {period.opening_hours.join(", ")}
+                  </p>
               ))}
+
+              <hr/>
+              <span style={{fontWeight:"bold"}}>Address: </span>
+              <br/>
+              {clinicOne.Address}{" "}
+              Singapore {clinicOne.PostalCode}
               <hr />
-              <p>Directions:</p>
+
+              <span style={{fontWeight:"bold"}}>Directions:</span>
+              <br/>
               {clinicOne.ALL_DIRECTIONS.map(path => (
-                <p>
-                  {path.transport_string}
-                  <br />
-                  {path.directions.join(", ")}
-                </p>
+                  <p>
+                    {path.transport_string}
+                    <br />
+                    {path.directions.join(", ")}
+                  </p>
               ))}
               <hr />
               <Link
@@ -192,29 +204,38 @@ const CompareBlock = props => {
           <br />
           <Dialog open={openTwo} onClose={handleClickCloseTwo}>
             <DialogContent>
-              Clinic Name: {clinicTwo.Name} <hr /> Address: {clinicTwo.Address}{" "}
-              Singapore {clinicTwo.PostalCode}
-              <hr /> Telephone: {clinicTwo.Tel} <hr /> Distance:{" "}
-              {parseFloat(clinicTwo.distance).toFixed(2)}km away
+              <span style={{fontWeight:"bold"}}>{clinicTwo.Name} <br /> {/*Clinic Name*/}</span>
+              {parseFloat(clinicTwo.distance).toFixed(2)}km away {/*Distance*/}
               <hr />
 
-              <p>Opening Hours:</p>
+              Telephone: {clinicTwo.Tel}
               <hr />
+
+              <span style={{fontWeight:"bold"}}>Opening Hours:</span>
+              <br/>
               {clinicTwo.ALL_OPENING_HOURS.map(period => (
-                <p>
-                  {period.day_string}
-                  <br />
-                  {period.opening_hours.join(", ")}
-                </p>
+                  <p>
+                    {period.day_string}
+                    <br />
+                    {period.opening_hours.join(", ")}
+                  </p>
               ))}
+
+              <hr/>
+              <span style={{fontWeight:"bold"}}>Address: </span>
+              <br/>
+              {clinicTwo.Address}{" "}
+              Singapore {clinicTwo.PostalCode}
               <hr />
-              <p>Directions:</p>
+
+              <span style={{fontWeight:"bold"}}>Directions:</span>
+              <br/>
               {clinicTwo.ALL_DIRECTIONS.map(path => (
-                <p>
-                  {path.transport_string}
-                  <br />
-                  {path.directions.join(", ")}
-                </p>
+                  <p>
+                    {path.transport_string}
+                    <br />
+                    {path.directions.join(", ")}
+                  </p>
               ))}
               <hr />
 
@@ -258,38 +279,40 @@ const CompareBlock = props => {
                 style={{ width: "100%" }}
               />
               <hr />
-              Clinic Name: {clinicTwo.properties.HCI_NAME} <hr /> Address:{" "}
-              {clinicTwo.properties.BLK_HSE_NO}{" "}
-              {clinicTwo.properties.STREET_NAME} #
+              <span style={{fontWeight:"bold"}}>{clinicTwo.properties.HCI_NAME} </span> {/*Clinic Name*/}
+              <br/>
+              {parseFloat(clinicTwo.distance).toFixed(2)}km away {/*Distance*/}
+              <hr />
+              <span style={{fontWeight: "bold"}}>{clinicTwo.properties.DR_NAME} {/*Doctor Name*/} </span>
+              <br/>
+              <br />
+              <span style={{fontWeight: "bold"}}>Telephone: </span>
+              <br/>
+              {clinicTwo.properties.Tel} <br />
+              <hr />
+              <span style={{fontWeight:"bold"}}>Opening Hours:</span>
+              <br/>
+              {clinicTwo.properties.ALL_OPENING_HOURS.map(period => (
+                  <p>
+                    {period.day_string}
+                    <br />
+                    {period.opening_hours.join(", ")}
+                  </p>
+              ))}
+              <hr />
+              <span style={{fontWeight:"bold"}}>Address: </span><br/>
+              {clinicTwo.properties.BLK_HSE_NO} {clinicTwo.properties.STREET_NAME} #
               {clinicTwo.properties.FLOOR_NO}-{clinicTwo.properties.UNIT_NO}{" "}
               {clinicTwo.properties.BUILDING_NAME} Singapore{" "}
               {clinicTwo.properties.PostalCode}
-              <hr /> Telephone: {clinicTwo.properties.Tel} <hr />
-              Applicable subsidies:{" "}
-              {clinicTwo.properties.CLINIC_PROGRAMME_CODE.join(", ")}
-              <hr />
-              Distance:
-              {parseFloat(clinicTwo.distance).toFixed(2)}km away
-              <hr />
-              Doctor: {clinicTwo.properties.DR_NAME}
-              <hr />
-              <p>Opening Hours:</p>
-              <hr />
-              {clinicTwo.properties.ALL_OPENING_HOURS.map(period => (
-                <p>
-                  {period.day_string}
-                  <br />
-                  {period.opening_hours.join(", ")}
-                </p>
-              ))}
-              <hr />
-              <p>Directions:</p>
+              <hr/>
+              <p style={{fontWeight: "bold"}}>Directions:</p>
               {clinicTwo.properties.ALL_DIRECTIONS.map(path => (
-                <p>
-                  {path.transport_string}
-                  <br />
-                  {path.directions.join(", ")}
-                </p>
+                  <p>
+                    {path.transport_string}
+                    <br />
+                    {path.directions.join(", ")}
+                  </p>
               ))}
               <hr />
 
