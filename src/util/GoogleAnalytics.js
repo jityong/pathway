@@ -53,6 +53,7 @@ const init = (options = {}) => {
 
     if (isGAEnabled) {
         ReactGA.initialize("UA-155752920-1");
+        ReactGA.pageview('/');
     }
 
     return isGAEnabled;
