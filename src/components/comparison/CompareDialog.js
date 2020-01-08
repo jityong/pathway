@@ -103,7 +103,7 @@ export class CompareDialog extends Component {
         const consultationPriceRows = consultationPrices.consultation.map(function (data) {
             return createData(
                 data.Description,
-                userNationality === "SG"
+                userNationality === "Singaporean"
                     ? userSubsidyType === "PG"
                     ? data.PCN_Price.PG
                     : userSubsidyType === "MG"
