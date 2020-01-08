@@ -50,7 +50,7 @@ const RouteTracker = () => <Route component={GoogleAnalytics} />;
 
 const init = (options = {}) => {
     const isGAEnabled = process.env.NODE_ENV === 'production';
-
+    console.log(isGAEnabled);
     if (isGAEnabled) {
         ReactGA.initialize("UA-155752920-1");
         ReactGA.pageview('/');
