@@ -1,6 +1,6 @@
-import React, { useEffect, Component } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
-import { Typography, Button, Card } from "@material-ui/core";
+import { Typography, Button} from "@material-ui/core";
 import Paper from "@material-ui/core/Paper";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
@@ -26,11 +26,15 @@ const useStyles = makeStyles(theme => ({
 
 const ConfirmClinicChoice = props => {
   const classes = useStyles();
-  const { userNationality, userSubsidyType, userAge } = props;
   function goBack() {
     props.history.goBack();
   }
-  const [choice, setChoice] = React.useState(props.location.state.choice);
+  const [choice] = React.useState(props.location.state.choice);
+  const [userNationality] = React.useState(props.location.state.formData.nationality)
+  const [userSubsidyType] = React.useState(props.location.state.formData.subsidyType)
+  const [userAge] = React.useState(props.location.state.formData.age)
+  console.log(userNationality)
+
   function createData(name, gp, pc) {
     return { name, gp, pc };
   }
@@ -51,7 +55,7 @@ const ConfirmClinicChoice = props => {
             ? data.Polyclinic_Price.PG
             : userSubsidyType === "MG"
                 ? data.Polyclinic_Price.MG
-                : userAge < 18 || userAge > 65
+                : userAge < 18 || userAge >= 65
                     ? data.Polyclinic_Price.SG_CHILD_ELDERLY
                     : data.Polyclinic_Price.SG_ADULT
             : userNationality === "Permanent Resident"
@@ -70,7 +74,7 @@ const ConfirmClinicChoice = props => {
                 : data.PCN_Price.NON_CHAS
             : data.PCN_Price.NON_SG,
         userNationality === "Singaporean"
-            ? userAge > 65
+            ? userAge >= 65
             ? userSubsidyType === "PG"
                 ? data.Polyclinic_Price.PG
                 : userSubsidyType === "MG"
@@ -97,7 +101,7 @@ const ConfirmClinicChoice = props => {
                 ? data.PCN_Price.PR
                 : data.PCN_Price.NON_RESIDENT,
             userNationality === "Singaporean"
-                ? userAge < 18 || userAge > 65
+                ? userAge < 18 || userAge >= 65
                 ? data.Polyclinic_Price.SG_CHILD_ELDERLY
                 : data.Polyclinic_Price.SG
                 : userNationality === "Permanent Resident"

@@ -50,7 +50,7 @@ export class CompareDialog extends Component {
             userAge,
             userSubsidyType
         } = this.state;
-        const {clinicOne, clinicTwo, formData} = this.props;
+        const {clinicOne, clinicTwo} = this.props;
 
         function createData(name, gp, pc) {
             return {name, gp, pc};
@@ -117,7 +117,7 @@ export class CompareDialog extends Component {
                     ? data.Polyclinic_Price.PG
                     : userSubsidyType === "MG"
                         ? data.Polyclinic_Price.MG
-                        : userAge < 18 || userAge > 65
+                        : userAge < 18 || userAge >= 65
                             ? data.Polyclinic_Price.SG_CHILD_ELDERLY
                             : data.Polyclinic_Price.SG_ADULT
                     : userNationality === "Permanent Resident"
@@ -136,7 +136,7 @@ export class CompareDialog extends Component {
                         : data.PCN_Price.NON_CHAS
                     : data.PCN_Price.NON_SG,
                 userNationality === "Singaporean"
-                    ? userAge > 65
+                    ? userAge >= 65
                     ? userSubsidyType === "PG"
                         ? data.Polyclinic_Price.PG
                         : userSubsidyType === "MG"
@@ -163,7 +163,7 @@ export class CompareDialog extends Component {
                         ? data.PCN_Price.PR
                         : data.PCN_Price.NON_RESIDENT,
                     userNationality === "Singaporean"
-                        ? userAge < 18 || userAge > 65
+                        ? userAge < 18 || userAge >= 65
                         ? data.Polyclinic_Price.SG_CHILD_ELDERLY
                         : data.Polyclinic_Price.SG
                         : userNationality === "Permanent Resident"
@@ -247,7 +247,8 @@ export class CompareDialog extends Component {
                                                                     textDecoration: "underline"
                                                                 }}
                                                             >
-                                                                Cost Breakdown based on your Age, Nationality & Eligible Subsidies
+                                                                Cost Breakdown based on your Age, Nationality & Eligible
+                                                                Subsidies
                                                             </p>
                                                             <Table>
                                                                 <TableHead>
@@ -288,7 +289,7 @@ export class CompareDialog extends Component {
                                                                             </span>
                                                                         </TableCell>
                                                                     </TableRow>
-                                                                    {consultationPriceRows.map(row=>(
+                                                                    {consultationPriceRows.map(row => (
                                                                         <TableRow key={row.name}>
                                                                             <TableCell component="th"
                                                                                        scope="row">

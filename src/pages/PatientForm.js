@@ -12,7 +12,6 @@ import FormControlLabel from "@material-ui/core/FormControlLabel";
 import FormLabel from "@material-ui/core/FormLabel";
 import Select from "@material-ui/core/Select";
 import OutlinedInput from "@material-ui/core/OutlinedInput";
-import Grid from "@material-ui/core/Grid";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
@@ -120,9 +119,9 @@ class PatientForm extends React.Component {
           onChange={this.handleChange}
           placeholder="ie. 25"
           // error ={this.state.age="" ? true : false}
-          InputProps={{
-            startAdornment: <InputAdornment position="start" />
-          }}
+          // InputProps={{
+          //   startAdornment: <InputAdornment position="start" children={}/>
+          // }}
           style={{  width: "100%" }}
         />
         <br />
@@ -136,7 +135,7 @@ class PatientForm extends React.Component {
             onChange={this.handleChange}
             input={
               <OutlinedInput
-                labelWidth="Nationality"
+                label="Nationality"
                 name="nationality"
                 id="nationality"
               />
@@ -187,7 +186,7 @@ class PatientForm extends React.Component {
                 onChange={this.handleChange}
                 input={
                   <OutlinedInput
-                    labelWidth="Eligible Subsidies"
+                    label="Eligible Subsidies"
                     name="age"
                     id="outlined-age-simple"
                   />
@@ -232,7 +231,7 @@ class PatientForm extends React.Component {
             </Button>
           ) : (
             <Fragment>
-              <Button variant="contained" disabled="true" size="large">
+              <Button variant="contained" disabled={true} size="large">
                 Submit
               </Button>
               <br />

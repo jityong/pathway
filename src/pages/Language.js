@@ -5,7 +5,7 @@ import Toolbar from "@material-ui/core/Toolbar";
 import IconButton from "@material-ui/core/IconButton";
 import ArrowBack from "@material-ui/icons/ArrowBackIos";
 import HelpOutline from "@material-ui/icons/HelpOutline";
-import { Typography, Button, Card } from "@material-ui/core";
+import { Typography, Button } from "@material-ui/core";
 import Background from "../images/BackgroundFaded.png";
 
 //Choose langauge, but all Buttons go to same place anyway. Could use some styling

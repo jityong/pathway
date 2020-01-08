@@ -21,7 +21,7 @@ var newDrugsData = drugsData.map(function(data) {
         : data.PCN_UnitPrice;
     data.PCN_Price.GREEN_CHAS = data.PCN_Price.NON_CHAS;
     data.PCN_Price.ORANGE_CHAS = data.PCN_Status == "S1"
-        ? "Charged at $1.40/week or " + xlsx.SSF.format('$0.00,',data.PCN_UnitPrice * 0.25)
+        ? "Charged at $1.40/week or " + xlsx.SSF.format('$0.00',data.PCN_UnitPrice * 0.25)
         + "/tablet, whichever is cheaper"
         : data.PCN_Status == "S2"
             ? data.PCN_UnitPrice * 0.5 * 0.25
@@ -49,9 +49,9 @@ var newDrugsData = drugsData.map(function(data) {
         ? "Charged at $0.70/week or "
         + xlsx.SSF.format('$0.00',data.Polyclinic_UnitPrice * 0.5)
         + "/tablet, whichever is cheaper"
-            : data.Polyclinic_Status == "S2"
+        : data.Polyclinic_Status == "S2"
             ? data.Polyclinic_UnitPrice * 0.5 * 0.5
-        : data.Polyclinic_UnitPrice;
+            : data.Polyclinic_UnitPrice;
     data.Polyclinic_Price.MG_above65 = data.Polyclinic_Status =="NA" ? "NA"
         : data.Polyclinic_Status == "S1"
         ? "Charged at $0.70/week or "

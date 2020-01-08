@@ -1,9 +1,7 @@
-import React, { Fragment, Component } from "react";
+import React from "react";
 import GP from "../data/pcn.json";
-//import GP from "../data/chas.json";
 import * as turf from "@turf/turf";
 import ResultTabs from "../components/ResultTabs.js";
-//import PC from "../data/polyclinics.json";
 import PC from "../data/newPolyclinics.json";
 import Switch from "@material-ui/core/Switch";
 import AppBar from "@material-ui/core/AppBar";
@@ -64,8 +62,6 @@ class FilteredResult extends React.Component {
 
   render(props) {
     const { userLat, userLng, formData, sortByLoc } = this.state;
-    const { open } = this.state;
-
     const filteredGP = GP.features.filter(clinic => {
       clinic.name = clinic.properties.HCI_NAME;
       const from = turf.point([userLng, userLat]);
@@ -93,15 +89,6 @@ class FilteredResult extends React.Component {
       return dist <= 100;
     });
 
-    function callbackFunc(clinic){
-      this.setState({ searchedClinic: clinic });
-    };
-    const handleToggle = () => {
-      this.setState({
-        open: !this.state.open
-      });
-    };
-
     function sortDist(a, b) {
       if (a.distance < b.distance) {
         return -1;
@@ -112,12 +99,8 @@ class FilteredResult extends React.Component {
     const toggleDistSort = () => {
       this.setState({ sortByLoc: !sortByLoc });
     };
-    const handleSwitch = name => event => {
-      this.setState({ [name]: event.target.checked });
-    };
     const sortedGP = filteredGP.sort(sortDist);
     const sortedPC = filteredPC.sort(sortDist);
-    //note: dangerouslySetInnerHTML cos the json is in string, but its actually HTML
     const help = () => {
       alert(
         "Clinics are sorted by distance; nearest at the top." +
