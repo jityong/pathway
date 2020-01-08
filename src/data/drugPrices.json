@@ -9,13 +9,13 @@
             "Polyclinic_Status": "NA",
             "Polyclinic_UnitPrice": 0,
             "PCN_Price": {
-                "NON_CHAS": "$0.25",
-                "GREEN_CHAS": "$0.25",
-                "ORANGE_CHAS": "$0.25",
-                "BLUE_CHAS": "$0.25",
-                "MG_CHAS": "$0.25",
-                "PG_CHAS": "$0.25",
-                "NON_SG": "$0.25"
+                "NON_CHAS": 0.25,
+                "GREEN_CHAS": 0.25,
+                "ORANGE_CHAS": 0.25,
+                "BLUE_CHAS": 0.25,
+                "MG_CHAS": 0.25,
+                "PG_CHAS": 0.25,
+                "NON_SG": 0.25
             },
             "Polyclinic_Price": {
                 "PG": "NA",
@@ -37,11 +37,11 @@
             "PCN_Price": {
                 "NON_CHAS": "Charged at $1.40/week or $0.08/tablet, whichever is cheaper",
                 "GREEN_CHAS": "Charged at $1.40/week or $0.08/tablet, whichever is cheaper",
-                "ORANGE_CHAS": "Charged at $1.40/week or $0.03/tablet, whichever is cheaper",
-                "BLUE_CHAS": "Charged at $1.40/week or $0.03/tablet, whichever is cheaper",
+                "ORANGE_CHAS": "Charged at $1.40/week or $0.00/tablet, whichever is cheaper",
+                "BLUE_CHAS": "Charged at $1.40/week or $0.00/tablet, whichever is cheaper",
                 "MG_CHAS": "Charged at $1.40/week or $0.02/tablet, whichever is cheaper",
                 "PG_CHAS": "Charged at $1.40/week or $0.01/tablet, whichever is cheaper",
-                "NON_SG": "$0.10"
+                "NON_SG": 0.1
             },
             "Polyclinic_Price": {
                 "PG": "Charged at $0.70/week or $0.05/tablet, whichever is cheaper",
@@ -49,7 +49,7 @@
                 "MG_below65": "Charged at $1.40/week or $0.03/tablet, whichever is cheaper",
                 "below65": "Charged at $1.40/week or $0.10/tablet, whichever is cheaper",
                 "noPG_above65": "Charged at $0.70/week or $0.10/tablet, whichever is cheaper",
-                "nonSG": "$0.10"
+                "nonSG": 0.1
             }
         },
         {
@@ -63,11 +63,11 @@
             "PCN_Price": {
                 "NON_CHAS": "Charged at $1.40/week or $0.09/tablet, whichever is cheaper",
                 "GREEN_CHAS": "Charged at $1.40/week or $0.09/tablet, whichever is cheaper",
-                "ORANGE_CHAS": "Charged at $1.40/week or $0.03/tablet, whichever is cheaper",
-                "BLUE_CHAS": "Charged at $1.40/week or $0.03/tablet, whichever is cheaper",
+                "ORANGE_CHAS": "Charged at $1.40/week or $0.00/tablet, whichever is cheaper",
+                "BLUE_CHAS": "Charged at $1.40/week or $0.00/tablet, whichever is cheaper",
                 "MG_CHAS": "Charged at $1.40/week or $0.02/tablet, whichever is cheaper",
                 "PG_CHAS": "Charged at $1.40/week or $0.02/tablet, whichever is cheaper",
-                "NON_SG": "$0.12"
+                "NON_SG": 0.12
             },
             "Polyclinic_Price": {
                 "PG": "NA",
@@ -87,13 +87,13 @@
             "Polyclinic_Status": "NA",
             "Polyclinic_UnitPrice": 0,
             "PCN_Price": {
-                "NON_CHAS": "$0.25",
-                "GREEN_CHAS": "$0.25",
-                "ORANGE_CHAS": "$0.25",
-                "BLUE_CHAS": "$0.25",
-                "MG_CHAS": "$0.25",
-                "PG_CHAS": "$0.25",
-                "NON_SG": "$0.25"
+                "NON_CHAS": 0.25,
+                "GREEN_CHAS": 0.25,
+                "ORANGE_CHAS": 0.25,
+                "BLUE_CHAS": 0.25,
+                "MG_CHAS": 0.25,
+                "PG_CHAS": 0.25,
+                "NON_SG": 0.25
             },
             "Polyclinic_Price": {
                 "PG": "NA",
@@ -115,11 +115,11 @@
             "PCN_Price": {
                 "NON_CHAS": "Charged at $1.40/week or $0.09/tablet, whichever is cheaper",
                 "GREEN_CHAS": "Charged at $1.40/week or $0.09/tablet, whichever is cheaper",
-                "ORANGE_CHAS": "Charged at $1.40/week or $0.03/tablet, whichever is cheaper",
-                "BLUE_CHAS": "Charged at $1.40/week or $0.03/tablet, whichever is cheaper",
+                "ORANGE_CHAS": "Charged at $1.40/week or $0.00/tablet, whichever is cheaper",
+                "BLUE_CHAS": "Charged at $1.40/week or $0.00/tablet, whichever is cheaper",
                 "MG_CHAS": "Charged at $1.40/week or $0.02/tablet, whichever is cheaper",
                 "PG_CHAS": "Charged at $1.40/week or $0.02/tablet, whichever is cheaper",
-                "NON_SG": "$0.12"
+                "NON_SG": 0.12
             },
             "Polyclinic_Price": {
                 "PG": "Charged at $0.70/week or $0.06/tablet, whichever is cheaper",
@@ -127,7 +127,7 @@
                 "MG_below65": "Charged at $1.40/week or $0.03/tablet, whichever is cheaper",
                 "below65": "Charged at $1.40/week or $0.12/tablet, whichever is cheaper",
                 "noPG_above65": "Charged at $0.70/week or $0.12/tablet, whichever is cheaper",
-                "nonSG": "$0.12"
+                "nonSG": 0.12
             }
         },
         {
@@ -139,13 +139,13 @@
             "Polyclinic_Status": "S1",
             "Polyclinic_UnitPrice": 0.1,
             "PCN_Price": {
-                "NON_CHAS": "$0.04",
-                "GREEN_CHAS": "$0.04",
-                "ORANGE_CHAS": "$0.01",
-                "BLUE_CHAS": "$0.01",
-                "MG_CHAS": "$0.01",
-                "PG_CHAS": "$0.01",
-                "NON_SG": "$0.10"
+                "NON_CHAS": 0.037500000000000006,
+                "GREEN_CHAS": 0.037500000000000006,
+                "ORANGE_CHAS": 0.0125,
+                "BLUE_CHAS": 0.0125,
+                "MG_CHAS": 0.009375000000000001,
+                "PG_CHAS": 0.00625,
+                "NON_SG": 0.1
             },
             "Polyclinic_Price": {
                 "PG": "Charged at $0.70/week or $0.05/tablet, whichever is cheaper",
@@ -153,7 +153,7 @@
                 "MG_below65": "Charged at $1.40/week or $0.03/tablet, whichever is cheaper",
                 "below65": "Charged at $1.40/week or $0.10/tablet, whichever is cheaper",
                 "noPG_above65": "Charged at $0.70/week or $0.10/tablet, whichever is cheaper",
-                "nonSG": "$0.10"
+                "nonSG": 0.1
             }
         },
         {
@@ -165,21 +165,21 @@
             "Polyclinic_Status": "NS",
             "Polyclinic_UnitPrice": 1.36,
             "PCN_Price": {
-                "NON_CHAS": "$1.36",
-                "GREEN_CHAS": "$1.36",
-                "ORANGE_CHAS": "$1.36",
-                "BLUE_CHAS": "$1.36",
-                "MG_CHAS": "$1.36",
-                "PG_CHAS": "$1.36",
-                "NON_SG": "$1.36"
+                "NON_CHAS": 1.36,
+                "GREEN_CHAS": 1.36,
+                "ORANGE_CHAS": 1.36,
+                "BLUE_CHAS": 1.36,
+                "MG_CHAS": 1.36,
+                "PG_CHAS": 1.36,
+                "NON_SG": 1.36
             },
             "Polyclinic_Price": {
-                "PG": "$1.36",
-                "MG_above65": "$1.36",
-                "MG_below65": "$1.36",
-                "below65": "$1.36",
-                "noPG_above65": "$1.36",
-                "nonSG": "$1.36"
+                "PG": 1.36,
+                "MG_above65": 1.36,
+                "MG_below65": 1.36,
+                "below65": 1.36,
+                "noPG_above65": 1.36,
+                "nonSG": 1.36
             }
         },
         {
@@ -191,21 +191,21 @@
             "Polyclinic_Status": "NS",
             "Polyclinic_UnitPrice": 1.29,
             "PCN_Price": {
-                "NON_CHAS": "$1.79",
-                "GREEN_CHAS": "$1.79",
-                "ORANGE_CHAS": "$1.79",
-                "BLUE_CHAS": "$1.79",
-                "MG_CHAS": "$1.79",
-                "PG_CHAS": "$1.79",
-                "NON_SG": "$1.79"
+                "NON_CHAS": 1.79,
+                "GREEN_CHAS": 1.79,
+                "ORANGE_CHAS": 1.79,
+                "BLUE_CHAS": 1.79,
+                "MG_CHAS": 1.79,
+                "PG_CHAS": 1.79,
+                "NON_SG": 1.79
             },
             "Polyclinic_Price": {
-                "PG": "$1.29",
-                "MG_above65": "$1.29",
-                "MG_below65": "$1.29",
-                "below65": "$1.29",
-                "noPG_above65": "$1.29",
-                "nonSG": "$1.29"
+                "PG": 1.29,
+                "MG_above65": 1.29,
+                "MG_below65": 1.29,
+                "below65": 1.29,
+                "noPG_above65": 1.29,
+                "nonSG": 1.29
             }
         },
         {
@@ -217,21 +217,21 @@
             "Polyclinic_Status": "NS",
             "Polyclinic_UnitPrice": 1.29,
             "PCN_Price": {
-                "NON_CHAS": "$1.98",
-                "GREEN_CHAS": "$1.98",
-                "ORANGE_CHAS": "$1.98",
-                "BLUE_CHAS": "$1.98",
-                "MG_CHAS": "$1.98",
-                "PG_CHAS": "$1.98",
-                "NON_SG": "$1.98"
+                "NON_CHAS": 1.98,
+                "GREEN_CHAS": 1.98,
+                "ORANGE_CHAS": 1.98,
+                "BLUE_CHAS": 1.98,
+                "MG_CHAS": 1.98,
+                "PG_CHAS": 1.98,
+                "NON_SG": 1.98
             },
             "Polyclinic_Price": {
-                "PG": "$1.29",
-                "MG_above65": "$1.29",
-                "MG_below65": "$1.29",
-                "below65": "$1.29",
-                "noPG_above65": "$1.29",
-                "nonSG": "$1.29"
+                "PG": 1.29,
+                "MG_above65": 1.29,
+                "MG_below65": 1.29,
+                "below65": 1.29,
+                "noPG_above65": 1.29,
+                "nonSG": 1.29
             }
         },
         {
@@ -243,21 +243,21 @@
             "Polyclinic_Status": "NS",
             "Polyclinic_UnitPrice": 2.28,
             "PCN_Price": {
-                "NON_CHAS": "$2.79",
-                "GREEN_CHAS": "$2.79",
-                "ORANGE_CHAS": "$2.79",
-                "BLUE_CHAS": "$2.79",
-                "MG_CHAS": "$2.79",
-                "PG_CHAS": "$2.79",
-                "NON_SG": "$2.79"
+                "NON_CHAS": 2.79,
+                "GREEN_CHAS": 2.79,
+                "ORANGE_CHAS": 2.79,
+                "BLUE_CHAS": 2.79,
+                "MG_CHAS": 2.79,
+                "PG_CHAS": 2.79,
+                "NON_SG": 2.79
             },
             "Polyclinic_Price": {
-                "PG": "$2.28",
-                "MG_above65": "$2.28",
-                "MG_below65": "$2.28",
-                "below65": "$2.28",
-                "noPG_above65": "$2.28",
-                "nonSG": "$2.28"
+                "PG": 2.28,
+                "MG_above65": 2.28,
+                "MG_below65": 2.28,
+                "below65": 2.28,
+                "noPG_above65": 2.28,
+                "nonSG": 2.28
             }
         },
         {
@@ -269,13 +269,13 @@
             "Polyclinic_Status": "NA",
             "Polyclinic_UnitPrice": 0,
             "PCN_Price": {
-                "NON_CHAS": "$2.76",
-                "GREEN_CHAS": "$2.76",
-                "ORANGE_CHAS": "$2.76",
-                "BLUE_CHAS": "$2.76",
-                "MG_CHAS": "$2.76",
-                "PG_CHAS": "$2.76",
-                "NON_SG": "$2.76"
+                "NON_CHAS": 2.76,
+                "GREEN_CHAS": 2.76,
+                "ORANGE_CHAS": 2.76,
+                "BLUE_CHAS": 2.76,
+                "MG_CHAS": 2.76,
+                "PG_CHAS": 2.76,
+                "NON_SG": 2.76
             },
             "Polyclinic_Price": {
                 "PG": "NA",
@@ -295,21 +295,21 @@
             "Polyclinic_Status": "NS",
             "Polyclinic_UnitPrice": 2.28,
             "PCN_Price": {
-                "NON_CHAS": "$2.79",
-                "GREEN_CHAS": "$2.79",
-                "ORANGE_CHAS": "$2.79",
-                "BLUE_CHAS": "$2.79",
-                "MG_CHAS": "$2.79",
-                "PG_CHAS": "$2.79",
-                "NON_SG": "$2.79"
+                "NON_CHAS": 2.79,
+                "GREEN_CHAS": 2.79,
+                "ORANGE_CHAS": 2.79,
+                "BLUE_CHAS": 2.79,
+                "MG_CHAS": 2.79,
+                "PG_CHAS": 2.79,
+                "NON_SG": 2.79
             },
             "Polyclinic_Price": {
-                "PG": "$2.28",
-                "MG_above65": "$2.28",
-                "MG_below65": "$2.28",
-                "below65": "$2.28",
-                "noPG_above65": "$2.28",
-                "nonSG": "$2.28"
+                "PG": 2.28,
+                "MG_above65": 2.28,
+                "MG_below65": 2.28,
+                "below65": 2.28,
+                "noPG_above65": 2.28,
+                "nonSG": 2.28
             }
         },
         {
@@ -321,21 +321,21 @@
             "Polyclinic_Status": "NS",
             "Polyclinic_UnitPrice": 1.36,
             "PCN_Price": {
-                "NON_CHAS": "$1.88",
-                "GREEN_CHAS": "$1.88",
-                "ORANGE_CHAS": "$1.88",
-                "BLUE_CHAS": "$1.88",
-                "MG_CHAS": "$1.88",
-                "PG_CHAS": "$1.88",
-                "NON_SG": "$1.88"
+                "NON_CHAS": 1.88,
+                "GREEN_CHAS": 1.88,
+                "ORANGE_CHAS": 1.88,
+                "BLUE_CHAS": 1.88,
+                "MG_CHAS": 1.88,
+                "PG_CHAS": 1.88,
+                "NON_SG": 1.88
             },
             "Polyclinic_Price": {
-                "PG": "$1.36",
-                "MG_above65": "$1.36",
-                "MG_below65": "$1.36",
-                "below65": "$1.36",
-                "noPG_above65": "$1.36",
-                "nonSG": "$1.36"
+                "PG": 1.36,
+                "MG_above65": 1.36,
+                "MG_below65": 1.36,
+                "below65": 1.36,
+                "noPG_above65": 1.36,
+                "nonSG": 1.36
             }
         },
         {
@@ -343,25 +343,25 @@
             "Description": "NOVOMIX 30 FLEXPEN 3ML  ",
             "Unit": "VAL",
             "PCN_Status": "S2",
-            "PCN_UnitPrice": 8.53,
+            "PCN_UnitPrice": "$8.53/pen",
             "Polyclinic_Status": "S2",
-            "Polyclinic_UnitPrice": 8.53,
+            "Polyclinic_UnitPrice": "$8.53/pen",
             "PCN_Price": {
-                "NON_CHAS": "$3.20",
-                "GREEN_CHAS": "$3.20",
-                "ORANGE_CHAS": "$1.07",
-                "BLUE_CHAS": "$1.07",
-                "MG_CHAS": "$0.80",
-                "PG_CHAS": "$0.53",
-                "NON_SG": "$8.53"
+                "NON_CHAS": null,
+                "GREEN_CHAS": null,
+                "ORANGE_CHAS": null,
+                "BLUE_CHAS": null,
+                "MG_CHAS": null,
+                "PG_CHAS": null,
+                "NON_SG": "$8.53/pen"
             },
             "Polyclinic_Price": {
-                "PG": "$2.13",
-                "MG_above65": "$1.07",
-                "MG_below65": "$1.07",
-                "below65": "$4.26",
-                "noPG_above65": "$4.26",
-                "nonSG": "$8.53"
+                "PG": null,
+                "MG_above65": null,
+                "MG_below65": null,
+                "below65": null,
+                "noPG_above65": null,
+                "nonSG": "$8.53/pen"
             }
         }
     ]
