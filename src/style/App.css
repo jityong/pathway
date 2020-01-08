@@ -101,6 +101,18 @@ body {
   border-color: #ff7c01;
 }
 
+.center{
+  text-align: center;
+  display: block;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  max-width: 100%;
+  height: auto;
+  width: auto;
+
+}
+
 /* Style the active class (and buttons on mouse-over)
 /* .pagination > li > a:hover {
   background-color:  #218838;

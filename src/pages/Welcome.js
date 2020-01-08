@@ -1,9 +1,9 @@
-import React from "react";
+import React, {Fragment} from "react";
 import { Link } from "react-router-dom";
 import "../style/App.css";
 import { Typography, Button, Card, Grid } from "@material-ui/core";
 //import Background from "./PathwayBG.png";
-import homepage2 from "../images/homepage2.png";
+import homepageLogo from "../images/homepageLogo.png";
 
 //Login page, which is the first page user will see. Need to change background
 //color to blue (whole page & considering responsive web design) for it to look good
@@ -12,13 +12,14 @@ import homepage2 from "../images/homepage2.png";
 //and bottom half when landscape
 function Welcome() {
   return (
-    <div
+    <body
       style={{
-        minHeight: "100vh",
-        backgroundImage: `url(${homepage2})`,
-        backgroundPosition: "center",
-        backgroundSize: "cover",
+          backgroundColor: "#ff7c01"
       }}>
+    <div>
+        <img src={homepageLogo} alt="homepageLogo" class="center" />
+
+    </div>
     <div style={{
       textAlign:"center",
       verticalAlign:"bottom",
@@ -35,7 +36,7 @@ function Welcome() {
         </Button>
       </Link>
     </div>
-    </div>
+    </body>
   );
 }
 
