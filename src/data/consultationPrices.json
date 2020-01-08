@@ -2,32 +2,32 @@
     "consultation": [
         {
             "Description": "Doctor Consultation",
-            "PCN_PG_CHAS": "$5 to $12/session",
-            "PCN_MG_CHAS": "$5 to $12/session",
-            "PCN_BLUE_CHAS": "$12 to $15/session",
-            "PCN_ORANGE_CHAS": "$12 to $15/session",
-            "PCN_GREEN_CHAS": "$35 to $55/session",
-            "PCN_NON_CHAS": "$35 to $55/session",
-            "POLYCLINIC_SG_ADULT": "$13.20/session",
-            "POLYCLINIC_SG_CHILD_ELDERLY": "$6.90/session",
-            "POLYCLINIC_PR": "$32.07/session",
-            "POLYCLINIC_NON_RESIDENT": "$51.47/session",
+            "PCN_PG_CHAS": "$5 to $12",
+            "PCN_MG_CHAS": "$5 to $12",
+            "PCN_BLUE_CHAS": "$12 to $15",
+            "PCN_ORANGE_CHAS": "$12 to $15",
+            "PCN_GREEN_CHAS": "$35 to $55",
+            "PCN_NON_CHAS": "$35 to $55",
+            "POLYCLINIC_SG_ADULT": 13.2,
+            "POLYCLINIC_SG_CHILD_ELDERLY": 6.9,
+            "POLYCLINIC_PR": 32.07,
+            "POLYCLINIC_NON_RESIDENT": 51.47,
             "PCN_Price": {
-                "PG": "$5 to $12/session",
-                "MG": "$5 to $12/session",
-                "ORANGE_CHAS": "$12 to $15/session",
-                "BLUE_CHAS": "$12 to $15/session",
-                "GREEN_CHAS": "$35 to $55/session",
-                "NON_CHAS": "$35 to $55/session",
-                "NON_RESIDENT": "$35 to $55/session"
+                "PG": "$5 to $12",
+                "MG": "$5 to $12",
+                "ORANGE_CHAS": "$12 to $15",
+                "BLUE_CHAS": "$12 to $15",
+                "GREEN_CHAS": "$35 to $55",
+                "NON_CHAS": "$35 to $55",
+                "NON_RESIDENT": "$35 to $55"
             },
             "Polyclinic_Price": {
-                "SG_ADULT": "$13.20/session",
-                "PR": "$32.07/session",
-                "SG_CHILD_ELDERLY": "$6.90/session",
-                "NON_RESIDENT": "$51.47/session",
-                "PG": null,
-                "MG": null
+                "SG_ADULT": 13.2,
+                "PR": 32.07,
+                "SG_CHILD_ELDERLY": 6.9,
+                "NON_RESIDENT": 51.47,
+                "PG": 3.45,
+                "MG": 1.725
             }
         },
         {
@@ -38,10 +38,10 @@
             "PCN_ORANGE_CHAS": "NA",
             "PCN_GREEN_CHAS": "NA",
             "PCN_NON_CHAS": "NA",
-            "POLYCLINIC_SG_ADULT": "$30/session",
-            "POLYCLINIC_SG_CHILD_ELDERLY": "$30/session",
-            "POLYCLINIC_PR": "$40/session",
-            "POLYCLINIC_NON_RESIDENT": "$67.80/session",
+            "POLYCLINIC_SG_ADULT": 30,
+            "POLYCLINIC_SG_CHILD_ELDERLY": 30,
+            "POLYCLINIC_PR": 40,
+            "POLYCLINIC_NON_RESIDENT": 67.8,
             "PCN_Price": {
                 "PG": "NA",
                 "MG": "NA",
@@ -52,12 +52,12 @@
                 "NON_RESIDENT": "NA"
             },
             "Polyclinic_Price": {
-                "SG_ADULT": "$30/session",
-                "PR": "$40/session",
-                "SG_CHILD_ELDERLY": "$30/session",
-                "NON_RESIDENT": "$67.80/session",
-                "PG": null,
-                "MG": null
+                "SG_ADULT": 30,
+                "PR": 40,
+                "SG_CHILD_ELDERLY": 30,
+                "NON_RESIDENT": 67.8,
+                "PG": 15,
+                "MG": 7.5
             }
         }
     ]
