@@ -1,9 +1,8 @@
-import React, {Fragment, Component} from "react";
+import React, { Component} from "react";
 import {Map, GoogleApiWrapper, Marker} from "google-maps-react";
 import PcDialog from "../PcDialog";
 import Button from "@material-ui/core/Button";
 import InfoWindowEx from "./InfoWindowEx";
-import {Link, Redirect} from "react-router-dom";
 
 const mapStyles = {
     width: "100%",
@@ -29,7 +28,7 @@ export class ClinicMap extends Component {
         });
 
     render() {
-        const {GP, PC, parentCallback} = this.props;
+        const {GP, PC} = this.props;
         const {selectedPlace} = this.state;
 
         const displayCurrent = (
@@ -130,7 +129,7 @@ export class ClinicMap extends Component {
                                     process.env.PUBLIC_URL +
                                     `/ClinicPictures/${selectedPlace.clinic.properties.FILE_NAME}.png`
                                 }
-                                alt="clinic picture"
+                                alt="clinic"
                                 style={{width: "100%"}}
                             />
                             <hr/>
@@ -208,7 +207,6 @@ export class ClinicMap extends Component {
                                     this.props.callbackFunction(selectedPlace.clinic)
                                 }
                             >
-                                {console.log(selectedPlace.clinic)}
                                 <span style={{color: "white"}}>Add to comparison</span>
                             </Button>
                         </div>

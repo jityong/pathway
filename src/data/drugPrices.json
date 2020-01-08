@@ -37,8 +37,8 @@
             "PCN_Price": {
                 "NON_CHAS": "Charged at $1.40/week or $0.08/tablet, whichever is cheaper",
                 "GREEN_CHAS": "Charged at $1.40/week or $0.08/tablet, whichever is cheaper",
-                "ORANGE_CHAS": "Charged at $1.40/week or $0.00/tablet, whichever is cheaper",
-                "BLUE_CHAS": "Charged at $1.40/week or $0.00/tablet, whichever is cheaper",
+                "ORANGE_CHAS": "Charged at $1.40/week or $0.03/tablet, whichever is cheaper",
+                "BLUE_CHAS": "Charged at $1.40/week or $0.03/tablet, whichever is cheaper",
                 "MG_CHAS": "Charged at $1.40/week or $0.02/tablet, whichever is cheaper",
                 "PG_CHAS": "Charged at $1.40/week or $0.01/tablet, whichever is cheaper",
                 "NON_SG": 0.1
@@ -63,8 +63,8 @@
             "PCN_Price": {
                 "NON_CHAS": "Charged at $1.40/week or $0.09/tablet, whichever is cheaper",
                 "GREEN_CHAS": "Charged at $1.40/week or $0.09/tablet, whichever is cheaper",
-                "ORANGE_CHAS": "Charged at $1.40/week or $0.00/tablet, whichever is cheaper",
-                "BLUE_CHAS": "Charged at $1.40/week or $0.00/tablet, whichever is cheaper",
+                "ORANGE_CHAS": "Charged at $1.40/week or $0.03/tablet, whichever is cheaper",
+                "BLUE_CHAS": "Charged at $1.40/week or $0.03/tablet, whichever is cheaper",
                 "MG_CHAS": "Charged at $1.40/week or $0.02/tablet, whichever is cheaper",
                 "PG_CHAS": "Charged at $1.40/week or $0.02/tablet, whichever is cheaper",
                 "NON_SG": 0.12
@@ -115,8 +115,8 @@
             "PCN_Price": {
                 "NON_CHAS": "Charged at $1.40/week or $0.09/tablet, whichever is cheaper",
                 "GREEN_CHAS": "Charged at $1.40/week or $0.09/tablet, whichever is cheaper",
-                "ORANGE_CHAS": "Charged at $1.40/week or $0.00/tablet, whichever is cheaper",
-                "BLUE_CHAS": "Charged at $1.40/week or $0.00/tablet, whichever is cheaper",
+                "ORANGE_CHAS": "Charged at $1.40/week or $0.03/tablet, whichever is cheaper",
+                "BLUE_CHAS": "Charged at $1.40/week or $0.03/tablet, whichever is cheaper",
                 "MG_CHAS": "Charged at $1.40/week or $0.02/tablet, whichever is cheaper",
                 "PG_CHAS": "Charged at $1.40/week or $0.02/tablet, whichever is cheaper",
                 "NON_SG": 0.12
@@ -343,25 +343,25 @@
             "Description": "NOVOMIX 30 FLEXPEN 3ML  ",
             "Unit": "VAL",
             "PCN_Status": "S2",
-            "PCN_UnitPrice": "$8.53/pen",
+            "PCN_UnitPrice": 0.2843333333333333,
             "Polyclinic_Status": "S2",
-            "Polyclinic_UnitPrice": "$8.53/pen",
+            "Polyclinic_UnitPrice": 0.2843333333333333,
             "PCN_Price": {
-                "NON_CHAS": null,
-                "GREEN_CHAS": null,
-                "ORANGE_CHAS": null,
-                "BLUE_CHAS": null,
-                "MG_CHAS": null,
-                "PG_CHAS": null,
-                "NON_SG": "$8.53/pen"
+                "NON_CHAS": 0.106625,
+                "GREEN_CHAS": 0.106625,
+                "ORANGE_CHAS": 0.035541666666666666,
+                "BLUE_CHAS": 0.035541666666666666,
+                "MG_CHAS": 0.02665625,
+                "PG_CHAS": 0.017770833333333333,
+                "NON_SG": 0.2843333333333333
             },
             "Polyclinic_Price": {
-                "PG": null,
-                "MG_above65": null,
-                "MG_below65": null,
-                "below65": null,
-                "noPG_above65": null,
-                "nonSG": "$8.53/pen"
+                "PG": 0.07108333333333333,
+                "MG_above65": 0.035541666666666666,
+                "MG_below65": 0.035541666666666666,
+                "below65": 0.14216666666666666,
+                "noPG_above65": 0.14216666666666666,
+                "nonSG": 0.2843333333333333
             }
         }
     ]

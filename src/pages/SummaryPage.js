@@ -1,12 +1,10 @@
-import React, {Component} from "react";
-import GpRoute from "../images/DischargeRoutes/GpRoute.png";
-import PCRoute from "../images/DischargeRoutes/PolyclinicRoute.png";
+import React from "react";
 import Paper from "@material-ui/core/Paper";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import IconButton from "@material-ui/core/IconButton";
 import ArrowBack from "@material-ui/icons/ArrowBackIos";
-import {Typography, Button, Card} from "@material-ui/core";
+import {Typography, Button} from "@material-ui/core";
 import {makeStyles} from "@material-ui/core/styles";
 
 const useStyles = makeStyles(theme => ({
@@ -34,7 +32,7 @@ export const SummaryPage = props => {
             {choice.type === "GP" ? (
                 <Paper sqaure="false" className={classes.root}>
                     <img src={process.env.PUBLIC_URL + `/ClinicPictures/${choice.properties.FILE_NAME}.png`}
-                         alt="pcn picture" style={{width: "100%"}}/>
+                         alt="pcn" style={{width: "100%"}}/>
                     <br/>
                     <br/>
                     {choice.properties.HCI_NAME} <br/>

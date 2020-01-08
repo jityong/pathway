@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import SwipeableViews from "react-swipeable-views";
-import { makeStyles, useTheme } from "@material-ui/core/styles";
+import { useTheme } from "@material-ui/core/styles";
 import AppBar from "@material-ui/core/AppBar";
 import Tabs from "@material-ui/core/Tabs";
 import Tab from "@material-ui/core/Tab";
@@ -37,18 +37,13 @@ const ResultTabs = props => {
   function handleChangeIndex(index) {
     setValue(index);
   }
-
-  const [pcOpen, setPcOpen] = React.useState(false);
-
   const [open, setOpen] = React.useState(false);
   const [clinicOne, setClinicOne] = React.useState();
   const [clinicTwo, setClinicTwo] = React.useState();
 
-  const [gpPage, setGpPage] = React.useState(1);
-  const [pcpage, setPcPage] = React.useState(1);
   const [activeGPPage, setActiveGPPage] = React.useState(1);
   const [activePCPage, setActivePCPage] = React.useState(1);
-  const [itemPerPage, setItemPerPage] = React.useState(10);
+  const [itemPerPage] = React.useState(10);
 
   const handleGPClose = (clinic, name) => {
     setOpen(false);
@@ -116,9 +111,6 @@ const ResultTabs = props => {
   };
   const handlePCPageChange = pageNumber => {
     setActivePCPage(pageNumber);
-  };
-  const onPcPageChange = page => {
-    setPcPage(page);
   };
   var indexOfLastTodoGP = activeGPPage * itemPerPage;
   var indexOfFirstTodoGP = indexOfLastTodoGP - itemPerPage;

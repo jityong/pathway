@@ -1,6 +1,6 @@
 import React, { useEffect, Fragment } from "react";
-import PropTypes from "prop-types";
-import { makeStyles, useTheme } from "@material-ui/core/styles";
+import { makeStyles
+} from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
 import Dialog from "@material-ui/core/Dialog";
 import Chip from "@material-ui/core/Chip";
@@ -23,8 +23,6 @@ const useStyles = makeStyles(theme => ({
 // FilteredResult --> ResultsTab --> CompareBlock
 const CompareBlock = props => {
   const classes = useStyles();
-  const theme = useTheme();
-
   const [clinicOne, setClinicOne] = React.useState();
   const [clinicTwo, setClinicTwo] = React.useState();
   const [open, setOpen] = React.useState(false);
@@ -33,7 +31,7 @@ const CompareBlock = props => {
   useEffect(() => {
     setClinicOne(props.clinicOne);
     setClinicTwo(props.clinicTwo);
-  });
+  },[props.clinicOne, props.clinicTwo]);
 
   function handleClickOpen() {
     setOpen(true);
@@ -67,7 +65,7 @@ const CompareBlock = props => {
                   process.env.PUBLIC_URL +
                   `/ClinicPictures/${clinicOne.properties.FILE_NAME}.png`
                 }
-                alt="clinic picture"
+                alt="clinic"
                 style={{ width: "100%" }}
               />
               <hr />
@@ -275,7 +273,7 @@ const CompareBlock = props => {
                   process.env.PUBLIC_URL +
                   `/ClinicPictures/${clinicTwo.properties.FILE_NAME}.png`
                 }
-                alt="clinic picture"
+                alt="clinic"
                 style={{ width: "100%" }}
               />
               <hr />
@@ -322,7 +320,9 @@ const CompareBlock = props => {
                   pathname: "/ConfirmClinicChoice",
                   state: {
                     choice: clinicTwo,
-                    formData: props.formData
+                    userNationality: props.formData.userNationality,
+                    userSubsidyType: props.formData.userSubsidyType,
+                    userAge: props.formData.userAge
                   }
                 }}
               >

@@ -1,8 +1,7 @@
-import React, {Fragment} from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import "../style/App.css";
-import { Typography, Button, Card, Grid } from "@material-ui/core";
-//import Background from "./PathwayBG.png";
+import { Button } from "@material-ui/core";
 import homepageLogo from "../images/homepageLogo.png";
 
 //Login page, which is the first page user will see. Need to change background
@@ -16,8 +15,9 @@ function Welcome() {
       style={{
           backgroundColor: "#ff7c01"
       }}>
+
     <div>
-        <img src={homepageLogo} alt="homepageLogo" class="center" />
+        <img src={homepageLogo} alt="homepageLogo" className="center" />
 
     </div>
     <div style={{
