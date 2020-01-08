@@ -80,7 +80,7 @@ export class GpDialog extends Component {
                         <p style={{fontWeight: "bold"}}>Opening Hours:</p>
                         <br/>
                         {clinic.properties.ALL_OPENING_HOURS.map(period => (
-                            <p>
+                            <p key={clinic.properties.HCI_NAME}>
                                 {period.day_string}
                                 <br/>
                                 {period.opening_hours.join(", ")}
@@ -95,11 +95,11 @@ export class GpDialog extends Component {
                         <hr/>
                         <p style={{fontWeight: "bold"}}>Directions:</p>
                         {clinic.properties.ALL_DIRECTIONS.map(path => (
-                            <p>
-                {path.transport_string}
+                            <p key={clinic.properties.HCI_NAME}>
+                                {path.transport_string}
                                 <br/>
                                 {path.directions.join(", ")}
-              </p>
+                            </p>
                         ))}
                         <hr/>
                         <Grid style={{flexGrow: 1}} container justify="space-evenly" direction="column">
@@ -113,23 +113,24 @@ export class GpDialog extends Component {
                                 <span style={{color: "white"}}>Add to comparison</span>
                             </Button>
                             <br/>
-                            <Button
-                                variant="contained"
-                                style={{backgroundColor: "#ff7c01"}}
-                                onClick={this.handleCompare}
+
+                            <Link style={{justifyContent:"center"}}
+                                to={{
+                                    pathname: "/ConfirmClinicChoice",
+                                    state: {
+                                        choice: clinic,
+                                        formData: this.props.formData
+                                    }
+                                }}
                             >
-                                <Link
-                                    to={{
-                                        pathname: "/ConfirmClinicChoice",
-                                        state: {
-                                            choice: clinic,
-                                            formData: this.props.formData
-                                        }
-                                    }}
+                                <Button
+                                    variant="contained"
+                                    style={{backgroundColor: "#ff7c01"}}
+                                    onClick={this.handleCompare}
                                 >
                                     <span style={{color: "white"}}>Select</span>
-                                </Link>
-                            </Button>
+                                </Button>
+                            </Link>
                         </Grid>
                     </DialogContent>
                 </Dialog>

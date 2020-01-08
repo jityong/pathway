@@ -92,23 +92,24 @@ export class PcDialog extends Component {
 
                             <br/>
 
-                            <Button
-                                variant="contained"
-                                style={{backgroundColor: "#ff7c01"}}
-                                onClick={this.handleCompare}
+
+                            <Link
+                                to={{
+                                    pathname: "/ConfirmClinicChoice",
+                                    state: {
+                                        choice: clinic,
+                                        formData: this.props.formData
+                                    }
+                                }}
                             >
-                                <Link
-                                    to={{
-                                        pathname: "/ConfirmClinicChoice",
-                                        state: {
-                                            choice: clinic,
-                                            formData: this.props.formData
-                                        }
-                                    }}
+                                <Button
+                                    variant="contained"
+                                    style={{backgroundColor: "#ff7c01"}}
+                                    onClick={this.handleCompare}
                                 >
                                     <span style={{color: "white"}}>Select</span>
-                                </Link>
-                            </Button>
+                                </Button>
+                            </Link>
                         </Grid>
                     </DialogContent>
                 </Dialog>
