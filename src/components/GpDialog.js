@@ -80,7 +80,7 @@ export class GpDialog extends Component {
                         <p style={{fontWeight: "bold"}}>Opening Hours:</p>
                         <br/>
                         {clinic.properties.ALL_OPENING_HOURS.map(period => (
-                            <p key={clinic.properties.HCI_NAME}>
+                            <p>
                                 {period.day_string}
                                 <br/>
                                 {period.opening_hours.join(", ")}
@@ -95,7 +95,7 @@ export class GpDialog extends Component {
                         <hr/>
                         <p style={{fontWeight: "bold"}}>Directions:</p>
                         {clinic.properties.ALL_DIRECTIONS.map(path => (
-                            <p key={clinic.properties.HCI_NAME}>
+                            <p>
                 {path.transport_string}
                                 <br/>
                                 {path.directions.join(", ")}
