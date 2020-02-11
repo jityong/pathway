@@ -41,7 +41,7 @@ class FilteredResult extends React.Component {
     fetch(
       `https://maps.googleapis.com/maps/api/geocode/json?address=${
         this.state.formData.postalCode
-      }&region=sg&key=${API_KEY}`
+      }&components=country:sg&key=${API_KEY}`
     )
       .then(res => res.json())
       .then(json => {
