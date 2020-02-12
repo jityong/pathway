@@ -8,7 +8,7 @@ import FilteredResult from "./pages/FilteredResult";
 import ConfirmClinicChoicePage from "./pages/ConfirmClinicChoice";
 import confirmedChoicePage from "./pages/SummaryPage";
 import GA from './util/GoogleAnalytics'
-
+// require("dotenv").config();
 
 //here is where i put all the routes tgt. can include the help button here which will
 //then be present in all the subsequent pages
