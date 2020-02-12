@@ -13,10 +13,8 @@ import HelpOutline from "@material-ui/icons/HelpOutline";
 import { Link } from "react-router-dom";
 import FormControlLabel from "@material-ui/core/FormControlLabel";
 import { FormLabel } from "@material-ui/core";
-import config from "../util/config.yml";
 
-const API_KEY = config.API_KEY;
-
+const API_KEY = 'AIzaSyBkw3BUkAeU1wdykluteLUQ6SNK5gEFQBY';
 // this component aims to display the filtered clinic after they fill in the form
 //try not to abuse the API call, im using some kind of free credits from google for this
 //api to be able to consistenly make the api call

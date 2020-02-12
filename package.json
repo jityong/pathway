@@ -22,6 +22,7 @@
     "react-scripts": "3.0.1",
     "react-select": "^3.0.8",
     "react-swipeable-views": "^0.13.3",
+    "read-yaml": "^1.1.0",
     "turf": "^3.0.14",
     "xlsx": "^0.15.4"
   },
