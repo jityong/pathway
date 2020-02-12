@@ -48,7 +48,6 @@
       "last 1 safari version"
     ]
   },
-  "homepage": "http://pathwaynuhs.com",
   "devDependencies": {
     "html-loader": "^0.5.5",
     "json": "^9.0.6",
