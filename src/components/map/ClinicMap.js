@@ -3,6 +3,7 @@ import {Map, GoogleApiWrapper, Marker} from "google-maps-react";
 import PcDialog from "../PcDialog";
 import Button from "@material-ui/core/Button";
 import InfoWindowEx from "./InfoWindowEx";
+import config from "../../util/config.yml";
 
 const mapStyles = {
     width: "100%",
@@ -277,5 +278,5 @@ export class ClinicMap extends Component {
 }
 
 export default GoogleApiWrapper({
-    apiKey: "AIzaSyDsbjEhJ1510KaVtIQJVTIU7at6hiA__6U"
+    apiKey: config.API_KEY
 })(ClinicMap);
