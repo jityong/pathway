@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/static/css/main.774d9563.chunk.css",
+    "main.js": "/static/js/main.377aebf0.chunk.js",
+    "main.js.map": "/static/js/main.377aebf0.chunk.js.map",
+    "runtime~main.js": "/static/js/runtime~main.a8a9905a.js",
+    "runtime~main.js.map": "/static/js/runtime~main.a8a9905a.js.map",
+    "static/css/2.9dafe002.chunk.css": "/static/css/2.9dafe002.chunk.css",
+    "static/js/2.5b0a4d97.chunk.js": "/static/js/2.5b0a4d97.chunk.js",
+    "static/js/2.5b0a4d97.chunk.js.map": "/static/js/2.5b0a4d97.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.7d20c0c3530abc82c4fa383219dbd53d.js": "/precache-manifest.7d20c0c3530abc82c4fa383219dbd53d.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/2.9dafe002.chunk.css.map": "/static/css/2.9dafe002.chunk.css.map",
+    "static/css/main.774d9563.chunk.css.map": "/static/css/main.774d9563.chunk.css.map",
+    "static/media/BackgroundFaded.png": "/static/media/BackgroundFaded.38bffda3.png",
+    "static/media/homepageLogo.png": "/static/media/homepageLogo.09d0b79e.png",
+    "static/media/infographics.png": "/static/media/infographics.72b3f235.png"
+  }
+}
