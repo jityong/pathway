@@ -14,7 +14,6 @@ import { Link } from "react-router-dom";
 import FormControlLabel from "@material-ui/core/FormControlLabel";
 import { FormLabel } from "@material-ui/core";
 
-const API_KEY = 'AIzaSyBkw3BUkAeU1wdykluteLUQ6SNK5gEFQBY';
 // this component aims to display the filtered clinic after they fill in the form
 //try not to abuse the API call, im using some kind of free credits from google for this
 //api to be able to consistenly make the api call
@@ -37,11 +36,16 @@ class FilteredResult extends React.Component {
     // this.routeChange = this.routeChange.bind(this);
   }
   componentDidMount() {
-    fetch(
-      `https://maps.googleapis.com/maps/api/geocode/json?address=${
-        this.state.formData.postalCode
-      }&components=country:sg&key=${API_KEY}`
-    )
+    fetch(`http://localhost:5000/googleMap/getGeoLoc`, {
+      method: 'POST',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        postalCode: this.state.formData.postalCode,
+      })
+    })
       .then(res => res.json())
       .then(json => {
         this.setState({
