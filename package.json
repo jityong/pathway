@@ -53,5 +53,5 @@
     "json": "^9.0.6",
     "utils": "^0.3.1"
   },
-  "proxy": "http://pathwaynuhs.com"
+  "proxy": "http://pathwaynuhs.com/backend"
 }
