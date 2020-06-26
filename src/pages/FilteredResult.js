@@ -36,7 +36,7 @@ class FilteredResult extends React.Component {
     // this.routeChange = this.routeChange.bind(this);
   }
   componentDidMount() {
-    fetch(`/googleMap/getGeoLoc`, {
+    fetch(`http://156.67.217.219/backend/googleMap/getGeoLoc`, {
       method: 'POST',
       headers: {
         'Accept': 'application/json',
