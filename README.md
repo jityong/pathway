@@ -6,7 +6,7 @@ Hosted on Hostinger VPS server.
 `/var/www/pathway` is the location of the source files.  
 
 * Perform `npm run-script build` and push new build into github before pulling from the VPS.
-> Unable to build inside VPS due to limitation in available RAM in the VPS. 
+> Unable to build inside VPS due to limited RAM in the VPS. 
 
 To test locally, pull this repo and create .env file in /backend directory, then key in:
 ```
