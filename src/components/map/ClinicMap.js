@@ -277,5 +277,5 @@ export class ClinicMap extends Component {
 }
 
 export default GoogleApiWrapper({
-    apiKey: 'AIzaSyBkw3BUkAeU1wdykluteLUQ6SNK5gEFQBY'
+    apiKey: 'AIzaSyCzNIAOWLCr9J7V6vWMRt7ZJgRD2o5n5SE'
 })(ClinicMap);
