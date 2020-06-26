@@ -52,5 +52,6 @@
     "html-loader": "^0.5.5",
     "json": "^9.0.6",
     "utils": "^0.3.1"
-  }
+  },
+  "proxy": "http://pathwaynuhs/backend"
 }
