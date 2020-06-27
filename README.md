@@ -14,3 +14,8 @@ API_KEY=<enter API KEY>
 ```
 and save. 
 > This is done to hide the api key for geocoding. Api Key used for the map has been restricted to only the pathwaynuhs.com domain, while Api Key for geocoding has been restricted to our server's IP address use only.
+
+Rename db_copy.js to be db.js and fill in the DB information.
+
+For more info on backend svc, access our ubuntu server and there will be a readme.txt file inside /var/www/pathway/backend.
+
