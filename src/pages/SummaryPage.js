@@ -6,6 +6,13 @@ import IconButton from "@material-ui/core/IconButton";
 import ArrowBack from "@material-ui/icons/ArrowBackIos";
 import {Typography, Button} from "@material-ui/core";
 import {makeStyles} from "@material-ui/core/styles";
+import Dialog from '@material-ui/core/Dialog';
+import DialogContent from '@material-ui/core/DialogContent';
+import FormControl from '@material-ui/core/FormControl';
+import TextareaAutosize from '@material-ui/core/TextareaAutosize';
+import Rating from '@material-ui/lab/Rating';
+import StarBorderIcon from '@material-ui/icons/StarBorder';
+import Box from '@material-ui/core/Box';
 
 const useStyles = makeStyles(theme => ({
     root: {
@@ -14,6 +21,9 @@ const useStyles = makeStyles(theme => ({
 }));
 export const SummaryPage = props => {
     const classes = useStyles();
+    const [rating, setRating] = React.useState(4);
+    const [feedback, setFeedback] = React.useState("");
+    const [dialog, setDialog] = React.useState(true);
 
     function goBack() {
         props.history.goBack();
@@ -22,6 +32,64 @@ export const SummaryPage = props => {
     const alertClick = () => {
         alert("This service will be available soon!")
     }
+    const handleRating = (event) => {
+        const {value} = event.target;
+        setRating(parseInt(value));
+    }
+    const handleFeedback = (event) => {
+        const {value} = event.target;
+        setFeedback(value);
+    }
+    const handleToggle = () => {
+        setDialog(!dialog);
+    }
+    const submitFeedback = () => {
+        fetch('http://156.67.217.219:5000/dbStorage/submitUserFeedback', {
+            method: 'POST',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                rating: rating,
+                feedback: feedback
+            })
+        })
+            .then(res => {
+                res.json();
+                handleToggle();
+            })
+            .catch(err => console.error(err));
+    }
+    const feedbackForm = (
+        <Dialog open={dialog} onClose={handleToggle} style={{width: "100%"}}>
+            <DialogContent>
+                <Rating
+                    name="Help us out!"
+                    value={rating}
+                    precision={1}
+                    emptyIcon={<StarBorderIcon fontSize="inherit"/>}
+                    name="rating"
+                    onChange={handleRating}
+                />
+                <hr/>
+                <FormControl variant="outlined">
+                    <TextareaAutosize
+                        rowsMin={5}
+                        name="feedback"
+                        label="Submit a feedback"
+                        placeholder="How was your experience with the app?"
+                        variant="outlined"
+                        value={feedback}
+                        onChange={handleFeedback}
+                    />
+                </FormControl>
+            </DialogContent>
+            <Button variant="contained" color="primary" onClick={submitFeedback} size="large">
+                Submit
+            </Button>
+        </Dialog>
+    )
     const {choice} = props.location.state;
     const result = (
         <Paper
@@ -120,7 +188,7 @@ export const SummaryPage = props => {
     );
 
     return (
-        <div>
+        <body>
             <AppBar position="static" style={{backgroundColor: "#ff7c01"}}>
                 <Toolbar>
                     <IconButton
@@ -141,7 +209,7 @@ export const SummaryPage = props => {
             </AppBar>
             <br/>
             <br/>
-
+            <box width={1}> {feedbackForm} </box>
             <Typography variant="button" align="center">
                 Thank you, the details of your selected clinic for your follow-up
                 treatment are as follows:
@@ -173,7 +241,7 @@ export const SummaryPage = props => {
                 Department, the Primary Care Network, Data.gov.sg and the Pathway team. Please direct
                 any queries to pathway@u.nus.edu.
             </Typography>
-        </div>
+        </body>
     );
 };
 
