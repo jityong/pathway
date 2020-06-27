@@ -37,6 +37,25 @@ class PatientForm extends React.Component {
         this.goBack = this.goBack.bind(this);
     }
 
+    uploadInfo = () => {
+        // console.log("running uploadinfo");
+        fetch('http://156.67.217.219:5000/dbStorage/storeFormInfo', {
+            method: 'POST',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                postalCode: this.state.postalCode,
+                age: this.state.age,
+                nationality: this.state.nationality,
+                subsidyType: this.state.subsidyType,
+            })
+        })
+            .then(res => res.json())
+            .catch(err => console.error(err));
+    }
+
     handleChange(event) {
         const {name, value} = event.target;
         return this.setState({[name]: value});
@@ -44,6 +63,19 @@ class PatientForm extends React.Component {
 
     goBack() {
         this.props.history.goBack();
+    }
+
+    handleSubmitForm = () => {
+        this.uploadInfo();
+        this.props.history.push({
+            pathname: '/FilteredResult',
+            state: {
+                postalCode: this.state.postalCode,
+                age: this.state.age,
+                nationality: this.state.nationality,
+                subsidyType: this.state.subsidyType
+            }
+        });
     }
 
     render() {
@@ -59,7 +91,9 @@ class PatientForm extends React.Component {
                 + "\n\n\n\n" +
                 "Please complete the following form to submit and continue your journey on Pathway!"
                 + "\n\n" +
-                "None of these information are kept or used for any other purposes."
+                "Some of these information are stored to analyse the demographics of our users and are not used for any other purposes."
+                + "\n\n" +
+                " We are not able to identify any users with these information."
             );
         };
         const alertSubsidy = () => {
@@ -218,21 +252,9 @@ class PatientForm extends React.Component {
                             variant="contained"
                             style={{backgroundColor: "#ff7c01"}}
                             size="large"
+                            onClick={this.handleSubmitForm}
                         >
-                            <Link
-                                to={{
-                                    pathname: "/FilteredResult",
-                                    state: {
-                                        postalCode: this.state.postalCode,
-                                        hasSubsidy: this.state.hasSubsidy,
-                                        subsidyType: this.state.subsidyType,
-                                        age: this.state.age,
-                                        nationality: this.state.nationality
-                                    }
-                                }}
-                            >
                                 <span style={{color: "white"}}>Submit</span>
-                            </Link>
                         </Button>
                     ) : (
                         <Fragment>

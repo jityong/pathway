@@ -115,7 +115,6 @@ export class ClinicMap extends Component {
                 {displayGP}
                 {displayPC}
                 {displayCurrent}
-                {console.log(displayCurrent)}
                 <InfoWindowEx
                     marker={this.state.activeMarker}
                     onClose={this.onInfoWindowClose}
