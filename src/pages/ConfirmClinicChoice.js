@@ -33,7 +33,6 @@ const ConfirmClinicChoice = props => {
   const [userNationality] = React.useState(props.location.state.formData.nationality)
   const [userSubsidyType] = React.useState(props.location.state.formData.subsidyType)
   const [userAge] = React.useState(props.location.state.formData.age)
-  console.log(userNationality)
 
   function createData(name, gp, pc) {
     return { name, gp, pc };
