@@ -19,9 +19,27 @@ const useStyles = makeStyles(theme => ({
         padding: theme.spacing(3, 3)
     }
 }));
+const experienceLabels = {
+    1: 'Very Unsatisfactory',
+    2: 'Unsatisfactory',
+    3: 'Neutral',
+    4: 'Satisfactory',
+    5: 'Very Satisfactory',
+};
+const usefulnessLabels = {
+    1: 'Very Unhelpful',
+    2: 'Unhelpful',
+    3: 'Neutral',
+    4: 'Helpful',
+    5: 'Very Helpful',
+}
+
 export const SummaryPage = props => {
     const classes = useStyles();
-    const [rating, setRating] = React.useState(4);
+    const [userExperience, setUserExperience] = React.useState(3);
+    const [experienceHover, setExperienceHover] = React.useState(3);
+    const [usefulness, setUsefulness] = React.useState(3);
+    const [usefulnessHover, setUsefulnessHover] = React.useState(3);
     const [feedback, setFeedback] = React.useState("");
     const [dialog, setDialog] = React.useState(true);
 
@@ -32,9 +50,13 @@ export const SummaryPage = props => {
     const alertClick = () => {
         alert("This service will be available soon!")
     }
-    const handleRating = (event) => {
+    const handleUserExperience = (event) => {
         const {value} = event.target;
-        setRating(parseInt(value));
+        setUserExperience(parseInt(value));
+    }
+    const handleUsefulness = (event) => {
+        const {value} = event.target;
+        setUsefulness(parseInt(value));
     }
     const handleFeedback = (event) => {
         const {value} = event.target;
@@ -51,7 +73,8 @@ export const SummaryPage = props => {
                 'Content-Type': 'application/json',
             },
             body: JSON.stringify({
-                rating: rating,
+                userExperience: userExperience,
+                usefulness: usefulness,
                 feedback: feedback
             })
         })
@@ -62,19 +85,57 @@ export const SummaryPage = props => {
             .catch(err => console.error(err));
     }
     const feedbackForm = (
-        <Dialog open={dialog} onClose={handleToggle} style={{width: "100%"}}>
+        <Dialog open={dialog} onClose={handleToggle}>
             <DialogContent>
+                <span>
+                    On a scale of 1 to 5:
+                    <hr/>
+                </span>
+                <span>
+                How would you rate
+                <br/>
+                your user experience?
+                </span>
+                <br/>
                 <Rating
-                    name="Help us out!"
-                    value={rating}
+                    name="userExperience"
+                    value={userExperience}
                     precision={1}
                     emptyIcon={<StarBorderIcon fontSize="inherit"/>}
-                    name="rating"
-                    onChange={handleRating}
+                    onChange={handleUserExperience}
+                    onChangeActive={(event,newExperienceHover) => {
+                        setExperienceHover(newExperienceHover);
+                    }}
                 />
+                <span style={{fontSize:"small"}}>
+                {userExperience !== null && <Box ml={2}>{experienceLabels[experienceHover !== -1 ? experienceHover : userExperience]}</Box>}
+                </span>
+                <br/>
+                <span>
+                How helpful was this
+                <br/>
+                app in finding your
+                <br/>
+                healthcare provider?
+                </span>
+                <br/>
+                <Rating
+                    name="usefulness"
+                    value={usefulness}
+                    precision={1}
+                    emptyIcon={<StarBorderIcon fontSize="inherit"/>}
+                    onChange={handleUsefulness}
+                    onChangeActive={(event,newUsefulnessHover) => {
+                        setUsefulnessHover(newUsefulnessHover);
+                    }}
+                />
+                <span style={{fontSize:"small"}}>
+                {usefulness !== null && <Box ml={2}>{usefulnessLabels[usefulnessHover !== -1 ? usefulnessHover : usefulness]}</Box>}
+                </span>
                 <hr/>
                 <FormControl variant="outlined">
                     <TextareaAutosize
+
                         rowsMin={5}
                         name="feedback"
                         label="Submit a feedback"
@@ -189,58 +250,58 @@ export const SummaryPage = props => {
 
     return (
         <body>
-            <AppBar position="static" style={{backgroundColor: "#ff7c01"}}>
-                <Toolbar>
-                    <IconButton
-                        edge="start"
-                        color="inherit"
-                        aria-label="menu"
-                        onClick={goBack}
-                    >
-                        <ArrowBack/>
-                        <Typography variant="subtitle1">Back</Typography>
-                    </IconButton>{" "}
-                    <Typography variant="h5" align="center" style={{flexGrow: 1}}>
-                        Summary
-                    </Typography>
-                    <Typography variant="subtitle1"><span
-                        style={{color: "#ff7c01"}}>----------------</span></Typography>
-                </Toolbar>
-            </AppBar>
-            <br/>
-            <br/>
-            <box width={1}> {feedbackForm} </box>
-            <Typography variant="button" align="center">
-                Thank you, the details of your selected clinic for your follow-up
-                treatment are as follows:
-                <br/>
-                {result}
-                <br/>
-            </Typography>
-
-            <div style={{textAlign: "center"}}>
-                <Button
-                    variant="contained"
-                    size="large"
-                    style={{backgroundColor: "#ff7c01"}}
-                    onClick={alertClick}
+        <AppBar position="static" style={{backgroundColor: "#ff7c01"}}>
+            <Toolbar>
+                <IconButton
+                    edge="start"
+                    color="inherit"
+                    aria-label="menu"
+                    onClick={goBack}
                 >
-                    {" "}
-                    <span style={{textDecoration: "none", color: "white"}}>
+                    <ArrowBack/>
+                    <Typography variant="subtitle1">Back</Typography>
+                </IconButton>{" "}
+                <Typography variant="h5" align="center" style={{flexGrow: 1}}>
+                    Summary
+                </Typography>
+                <Typography variant="subtitle1"><span
+                    style={{color: "#ff7c01"}}>----------------</span></Typography>
+            </Toolbar>
+        </AppBar>
+        <br/>
+        <br/>
+        <box width={1}> {feedbackForm} </box>
+        <Typography variant="button" align="center">
+            Thank you, the details of your selected clinic for your follow-up
+            treatment are as follows:
+            <br/>
+            {result}
+            <br/>
+        </Typography>
+
+        <div style={{textAlign: "center"}}>
+            <Button
+                variant="contained"
+                size="large"
+                style={{backgroundColor: "#ff7c01"}}
+                onClick={alertClick}
+            >
+                {" "}
+                <span style={{textDecoration: "none", color: "white"}}>
             Send to my email{" "}
           </span>
-                </Button>
-            </div>
-            <br/>
-            <br/>
-            <br/>
-            <hr/>
-            <Typography variant="caption" align="center">
-                {" "}
-                All information quoted above belongs to MOHT (MOH), NUHS Primary Care
-                Department, the Primary Care Network, Data.gov.sg and the Pathway team. Please direct
-                any queries to pathway@u.nus.edu.
-            </Typography>
+            </Button>
+        </div>
+        <br/>
+        <br/>
+        <br/>
+        <hr/>
+        <Typography variant="caption" align="center">
+            {" "}
+            All information quoted above belongs to MOHT (MOH), NUHS Primary Care
+            Department, the Primary Care Network, Data.gov.sg and the Pathway team. Please direct
+            any queries to pathway@u.nus.edu.
+        </Typography>
         </body>
     );
 };

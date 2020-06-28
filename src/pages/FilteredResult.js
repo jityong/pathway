@@ -31,7 +31,7 @@ class FilteredResult extends React.Component {
             formData: this.props.location.state, //this gets the info from react router from PatientForm.js
             userLng: 0,
             userLat: 0,
-            sortByLoc: true,
+            sortByLoc: false, //3km radius
             open: false,
             userNotifDialog: true
             // searchedClinic: {}
