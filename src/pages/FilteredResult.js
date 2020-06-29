@@ -85,7 +85,7 @@ class FilteredResult extends React.Component {
                         <br/><br/>
                         Do checkout our different features: <br/>
                         - <span style={{fontWeight:"bold"}}>Map View Feature</span> : press 'MAP VIEW' <br/>
-                        - <span style={{fontWeight:"bold"}}>Compare Between Clinics</span>: select any 2 clinics from the list or MapView
+                        - <span style={{fontWeight:"bold"}}>Compare Between Clinics</span>: select any 2 clinics from the list or MapView,
                         and press 'add to comparison'
                         <br/>
                         <hr/>
