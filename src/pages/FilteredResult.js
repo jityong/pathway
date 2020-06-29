@@ -79,16 +79,18 @@ class FilteredResult extends React.Component {
         const userNotification = (
                 <Dialog open={this.state.userNotifDialog} onClose={this.handleUserNotifToggle}>
                     <DialogContent style={{font: ""}}>
-                        Hello! This app is still in its BETA phase and the prices available for comparison are limited
+                        Hello! This app is still in its <span style={{fontWeight:"bold"}}> BETA </span> phase and the prices available for comparison are limited
                         to
                         some of the more common drugs for diabetic patients.
                         <br/><br/>
-                        Do checkout our different features such as the comparison feature (select 2 clinics to compare)
-                        & map feature!
+                        Do checkout our different features: <br/>
+                        - <span style={{fontWeight:"bold"}}>Map View Feature</span> : press 'MAP VIEW' <br/>
+                        - <span style={{fontWeight:"bold"}}>Compare Between Clinics</span>: select 2 clinics from the list of clinics/from MapView
+                        & press 'add to comparison'
                         <br/>
                         <hr/>
-                        Please help us out by submitting any feedback you have at the end of the app. Thank you for your
-                        support!
+                        <span style={{fontStyle:"italic",fontSize:"small"}}>Please help us out by submitting any feedback you have at the end of the app. Thank you for your
+                            support! </span>
                     </DialogContent>
                     <Button variant="contained" color="secondary" onClick={this.handleUserNotifToggle} size="large">
                         Continue

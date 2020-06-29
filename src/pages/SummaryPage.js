@@ -139,7 +139,7 @@ export const SummaryPage = props => {
                         rowsMin={5}
                         name="feedback"
                         label="Submit a feedback"
-                        placeholder="How was your experience with the app?"
+                        placeholder="How was your experience with the app? (Optional) "
                         variant="outlined"
                         value={feedback}
                         onChange={handleFeedback}
