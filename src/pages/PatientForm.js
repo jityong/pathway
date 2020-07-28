@@ -18,6 +18,7 @@ import Typography from "@material-ui/core/Typography";
 import IconButton from "@material-ui/core/IconButton";
 import ArrowBack from "@material-ui/icons/ArrowBackIos";
 import HelpOutline from "@material-ui/icons/HelpOutline";
+import cfg from "../etc/config.json";
 
 //this component takes gets postal code & subsidy from user and pass the data over
 //to the FilteredResult.js component through the react router
@@ -39,7 +40,7 @@ class PatientForm extends React.Component {
 
     uploadInfo = () => {
         // console.log("running uploadinfo");
-        fetch('http://156.67.217.219:5000/dbStorage/storeFormInfo', {
+        fetch(`${cfg.backend_svc}/dbStorage/storeFormInfo`, {
             method: 'POST',
             headers: {
                 'Accept': 'application/json',

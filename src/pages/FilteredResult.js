@@ -16,6 +16,7 @@ import {FormLabel} from "@material-ui/core";
 import Dialog from '@material-ui/core/Dialog';
 import DialogContent from '@material-ui/core/DialogContent';
 import Button from '@material-ui/core/Button';
+import cfg from "../etc/config.json";
 
 // this component aims to display the filtered clinic after they fill in the form
 //try not to abuse the API call, im using some kind of free credits from google for this
@@ -42,7 +43,7 @@ class FilteredResult extends React.Component {
     }
 
     componentDidMount() {
-        fetch(`http://156.67.217.219:5000/googleMap/getGeoLoc`, {
+        fetch(`${cfg.backend_svc}/googleMap/getGeoLoc`, {
             method: 'POST',
             headers: {
                 'Accept': 'application/json',

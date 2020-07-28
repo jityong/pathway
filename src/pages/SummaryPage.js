@@ -13,6 +13,7 @@ import TextareaAutosize from '@material-ui/core/TextareaAutosize';
 import Rating from '@material-ui/lab/Rating';
 import StarBorderIcon from '@material-ui/icons/StarBorder';
 import Box from '@material-ui/core/Box';
+import cfg from "../etc/config.json";
 
 const useStyles = makeStyles(theme => ({
     root: {
@@ -66,7 +67,7 @@ export const SummaryPage = props => {
         setDialog(!dialog);
     }
     const submitFeedback = () => {
-        fetch('http://156.67.217.219:5000/dbStorage/submitUserFeedback', {
+        fetch(`${cfg.backend_svc}/dbStorage/submitUserFeedback`, {
             method: 'POST',
             headers: {
                 'Accept': 'application/json',
