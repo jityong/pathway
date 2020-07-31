@@ -64,7 +64,7 @@ export class ClinicMap extends Component {
                     key={clinic.id}
                     clinic={clinic}
                     id={clinic.id}
-                    icon={"http://maps.google.com/mapfiles/ms/icons/green.png"}
+                    icon={"https://maps.google.com/mapfiles/ms/icons/green.png"}
                     position={{
                         lat: clinic.geometry.coordinates[1],
                         lng: clinic.geometry.coordinates[0]
@@ -94,7 +94,7 @@ export class ClinicMap extends Component {
                     key={clinic.id}
                     clinic={clinic}
                     id={clinic.id}
-                    icon={"http://maps.google.com/mapfiles/ms/icons/blue.png"}
+                    icon={"https://maps.google.com/mapfiles/ms/icons/blue.png"}
                     position={{
                         lat: clinic.coord[1],
                         lng: clinic.coord[0]
