@@ -2,9 +2,11 @@ Please visit us at https://www.pathwaynuhs.com/
 
 ## Introduction
 
-Currently a BETA version, working closely alongside with NUHS (National University Health System). We aim to inform users about CHAS clinics near them & provide them with price comparisons between polyclinics and CHAS clinic prices. We make use of accurate data provided by NUHS to calculate these prices based on the type of CHAS subsidy that is applicable to the use (Namely Blue, Green & Orange) as well as their Nationality. 
+Currently a BETA version, we are working closely alongside NUHS (National University Health System).
 
-As the app is still in the BETA phase, we are targetting mainly diabetic patients. There is a large demographics of diabetic patients in Singapore who needs to have frequent follow-up treatment. Hence, we aim to use the pilot version of the app to help these users make more informed decisions about their choices of follow-up treatment. 
+We aim to inform users about CHAS clinics near them & provide them with price comparisons between polyclinics and CHAS clinic prices. We are making use of accurate data provided by NUHS to calculate various prices based on the type of CHAS subsidy that is applicable to the user (namely Blue, Green & Orange) as well as their Nationality. 
+
+As the app is still in the BETA phase, we are targetting mainly diabetic patients because there is a large demographics of diabetic patients in Singapore who needs to have frequent follow-up treatment. As such, we aim to use the pilot version of the app to help these users make more informed decisions about their choices of follow-up treatment. 
 
 
 
