@@ -1,3 +1,6 @@
+
+![homepage](public/readMeFiles/homepage.png "homepage")
+
 Please visit us at https://www.pathwaynuhs.com/
 
 ## Introduction
