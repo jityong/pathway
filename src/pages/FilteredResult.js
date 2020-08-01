@@ -16,6 +16,7 @@ import {FormLabel} from "@material-ui/core";
 import Dialog from '@material-ui/core/Dialog';
 import DialogContent from '@material-ui/core/DialogContent';
 import Button from '@material-ui/core/Button';
+import cfg from "../etc/config.json";
 
 // this component aims to display the filtered clinic after they fill in the form
 //try not to abuse the API call, im using some kind of free credits from google for this
@@ -29,9 +30,9 @@ class FilteredResult extends React.Component {
         super(props);
         this.state = {
             formData: this.props.location.state, //this gets the info from react router from PatientForm.js
-            userLng: 0,
-            userLat: 0,
-            sortByLoc: true,
+            userLng: this.props.location.state.userLng,
+            userLat: this.props.location.state.userLat,
+            sortByLoc: false, //3km radius
             open: false,
             userNotifDialog: true
             // searchedClinic: {}
@@ -42,7 +43,7 @@ class FilteredResult extends React.Component {
     }
 
     componentDidMount() {
-        fetch(`http://156.67.217.219:5000/googleMap/getGeoLoc`, {
+        fetch(`${cfg.backend_svc}/googleMap/getGeoLoc`, {
             method: 'POST',
             headers: {
                 'Accept': 'application/json',
@@ -79,16 +80,18 @@ class FilteredResult extends React.Component {
         const userNotification = (
                 <Dialog open={this.state.userNotifDialog} onClose={this.handleUserNotifToggle}>
                     <DialogContent style={{font: ""}}>
-                        Hello! This app is still in its BETA phase and the prices available for comparison are limited
+                        Hello! This app is still in its <span style={{fontWeight:"bold"}}> BETA </span> phase and the prices available for comparison are limited
                         to
                         some of the more common drugs for diabetic patients.
                         <br/><br/>
-                        Do checkout our different features such as the comparison feature (select 2 clinics to compare)
-                        & map feature!
+                        Do checkout our different features: <br/>
+                        - <span style={{fontWeight:"bold"}}>Map View Feature</span> : press 'MAP VIEW' <br/>
+                        - <span style={{fontWeight:"bold"}}>Compare Between Clinics</span>: select any 2 clinics from the list or MapView,
+                        and press 'add to comparison'
                         <br/>
                         <hr/>
-                        Please help us out by submitting any feedback you have at the end of the app. Thank you for your
-                        support!
+                        <span style={{fontStyle:"italic",fontSize:"small"}}>Please help us out by submitting any feedback you have at the end of the app. Thank you for your
+                            support! </span>
                     </DialogContent>
                     <Button variant="contained" color="secondary" onClick={this.handleUserNotifToggle} size="large">
                         Continue

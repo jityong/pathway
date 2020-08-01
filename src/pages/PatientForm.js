@@ -18,10 +18,12 @@ import Typography from "@material-ui/core/Typography";
 import IconButton from "@material-ui/core/IconButton";
 import ArrowBack from "@material-ui/icons/ArrowBackIos";
 import HelpOutline from "@material-ui/icons/HelpOutline";
+import cfg from "../etc/config.json";
 
 //this component takes gets postal code & subsidy from user and pass the data over
 //to the FilteredResult.js component through the react router
 // could also use some styling
+
 
 class PatientForm extends React.Component {
     constructor() {
@@ -31,7 +33,9 @@ class PatientForm extends React.Component {
             hasSubsidy: "No",
             subsidyType: "",
             age: "",
-            nationality: ""
+            nationality: "",
+            userLng: 0,
+            userLat: 0
         };
         this.handleChange = this.handleChange.bind(this);
         this.goBack = this.goBack.bind(this);
@@ -39,7 +43,7 @@ class PatientForm extends React.Component {
 
     uploadInfo = () => {
         // console.log("running uploadinfo");
-        fetch('http://156.67.217.219:5000/dbStorage/storeFormInfo', {
+        fetch(`${cfg.backend_svc}/dbStorage/storeFormInfo`, {
             method: 'POST',
             headers: {
                 'Accept': 'application/json',
@@ -65,17 +69,75 @@ class PatientForm extends React.Component {
         this.props.history.goBack();
     }
 
+    async getGeoLoc() {
+        //must explicitly return as Promise, so that the .then in testInput() will wait for the final
+        // resolve() value (which we can now explicitly specify, instead of resolving when the fetch() completes.
+        return new Promise((resolve, reject) => {
+            fetch(`${cfg.backend_svc}/googleMap/getGeoLoc`, {
+                method: 'POST',
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    postalCode: this.state.postalCode,
+                })
+            })
+                .then(res => res.json())
+                .then(json => {
+                    console.log('json:', json);
+                    this.setState({
+                        userLng: json.results[0].geometry.location.lng,
+                        userLat: json.results[0].geometry.location.lat
+                    });
+                }).then(res => {
+                resolve(true);
+            })
+                .catch(err => {
+                    console.log('Error in retrieving geo loc from postal code')
+                    console.log(err);
+                    resolve(false);
+                });
+        })
+    }
+
+    async testInput(postalCode, age) {
+        return new Promise((resolve,reject) => {
+            var age_Regex = new RegExp("^(\\d{0,3})?$");
+            this.getGeoLoc().then(res => {
+                console.log('geoCode flag:', res);
+                if (!res) {
+                    alert("Please enter a valid 6-digit postal code! Example: 119244");
+                    resolve(false);
+                }
+                console.log('age regex:', age_Regex.test(age));
+                if (!age_Regex.test(age)) {
+                    alert("Please enter a valid age! Example: 25");
+                    resolve(false);
+                }
+                resolve(true);
+            })
+        })
+    }
+
+
     handleSubmitForm = () => {
-        this.uploadInfo();
-        this.props.history.push({
-            pathname: '/FilteredResult',
-            state: {
-                postalCode: this.state.postalCode,
-                age: this.state.age,
-                nationality: this.state.nationality,
-                subsidyType: this.state.subsidyType
+        this.testInput(this.state.postalCode, this.state.age).then(res => {
+            if (res) {
+                this.uploadInfo();
+                this.props.history.push({
+                    pathname: '/FilteredResult',
+                    state: {
+                        postalCode: this.state.postalCode,
+                        age: this.state.age,
+                        nationality: this.state.nationality,
+                        subsidyType: this.state.subsidyType,
+                        userLng: this.state.userLng,
+                        userLat: this.state.userLat
+                    }
+                });
             }
-        });
+        })
     }
 
     render() {
@@ -139,7 +201,8 @@ class PatientForm extends React.Component {
                     onChange={this.handleChange}
                     placeholder="123456"
                     InputProps={{
-                        startAdornment: <InputAdornment position="start">S</InputAdornment>
+                        startAdornment: <InputAdornment position="start">S</InputAdornment>,
+                        pattern: "^(\d{6})?$"
                     }}
                     style={{width: "100%"}}
                 />
@@ -254,7 +317,7 @@ class PatientForm extends React.Component {
                             size="large"
                             onClick={this.handleSubmitForm}
                         >
-                                <span style={{color: "white"}}>Submit</span>
+                            <span style={{color: "white"}}>Submit</span>
                         </Button>
                     ) : (
                         <Fragment>

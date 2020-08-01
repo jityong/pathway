@@ -14,7 +14,8 @@ CREATE TABLE UserInfo
 CREATE TABLE UserFeedback
 (
     id SERIAL,
-    rating INTEGER,
+    userExperience INTEGER,
+    usefulness     INTEGER,
     feedback VARCHAR(300),
     PRIMARY KEY (id)
 )

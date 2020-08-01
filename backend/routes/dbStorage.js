@@ -21,10 +21,11 @@ router.post('/storeFormInfo', async(req, res) => {
 
 router.post('/submitUserFeedback', async(req, res) => {
     try {
-        const rating = req.body.rating;
+        const userExperience = req.body.userExperience;
+        const usefulness = req.body.usefulness;
         const feedback = req.body.feedback;
-        const values = [rating,feedback];
-        const query = `INSERT INTO UserFeedback(rating, feedback) VALUES ($1,$2)`;
+        const values = [userExperience,usefulness,feedback];
+        const query = `INSERT INTO UserFeedback(userExperience, usefulness, feedback) VALUES ($1,$2,$3)`;
         pool.query(query, values)
             .then(result => res.json("store feedback success"))
             .catch(e => {console.error(e.stack)});
