@@ -6,7 +6,7 @@ Currently a BETA version, we are working closely alongside NUHS (National Univer
 
 We aim to inform users about CHAS clinics near them & provide them with price comparisons between polyclinics and CHAS clinic prices. We are making use of accurate data provided by NUHS to calculate various prices based on the type of CHAS subsidy that is applicable to the user (namely Blue, Green & Orange) as well as their Nationality. 
 
-In our BETA phase, we are targetting mainly diabetic patients because there is a large demographics of diabetic patients in Singapore who needs to have frequent follow-up treatment. As such, we aim to use the pilot version of the app to help these users make more informed decisions about their choices of follow-up treatment. 
+In our BETA phase, we are targetting mainly diabetic patients because there is a large demographics of diabetic patients in Singapore who needs to have frequent follow-up treatments. As such, we aim to use the pilot version of the app to help these users make more informed decisions about their choices of follow-up treatment. 
 
 
 
