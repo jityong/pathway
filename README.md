@@ -1,6 +1,19 @@
+Please visit us at https://www.pathwaynuhs.com/
+
+## Introduction
+
+Currently a BETA version, working closely alongside with NUHS (National University Health System). We aim to inform users about CHAS clinics near them & provide them with price comparisons between polyclinics and CHAS clinic prices. We make use of accurate data provided by NUHS to calculate these prices based on the type of CHAS subsidy that is applicable to the use (Namely Blue, Green & Orange) as well as their Nationality. 
+
+As the app is still in the BETA phase, we are targetting mainly diabetic patients. There is a large demographics of diabetic patients in Singapore who needs to have frequent follow-up treatment. Hence, we aim to use the pilot version of the app to help these users make more informed decisions about their choices of follow-up treatment. 
+
+
+
+
+
+
 ## Details
 
-Hosted on Hostinger VPS server.   
+Hosted on AWS EC2 Instance.   
 `pm2 list` to view the backend services that is running.  
 `/etc/nginx/default` is where the nginx configuration is.  
 `/var/www/pathway` is the location of the source files.  
